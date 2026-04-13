@@ -1,0 +1,5273 @@
+{
+  "instructions": "Review each question and fill in correct_subject. Leave correct_subject blank if current_subject is already correct. confidence = how sure we are the current_subject is right (0=wrong, 100=certain). Valid subjects: Anatomy, Physiology, Biochemistry, Pathology, Pharmacology, Microbiology, Medicine, Surgery, Obstetrics & Gynaecology, Paediatrics, Psychiatry, Radiology, Orthopaedics, ENT, Ophthalmology, Dermatology, Anaesthesia, Forensic Medicine, Community Medicine",
+  "total": 249,
+  "breakdown": {
+    "Unclassified (confidence 0)": 27,
+    "Likely Wrong Subject (confidence 15)": 5,
+    "Ambiguous — Immunology (confidence 55)": 107,
+    "Ambiguous — Drug/Treatment (confidence 65)": 100,
+    "Ambiguous — Biostatistics (confidence 65)": 10
+  },
+  "questions": [
+    {
+      "id": "neetpg-2012-s1-q1421",
+      "year": 2012,
+      "shift": 1,
+      "question": "The scan with highest sensitivity to detect adrenal metastasis due to bronchogenic carcinoma is:",
+      "options": {
+        "A": "Contrast Enhanced CT abdomen with Adrenal protocol",
+        "B": "PET scan",
+        "C": "MRI scan",
+        "D": "Radionuclide scan"
+      },
+      "current_subject": "Radiology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Biostatistics",
+      "review_explanation": "Sensitivity, specificity, p-value questions are primarily Community Medicine, but may be asked in context of a specific subject (e.g. sensitivity of a TB test asked in Medicine).",
+      "suggested_subjects": [
+        "Community Medicine",
+        "Radiology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0247",
+      "year": 2013,
+      "shift": 1,
+      "question": "Enzyme specificity is given by ?",
+      "options": {
+        "A": "K",
+        "B": "Vrm„",
+        "C": "Both",
+        "D": "None"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Biostatistics",
+      "review_explanation": "Sensitivity, specificity, p-value questions are primarily Community Medicine, but may be asked in context of a specific subject (e.g. sensitivity of a TB test asked in Medicine).",
+      "suggested_subjects": [
+        "Community Medicine",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0604",
+      "year": 2013,
+      "shift": 1,
+      "question": "Antibiotic sensitivity testing can be done using all except",
+      "options": {
+        "A": "E test",
+        "B": "Kirby-Bauer method",
+        "C": "Culture agar method",
+        "D": "Broth dilution method"
+      },
+      "current_subject": "Pharmacology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Biostatistics",
+      "review_explanation": "Sensitivity, specificity, p-value questions are primarily Community Medicine, but may be asked in context of a specific subject (e.g. sensitivity of a TB test asked in Medicine).",
+      "suggested_subjects": [
+        "Community Medicine",
+        "Pharmacology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q2069",
+      "year": 2014,
+      "shift": 1,
+      "question": "What is produced by the supersensitivity of Dopamine receptors ?",
+      "options": {
+        "A": "Dyskinesia",
+        "B": "Hyperphagia",
+        "C": "Hyperpathia",
+        "D": "Hypomania"
+      },
+      "current_subject": "Psychiatry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Biostatistics",
+      "review_explanation": "Sensitivity, specificity, p-value questions are primarily Community Medicine, but may be asked in context of a specific subject (e.g. sensitivity of a TB test asked in Medicine).",
+      "suggested_subjects": [
+        "Community Medicine",
+        "Psychiatry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0558",
+      "year": 2015,
+      "shift": 1,
+      "question": "A 47-year-old woman presents with complaints of nervousness and increased sensitivity to hot weather. She is diagnosed with hyperthyroidism and prescribed propylthiouracil. What is the principal mechanism by which this drug acts?",
+      "options": {
+        "A": "Decreasing the efficacy of TSH binding to the thyroid TSH receptor",
+        "B": "Decreasing the rate of proteolysis of thyroglobulin",
+        "C": "Increasing the amount of 3,3',5'-triiodothyronine (reverse T3; rT3)",
+        "D": "Inhibiting deiodination of thyroxine (T4)"
+      },
+      "current_subject": "Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Biostatistics",
+      "review_explanation": "Sensitivity, specificity, p-value questions are primarily Community Medicine, but may be asked in context of a specific subject (e.g. sensitivity of a TB test asked in Medicine).",
+      "suggested_subjects": [
+        "Community Medicine",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0688",
+      "year": 2015,
+      "shift": 1,
+      "question": "Medium used for antibiotic sensitivity:",
+      "options": {
+        "A": "CLED agar",
+        "B": "Hektoen agar",
+        "C": "Mueller-Hinton agar",
+        "D": "Salt milk agar"
+      },
+      "current_subject": "Pharmacology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Biostatistics",
+      "review_explanation": "Sensitivity, specificity, p-value questions are primarily Community Medicine, but may be asked in context of a specific subject (e.g. sensitivity of a TB test asked in Medicine).",
+      "suggested_subjects": [
+        "Community Medicine",
+        "Pharmacology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2019-s1-q0098",
+      "year": 2019,
+      "shift": 1,
+      "question": "Variation in sensitivity of response to different doses of drug in different individual is obtained from?",
+      "options": {
+        "A": "Dose response curve",
+        "B": "Therapeutic index",
+        "C": "Bioavailability",
+        "D": "Phase 1 clinical trials"
+      },
+      "current_subject": "Pharmacology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Biostatistics",
+      "review_explanation": "Sensitivity, specificity, p-value questions are primarily Community Medicine, but may be asked in context of a specific subject (e.g. sensitivity of a TB test asked in Medicine).",
+      "suggested_subjects": [
+        "Community Medicine",
+        "Pharmacology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2019-s1-q0167",
+      "year": 2019,
+      "shift": 1,
+      "question": "A female patient of 26 years, presents with oral ulcers, photosensitivity and skin malar rash in face sparing the nasolabial folds of both side.",
+      "options": {
+        "A": "Sturge weber syndrome",
+        "B": "SLE",
+        "C": "Dermatitis",
+        "D": "Psoriasis"
+      },
+      "current_subject": "Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Biostatistics",
+      "review_explanation": "Sensitivity, specificity, p-value questions are primarily Community Medicine, but may be asked in context of a specific subject (e.g. sensitivity of a TB test asked in Medicine).",
+      "suggested_subjects": [
+        "Community Medicine",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2019-s1-q0247",
+      "year": 2019,
+      "shift": 1,
+      "question": "A child with history of fever, photosensitivity, rash sparing nasolabial fold presents to OP. Identify the condition?",
+      "options": {
+        "A": "SLE",
+        "B": "Polymorphous light eruption",
+        "C": "Discoid lupus",
+        "D": "Skin tuberculosis"
+      },
+      "current_subject": "Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Biostatistics",
+      "review_explanation": "Sensitivity, specificity, p-value questions are primarily Community Medicine, but may be asked in context of a specific subject (e.g. sensitivity of a TB test asked in Medicine).",
+      "suggested_subjects": [
+        "Community Medicine",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2020-s1-q0235",
+      "year": 2020,
+      "shift": 1,
+      "question": "Cancer patient undergoes radiotherapy, pick the true statement for radiosensitivity of tissues?",
+      "options": {
+        "A": "Rapidly dividing cells are resistant to radiation",
+        "B": "GI mucosa is one of the most radioresistant tissues in the body",
+        "C": "The intensity of radiation is inversely proportional to the square of distance from the source",
+        "D": "Small blood vessels are least resistant to radiation"
+      },
+      "current_subject": "Radiology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Biostatistics",
+      "review_explanation": "Sensitivity, specificity, p-value questions are primarily Community Medicine, but may be asked in context of a specific subject (e.g. sensitivity of a TB test asked in Medicine).",
+      "suggested_subjects": [
+        "Community Medicine",
+        "Radiology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0565",
+      "year": 2012,
+      "shift": 1,
+      "question": "Prophylactic dose of vitamin K given to new born infants at delivery is ?",
+      "options": {
+        "A": "1mg",
+        "B": "5mg",
+        "C": "10mg",
+        "D": "15mg"
+      },
+      "current_subject": "Obstetrics & Gynaecology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Obstetrics & Gynaecology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0648",
+      "year": 2012,
+      "shift": 1,
+      "question": "Antidote for strychnine poisoning is: NEET 13",
+      "options": {
+        "A": "Fomepizole",
+        "B": "Physotigmine",
+        "C": "Barbiturates",
+        "D": "Naloxone"
+      },
+      "current_subject": "Forensic Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Forensic Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0685",
+      "year": 2012,
+      "shift": 1,
+      "question": "Which of the following is the mechanism of action of tetanospasmin ?",
+      "options": {
+        "A": "Inhibition of release of GABA and glycine",
+        "B": "Inhibition of Ach release from synapse",
+        "C": "Inhibition of protein synthesis",
+        "D": "Activation of adenylyl cyclase"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0981",
+      "year": 2012,
+      "shift": 1,
+      "question": "Treatment of choice for amblyopia is ?",
+      "options": {
+        "A": "Convergent exercises",
+        "B": "Spectacles",
+        "C": "Surgery",
+        "D": "Conventional occlusion"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q1108",
+      "year": 2012,
+      "shift": 1,
+      "question": "Treatment of choice in anorectal carcinoma",
+      "options": {
+        "A": "Chemoradiation",
+        "B": "APRCombined surgery and radiotherapy",
+        "C": "Chemotherapy alone",
+        "D": "All"
+      },
+      "current_subject": "Pathology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Pathology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q1144",
+      "year": 2012,
+      "shift": 1,
+      "question": "Child with polytrauma came to casualty, dose of packed cell",
+      "options": {
+        "A": "10 ml/kg",
+        "B": "20 ml/kg",
+        "C": "30 ml/kg",
+        "D": "40 ml/kg"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q1145",
+      "year": 2012,
+      "shift": 1,
+      "question": "Polytrauma patient came to EMS, dose of crystalloid given should be",
+      "options": {
+        "A": "500 ml RL bolus then regulated by indicators",
+        "B": "2000 ml bolus",
+        "C": "1000 ml bolus then regulated by clinical indicators",
+        "D": "250 ml bolus"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q1168",
+      "year": 2012,
+      "shift": 1,
+      "question": "Dose of i.v. adrenaline in term infant is during neonatal resuscitation -",
+      "options": {
+        "A": "0.1 - 0.3 ml/kg in 1:1000",
+        "B": "0.3 - 0.5 ml/kg in 1:1000",
+        "C": "0.1-0.3 ml/kg in 1:10,000",
+        "D": "0.3 - 0.5 ml/kg in 1:10,000"
+      },
+      "current_subject": "Paediatrics",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Paediatrics"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q1234",
+      "year": 2012,
+      "shift": 1,
+      "question": "Treatment of choice for fracture neck femur in 40 years old female",
+      "options": {
+        "A": "Multiple screw fixation",
+        "B": "Bipolar hemiarthroplasty",
+        "C": "THR",
+        "D": "None"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Anatomy"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q1294",
+      "year": 2012,
+      "shift": 1,
+      "question": "Bartholin's cyst treatment of choice -",
+      "options": {
+        "A": "Excision",
+        "B": "Antibiotics",
+        "C": "Marsupialisation",
+        "D": "Drainage"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0230",
+      "year": 2013,
+      "shift": 1,
+      "question": "Mechanism of action of cholecystokinin ?",
+      "options": {
+        "A": "Activation of adenylyl cyclase",
+        "B": "Opening of ion channels",
+        "C": "Through IP3- DAG system",
+        "D": "Transcription facters"
+      },
+      "current_subject": "Physiology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Physiology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0533",
+      "year": 2013,
+      "shift": 1,
+      "question": "Side effect of salmeterol is ?",
+      "options": {
+        "A": "Tremor",
+        "B": "Seizure",
+        "C": "Hypertension",
+        "D": "Hyperkalaemia"
+      },
+      "current_subject": "Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0546",
+      "year": 2013,
+      "shift": 1,
+      "question": "High dose of morphine is used without much danger in ?",
+      "options": {
+        "A": "Gall bladder surgery",
+        "B": "Labour",
+        "C": "Myocardial infarction",
+        "D": "Head injury"
+      },
+      "current_subject": "Pathology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Pathology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0561",
+      "year": 2013,
+      "shift": 1,
+      "question": "Most common side effect of haloperidol ?",
+      "options": {
+        "A": "Hypotension",
+        "B": "Akathasia",
+        "C": "Dryness of mouth",
+        "D": "Tic disorder"
+      },
+      "current_subject": "Psychiatry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Psychiatry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0565",
+      "year": 2013,
+      "shift": 1,
+      "question": "Drug of choice for reversal of muscle relaxant after anaerthesia",
+      "options": {
+        "A": "Pralidoxine",
+        "B": "Neostigmine",
+        "C": "Atropine",
+        "D": "None"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Anatomy"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0586",
+      "year": 2013,
+      "shift": 1,
+      "question": "Drug of choice for bleeding oesophageal varices is?",
+      "options": {
+        "A": "Ethanolamine oleate",
+        "B": "Octreotide",
+        "C": "Propanolol",
+        "D": "Phytonadione"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0591",
+      "year": 2013,
+      "shift": 1,
+      "question": "Mechanism of Action of clofibrate ?",
+      "options": {
+        "A": "They increase lipoprotein lipase activity through PPAR alpha and cause increased lipolysis of triglycerides",
+        "B": "Inhibits lipolysis in adipose tissue",
+        "C": "Inhibits HMG CoA reductase",
+        "D": "Bind bile acids and bile salts in small intestine"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0599",
+      "year": 2013,
+      "shift": 1,
+      "question": "Mechanism of action of transexaminic acid is",
+      "options": {
+        "A": "Decrease vascular permeability",
+        "B": "Smooth muscle contraction",
+        "C": "Activates Plasmin formation",
+        "D": "Prevents fibrinolysis"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Anatomy"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0607",
+      "year": 2013,
+      "shift": 1,
+      "question": "Mechanism of action of aminoglycosides is ?",
+      "options": {
+        "A": "Inhibition of protein synthesis",
+        "B": "Image to cell membrane",
+        "C": "Coagulation of proteins",
+        "D": "Inhibition of cell wall synthesis"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1022",
+      "year": 2013,
+      "shift": 1,
+      "question": "Treatment of choice for atticoantral type of CSOM?",
+      "options": {
+        "A": "Antiboiotics",
+        "B": "Tympanoplasty",
+        "C": "Modified radical mastoidectomy",
+        "D": "None"
+      },
+      "current_subject": "ENT",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "ENT"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1083",
+      "year": 2013,
+      "shift": 1,
+      "question": "Treatment of choice for nasopharyngeal carcinoma is ?",
+      "options": {
+        "A": "Surgery",
+        "B": "Radiotherapy",
+        "C": "Surgery & radiotherapy",
+        "D": "Chemotherapy"
+      },
+      "current_subject": "Pathology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Pathology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1120",
+      "year": 2013,
+      "shift": 1,
+      "question": "Treatment of choice for anisoeikonia ?",
+      "options": {
+        "A": "Orthoptic exercise",
+        "B": "Spectacles",
+        "C": "Surgery",
+        "D": "Contact lens"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1156",
+      "year": 2013,
+      "shift": 1,
+      "question": "Drug of choice for intermediate uveitis ?",
+      "options": {
+        "A": "Atropine",
+        "B": "Antibiotics",
+        "C": "Topical steroids",
+        "D": "Systemic steroid"
+      },
+      "current_subject": "Ophthalmology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Ophthalmology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1174",
+      "year": 2013,
+      "shift": 1,
+      "question": "Drug of choice for open angle glaucoma -",
+      "options": {
+        "A": "Acetazolamide",
+        "B": "Latanoprost",
+        "C": "Timolol",
+        "D": "Brimonidine"
+      },
+      "current_subject": "Ophthalmology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Ophthalmology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1351",
+      "year": 2013,
+      "shift": 1,
+      "question": "Post operative abscess treatment of choice",
+      "options": {
+        "A": "Hydration",
+        "B": "IV antibiotics",
+        "C": "Image guided aspiration",
+        "D": "Reexploration"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1362",
+      "year": 2013,
+      "shift": 1,
+      "question": "The treatment of choice for squamous cell anal cancer?",
+      "options": {
+        "A": "Laser fulgaration",
+        "B": "Chemoradiotherapy",
+        "C": "Abdominoperennial resection",
+        "D": "Platinum-based chemotherapy"
+      },
+      "current_subject": "Pathology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Pathology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1389",
+      "year": 2013,
+      "shift": 1,
+      "question": "Treatment of choice for medullary carcinoma of thyroid is:",
+      "options": {
+        "A": "Total thyroidectomy",
+        "B": "Partial thyroidectomy",
+        "C": "1131 ablation",
+        "D": "Hemithyroidectomy"
+      },
+      "current_subject": "Pathology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Pathology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1662",
+      "year": 2013,
+      "shift": 1,
+      "question": "Treatment of choice for lichen planus ?",
+      "options": {
+        "A": "Topical corticosteroids",
+        "B": "Systemic corticosteroids",
+        "C": "Antihistaminics",
+        "D": "Acitretin"
+      },
+      "current_subject": "Dermatology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Dermatology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1678",
+      "year": 2013,
+      "shift": 1,
+      "question": "Treatment of choice of scabies in pregnancy ?",
+      "options": {
+        "A": "Ivermectin",
+        "B": "Garna-benzen hexachloride",
+        "C": "Permethrin",
+        "D": "Garna-benzen hexachloride"
+      },
+      "current_subject": "Dermatology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Dermatology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1744",
+      "year": 2013,
+      "shift": 1,
+      "question": "Drug of choice for Bier's block ?",
+      "options": {
+        "A": "Bupivacaine",
+        "B": "Etidocaine",
+        "C": "Ropivacaine",
+        "D": "Lidocaine"
+      },
+      "current_subject": "Anaesthesia",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Anaesthesia"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1753",
+      "year": 2013,
+      "shift": 1,
+      "question": "Which delivers highest dose of radiation -",
+      "options": {
+        "A": "Cardiac perfusion scan",
+        "B": "CT chest",
+        "C": "CT brain",
+        "D": "Mammogram"
+      },
+      "current_subject": "Radiology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Radiology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1837",
+      "year": 2013,
+      "shift": 1,
+      "question": "Drug of choice for generalized anxiety ?",
+      "options": {
+        "A": "3-blocker",
+        "B": "Alprazolam",
+        "C": "Buspirone",
+        "D": "Phenytoin"
+      },
+      "current_subject": "Psychiatry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Psychiatry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0599",
+      "year": 2014,
+      "shift": 1,
+      "question": "Prophylactic dose of vitamin K given to new born infants at delivery is ?",
+      "options": {
+        "A": "1mg",
+        "B": "5mg",
+        "C": "10mg",
+        "D": "15mg"
+      },
+      "current_subject": "Obstetrics & Gynaecology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Obstetrics & Gynaecology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0634",
+      "year": 2014,
+      "shift": 1,
+      "question": "Hydroxyurea mechanism of action in cancer is by inhibiting the enzyme ?",
+      "options": {
+        "A": "Ribonucleotide diphosphate reductase",
+        "B": "Ribonucleotide oxidase",
+        "C": "DNA lyase",
+        "D": "DNA synthetase"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0711",
+      "year": 2014,
+      "shift": 1,
+      "question": "Alkaline diuresis is treatment of choice in poisoning with ?",
+      "options": {
+        "A": "Benzodiazepine",
+        "B": "Barbiturates",
+        "C": "Dhatura",
+        "D": "Morphine"
+      },
+      "current_subject": "Forensic Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Forensic Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0723",
+      "year": 2014,
+      "shift": 1,
+      "question": "Fatal dose of KCN is ?",
+      "options": {
+        "A": "50 - 60 mg",
+        "B": "120 -130 mg",
+        "C": "180 -190 mg",
+        "D": "280 - 300 mg"
+      },
+      "current_subject": "Forensic Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Forensic Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0735",
+      "year": 2014,
+      "shift": 1,
+      "question": "Mechanism of action in pathogenesis of Pseudomembranous colitis by CI difficle ?",
+      "options": {
+        "A": "Due to invasiveness",
+        "B": "Due to endotoxin",
+        "C": "Due to exotoxin",
+        "D": "Due to NM blockade"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Microbiology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q1276",
+      "year": 2014,
+      "shift": 1,
+      "question": "Drug of choice for the treatment of acute gout in patients in whom NSAIDs are contraindicated is?",
+      "options": {
+        "A": "Colchicine",
+        "B": "Allopurinol",
+        "C": "Xyloric acid",
+        "D": "Paracetamol"
+      },
+      "current_subject": "Orthopaedics",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Orthopaedics"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q1323",
+      "year": 2014,
+      "shift": 1,
+      "question": "DOC for Tourette syndrome",
+      "options": {
+        "A": "Haloperidol",
+        "B": "Valproate",
+        "C": "B complex",
+        "D": "Clonidine"
+      },
+      "current_subject": "Psychiatry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Psychiatry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q1416",
+      "year": 2014,
+      "shift": 1,
+      "question": "Dose of rTPA in ischaemic stroke is",
+      "options": {
+        "A": "60 mg",
+        "B": "90 mg",
+        "C": "100 mg",
+        "D": "120 mg"
+      },
+      "current_subject": "Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q1819",
+      "year": 2014,
+      "shift": 1,
+      "question": "The treatment of choice for bartholin cyst is ?",
+      "options": {
+        "A": "Marsupilisation",
+        "B": "Aspiration",
+        "C": "Observe",
+        "D": "Curettage and closure"
+      },
+      "current_subject": "Obstetrics & Gynaecology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Obstetrics & Gynaecology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q1907",
+      "year": 2014,
+      "shift": 1,
+      "question": "Mechanism of action of IUCD is all except ?",
+      "options": {
+        "A": "Inhibit ovulation",
+        "B": "Induce biochemical changes in endometrium",
+        "C": "Increase tubal motility",
+        "D": "Inflammatory respone in endometrium"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q2000",
+      "year": 2014,
+      "shift": 1,
+      "question": "IV dose of 1: 10000 concentration of epinephrine in pre term baby is?",
+      "options": {
+        "A": "0.1m1",
+        "B": "0.2 ml",
+        "C": "0.3 ml",
+        "D": "0.4 ml"
+      },
+      "current_subject": "Paediatrics",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Paediatrics"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q2110",
+      "year": 2014,
+      "shift": 1,
+      "question": "Lithium is treatment of choice for",
+      "options": {
+        "A": "Unipolar MDP prophylaxis",
+        "B": "Bipolar MDP prophylaxis",
+        "C": "Schizophrenia",
+        "D": "Acute mania"
+      },
+      "current_subject": "Psychiatry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Psychiatry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0579",
+      "year": 2015,
+      "shift": 1,
+      "question": "Drug of choice for drug induced peptic ulcer ?",
+      "options": {
+        "A": "Prostaglandin analogues",
+        "B": "H -receptor antagonists 2",
+        "C": "Proton pump inhibitors",
+        "D": "Antacids"
+      },
+      "current_subject": "Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0864",
+      "year": 2015,
+      "shift": 1,
+      "question": "Drug of choice for plasmodium vivax is: September 2006",
+      "options": {
+        "A": "Mefloquine",
+        "B": "Chloroquine",
+        "C": "Artesunate",
+        "D": "Quinine"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Microbiology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0956",
+      "year": 2015,
+      "shift": 1,
+      "question": "What is the treatment of choice for ethmoidal polyps?",
+      "options": {
+        "A": "Functional Endoscopic sinus surgery with polypectomy",
+        "B": "Intranasal ethmoidectomy",
+        "C": "Extranasl ethmoidectomy",
+        "D": "Transantral ethmoidectomy"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1040",
+      "year": 2015,
+      "shift": 1,
+      "question": "Mioitcs are treatment of choice for ?",
+      "options": {
+        "A": "Angle closure glaucoma",
+        "B": "Open angle glaucoma",
+        "C": "Buphthalmos",
+        "D": "Sympathetic Ophthalmia"
+      },
+      "current_subject": "Ophthalmology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Ophthalmology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1252",
+      "year": 2015,
+      "shift": 1,
+      "question": "Treatment of choice of mucinous carcinoma of Gall Bladder confined to the lamina propria is -",
+      "options": {
+        "A": "Simple cholecystectomy",
+        "B": "Extended cholecystectomy",
+        "C": "Cholecystectomy with wedge resection of liver",
+        "D": "Chemotherapy only"
+      },
+      "current_subject": "Pathology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Pathology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1267",
+      "year": 2015,
+      "shift": 1,
+      "question": "A 70 year pld male complaining of per rectal bleeding was diagnosed of having rectal/anorectal cancer. The distal margin of the tumor was 5 cm from the anal verge the treatment of choice would be -",
+      "options": {
+        "A": "Palliative Radiotherapy",
+        "B": "Abdominoperineal recection",
+        "C": "Low anterior resection",
+        "D": "Local Excision"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1324",
+      "year": 2015,
+      "shift": 1,
+      "question": "What is the treatment of choice in desmoid tumors ?",
+      "options": {
+        "A": "Irradiation",
+        "B": "Wide excision",
+        "C": "Local excision",
+        "D": "Local excision following radiation"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1381",
+      "year": 2015,
+      "shift": 1,
+      "question": "Treatment of choice for symptomatic neonatal hypoglycemia is",
+      "options": {
+        "A": "Dextrose normal saline",
+        "B": "5% dextrose",
+        "C": "10% dextrose",
+        "D": "25% dextrose"
+      },
+      "current_subject": "Paediatrics",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Paediatrics"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1428",
+      "year": 2015,
+      "shift": 1,
+      "question": "Treatment of choice for Kawasaki Disease is:",
+      "options": {
+        "A": "IV Immunoglobulins",
+        "B": "Steroids",
+        "C": "Dapsone",
+        "D": "Methotrexate"
+      },
+      "current_subject": "Paediatrics",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Paediatrics"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1464",
+      "year": 2015,
+      "shift": 1,
+      "question": "Fracture neck of femur in 80 year old male sustained 1 weekback The treatment of choice is -",
+      "options": {
+        "A": "Hemiarthroplasty",
+        "B": "ExcisionarthroPlastY",
+        "C": "Closed reduction and fixation with three cancellous screws",
+        "D": "Longitudinal skin traction for 6 weeks"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Anatomy"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1525",
+      "year": 2015,
+      "shift": 1,
+      "question": "Patient with NTD, dose of folic acid in next pregnancy",
+      "options": {
+        "A": "0.5 mg",
+        "B": "1 mg",
+        "C": "2 mg",
+        "D": "4 mg"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1537",
+      "year": 2015,
+      "shift": 1,
+      "question": "Which is not side effect of POP [Progestin only pill]",
+      "options": {
+        "A": "Ovarian cysts",
+        "B": "Venous thromboembolism",
+        "C": "Increased risk of diabetes mellitus",
+        "D": "Ectopic pregnancy"
+      },
+      "current_subject": "Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1642",
+      "year": 2015,
+      "shift": 1,
+      "question": "Which of the following is late severe adverse effect of radiation therapy",
+      "options": {
+        "A": "Nausea",
+        "B": "Erythema",
+        "C": "Anemia",
+        "D": "Osteoradionecrosis"
+      },
+      "current_subject": "Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1699",
+      "year": 2015,
+      "shift": 1,
+      "question": "Treatment of choice for acute panic attacks is ?",
+      "options": {
+        "A": "Barbiturates",
+        "B": "Benzodiazepines",
+        "C": "TCAs",
+        "D": "MAO inhibitors"
+      },
+      "current_subject": "Psychiatry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Psychiatry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0515",
+      "year": 2016,
+      "shift": 1,
+      "question": "Which of the following is NOT side effect of amiodarone?",
+      "options": {
+        "A": "Pulmonary fibrosis",
+        "B": "Corneal microdeposits",
+        "C": "Photosensitivity",
+        "D": "Tachycardia"
+      },
+      "current_subject": "Pathology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Pathology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0516",
+      "year": 2016,
+      "shift": 1,
+      "question": "A side effect of loop diuretics is used in ?",
+      "options": {
+        "A": "Post - surgery care",
+        "B": "Chronic anemia",
+        "C": "Blood transfusion",
+        "D": "Oncology/cancer"
+      },
+      "current_subject": "Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0520",
+      "year": 2016,
+      "shift": 1,
+      "question": "Which of the following is not true about the mechanism of action of digitalis?",
+      "options": {
+        "A": "It binds to the intracellular face of Na' ATPase enzyme",
+        "B": "There is rise in intracellular Na'",
+        "C": "It has positive ionotropic action",
+        "D": "Digitalis action is independent of cardiac innervation"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0525",
+      "year": 2016,
+      "shift": 1,
+      "question": "Adverse effect of methysergide is ?",
+      "options": {
+        "A": "Metabolic syndrome",
+        "B": "Endocardial fibrosis",
+        "C": "Peyronie's syndrome",
+        "D": "Dry mouth"
+      },
+      "current_subject": "Pathology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Pathology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0575",
+      "year": 2016,
+      "shift": 1,
+      "question": "Mechanism of action of Linezolid is :?",
+      "options": {
+        "A": "Inhibits 30S ribosome subunit of 50S ribosome",
+        "B": "Inhibits 23S ribosome subunit of 50S ribosome",
+        "C": "Inhibits 5S ribosome subunit of 50S ribosome",
+        "D": "Inhibits 5PS. ribosome subunit of 50S ribosome"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0578",
+      "year": 2016,
+      "shift": 1,
+      "question": "Mechanism of action of Niclosamide is :?",
+      "options": {
+        "A": "Inhibition of substrate level phosphorylation",
+        "B": "Inhibition of oxidative phosphorylation",
+        "C": "Inhibition of proton efflux pumps",
+        "D": "Increase production of free radicals"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0582",
+      "year": 2016,
+      "shift": 1,
+      "question": "Drug of choice for surgical prophylaxis is :?",
+      "options": {
+        "A": "Cefaclor",
+        "B": "Ceftizoxime",
+        "C": "Cefazolin",
+        "D": "Cefoperazone"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0587",
+      "year": 2016,
+      "shift": 1,
+      "question": "Mechanism of action of Torcetraprib is ?",
+      "options": {
+        "A": "Bile acid sequestrant",
+        "B": "Sterol absorption inhibitor",
+        "C": "Lipoprotein lipase activator",
+        "D": "CETP inhibitors"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0607",
+      "year": 2016,
+      "shift": 1,
+      "question": "Which of the following is not an adverse effect of cyclophosphamide?",
+      "options": {
+        "A": "Hemorrhagic cystitis",
+        "B": "Infertility",
+        "C": "Bone marrow suppression",
+        "D": "Diabetes insipidus"
+      },
+      "current_subject": "Obstetrics & Gynaecology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Obstetrics & Gynaecology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0649",
+      "year": 2016,
+      "shift": 1,
+      "question": "Treatment of choice for stab injury caecum ?",
+      "options": {
+        "A": "Caecostomy",
+        "B": "Ileo-transverse anastomosis",
+        "C": "Transverse colostomy",
+        "D": "Sigmoid colostomy"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0728",
+      "year": 2016,
+      "shift": 1,
+      "question": "Diphtheria toxin's mechanism of action is: September 2009",
+      "options": {
+        "A": "Inhibiting glucose synthesis",
+        "B": "Inhibiting protein synthesis",
+        "C": "Promoting acetylcholine release",
+        "D": "Altering cyclic GMP levels"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0944",
+      "year": 2016,
+      "shift": 1,
+      "question": "A patient presents with Ca larynx involving left false cord, left arytenoid and left aryepiglottic fold with bilateral mobile true cords. The treatment of choice in this patient is which of the following?",
+      "options": {
+        "A": "Vertical hemilarygectomy",
+        "B": "Horizontal partial hemilaryngectomy",
+        "C": "Total laryngectomy",
+        "D": "Radiotherapy followed by chemotherapy"
+      },
+      "current_subject": "ENT",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "ENT"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1028",
+      "year": 2016,
+      "shift": 1,
+      "question": "Which of the following is long term side effect of phakic 10Ls",
+      "options": {
+        "A": "Chronic glaucoma",
+        "B": "Retinal detachment",
+        "C": "Optic neuritis",
+        "D": "None"
+      },
+      "current_subject": "Ophthalmology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Ophthalmology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1252",
+      "year": 2016,
+      "shift": 1,
+      "question": "Drug of choice for palliative treatment of pancreatic carcinoma",
+      "options": {
+        "A": "Erlotinib",
+        "B": "Gemcitabine",
+        "C": "Paclitaxel",
+        "D": "Cyclophosphomide"
+      },
+      "current_subject": "Pathology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Pathology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1284",
+      "year": 2016,
+      "shift": 1,
+      "question": "Treatment of choice for low fistula in ano is -",
+      "options": {
+        "A": "Fistulotomy",
+        "B": "Intravenous antibiotics",
+        "C": "Staged surgical resection",
+        "D": "None of the above"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1304",
+      "year": 2016,
+      "shift": 1,
+      "question": "Treatment of choice for bladder stone",
+      "options": {
+        "A": "Transurethral litholapaxy",
+        "B": "Percutaneous suprapubic litholapaxy",
+        "C": "Vesicotomy and stone retrieval",
+        "D": "Intravenous antibiotics"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1321",
+      "year": 2016,
+      "shift": 1,
+      "question": "For lower lip carcinoma of <1cm in size. The treatment of choice will be-",
+      "options": {
+        "A": "Radiation",
+        "B": "Chemotherapy",
+        "C": "Excision",
+        "D": "Radiation and chemotherapy"
+      },
+      "current_subject": "Pathology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Pathology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1488",
+      "year": 2016,
+      "shift": 1,
+      "question": "Treatment of choice in Acute myositis ossificans is:",
+      "options": {
+        "A": "Immobilization of elbow",
+        "B": "Short wave diathermy",
+        "C": "Passive movements of arm",
+        "D": "Active exercises"
+      },
+      "current_subject": "Orthopaedics",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Orthopaedics"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1493",
+      "year": 2016,
+      "shift": 1,
+      "question": "An infertile woman has bilateral tubal block at cornua diagnosed on hysterosalpingography. Next treatment of choice is ?",
+      "options": {
+        "A": "IVF",
+        "B": "Laparoscopy and hysteroscopy",
+        "C": "Tuboplasty",
+        "D": "Hydrotubation"
+      },
+      "current_subject": "Surgery",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Surgery"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1537",
+      "year": 2016,
+      "shift": 1,
+      "question": "Treatment of choice in patient with infertility & endometriosis ?",
+      "options": {
+        "A": "IUI",
+        "B": "Surgery",
+        "C": "Danozol",
+        "D": "Ovulation induction"
+      },
+      "current_subject": "Obstetrics & Gynaecology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Obstetrics & Gynaecology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1686",
+      "year": 2016,
+      "shift": 1,
+      "question": "Treatment of choice for scabies in an infant < 6 months is?",
+      "options": {
+        "A": "BHC",
+        "B": "Ivermactin",
+        "C": "Permathrin",
+        "D": "Crotomiton"
+      },
+      "current_subject": "Dermatology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Dermatology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1687",
+      "year": 2016,
+      "shift": 1,
+      "question": "Oral treatment of choice for scabies is?",
+      "options": {
+        "A": "Albendazole",
+        "B": "Itraconazole",
+        "C": "Sulphur",
+        "D": "Ivermactin"
+      },
+      "current_subject": "Dermatology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Dermatology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1691",
+      "year": 2016,
+      "shift": 1,
+      "question": "Treatment of choice for erytherodermic psoriasis is?",
+      "options": {
+        "A": "Prednisolone",
+        "B": "Hydroxyurea",
+        "C": "Acitretin",
+        "D": "Ciclosporin"
+      },
+      "current_subject": "Dermatology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Dermatology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1692",
+      "year": 2016,
+      "shift": 1,
+      "question": "Multiple psoriatic lesions on hands. Treatment of choice is?",
+      "options": {
+        "A": "NBUVB",
+        "B": "Systemic methotrexate",
+        "C": "Topical steroids and salicylic acid",
+        "D": "Systemic steroids"
+      },
+      "current_subject": "Dermatology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Dermatology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1768",
+      "year": 2016,
+      "shift": 1,
+      "question": "Treatment of choice for generalized anxiety disorder is?",
+      "options": {
+        "A": "Benzodiazepines",
+        "B": "Neuroleptics",
+        "C": "Beta blockers",
+        "D": "Barbiturates"
+      },
+      "current_subject": "Psychiatry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Psychiatry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1779",
+      "year": 2016,
+      "shift": 1,
+      "question": "Drug of choice for Tourette syndrome is?",
+      "options": {
+        "A": "Haloperidol",
+        "B": "Amantidine",
+        "C": "Propanolol",
+        "D": "Diazepam"
+      },
+      "current_subject": "Psychiatry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Psychiatry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1782",
+      "year": 2016,
+      "shift": 1,
+      "question": "DOC for schizophrenic patient with poor oral absorption is?",
+      "options": {
+        "A": "Clozapine",
+        "B": "Fluphenazine",
+        "C": "Sulpride",
+        "D": "Penfluridol"
+      },
+      "current_subject": "Psychiatry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Psychiatry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1783",
+      "year": 2016,
+      "shift": 1,
+      "question": "Which of the following is not side effect of quetiapine?",
+      "options": {
+        "A": "Dry mouth",
+        "B": "Hair loss",
+        "C": "Sudden cardiac death",
+        "D": "Dyspepsia"
+      },
+      "current_subject": "Dermatology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Dermatology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2017-s1-q0273",
+      "year": 2017,
+      "shift": 1,
+      "question": ": Which is the treatment of choice for irradiation in Chordoma?",
+      "options": {
+        "A": "Protons",
+        "B": "Electrons",
+        "C": "Gamma radiation",
+        "D": "3D - CRT"
+      },
+      "current_subject": "Radiology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Radiology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2018-s1-q0055",
+      "year": 2018,
+      "shift": 1,
+      "question": "Drug of choice for resistant rheumatic chorea?",
+      "options": {
+        "A": "Valproate",
+        "B": "Haloperidol",
+        "C": "Diazepam",
+        "D": "Probenecid"
+      },
+      "current_subject": "Psychiatry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Psychiatry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2018-s1-q0057",
+      "year": 2018,
+      "shift": 1,
+      "question": "Physiological dose of hydrocortisone (mg/kg/day) is -",
+      "options": {
+        "A": "5 mg/kg/day",
+        "B": "10 mg/kg/day",
+        "C": "15 mg/kg/day",
+        "D": "20 mg/kg/day"
+      },
+      "current_subject": "Physiology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Physiology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2018-s1-q0058",
+      "year": 2018,
+      "shift": 1,
+      "question": "What is mechanism of action of colchicine in acute gout?",
+      "options": {
+        "A": "Inhibition of purine metabolism",
+        "B": "Inhibition of uric acid conversion",
+        "C": "Migration of leukocytes",
+        "D": "Leukocytes, lymphocytes inhibition & microtubular inhibitor"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2018-s1-q0196",
+      "year": 2018,
+      "shift": 1,
+      "question": "What is mechanism of action of Curanium drugs as muscle relaxant?",
+      "options": {
+        "A": "Persistently depolarizing at Neuromuscular junction",
+        "B": "Act competitively on Ach receptors blocking post-synaptically",
+        "C": "Repetitive stimulation of Ach receptors on muscle end plate",
+        "D": "Inhibiting the calcium channel on presynaptic membrane"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Anatomy"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2018-s1-q0253",
+      "year": 2018,
+      "shift": 1,
+      "question": "Mechanism of action colchicine in acute gout",
+      "options": {
+        "A": "Uric acid nephrolithiasis",
+        "B": "Deficiency of enzyme Xanthine oxidase",
+        "C": "Increase in serum urate concentration",
+        "D": "Renal disease involving interstitial tissues"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2019-s1-q0080",
+      "year": 2019,
+      "shift": 1,
+      "question": "Mechanism of action of Oseltamivir?",
+      "options": {
+        "A": "Protein synthesis inhibitor",
+        "B": "Thymidylate synthetase inhibitor",
+        "C": "Neuraminidase inhibitor",
+        "D": "Pyrimidine analogs."
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2019-s1-q0136",
+      "year": 2019,
+      "shift": 1,
+      "question": "2 year old boy of weight 12 kg with vitamin A deficiency what is oral dose of vitamin A",
+      "options": {
+        "A": "50, 000 I.U",
+        "B": "1 lakh I.U.",
+        "C": "1.5 lakh I.U",
+        "D": "2 lakh I.U"
+      },
+      "current_subject": "Paediatrics",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Paediatrics"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2020-s1-q0206",
+      "year": 2020,
+      "shift": 1,
+      "question": "A woman developed pain and crawling sensation on her legs at night. Clinical history of restless leg syndrome. Drug of choice?.",
+      "options": {
+        "A": "Pramipexole",
+        "B": "Gabapentin",
+        "C": "Vitamin B12",
+        "D": "Iron tablets"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2022-s1-q0012",
+      "year": 2022,
+      "shift": 1,
+      "question": "A female patient presents to you with unilateral headache. It is associated with nausea, photophobia, and phonophobia. What is the drug of choice for acute management?",
+      "options": {
+        "A": "Flunarizine",
+        "B": "Sumatriptan",
+        "C": "Propranolol",
+        "D": "Topiramate"
+      },
+      "current_subject": "Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2022-s1-q0126",
+      "year": 2022,
+      "shift": 1,
+      "question": "A 10-month old infant was brought with complaints of jerking movement of limbs towards the body. On examination, there is regression of developmental milestones. Electroencephalogram shows hypsarrhythmia. Which of the following is the drug of choice in this condition ?",
+      "options": {
+        "A": "Phenytoin",
+        "B": "Adrenocorticotropic hormone",
+        "C": "Levetiracetam",
+        "D": "Phenobarbitone"
+      },
+      "current_subject": "Paediatrics",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Paediatrics"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2023-s1-q0011",
+      "year": 2023,
+      "shift": 1,
+      "question": "A man presents with a history of dysuria and urethral discharge after having unprotected sexual intercourse. Gram-staining of the purulent discharge is seen in the following image. What is the treatment of choice for this infection?",
+      "options": {
+        "A": "Erythromycin",
+        "B": "Azithromycin",
+        "C": "Ceftriaxone",
+        "D": "Penicillin G"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Microbiology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2023-s1-q0054",
+      "year": 2023,
+      "shift": 1,
+      "question": "Which of the following is the drug of choice fkor preoperative antibiotic prophylaxis in patient undergoing cardiac surgery?",
+      "options": {
+        "A": "Penicillin G",
+        "B": "Erythromycin",
+        "C": "Azithromycin",
+        "D": "Cefazolin"
+      },
+      "current_subject": "Anaesthesia",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Anaesthesia"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2024-s1-q0078",
+      "year": 2024,
+      "shift": 1,
+      "question": "A person comes to emergency after consumption of substance, the form & dose of which is not known to relatives. The patient shows tachypnea, hypotension. On metabolic assessment high anion gap acidosis is noted with hypocalcemia. Diagnosis",
+      "options": {
+        "A": "Methyl alcohol",
+        "B": "Ethylene glycol",
+        "C": "Dhatura",
+        "D": "Ethyl alcohol"
+      },
+      "current_subject": "Forensic Medicine",
+      "confidence": 65,
+      "review_reason": "Ambiguous — Drug/Treatment",
+      "review_explanation": "Drug of choice / treatment of choice questions can belong to Pharmacology (if testing the drug mechanism) or the disease subject (if testing clinical management). Context determines the correct subject.",
+      "suggested_subjects": [
+        "Pharmacology",
+        "Forensic Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0430",
+      "year": 2012,
+      "shift": 1,
+      "question": "True statement about inheritence of an X linked recessive trait is -",
+      "options": {
+        "A": "50% of boys of carrier mother are affected",
+        "B": "50% of girls of diseased father are carrier",
+        "C": "Father transmits disease to the son",
+        "D": "Mother transmits the disease to the daughter"
+      },
+      "current_subject": "Community Medicine",
+      "confidence": 15,
+      "review_reason": "Likely Wrong Subject",
+      "review_explanation": "Genetics/inheritance questions were incorrectly placed in Community Medicine by the classifier.",
+      "suggested_subjects": [
+        "Paediatrics",
+        "Pathology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0433",
+      "year": 2012,
+      "shift": 1,
+      "question": "Male to male transmission is seen in -",
+      "options": {
+        "A": "Autosomal dominant diseases",
+        "B": "Autosomal recessive",
+        "C": "X-linked dominant",
+        "D": "M itochondrial disease"
+      },
+      "current_subject": "Community Medicine",
+      "confidence": 15,
+      "review_reason": "Likely Wrong Subject",
+      "review_explanation": "Genetics/inheritance questions were incorrectly placed in Community Medicine by the classifier.",
+      "suggested_subjects": [
+        "Paediatrics",
+        "Pathology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0434",
+      "year": 2012,
+      "shift": 1,
+      "question": "Female is affected, male is not. Disease is autosomal dominant, what is the chance in children?",
+      "options": {
+        "A": "50% affected",
+        "B": "25% affected",
+        "C": "75% affected",
+        "D": "All affected"
+      },
+      "current_subject": "Community Medicine",
+      "confidence": 15,
+      "review_reason": "Likely Wrong Subject",
+      "review_explanation": "Genetics/inheritance questions were incorrectly placed in Community Medicine by the classifier.",
+      "suggested_subjects": [
+        "Paediatrics",
+        "Pathology",
+        "Biochemistry"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0445",
+      "year": 2012,
+      "shift": 1,
+      "question": "All is true about Giant cell arteritis except ?",
+      "options": {
+        "A": "Involves large to small sized areteries",
+        "B": "Granulomatous inflammation",
+        "C": "Most commonly involved artery is abdominal aorta",
+        "D": "Segmental nature of the involvement"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0472",
+      "year": 2012,
+      "shift": 1,
+      "question": "Helmet cells are characteristic of anemia of?",
+      "options": {
+        "A": "Hemolytic uremic syndrome",
+        "B": "Polysplenia",
+        "C": "Spherocytosis",
+        "D": "Acanthocytosis"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0678",
+      "year": 2012,
+      "shift": 1,
+      "question": "True about chlamydia are all except:",
+      "options": {
+        "A": "Obligate intracellular organism",
+        "B": "Gram positive",
+        "C": "Reticulate body is metabolically active",
+        "D": "Replicate by binary fission"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0742",
+      "year": 2012,
+      "shift": 1,
+      "question": "Idiotypic class of antibody is determined by -",
+      "options": {
+        "A": "Fc region",
+        "B": "Hinge region",
+        "C": "Carboxy end",
+        "D": "Amino end"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0749",
+      "year": 2012,
+      "shift": 1,
+      "question": "Center of complement pathway -",
+      "options": {
+        "A": "C3",
+        "B": "CI",
+        "C": "C5",
+        "D": "C2"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0757",
+      "year": 2012,
+      "shift": 1,
+      "question": "Superantigen causes -",
+      "options": {
+        "A": "Polyclonal activation of T-cells",
+        "B": "Stimulation of B cells",
+        "C": "Enhancement of phagocytosis",
+        "D": "Activation of complement"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0760",
+      "year": 2012,
+      "shift": 1,
+      "question": "Antibody elevated in parasitic infection ?",
+      "options": {
+        "A": "IgA",
+        "B": "IgE",
+        "C": "IgG",
+        "D": "IgM"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0762",
+      "year": 2012,
+      "shift": 1,
+      "question": "True about interferon is:",
+      "options": {
+        "A": "It is a synthetic antiviral agent",
+        "B": "Inhibits viral replication in cells",
+        "C": "Is specific for particular virus",
+        "D": "None"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q1018",
+      "year": 2012,
+      "shift": 1,
+      "question": "Antibody used in the treatment of Bronchial Asthma is:",
+      "options": {
+        "A": "Omalizumab",
+        "B": "Rituximab",
+        "C": "Daclizumab",
+        "D": "Transtusuzumab"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q1062",
+      "year": 2012,
+      "shift": 1,
+      "question": "The immunoglobulin most commonly involved in Multiple Myeloma is :",
+      "options": {
+        "A": "IgG",
+        "B": "IgM",
+        "C": "IgA",
+        "D": "IgD"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q1077",
+      "year": 2012,
+      "shift": 1,
+      "question": "Antibodies most commonly seen in drug induced lupus are:",
+      "options": {
+        "A": "Anti ds DNA Antibodies",
+        "B": "Anti Sm Antibodies",
+        "C": "Anti-Ro Antibodies",
+        "D": "Antihistone Antibodies"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0408",
+      "year": 2013,
+      "shift": 1,
+      "question": "Macrophages are converted to epitheloid cells by which cytokine ?",
+      "options": {
+        "A": "IL-2",
+        "B": "IFN-y",
+        "C": "TNF-a",
+        "D": "TGF-(3"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0410",
+      "year": 2013,
+      "shift": 1,
+      "question": "Cytokine causing fever -",
+      "options": {
+        "A": "IL-6",
+        "B": "IFN-y",
+        "C": "IL-18",
+        "D": "IL-4"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0413",
+      "year": 2013,
+      "shift": 1,
+      "question": "The professional antigen presenting cells ?",
+      "options": {
+        "A": "B cells",
+        "B": "Dendritic cells",
+        "C": "T cells",
+        "D": "NK cells"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0414",
+      "year": 2013,
+      "shift": 1,
+      "question": "Which cytokine activate macrophages ?",
+      "options": {
+        "A": "IL-8",
+        "B": "IFN-y",
+        "C": "PAF",
+        "D": "Leukotriene B4"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0416",
+      "year": 2013,
+      "shift": 1,
+      "question": "HLA is located on ?",
+      "options": {
+        "A": "Short arm of chr-6",
+        "B": "Long arm of chr-6",
+        "C": "Short arm of chr-3",
+        "D": "Long arm of chr-3"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0417",
+      "year": 2013,
+      "shift": 1,
+      "question": "Drug induced lupus antibodies are found in ?",
+      "options": {
+        "A": "Anti-Rho",
+        "B": "Ds-DNA",
+        "C": "Anti-Sm",
+        "D": "Anti-histone antibody"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0418",
+      "year": 2013,
+      "shift": 1,
+      "question": "Which antibodies in mother with SLE is responsible for congenital heart disease in child?",
+      "options": {
+        "A": "Anti-histone",
+        "B": "Anti-Ro & Anti-LA",
+        "C": "Anti ds DNA",
+        "D": "Anti-centromere"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0453",
+      "year": 2013,
+      "shift": 1,
+      "question": "Pseudo-Pelger-Huet cells or seen in",
+      "options": {
+        "A": "Hairy cell leukemia",
+        "B": "Multiple myeloma",
+        "C": "Mylodysplastic syndrome",
+        "D": "Hodgkin's lymphoma"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0461",
+      "year": 2013,
+      "shift": 1,
+      "question": "Donath landsteiner antibody is seen in?",
+      "options": {
+        "A": "PNH",
+        "B": "Waldenstrom's macroglobulinemia",
+        "C": "Paroxysmal cold hemoglobinuri",
+        "D": "Malaria"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0738",
+      "year": 2013,
+      "shift": 1,
+      "question": "Patient came from Nagaland and shows positive test with OXK antigen. Diagnosis is?",
+      "options": {
+        "A": "Trench fever",
+        "B": "Scrub typhus",
+        "C": "Endemic typhus",
+        "D": "Epidemic typhus"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0807",
+      "year": 2013,
+      "shift": 1,
+      "question": "Numbers of variable regions on each light and heavy chain of an antibody ?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0808",
+      "year": 2013,
+      "shift": 1,
+      "question": "Immunoglobulin changes in variable region ?",
+      "options": {
+        "A": "ldiotype",
+        "B": "Isotype",
+        "C": "A llotype",
+        "D": "Epitope"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0810",
+      "year": 2013,
+      "shift": 1,
+      "question": "Heat labile immunoglobulin",
+      "options": {
+        "A": "IgA",
+        "B": "IgG",
+        "C": "IgE",
+        "D": "IgM"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0811",
+      "year": 2013,
+      "shift": 1,
+      "question": "Major immunoglobulin secreted by intestine ?",
+      "options": {
+        "A": "IgG",
+        "B": "IgM",
+        "C": "IgA",
+        "D": "IgD"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0813",
+      "year": 2013,
+      "shift": 1,
+      "question": "T cells in lymph node are present in:",
+      "options": {
+        "A": "Paracortical area",
+        "B": "Mantle layer",
+        "C": "Medullary cords",
+        "D": "Cortical follicles"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0816",
+      "year": 2013,
+      "shift": 1,
+      "question": "Complement attaches to immunoglobulin at ?",
+      "options": {
+        "A": "Aminoterminal",
+        "B": "Fab region",
+        "C": "Variable region",
+        "D": "Fc fragment"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0817",
+      "year": 2013,
+      "shift": 1,
+      "question": "The Fc piece of which immunoglobulin fixes C1",
+      "options": {
+        "A": "IgA",
+        "B": "IgG",
+        "C": "IgM",
+        "D": "c and b"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0819",
+      "year": 2013,
+      "shift": 1,
+      "question": "All are true regarding interleukin-1 except ?",
+      "options": {
+        "A": "Primary source is monocyte-macrophage system",
+        "B": "Endogenous pyrogens",
+        "C": "Inhibit IL-2 production by T-cells",
+        "D": "All are true"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0820",
+      "year": 2013,
+      "shift": 1,
+      "question": "Which of the following is superantigen ?",
+      "options": {
+        "A": "Cholera toxin",
+        "B": "Diphtheria toxin",
+        "C": "TSST",
+        "D": "Vero-cytoxin"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0825",
+      "year": 2013,
+      "shift": 1,
+      "question": "ABO isoantibodies are of which class",
+      "options": {
+        "A": "IgG",
+        "B": "IgM",
+        "C": "IgD",
+        "D": "IgA"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0835",
+      "year": 2013,
+      "shift": 1,
+      "question": "Bacteria showing antigenic variation ?",
+      "options": {
+        "A": "Yersinia",
+        "B": "Bordetella",
+        "C": "Brucella",
+        "D": "Borrelia"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1484",
+      "year": 2013,
+      "shift": 1,
+      "question": "Baby borne to patient suspected of chlamydial infection sample to be taken for diagnosis -",
+      "options": {
+        "A": "Conjunctival",
+        "B": "Urethral",
+        "C": "Urine sample",
+        "D": "Blood"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0232",
+      "year": 2014,
+      "shift": 1,
+      "question": "Gene for Rh antigen is located on chromosome ?",
+      "options": {
+        "A": "1",
+        "B": "4",
+        "C": "9",
+        "D": "19"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0259",
+      "year": 2014,
+      "shift": 1,
+      "question": "Carbohydrate in ABO blood group antigens is ?",
+      "options": {
+        "A": "Glucose",
+        "B": "Fructose",
+        "C": "Inulin",
+        "D": "Maltose"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0377",
+      "year": 2014,
+      "shift": 1,
+      "question": "Necrosis with cell bodies retained as ghost cells is ?",
+      "options": {
+        "A": "Coagulative necrosis",
+        "B": "Liquefactive",
+        "C": "Caseous",
+        "D": "None"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0389",
+      "year": 2014,
+      "shift": 1,
+      "question": "In tuberculosis the cytokine causing fever is",
+      "options": {
+        "A": "ILI",
+        "B": "IL2",
+        "C": "IL3",
+        "D": "IL4"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0392",
+      "year": 2014,
+      "shift": 1,
+      "question": "Mantoux test is based on which hypersensitivity?",
+      "options": {
+        "A": "Type 1",
+        "B": "Type 2",
+        "C": "Type 3",
+        "D": "Type 4"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0393",
+      "year": 2014,
+      "shift": 1,
+      "question": "Atopy in hypersensitivity is ?",
+      "options": {
+        "A": "Systemic type I hypersensitivity",
+        "B": "Local type I hypersensitivity",
+        "C": "Systemic type II hypersensitivity",
+        "D": "Local type II hypersensitivity"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0395",
+      "year": 2014,
+      "shift": 1,
+      "question": "HLA associated with rheumatoid arthritis is ?",
+      "options": {
+        "A": "HLA B27",
+        "B": "HLA DR 4",
+        "C": "HLABI9",
+        "D": "HLA DR2"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0396",
+      "year": 2014,
+      "shift": 1,
+      "question": "Which of the following interleukin is secreted by T helper 2 cells?",
+      "options": {
+        "A": "IL 11",
+        "B": "IL 7",
+        "C": "IL 1",
+        "D": "IL 13"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0397",
+      "year": 2014,
+      "shift": 1,
+      "question": "Interleukin 2 is produced by",
+      "options": {
+        "A": "T helper cells 1",
+        "B": "T helper cells 2",
+        "C": "Natural killer cells",
+        "D": "Basophils"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0398",
+      "year": 2014,
+      "shift": 1,
+      "question": "Non professional antigen presenting cell is A/E ?",
+      "options": {
+        "A": "Endothelial cell",
+        "B": "Epidermal cell",
+        "C": "Fibroblasts",
+        "D": "Red blood cells"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0400",
+      "year": 2014,
+      "shift": 1,
+      "question": "NK cell shows presence of ?",
+      "options": {
+        "A": "CD 44",
+        "B": "CD 16",
+        "C": "CD 54",
+        "D": "CD 32"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0407",
+      "year": 2014,
+      "shift": 1,
+      "question": "Complement CI synthesized from -",
+      "options": {
+        "A": "Liver",
+        "B": "Macrophage",
+        "C": "Intestinal epithelium",
+        "D": "Endothelium"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0410",
+      "year": 2014,
+      "shift": 1,
+      "question": "HLA B51 is associated with ?",
+      "options": {
+        "A": "Behcet's disease",
+        "B": "Chrug strauss syndrome",
+        "C": "Microscopic polyangitis",
+        "D": "Polyarteritis nodosa"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0432",
+      "year": 2014,
+      "shift": 1,
+      "question": "Carcinoembryonic antigen is raised in which of the following non neoplastic conditions -",
+      "options": {
+        "A": "Hepatitis",
+        "B": "Pancreatitis",
+        "C": "Hemolytic anemia",
+        "D": "Ulcerative colitis"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0730",
+      "year": 2014,
+      "shift": 1,
+      "question": "In pontaic fever, which antigen is seen in urine?",
+      "options": {
+        "A": "Lipopolysaccharide-1",
+        "B": "Lipopolysaccharide-2",
+        "C": "Lipopolysaccharide-4",
+        "D": "Lipopolysaccharide-6"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0764",
+      "year": 2014,
+      "shift": 1,
+      "question": "How does chlamydia differ from other usual bacteria?",
+      "options": {
+        "A": "Lack cell wall",
+        "B": "Cannot grow in cell free culture media",
+        "C": "Contains inclusion body",
+        "D": "None of the above"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0775",
+      "year": 2014,
+      "shift": 1,
+      "question": "Weil felix reaction is heterophile antibodies reaction due sharing of Rickettsial antigen with",
+      "options": {
+        "A": "Shigella",
+        "B": "Proteus",
+        "C": "Chlamydia",
+        "D": "Mycoplasma"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0811",
+      "year": 2014,
+      "shift": 1,
+      "question": "E antigen (HBeAg) of hepatitis B virus is a product of which gene",
+      "options": {
+        "A": "S",
+        "B": "C",
+        "C": "p",
+        "D": "x"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0816",
+      "year": 2014,
+      "shift": 1,
+      "question": "A 17 years old female presents with sore throat, lymphadenopathy and positive heterophile antibodies test. Diagnosis is ?",
+      "options": {
+        "A": "Tuberculosis",
+        "B": "Streptococcal pharyngitis",
+        "C": "Infectious mononucleosis",
+        "D": "Cytomegalic inclusion disease"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0879",
+      "year": 2014,
+      "shift": 1,
+      "question": "Which of the following is an example of heterophile antibody test ?",
+      "options": {
+        "A": "Widal test",
+        "B": "Weil-Felix reaction",
+        "C": "Rose-waler test",
+        "D": "Blood grouping & cross matching"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q1257",
+      "year": 2014,
+      "shift": 1,
+      "question": "Type 5 Hypersensitivity mimics",
+      "options": {
+        "A": "Type 1",
+        "B": "Type 2",
+        "C": "Type 3",
+        "D": "Type 4"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q1307",
+      "year": 2014,
+      "shift": 1,
+      "question": "Woman of 30-years with Raynaud's phenomenon, polyarthritis, dysphagia of 5-years and mild Sclerodactyl, blood showing Anti-centromere antibody positive, the likely cause is",
+      "options": {
+        "A": "CREST",
+        "B": "Mixed connective tissue disorder",
+        "C": "SLE",
+        "D": "Rheumatoid arthritis"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q1340",
+      "year": 2014,
+      "shift": 1,
+      "question": "Interferon gamma release assay measures IFN release against which M. TB antigen",
+      "options": {
+        "A": "ESAT-6",
+        "B": "E SAT-7",
+        "C": "CF-11",
+        "D": "CF-12"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q1678",
+      "year": 2014,
+      "shift": 1,
+      "question": "Antiendomysial antibody is used in screening of ?",
+      "options": {
+        "A": "Myasthenia gravis",
+        "B": "Auto immune hepatitis",
+        "C": "Coeliac diseases",
+        "D": "Graves disease"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0401",
+      "year": 2015,
+      "shift": 1,
+      "question": "Which of the following is derived from fibroblast cells ?",
+      "options": {
+        "A": "TGF-13",
+        "B": "MMP2",
+        "C": "Collagen",
+        "D": "Angiopoietin"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0413",
+      "year": 2015,
+      "shift": 1,
+      "question": "MHC-2 is present in all except",
+      "options": {
+        "A": "Cortical macrophages",
+        "B": "Medullary m acrophages",
+        "C": "Cortical epithelial cells",
+        "D": "Medullary epithelial cells"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0414",
+      "year": 2015,
+      "shift": 1,
+      "question": "B cells are located in which region of lymph nodes",
+      "options": {
+        "A": "Paracortical region",
+        "B": "Cortical follicles",
+        "C": "Medullar sinuses",
+        "D": "Subcapsular region"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0451",
+      "year": 2015,
+      "shift": 1,
+      "question": "Warm antibody in AIHA is -",
+      "options": {
+        "A": "IgE",
+        "B": "IgM",
+        "C": "IgG",
+        "D": "IgD"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0702",
+      "year": 2015,
+      "shift": 1,
+      "question": "Tennis racket cells is seen in -",
+      "options": {
+        "A": "Sarcoma botyroides",
+        "B": "Vaginal adenocarcinoma",
+        "C": "Leiomyoma uterus",
+        "D": "Seminoma"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0723",
+      "year": 2015,
+      "shift": 1,
+      "question": "Which streptodornase is most antigenic in human beings:",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0741",
+      "year": 2015,
+      "shift": 1,
+      "question": "Absence of Vi-antibody in typhoid patient has:",
+      "options": {
+        "A": "Good prognosis",
+        "B": "Bad prognosis",
+        "C": "No relation with prognosis",
+        "D": "Indicates widal negative"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0742",
+      "year": 2015,
+      "shift": 1,
+      "question": "Clinical significance of Vi antigen of S. typhi is:",
+      "options": {
+        "A": "Helps in diagnosis",
+        "B": "Highly immunogenic",
+        "C": "Most important antigen for widal test",
+        "D": "Antibody against Vi-antigen is used for diagnosis of carrier"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0762",
+      "year": 2015,
+      "shift": 1,
+      "question": "Integration of viral genome into host cell chromosome can leads to -",
+      "options": {
+        "A": "Malignancy",
+        "B": "Latency",
+        "C": "Altered growth",
+        "D": "All of the above"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0778",
+      "year": 2015,
+      "shift": 1,
+      "question": "Complement Fixation test is: September 2005",
+      "options": {
+        "A": "VIDAL",
+        "B": "Coombs test",
+        "C": "Wassermann reaction",
+        "D": "VDRL"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0780",
+      "year": 2015,
+      "shift": 1,
+      "question": "Which of the following complement factors is marker of humoral rejection?",
+      "options": {
+        "A": "C3d",
+        "B": "C3b",
+        "C": "C4d",
+        "D": "C5a"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0791",
+      "year": 2015,
+      "shift": 1,
+      "question": "Complement deficiency has not been implicated in causing ?",
+      "options": {
+        "A": "SLE",
+        "B": "PNH",
+        "C": "Hereditary angiodema",
+        "D": "Membranous nephritis"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0794",
+      "year": 2015,
+      "shift": 1,
+      "question": "Monoclonal antibody binds to ?",
+      "options": {
+        "A": "Epitope",
+        "B": "Paratope",
+        "C": "Both epitope and paratope",
+        "D": "None of the above"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1185",
+      "year": 2015,
+      "shift": 1,
+      "question": "Which of the following antibodies is highly specific for systemic lupus erythematosus -",
+      "options": {
+        "A": "Anti-Sm",
+        "B": "Anti-RO-1",
+        "C": "Anti-UIRNP",
+        "D": "Anti-Centromere"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1201",
+      "year": 2015,
+      "shift": 1,
+      "question": "In which of causes of oral ulcer, Auto- antibodies are not seen?",
+      "options": {
+        "A": "Behcet disease",
+        "B": "SLE",
+        "C": "Pemphigus",
+        "D": "Celiac disease"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1387",
+      "year": 2015,
+      "shift": 1,
+      "question": "Most common antigen involved in erythroblastosis fetalis is",
+      "options": {
+        "A": "C antigen in Rh group",
+        "B": "D antigen in Rh group",
+        "C": "E antigen in Rh group",
+        "D": "Duffy antigen"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q1585",
+      "year": 2015,
+      "shift": 1,
+      "question": "After hepatitis B vaccination child with allergic family history and pruritis involving face & convexities developed numerous umblicated vesicles; which became pustular & haemorhagic & crusted. After 2 days child developed high fever and lymphadenopathy. The diagnosis is",
+      "options": {
+        "A": "Secondary infected atopic dermatitis",
+        "B": "Molluscum contagiosum",
+        "C": "Eczema herpaticum",
+        "D": "Eczema vaccinatum"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0378",
+      "year": 2016,
+      "shift": 1,
+      "question": "Complement mediated hypersensitivity reaction is?",
+      "options": {
+        "A": "Type -1 hypersensitivity",
+        "B": "Type -2 hypersensitivity",
+        "C": "Type -4 hypersensitivity",
+        "D": "None"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0380",
+      "year": 2016,
+      "shift": 1,
+      "question": "Type 4 hypersensitivity reaction to TB antigen is similar to which of the following?",
+      "options": {
+        "A": "Serum sickness",
+        "B": "Asthma",
+        "C": "Myasthenia gravis",
+        "D": "Temporal arteritis"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0382",
+      "year": 2016,
+      "shift": 1,
+      "question": "True about MHC-class II -",
+      "options": {
+        "A": "Not involved in innate immunity",
+        "B": "Cytotoxic T-cell involved",
+        "C": "Present in nucleated cells",
+        "D": "All"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0383",
+      "year": 2016,
+      "shift": 1,
+      "question": "MHC1 is involved in?",
+      "options": {
+        "A": "Tumor lysis",
+        "B": "Mixed leukocyte reaction",
+        "C": "Autoimmune disease susceptibility",
+        "D": "All of the above"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0384",
+      "year": 2016,
+      "shift": 1,
+      "question": "CD4 is associated with HLA?",
+      "options": {
+        "A": "HLA 1",
+        "B": "HLA 2",
+        "C": "HLA 3",
+        "D": "All of the above"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0386",
+      "year": 2016,
+      "shift": 1,
+      "question": "Which of the following interleukin is secreted by T helper 2 cells?",
+      "options": {
+        "A": "IL 11",
+        "B": "IL 7",
+        "C": "IL 1",
+        "D": "IL 13"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0391",
+      "year": 2016,
+      "shift": 1,
+      "question": "More than 90% patients of CREST syndrome with the limited cutaneous form of this disorder make which of the following autoantibodies?",
+      "options": {
+        "A": "Anti-centromere",
+        "B": "Anti-DNA topoisomerase l",
+        "C": "Anti-double-stranded DNA",
+        "D": "Anti-Golgi"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0392",
+      "year": 2016,
+      "shift": 1,
+      "question": "Anti Jo-1 antibodies are feature associated with?",
+      "options": {
+        "A": "SLE",
+        "B": "Systemic sclerosis",
+        "C": "Polymyositis",
+        "D": "Rheumatoid arthritis"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0393",
+      "year": 2016,
+      "shift": 1,
+      "question": "HLA marker associated with diabetes mellitus type 1 is -",
+      "options": {
+        "A": "B 7",
+        "B": "DR 4",
+        "C": "DQ 3",
+        "D": "DQ 4"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0449",
+      "year": 2016,
+      "shift": 1,
+      "question": "In allergic bronchopulmonary aspergillosis, the location of lesions is",
+      "options": {
+        "A": "Pleura",
+        "B": "Bronchi and bronchioles",
+        "C": "Alveoli",
+        "D": "All of the above"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0467",
+      "year": 2016,
+      "shift": 1,
+      "question": "Autoimmune gastritis is associated with deficiency of vitamin?",
+      "options": {
+        "A": "A",
+        "B": "B12",
+        "C": "C",
+        "D": "D"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0713",
+      "year": 2016,
+      "shift": 1,
+      "question": "How does chlamydia differ from other usual bacteria?",
+      "options": {
+        "A": "Lack cell wall",
+        "B": "Cannot grow in cell free culture media",
+        "C": "Contains inclusion body",
+        "D": "None of the above"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0714",
+      "year": 2016,
+      "shift": 1,
+      "question": "Similarity between chlamydia and virus is",
+      "options": {
+        "A": "Filterable through filter",
+        "B": "Ability to grow in cell free media",
+        "C": "Contains both DNA and RNA",
+        "D": "All of the above"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0719",
+      "year": 2016,
+      "shift": 1,
+      "question": "ELISA test for virulence antigen is used for which type of E coli",
+      "options": {
+        "A": "ETEC",
+        "B": "EIEC",
+        "C": "EHEC",
+        "D": "EAEC"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0748",
+      "year": 2016,
+      "shift": 1,
+      "question": "Core antigen [HBO in HBV is encloded by which gene ?",
+      "options": {
+        "A": "S",
+        "B": "C",
+        "C": "P",
+        "D": "X"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0766",
+      "year": 2016,
+      "shift": 1,
+      "question": "Chlamydospore is formed by ?",
+      "options": {
+        "A": "Candida albicans",
+        "B": "Candida pscitasi",
+        "C": "Histoplasma",
+        "D": "Cryptococcus"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0773",
+      "year": 2016,
+      "shift": 1,
+      "question": "Antibody specificity is due to ?",
+      "options": {
+        "A": "Amino acid sequence at H chain",
+        "B": "Amino acid sequence at L chain",
+        "C": "Amino acid at carboxy terminal",
+        "D": "Amino acid sequence at the amino terminal"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0774",
+      "year": 2016,
+      "shift": 1,
+      "question": "Antibody diversity is due to -",
+      "options": {
+        "A": "Gene rearrangement",
+        "B": "Gene translocation",
+        "C": "Antigenic variation",
+        "D": "a and c"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0776",
+      "year": 2016,
+      "shift": 1,
+      "question": "Most effective antibody for precipitation ?",
+      "options": {
+        "A": "IgM",
+        "B": "IgG",
+        "C": "IgA",
+        "D": "IgD"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q0777",
+      "year": 2016,
+      "shift": 1,
+      "question": "Complement Fixation test is: September 2005",
+      "options": {
+        "A": "VIDAL",
+        "B": "Coombs test",
+        "C": "Wassermann reaction",
+        "D": "VDRL"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1089",
+      "year": 2016,
+      "shift": 1,
+      "question": "Patient with nephrotic syndrome has decreased amount of which antibody",
+      "options": {
+        "A": "IgG",
+        "B": "IgE",
+        "C": "IgM",
+        "D": "IgA"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2016-s1-q1101",
+      "year": 2016,
+      "shift": 1,
+      "question": "Specific antibody associated with primary biliary cirrhosis is:",
+      "options": {
+        "A": "Anti-myosin",
+        "B": "Anti-nuclear",
+        "C": "Anti-mitochondrial",
+        "D": "Anti-endomysial"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2017-s1-q0067",
+      "year": 2017,
+      "shift": 1,
+      "question": "Australian antigen for hepatitis b is?",
+      "options": {
+        "A": "Hb S ag",
+        "B": "Hb E ag",
+        "C": "Hb D ag",
+        "D": "HbV Dna"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2018-s1-q0092",
+      "year": 2018,
+      "shift": 1,
+      "question": "Australian antigen for hepatitis b is?",
+      "options": {
+        "A": "Hb S ag",
+        "B": "Hb E ag",
+        "C": "Hb D ag",
+        "D": "HbV Dna"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2018-s1-q0132",
+      "year": 2018,
+      "shift": 1,
+      "question": "Not seen in allergic pulmonary aspergillosis is",
+      "options": {
+        "A": "High IgE level",
+        "B": "Recurrent pneumonia",
+        "C": "Occurrence in patients with old cavitary lesions",
+        "D": "Pleural effusion"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2020-s1-q0039",
+      "year": 2020,
+      "shift": 1,
+      "question": "A 30-year-old male came with complaints of swelling around the knee joint. Histopathological examination of the swelling demonstrated many giant cells interspersed with mononuclear cells. What is the probable diagnosis",
+      "options": {
+        "A": "Osteosarcoma",
+        "B": "Ewing's sarcoma",
+        "C": "Giant cell tumour",
+        "D": "Chondrosarcoma"
+      },
+      "current_subject": "Pathology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2020-s1-q0046",
+      "year": 2020,
+      "shift": 1,
+      "question": "A 33-year-old man presents with 5-week history of calf pain, swelling, and low- grade fever. Serum levels of creatinine kinase are elevated. A muscle biopsy reveals numerous eosinophils also she had peripheral blood eosinophilia. Which of the following interleukins is primarily responsible for the increase in eosinophils in this patient?",
+      "options": {
+        "A": "IL 2",
+        "B": "IL 4",
+        "C": "IL 1",
+        "D": "IL6"
+      },
+      "current_subject": "Anatomy",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2020-s1-q0081",
+      "year": 2020,
+      "shift": 1,
+      "question": "All of the following is/are having superantigen Property Except",
+      "options": {
+        "A": "Vibrio cholera",
+        "B": "Streptococcal pyrogenic",
+        "C": "Staphylococcal enterotoxins",
+        "D": "None of these"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2020-s1-q0093",
+      "year": 2020,
+      "shift": 1,
+      "question": "Which of the following cell components produced by Neisseria gonorrhoeae is responsible for attachment to host cells?",
+      "options": {
+        "A": "Lipooligosaccharide",
+        "B": "Pili (fimbriae)",
+        "C": "IgA1 protease",
+        "D": "Outer membrane porin protein"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2020-s1-q0263",
+      "year": 2020,
+      "shift": 1,
+      "question": "Immunoglobulin Image shown below is of-",
+      "options": {
+        "A": "IgA",
+        "B": "IgG",
+        "C": "IgM",
+        "D": "IgE"
+      },
+      "current_subject": "Biochemistry",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2022-s1-q0114",
+      "year": 2022,
+      "shift": 1,
+      "question": "A patient presents to you with fever, jaundice, and malaise. What is the most likely diagnosis based on the serology reports given below? Anti-HBc (IgM): Positive HBsAg: Positive Anti-HBs: Negative Anti-HCV antibodies: Negative",
+      "options": {
+        "A": "Acute hepatitis B",
+        "B": "Acute hepatitis C",
+        "C": "Chronic hepatitis B",
+        "D": "Chronic hepatitis C"
+      },
+      "current_subject": "Medicine",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2023-s1-q0009",
+      "year": 2023,
+      "shift": 1,
+      "question": "A boy presented with a fever and chills. Rapid test was positive for specific antigen HRP-2. Which of the following species of Plasmodium is the most likely causative agent?",
+      "options": {
+        "A": "Plasmodium falciparum",
+        "B": "Plasmodium malariae",
+        "C": "Plasmodium vivax",
+        "D": "Plasmodium ovale"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2023-s1-q0174",
+      "year": 2023,
+      "shift": 1,
+      "question": "In a patient presented with fever and positive filarial antigen test, what is the next appropriate method of management?",
+      "options": {
+        "A": "Bone marrow biopsy",
+        "B": "DEC provocation test",
+        "C": "Detection of microfilariae in the blood smear",
+        "D": "Ultrasound of the scrotum"
+      },
+      "current_subject": "Microbiology",
+      "confidence": 55,
+      "review_reason": "Ambiguous — Immunology",
+      "review_explanation": "Immunology topics (complement, antibodies, cytokines, HLA) are asked across Microbiology, Pathology, and Medicine in different NEET PG papers. The correct subject depends on which department set the question.",
+      "suggested_subjects": [
+        "Microbiology",
+        "Pathology",
+        "Medicine"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0166",
+      "year": 2012,
+      "shift": 1,
+      "question": "A man slept with head over forearm, next morning he complains of tingling, numbness over forearm. It is caused by ?",
+      "options": {
+        "A": "Sensitivity to hypoxia is A>B>C",
+        "B": "Sensitivity to pressure is A>B>C",
+        "C": "Sensitivity to hypoxia is C>B>A",
+        "D": "Sensitivity to pressure is B>A>C"
+      },
+      "current_subject": "Community Medicine",
+      "confidence": 15,
+      "review_reason": "Likely Wrong Subject",
+      "review_explanation": "Clinical neurology/anatomy questions were incorrectly placed in Community Medicine by the classifier.",
+      "suggested_subjects": [
+        "Anatomy",
+        "Medicine",
+        "Pharmacology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0595",
+      "year": 2015,
+      "shift": 1,
+      "question": "Neuropathy with INH therapy is least in patients?",
+      "options": {
+        "A": "Having malnutrition",
+        "B": "Alcoholics",
+        "C": "Fast acetylators",
+        "D": "Vitamin B complex deficiency"
+      },
+      "current_subject": "Community Medicine",
+      "confidence": 15,
+      "review_reason": "Likely Wrong Subject",
+      "review_explanation": "Clinical neurology/anatomy questions were incorrectly placed in Community Medicine by the classifier.",
+      "suggested_subjects": [
+        "Anatomy",
+        "Medicine",
+        "Pharmacology"
+      ],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0751",
+      "year": 2012,
+      "shift": 1,
+      "question": "Which of the following T cell independent Antigen acts through -",
+      "options": {
+        "A": "T-cell",
+        "B": "B-cell",
+        "C": "Macrophages",
+        "D": "CD8+ T cells"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0753",
+      "year": 2012,
+      "shift": 1,
+      "question": "Which of the following immunoglobulin is responsible for opsonisation -",
+      "options": {
+        "A": "IgA",
+        "B": "Ig G",
+        "C": "Ig M",
+        "D": "none"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0754",
+      "year": 2012,
+      "shift": 1,
+      "question": "Opsonization takes place through -",
+      "options": {
+        "A": "C3a",
+        "B": "C3b",
+        "C": "C5a",
+        "D": "C5b"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0755",
+      "year": 2012,
+      "shift": 1,
+      "question": "Antigen idiotype is related to -",
+      "options": {
+        "A": "Fc fragment",
+        "B": "Hinge region",
+        "C": "C-terminal",
+        "D": "N-terminal"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0756",
+      "year": 2012,
+      "shift": 1,
+      "question": "Activation of classical complement pathway ?",
+      "options": {
+        "A": "IgA",
+        "B": "IgG",
+        "C": "IgM",
+        "D": "IgD"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0758",
+      "year": 2012,
+      "shift": 1,
+      "question": "Complement formed in liver -",
+      "options": {
+        "A": "C2, C4",
+        "B": "C3, C6, C9",
+        "C": "C5, C8",
+        "D": "C1"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2012-s1-q0759",
+      "year": 2012,
+      "shift": 1,
+      "question": "Gene components of HLA class I includes -",
+      "options": {
+        "A": "A, B, C",
+        "B": "DR",
+        "C": "DQ",
+        "D": "DP"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q0999",
+      "year": 2013,
+      "shift": 1,
+      "question": "True about central nystagmus ?",
+      "options": {
+        "A": "Changing direction",
+        "B": "Not suppressed by optic fixation",
+        "C": "Horizontal or vertical",
+        "D": "All of the above"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1201",
+      "year": 2013,
+      "shift": 1,
+      "question": "Down-beat nystagmus is seen in lesion of ?",
+      "options": {
+        "A": "Brainstem",
+        "B": "Cerebellum",
+        "C": "Basal ganglia",
+        "D": "Hippocampus"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2013-s1-q1202",
+      "year": 2013,
+      "shift": 1,
+      "question": "Down beat nystagmus is seen in?",
+      "options": {
+        "A": "Arnold chiari malformation",
+        "B": "Brain stem damage",
+        "C": "Pontine hemorrhage",
+        "D": "Labyrinthine damage"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0880",
+      "year": 2014,
+      "shift": 1,
+      "question": "Complement components are:",
+      "options": {
+        "A": "Lipids",
+        "B": "Proteins",
+        "C": "Lipoproteins",
+        "D": "Polysaccharide"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0881",
+      "year": 2014,
+      "shift": 1,
+      "question": "Complement components are ?",
+      "options": {
+        "A": "Lipoproteins",
+        "B": "Glycoproteins",
+        "C": "Polysaccharides",
+        "D": "Lipid"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0882",
+      "year": 2014,
+      "shift": 1,
+      "question": "C esterase inhibitor deficiency causes ? 1",
+      "options": {
+        "A": "Neisseria infection",
+        "B": "Hereditary angioneurotic edema",
+        "C": "Hemolytic disease",
+        "D": "Hemolytic uremic syndrome"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0883",
+      "year": 2014,
+      "shift": 1,
+      "question": "Membrane attack complex (MAC) in complement system is:",
+      "options": {
+        "A": "C3b",
+        "B": "C13",
+        "C": "C5_9",
+        "D": "C24"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0884",
+      "year": 2014,
+      "shift": 1,
+      "question": "Runt disease is ?",
+      "options": {
+        "A": "Graft rejection",
+        "B": "Graft vs host disease",
+        "C": "Host vs graft disease",
+        "D": "Type III hypersensitivity"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2014-s1-q0887",
+      "year": 2014,
+      "shift": 1,
+      "question": "IgE binds to which cell ?",
+      "options": {
+        "A": "T cells",
+        "B": "B cells",
+        "C": "Mast cells",
+        "D": "NK cells"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0405",
+      "year": 2015,
+      "shift": 1,
+      "question": "Interleukin 2 is produced by",
+      "options": {
+        "A": "T helper cells 1",
+        "B": "T helper cells 2",
+        "C": "Natural killer cells",
+        "D": "Basophils"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0407",
+      "year": 2015,
+      "shift": 1,
+      "question": "IFN-gamma is produced by",
+      "options": {
+        "A": "Neutrophills",
+        "B": "Macrophages",
+        "C": "T - cells",
+        "D": "B - cells"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0411",
+      "year": 2015,
+      "shift": 1,
+      "question": "Following injection of lymphokines, the same class of immunoglobulin are produced. This is to be referred as -",
+      "options": {
+        "A": "Group switching",
+        "B": "Clonal selection",
+        "C": "Hybridisation",
+        "D": "Class switching"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2015-s1-q0416",
+      "year": 2015,
+      "shift": 1,
+      "question": "Number of criteria for HLA matching are",
+      "options": {
+        "A": "10",
+        "B": "4",
+        "C": "16",
+        "D": "22"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2017-s1-q0042",
+      "year": 2017,
+      "shift": 1,
+      "question": "Opsonin is",
+      "options": {
+        "A": "C3a",
+        "B": "C3b",
+        "C": "C5a",
+        "D": "C6"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2018-s1-q0036",
+      "year": 2018,
+      "shift": 1,
+      "question": "Opsonin is",
+      "options": {
+        "A": "C3a",
+        "B": "C3b",
+        "C": "C5a",
+        "D": "C6"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2018-s1-q0276",
+      "year": 2018,
+      "shift": 1,
+      "question": "Which is the treatment of choice for irradiation in Chordoma?",
+      "options": {
+        "A": "Protons",
+        "B": "Electrons",
+        "C": "Gamma radiation",
+        "D": "3D - CRT"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2018-s1-q0289",
+      "year": 2018,
+      "shift": 1,
+      "question": "Which condition is associated with Congenital adrenal hypoplasia?",
+      "options": {
+        "A": "Male pseudohermaphroditism",
+        "B": "Female pseudohermaphroditism",
+        "C": "True pseudohermaphroditism",
+        "D": "Sequential pseudohermaphroditism"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2020-s1-q0090",
+      "year": 2020,
+      "shift": 1,
+      "question": "Which interleukin responsible for producing IgE from B cells",
+      "options": {
+        "A": "IL 1",
+        "B": "IL 3",
+        "C": "IL 4",
+        "D": "Both B & C"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2020-s1-q0271",
+      "year": 2020,
+      "shift": 1,
+      "question": "The movement is lost in:",
+      "options": {
+        "A": "Third nerve palsy",
+        "B": "Trochlear palsy",
+        "C": "Sixth nerve palsy",
+        "D": "Facial nerve palsy"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    },
+    {
+      "id": "neetpg-2024-s1-q0042",
+      "year": 2024,
+      "shift": 1,
+      "question": "In head impulse test following finding seen in right vestibular neuritis:",
+      "options": {
+        "A": "On rotating head to right, left saccade",
+        "B": "On rotating head to left, right saccade",
+        "C": "On rotating head toward right, right saccade",
+        "D": "On rotating to the left, left saccade"
+      },
+      "current_subject": "General Medicine",
+      "confidence": 0,
+      "review_reason": "Unclassified",
+      "review_explanation": "Claude could not determine the subject even after reading the full question and options.",
+      "suggested_subjects": [],
+      "correct_subject": ""
+    }
+  ]
+}

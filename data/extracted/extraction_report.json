@@ -1,0 +1,25 @@
+{
+  "totalExtracted": 10368,
+  "byYear": {
+    "2012-shift1": 1464,
+    "2013-shift1": 1849,
+    "2014-shift1": 2104,
+    "2015-shift1": 1698,
+    "2016-shift1": 1754,
+    "2017-shift1": 119,
+    "2018-shift1": 289,
+    "2019-shift1": 288,
+    "2020-shift1": 298,
+    "2022-shift1": 198,
+    "2023-shift1": 197,
+    "2024-shift1": 87,
+    "2024-shift2": 23
+  },
+  "skipped": [
+    "2021: Scanned image PDF — text extraction not possible without OCR."
+  ],
+  "issues": [],
+  "questionsWithoutExplanation": 4187,
+  "questionsWithMissingOptions": 0,
+  "incompleteOptions": 30
+}
