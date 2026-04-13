@@ -2,7 +2,6 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { cn } from '../lib/utils';
 import {
   HomeIcon,
-  ListIcon,
   ClockIcon,
   BookOpenIcon,
   BookmarkIcon,
@@ -14,7 +13,6 @@ import {
 
 const NAV_ITEMS = [
   { to: '/', icon: HomeIcon, label: 'Home' },
-  { to: '/browse', icon: ListIcon, label: 'Browse' },
   { to: '/practice', icon: ClockIcon, label: 'Practice Test' },
   { to: '/quiz', icon: BookOpenIcon, label: 'Quiz Mode' },
   { to: '/flashcard', icon: LayersIcon, label: 'Flashcards' },

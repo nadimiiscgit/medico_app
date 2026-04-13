@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
-import { Browse } from './pages/Browse';
 import { Quiz } from './pages/Quiz';
 import { PracticeTest } from './pages/PracticeTest';
 import { Bookmarks } from './pages/Bookmarks';
@@ -17,7 +16,6 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/browse" element={<Browse />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/practice" element={<PracticeTest />} />
           <Route path="/bookmarks" element={<Bookmarks />} />
