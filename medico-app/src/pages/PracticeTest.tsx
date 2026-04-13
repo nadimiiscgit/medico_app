@@ -230,8 +230,13 @@ export function PracticeTest() {
     const correct = testQuestions.filter(
       (q) => selectedOptions[q.id] === q.correctAnswer
     ).length;
-    const pct = percentage(correct, testQuestions.length);
+    const wrong = attempted - correct;
     const unattempted = testQuestions.length - attempted;
+    const pct = percentage(correct, testQuestions.length);
+    // NEET PG scoring: +4 per correct, -1 per wrong
+    const neetScore = correct * 4 - wrong * 1;
+    const maxScore = testQuestions.length * 4;
+    const neetPct = maxScore > 0 ? Math.round((neetScore / maxScore) * 100) : 0;
 
     return (
       <div className="max-w-xl mx-auto space-y-5">
@@ -242,14 +247,25 @@ export function PracticeTest() {
             <div className={`text-5xl font-bold mb-1 ${pct >= 70 ? 'text-green-600' : pct >= 50 ? 'text-yellow-600' : 'text-red-600'}`}>
               {pct}%
             </div>
-            <p className="text-gray-500 dark:text-gray-400 text-sm">Score</p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">Accuracy</p>
+
+            {/* NEET PG Score */}
+            <div className="mt-4 px-4 py-3 bg-blue-50 dark:bg-blue-950/40 rounded-xl inline-block">
+              <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">
+                {neetScore} / {maxScore}
+              </div>
+              <div className="text-xs text-blue-600 dark:text-blue-400 font-medium">
+                NEET PG Score (+4 / −1) · {neetPct}%
+              </div>
+            </div>
+
             <div className="grid grid-cols-3 gap-4 mt-6 text-center">
               <div>
                 <div className="text-2xl font-bold text-green-600">{correct}</div>
                 <div className="text-xs text-gray-500 dark:text-gray-400">Correct</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-red-600">{attempted - correct}</div>
+                <div className="text-2xl font-bold text-red-600">{wrong}</div>
                 <div className="text-xs text-gray-500 dark:text-gray-400">Wrong</div>
               </div>
               <div>

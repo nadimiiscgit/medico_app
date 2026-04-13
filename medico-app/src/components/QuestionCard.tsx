@@ -3,7 +3,7 @@ import type { Question, OptionKey } from '../types';
 import { Badge } from './ui/Badge';
 import { Button } from './ui/Button';
 import { cn } from '../lib/utils';
-import { BookmarkIcon, ChevronDownIcon, ChevronUpIcon, CheckCircleIcon, XCircleIcon } from 'lucide-react';
+import { BookmarkIcon, ChevronDownIcon, ChevronUpIcon, CheckCircleIcon, XCircleIcon, PencilIcon } from 'lucide-react';
 
 interface QuestionCardProps {
   question: Question;
@@ -17,6 +17,8 @@ interface QuestionCardProps {
   onSubmit?: () => void;
   mode?: 'quiz' | 'review' | 'browse';
   isAnswered?: boolean;
+  note?: string;
+  onSaveNote?: (note: string) => void;
 }
 
 const OPTION_KEYS: OptionKey[] = ['A', 'B', 'C', 'D'];
@@ -56,8 +58,12 @@ export function QuestionCard({
   onSubmit,
   mode = 'browse',
   isAnswered = false,
+  note = '',
+  onSaveNote,
 }: QuestionCardProps) {
   const [showExplanation, setShowExplanation] = useState(false);
+  const [showNotes, setShowNotes] = useState(false);
+  const [noteText, setNoteText] = useState(note);
   const subjectColor = SUBJECT_COLORS[question.subject] ?? 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300';
 
   const getOptionStyle = (key: OptionKey) => {
@@ -198,6 +204,47 @@ export function QuestionCard({
           {showExplanation && (
             <div className="mt-2 px-4 py-3 bg-blue-50 dark:bg-blue-950/40 rounded-lg text-sm text-gray-700 dark:text-gray-300 leading-relaxed border border-blue-100 dark:border-blue-900">
               {question.explanation}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Notes */}
+      {onSaveNote && (
+        <div className="mx-5 mb-4">
+          <button
+            onClick={() => setShowNotes(!showNotes)}
+            className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 font-medium hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+          >
+            <PencilIcon className="w-3.5 h-3.5" />
+            {noteText.trim() ? 'Edit note' : 'Add note'}
+            {noteText.trim() && !showNotes && (
+              <span className="text-xs text-blue-500 dark:text-blue-400 truncate max-w-[160px]">· {noteText}</span>
+            )}
+          </button>
+          {showNotes && (
+            <div className="mt-2 space-y-2">
+              <textarea
+                value={noteText}
+                onChange={(e) => setNoteText(e.target.value)}
+                placeholder="Write your notes, mnemonics, or key points here..."
+                rows={3}
+                className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+              />
+              <div className="flex gap-2">
+                <button
+                  onClick={() => { onSaveNote(noteText); setShowNotes(false); }}
+                  className="px-3 py-1.5 text-xs font-medium bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  Save
+                </button>
+                <button
+                  onClick={() => { setNoteText(note); setShowNotes(false); }}
+                  className="px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors"
+                >
+                  Cancel
+                </button>
+              </div>
             </div>
           )}
         </div>

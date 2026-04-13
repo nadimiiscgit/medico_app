@@ -20,12 +20,10 @@ import {
 import { Link } from 'react-router-dom';
 import { createSession } from '../store/userProgress';
 
-type QuizStep = 'setup' | 'quiz' | 'results';
+type QuizStep = 'setup' | 'quiz' | 'results' | 'review';
 
 interface QuizAnswer {
   selectedOption: OptionKey | null;
-  isCorrect: boolean;
-  revealed: boolean;
 }
 
 export function Quiz() {
@@ -46,9 +44,14 @@ export function Quiz() {
     searchParams.get('year') ? parseInt(searchParams.get('year')!) : 0
   );
   const [questionCount, setQuestionCount] = useState(20);
+  const [reviseWrong, setReviseWrong] = useState(searchParams.get('mode') === 'revise');
 
   const startQuiz = useCallback(() => {
     let pool = questions;
+    if (reviseWrong) {
+      const incorrectIds = new Set(progress.incorrectQuestionIds ?? []);
+      pool = pool.filter((q) => incorrectIds.has(q.id));
+    }
     if (selectedSubject !== 'All') pool = pool.filter((q) => q.subject === selectedSubject);
     if (selectedYear > 0) pool = pool.filter((q) => q.year === selectedYear);
 
@@ -74,27 +77,11 @@ export function Quiz() {
 
   const handleSelectOption = (opt: OptionKey) => {
     const q = quizQuestions[currentIdx];
-    if (!q || answers[q.id]?.revealed) return;
+    if (!q) return;
     setAnswers((prev) => ({
       ...prev,
-      [q.id]: { selectedOption: opt, isCorrect: false, revealed: false },
+      [q.id]: { selectedOption: opt },
     }));
-  };
-
-  const handleSubmit = () => {
-    const q = quizQuestions[currentIdx];
-    if (!q || !answers[q.id]?.selectedOption) return;
-
-    const isCorrect = answers[q.id].selectedOption === q.correctAnswer;
-    const timeTaken = Math.round((Date.now() - startTimeRef.current) / 1000);
-
-    setAnswers((prev) => ({
-      ...prev,
-      [q.id]: { ...prev[q.id], isCorrect, revealed: true },
-    }));
-
-    recordQuestionAnswer(q.id, q.subject, q.year, isCorrect, timeTaken);
-    startTimeRef.current = Date.now();
   };
 
   const handleNext = () => {
@@ -111,20 +98,32 @@ export function Quiz() {
 
   const finishQuiz = () => {
     if (!session) return;
+
+    quizQuestions.forEach((q) => {
+      const sel = answers[q.id]?.selectedOption;
+      if (sel) {
+        const isCorrect = sel === q.correctAnswer;
+        const timeTaken = Math.round((Date.now() - startTimeRef.current) / 1000);
+        recordQuestionAnswer(q.id, q.subject, q.year, isCorrect, timeTaken);
+      }
+    });
+
     const completedSession: TestSession = {
       ...session,
       completedAt: new Date().toISOString(),
       answers: Object.fromEntries(
-        Object.entries(answers).map(([id, a]) => [
-          id,
-          {
-            questionId: id,
-            selectedOption: a.selectedOption,
-            isCorrect: a.isCorrect,
-            timeTaken: 0,
-            answeredAt: new Date().toISOString(),
-          },
-        ])
+        quizQuestions
+          .filter((q) => answers[q.id]?.selectedOption)
+          .map((q) => [
+            q.id,
+            {
+              questionId: q.id,
+              selectedOption: answers[q.id].selectedOption,
+              isCorrect: answers[q.id].selectedOption === q.correctAnswer,
+              timeTaken: 0,
+              answeredAt: new Date().toISOString(),
+            },
+          ])
       ),
     };
     completeSession(completedSession);
@@ -133,8 +132,10 @@ export function Quiz() {
 
   const currentQ = quizQuestions[currentIdx];
   const currentAnswer = currentQ ? answers[currentQ.id] : null;
-  const answeredCount = Object.values(answers).filter((a) => a.revealed).length;
-  const correctCount = Object.values(answers).filter((a) => a.isCorrect).length;
+  const answeredCount = Object.values(answers).filter((a) => a.selectedOption).length;
+  const correctCount = quizQuestions.filter(
+    (q) => answers[q.id]?.selectedOption === q.correctAnswer
+  ).length;
 
   if (loading) {
     return (
@@ -205,6 +206,26 @@ export function Quiz() {
               </div>
             </div>
 
+            {/* Revise Wrong Answers */}
+            {(progress.incorrectQuestionIds?.length ?? 0) > 0 && (
+              <div>
+                <label className="flex items-center gap-3 cursor-pointer p-3 rounded-lg border-2 transition-all border-gray-200 dark:border-gray-700 hover:border-orange-400 has-[:checked]:border-orange-500 has-[:checked]:bg-orange-50 dark:has-[:checked]:bg-orange-950/30">
+                  <input
+                    type="checkbox"
+                    checked={reviseWrong}
+                    onChange={(e) => setReviseWrong(e.target.checked)}
+                    className="w-4 h-4 accent-orange-600"
+                  />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Revise Wrong Answers</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                      Practice {progress.incorrectQuestionIds.length} questions you got wrong
+                    </p>
+                  </div>
+                </label>
+              </div>
+            )}
+
             <Button className="w-full" size="lg" onClick={startQuiz}>
               <PlayIcon className="w-4 h-4" />
               Start Quiz
@@ -227,7 +248,11 @@ export function Quiz() {
             <p className="text-gray-600 dark:text-gray-400 text-lg font-medium">
               {correctCount} / {quizQuestions.length} correct
             </p>
-            <div className="mt-6 flex gap-3 justify-center">
+            <div className="mt-6 flex gap-3 justify-center flex-wrap">
+              <Button variant="outline" onClick={() => setStep('review')}>
+                <ListIcon className="w-4 h-4" />
+                Review Answers
+              </Button>
               <Button variant="outline" onClick={startQuiz}>
                 <RotateCcwIcon className="w-4 h-4" />
                 Try Again
@@ -238,12 +263,6 @@ export function Quiz() {
                   Home
                 </Button>
               </Link>
-              <Link to="/browse">
-                <Button>
-                  <ListIcon className="w-4 h-4" />
-                  Browse
-                </Button>
-              </Link>
             </div>
           </CardContent>
         </Card>
@@ -251,29 +270,64 @@ export function Quiz() {
         {/* Results breakdown */}
         <div className="space-y-3">
           {quizQuestions.map((q, idx) => {
-            const ans = answers[q.id];
+            const sel = answers[q.id]?.selectedOption;
+            const isCorrect = sel === q.correctAnswer;
+            const unattempted = !sel;
             return (
               <div
                 key={q.id}
                 className={`flex items-center gap-3 p-3 rounded-lg border ${
-                  ans?.isCorrect
+                  unattempted
+                    ? 'bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700'
+                    : isCorrect
                     ? 'bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-900'
                     : 'bg-red-50 dark:bg-red-950/30 border-red-200 dark:border-red-900'
                 }`}
               >
                 <div className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold ${
-                  ans?.isCorrect ? 'bg-green-600 text-white' : 'bg-red-600 text-white'
+                  unattempted ? 'bg-gray-400 text-white' : isCorrect ? 'bg-green-600 text-white' : 'bg-red-600 text-white'
                 }`}>
                   {idx + 1}
                 </div>
                 <p className="text-sm text-gray-700 dark:text-gray-300 flex-1 truncate">{q.question}</p>
                 <span className="text-xs font-medium flex-shrink-0 text-gray-600 dark:text-gray-400">
-                  {ans?.selectedOption ?? '—'} {ans?.isCorrect ? '✓' : `✗ (${q.correctAnswer})`}
+                  {sel ?? '—'} {unattempted ? '' : isCorrect ? '✓' : `✗ (${q.correctAnswer})`}
                 </span>
               </div>
             );
           })}
         </div>
+      </div>
+    );
+  }
+
+  // Review all answers after quiz
+  if (step === 'review') {
+    return (
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">Answer Review</h1>
+          <Button variant="outline" size="sm" onClick={() => setStep('results')}>
+            Back to Results
+          </Button>
+        </div>
+        {quizQuestions.map((q, idx) => {
+          const sel = answers[q.id]?.selectedOption ?? null;
+          return (
+            <QuestionCard
+              key={q.id}
+              question={q}
+              questionIndex={idx}
+              totalQuestions={quizQuestions.length}
+              isBookmarked={isBookmarked(q.id)}
+              onBookmark={() => bookmark(q.id)}
+              selectedOption={sel}
+              showAnswer
+              isAnswered
+              mode="review"
+            />
+          );
+        })}
       </div>
     );
   }
@@ -299,10 +353,9 @@ export function Quiz() {
           onBookmark={() => bookmark(currentQ.id)}
           selectedOption={currentAnswer?.selectedOption ?? null}
           onSelectOption={handleSelectOption}
-          onSubmit={handleSubmit}
-          showAnswer={currentAnswer?.revealed ?? false}
-          isAnswered={currentAnswer?.revealed ?? false}
-          mode="quiz"
+          showAnswer={false}
+          isAnswered={false}
+          mode="browse"
         />
       )}
 
@@ -319,7 +372,7 @@ export function Quiz() {
 
         <Button
           onClick={handleNext}
-          disabled={!currentAnswer?.revealed && !currentAnswer?.selectedOption}
+          disabled={!currentAnswer?.selectedOption}
         >
           {currentIdx === quizQuestions.length - 1 ? (
             <>Finish <CheckCircleIcon className="w-4 h-4" /></>

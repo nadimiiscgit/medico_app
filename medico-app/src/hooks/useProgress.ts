@@ -55,7 +55,7 @@ export function useProgress() {
   );
 
   const resetProgress = useCallback(() => {
-    update(() => {
+    update((p) => {
       const fresh: UserProgress = {
         totalAttempted: 0,
         totalCorrect: 0,
@@ -64,11 +64,21 @@ export function useProgress() {
         streak: 0,
         totalStudyTime: 0,
         sessions: [],
-        bookmarks: progress.bookmarks, // Keep bookmarks on reset
+        bookmarks: p.bookmarks, // Keep bookmarks on reset
+        incorrectQuestionIds: [],
+        dailyGoal: p.dailyGoal,
+        dailyStats: { date: '', attempted: 0 },
       };
       return fresh;
     });
-  }, [update, progress.bookmarks]);
+  }, [update]);
+
+  const setDailyGoal = useCallback(
+    (goal: number) => {
+      update((p) => ({ ...p, dailyGoal: goal }));
+    },
+    [update]
+  );
 
   return {
     progress,
@@ -76,6 +86,7 @@ export function useProgress() {
     completeSession,
     recordQuestionAnswer,
     resetProgress,
+    setDailyGoal,
     isBookmarked: (id: string) => progress.bookmarks.includes(id),
   };
 }

@@ -13,6 +13,9 @@ const DEFAULT_PROGRESS: UserProgress = {
   totalStudyTime: 0,
   sessions: [],
   bookmarks: [],
+  incorrectQuestionIds: [],
+  dailyGoal: 20,
+  dailyStats: { date: '', attempted: 0 },
 };
 
 export function loadProgress(): UserProgress {
@@ -71,6 +74,21 @@ export function recordAnswer(
     correct: (yearStats[year]?.correct ?? 0) + (isCorrect ? 1 : 0),
   };
 
+  // Track incorrectly answered questions
+  let incorrectQuestionIds = progress.incorrectQuestionIds ?? [];
+  if (isCorrect) {
+    incorrectQuestionIds = incorrectQuestionIds.filter((id) => id !== questionId);
+  } else if (!incorrectQuestionIds.includes(questionId)) {
+    incorrectQuestionIds = [...incorrectQuestionIds, questionId];
+  }
+
+  // Track daily progress (resets each day)
+  const today = new Date().toDateString();
+  const prevDaily = progress.dailyStats ?? { date: '', attempted: 0 };
+  const dailyStats = prevDaily.date === today
+    ? { date: today, attempted: prevDaily.attempted + 1 }
+    : { date: today, attempted: 1 };
+
   return {
     ...progress,
     totalAttempted: progress.totalAttempted + 1,
@@ -78,6 +96,8 @@ export function recordAnswer(
     totalStudyTime: progress.totalStudyTime + timeTaken,
     subjectStats,
     yearStats,
+    incorrectQuestionIds,
+    dailyStats,
   };
 }
 

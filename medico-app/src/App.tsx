@@ -7,6 +7,7 @@ import { PracticeTest } from './pages/PracticeTest';
 import { Bookmarks } from './pages/Bookmarks';
 import { Analytics } from './pages/Analytics';
 import { Settings } from './pages/Settings';
+import { Flashcard } from './pages/Flashcard';
 import { useTheme } from './hooks/useTheme';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/bookmarks" element={<Bookmarks />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/flashcard" element={<Flashcard />} />
         </Routes>
       </Layout>
     </BrowserRouter>

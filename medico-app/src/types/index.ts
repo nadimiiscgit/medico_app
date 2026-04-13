@@ -52,6 +52,9 @@ export interface UserProgress {
   totalStudyTime: number; // seconds
   sessions: TestSession[];
   bookmarks: string[]; // question IDs
+  incorrectQuestionIds: string[]; // questions last answered incorrectly
+  dailyGoal: number; // target questions per day
+  dailyStats: { date: string; attempted: number }; // resets each day
 }
 
 export interface Filters {

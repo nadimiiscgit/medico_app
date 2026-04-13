@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useProgress } from '../hooks/useProgress';
+import { useQuestions } from '../hooks/useQuestions';
 import { useTheme } from '../hooks/useTheme';
 import type { Theme } from '../hooks/useTheme';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { percentage } from '../lib/utils';
-import { AlertTriangleIcon, DownloadIcon, Trash2Icon, SunIcon, MoonIcon, MonitorIcon } from 'lucide-react';
+import { AlertTriangleIcon, DownloadIcon, Trash2Icon, SunIcon, MoonIcon, MonitorIcon, TargetIcon } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 const THEME_OPTIONS: { value: Theme; label: string; icon: React.ElementType }[] = [
@@ -15,9 +16,11 @@ const THEME_OPTIONS: { value: Theme; label: string; icon: React.ElementType }[] 
 ];
 
 export function Settings() {
-  const { progress, resetProgress } = useProgress();
+  const { progress, resetProgress, setDailyGoal } = useProgress();
+  const { questions } = useQuestions();
   const { theme, setTheme } = useTheme();
   const [confirmReset, setConfirmReset] = useState(false);
+  const [goalInput, setGoalInput] = useState(String(progress.dailyGoal ?? 20));
 
   const exportData = () => {
     const data = {
@@ -37,6 +40,28 @@ export function Settings() {
     const a = document.createElement('a');
     a.href = url;
     a.download = `neetpg-progress-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const exportWrongAnswers = () => {
+    const incorrectIds = new Set(progress.incorrectQuestionIds ?? []);
+    const wrongQuestions = questions.filter((q) => incorrectIds.has(q.id));
+    const rows = [
+      ['ID', 'Year', 'Subject', 'Topic', 'Question', 'A', 'B', 'C', 'D', 'Correct Answer'],
+      ...wrongQuestions.map((q) => [
+        q.id, q.year, q.subject, q.topic,
+        `"${q.question.replace(/"/g, '""')}"`,
+        `"${q.options.A}"`, `"${q.options.B}"`, `"${q.options.C}"`, `"${q.options.D}"`,
+        q.correctAnswer,
+      ]),
+    ];
+    const csv = rows.map((r) => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `neetpg-wrong-answers-${new Date().toISOString().split('T')[0]}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -106,6 +131,41 @@ export function Settings() {
         </CardContent>
       </Card>
 
+      {/* Daily Goal */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-base flex items-center gap-2">
+            <TargetIcon className="w-4 h-4 text-blue-600" />
+            Daily Goal
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+            Set a daily target for how many questions to attempt.
+          </p>
+          <div className="flex items-center gap-3">
+            <input
+              type="number"
+              min={1}
+              max={500}
+              value={goalInput}
+              onChange={(e) => setGoalInput(e.target.value)}
+              className="w-24 border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+            />
+            <span className="text-sm text-gray-500 dark:text-gray-400">questions / day</span>
+            <Button
+              size="sm"
+              onClick={() => {
+                const val = parseInt(goalInput);
+                if (val > 0) setDailyGoal(val);
+              }}
+            >
+              Save
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Export */}
       <Card>
         <CardHeader>
@@ -113,12 +173,20 @@ export function Settings() {
         </CardHeader>
         <CardContent>
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-            Export your performance data as a JSON file for backup or analysis.
+            Export your performance data or download a list of questions you got wrong.
           </p>
-          <Button variant="outline" onClick={exportData}>
-            <DownloadIcon className="w-4 h-4" />
-            Export Progress Report
-          </Button>
+          <div className="flex gap-3 flex-wrap">
+            <Button variant="outline" onClick={exportData}>
+              <DownloadIcon className="w-4 h-4" />
+              Export Progress Report
+            </Button>
+            {(progress.incorrectQuestionIds?.length ?? 0) > 0 && (
+              <Button variant="outline" onClick={exportWrongAnswers}>
+                <DownloadIcon className="w-4 h-4" />
+                Export Wrong Answers ({progress.incorrectQuestionIds.length})
+              </Button>
+            )}
+          </div>
         </CardContent>
       </Card>
 

@@ -15,6 +15,8 @@ import {
   ZapIcon,
   ArrowRightIcon,
   CheckCircleIcon,
+  TargetIcon,
+  XCircleIcon,
 } from 'lucide-react';
 
 export function Home() {
@@ -26,8 +28,17 @@ export function Home() {
   const topSubjects = Object.entries(progress.subjectStats)
     .sort((a, b) => b[1].attempted - a[1].attempted)
     .slice(0, 4);
-
   const years = [...new Set(questions.map((q) => q.year))].sort((a, b) => b - a);
+
+  // Daily goal
+  const dailyGoal = progress.dailyGoal ?? 20;
+  const today = new Date().toDateString();
+  const dailyAttempted = progress.dailyStats?.date === today ? progress.dailyStats.attempted : 0;
+  const dailyPct = Math.min(100, Math.round((dailyAttempted / dailyGoal) * 100));
+  const dailyDone = dailyAttempted >= dailyGoal;
+
+  // Revise wrong count
+  const wrongCount = progress.incorrectQuestionIds?.length ?? 0;
 
   if (loading) {
     return (
@@ -132,6 +143,56 @@ export function Home() {
             </div>
           </CardContent>
         </Card>
+      </div>
+
+      {/* Daily goal + Revise wrong */}
+      <div className="grid sm:grid-cols-2 gap-4">
+        <Card>
+          <CardContent className="py-4">
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
+                <TargetIcon className={`w-4 h-4 ${dailyDone ? 'text-green-600' : 'text-blue-600'}`} />
+                <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Daily Goal</span>
+              </div>
+              <span className={`text-xs font-medium ${dailyDone ? 'text-green-600' : 'text-gray-500 dark:text-gray-400'}`}>
+                {dailyAttempted} / {dailyGoal}
+              </span>
+            </div>
+            <Progress value={dailyPct} color={dailyDone ? 'green' : 'blue'} />
+            {dailyDone && (
+              <p className="text-xs text-green-600 dark:text-green-400 mt-1.5 font-medium">Goal complete!</p>
+            )}
+          </CardContent>
+        </Card>
+
+        {wrongCount > 0 ? (
+          <Link to="/quiz?mode=revise">
+            <Card className="h-full hover:border-orange-400 dark:hover:border-orange-600 transition-colors cursor-pointer">
+              <CardContent className="py-4 flex items-center gap-3 h-full">
+                <div className="w-9 h-9 bg-orange-100 dark:bg-orange-900/40 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <XCircleIcon className="w-5 h-5 text-orange-600 dark:text-orange-400" />
+                </div>
+                <div>
+                  <div className="text-sm font-semibold text-gray-800 dark:text-gray-200">Revise Wrong Answers</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">{wrongCount} questions to review</div>
+                </div>
+                <ArrowRightIcon className="w-4 h-4 text-gray-400 ml-auto" />
+              </CardContent>
+            </Card>
+          </Link>
+        ) : (
+          <Card>
+            <CardContent className="py-4 flex items-center gap-3">
+              <div className="w-9 h-9 bg-green-100 dark:bg-green-900/40 rounded-lg flex items-center justify-center flex-shrink-0">
+                <CheckCircleIcon className="w-5 h-5 text-green-600 dark:text-green-400" />
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-gray-800 dark:text-gray-200">No Wrong Answers</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Keep practicing to track mistakes</div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">

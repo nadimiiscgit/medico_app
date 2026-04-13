@@ -9,6 +9,7 @@ import {
   BarChart3Icon,
   SettingsIcon,
   BrainIcon,
+  LayersIcon,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -16,6 +17,7 @@ const NAV_ITEMS = [
   { to: '/browse', icon: ListIcon, label: 'Browse' },
   { to: '/practice', icon: ClockIcon, label: 'Practice Test' },
   { to: '/quiz', icon: BookOpenIcon, label: 'Quiz Mode' },
+  { to: '/flashcard', icon: LayersIcon, label: 'Flashcards' },
   { to: '/bookmarks', icon: BookmarkIcon, label: 'Bookmarks' },
   { to: '/analytics', icon: BarChart3Icon, label: 'Analytics' },
   { to: '/settings', icon: SettingsIcon, label: 'Settings' },

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useQuestions } from '../hooks/useQuestions';
 import { useProgress } from '../hooks/useProgress';
+import { useNotes } from '../hooks/useNotes';
 import { QuestionCard } from '../components/QuestionCard';
 import { Button } from '../components/ui/Button';
 import type { OptionKey } from '../types';
@@ -9,6 +10,7 @@ import { BookmarkIcon } from 'lucide-react';
 export function Bookmarks() {
   const { questions, loading } = useQuestions();
   const { progress, bookmark, isBookmarked } = useProgress();
+  const { notes, saveNote } = useNotes();
   const [selectedOptions, setSelectedOptions] = useState<Record<string, OptionKey | null>>({});
   const [revealedQuestions, setRevealedQuestions] = useState<Set<string>>(new Set());
 
@@ -60,6 +62,8 @@ export function Bookmarks() {
             onSubmit={() => setRevealedQuestions((prev) => new Set([...prev, q.id]))}
             mode={selectedOptions[q.id] && !revealedQuestions.has(q.id) ? 'quiz' : 'browse'}
             isAnswered={revealedQuestions.has(q.id)}
+            note={notes[q.id] ?? ''}
+            onSaveNote={(n) => saveNote(q.id, n)}
           />
         ))}
       </div>

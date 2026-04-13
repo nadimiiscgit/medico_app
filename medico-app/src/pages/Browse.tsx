@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { useQuestions, useFilteredQuestions } from '../hooks/useQuestions';
 import { useProgress } from '../hooks/useProgress';
+import { useNotes } from '../hooks/useNotes';
 import { QuestionCard } from '../components/QuestionCard';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
@@ -28,6 +29,7 @@ const DEFAULT_FILTERS: Filters = {
 export function Browse() {
   const { questions, loading, years, subjects } = useQuestions();
   const { progress, bookmark, isBookmarked } = useProgress();
+  const { notes, saveNote } = useNotes();
   const [filters, setFilters] = useState<Filters>(DEFAULT_FILTERS);
   const [page, setPage] = useState(0);
   const [showFilters, setShowFilters] = useState(false);
@@ -270,6 +272,8 @@ export function Browse() {
                 onSubmit={() => handleReveal(q.id)}
                 mode={selectedOptions[q.id] && !revealedQuestions.has(q.id) ? 'quiz' : 'browse'}
                 isAnswered={revealedQuestions.has(q.id)}
+                note={notes[q.id] ?? ''}
+                onSaveNote={(n) => saveNote(q.id, n)}
               />
             </div>
           ))}

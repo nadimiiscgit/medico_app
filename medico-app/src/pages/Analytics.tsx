@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useProgress } from '../hooks/useProgress';
 import { useQuestions } from '../hooks/useQuestions';
+import { Progress as ProgressBar } from '../components/ui/Progress';
 import { useTheme } from '../hooks/useTheme';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
 import { Progress } from '../components/ui/Progress';
@@ -10,6 +11,7 @@ import {
   BarChart3Icon,
   FlameIcon,
   ZapIcon,
+  BookOpenIcon,
 } from 'lucide-react';
 import {
   BarChart,
@@ -92,6 +94,22 @@ export function Analytics() {
       .sort((a, b) => a.accuracy - b.accuracy)
       .slice(0, 3);
   }, [progress.subjectStats]);
+
+  // Subject coverage: attempted vs total available
+  const subjectCoverage = useMemo(() => {
+    const totalBySubject: Record<string, number> = {};
+    questions.forEach((q) => {
+      totalBySubject[q.subject] = (totalBySubject[q.subject] ?? 0) + 1;
+    });
+    return Object.entries(totalBySubject)
+      .map(([subject, total]) => ({
+        subject,
+        total,
+        attempted: progress.subjectStats[subject]?.attempted ?? 0,
+        coveragePct: Math.round(((progress.subjectStats[subject]?.attempted ?? 0) / total) * 100),
+      }))
+      .sort((a, b) => b.attempted - a.attempted);
+  }, [questions, progress.subjectStats]);
 
   // Chart colors for dark mode
   const axisColor = isDark ? '#9ca3af' : '#6b7280';
@@ -305,6 +323,36 @@ export function Analytics() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Subject coverage */}
+      {subjectCoverage.length > 0 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base flex items-center gap-2">
+              <BookOpenIcon className="w-4 h-4 text-blue-500" />
+              Subject Coverage
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+              Questions attempted out of total available per subject.
+            </p>
+            <div className="space-y-3">
+              {subjectCoverage.map((s) => (
+                <div key={s.subject} className="space-y-1">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="font-medium text-gray-700 dark:text-gray-300">{s.subject}</span>
+                    <span className="text-gray-500 dark:text-gray-400 text-xs">
+                      {s.attempted} / {s.total} · <span className="font-medium">{s.coveragePct}%</span>
+                    </span>
+                  </div>
+                  <ProgressBar value={s.coveragePct} color="blue" />
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Recent sessions */}
       {sessions.length > 0 && (
