@@ -73,3 +73,6 @@ medico-app/dist
 
 # Large source PDFs (too big for GitHub)
 data/pdfs/
+
+# Large extracted data files (too big for GitHub)
+data/extracted/practice_questions.json

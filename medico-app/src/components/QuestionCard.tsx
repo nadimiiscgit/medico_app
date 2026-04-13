@@ -117,9 +117,15 @@ export function QuestionCard({
           )}>
             {question.difficulty}
           </span>
-          <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">
-            NEET PG {question.year}{question.shift > 1 ? ` Shift ${question.shift}` : ''}
-          </span>
+          {question.source === 'practice' ? (
+            <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
+              Practice
+            </span>
+          ) : (
+            <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">
+              NEET PG {question.year}{question.shift > 1 ? ` Shift ${question.shift}` : ''}
+            </span>
+          )}
           {question.topic && (
             <span className="text-xs text-gray-400 dark:text-gray-500">· {question.topic}</span>
           )}

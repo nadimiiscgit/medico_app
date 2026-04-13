@@ -1,6 +1,6 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { useQuestions } from '../hooks/useQuestions';
+import { useQuestions, usePracticeQuestions } from '../hooks/useQuestions';
 import { useProgress } from '../hooks/useProgress';
 import { QuestionCard } from '../components/QuestionCard';
 import { Button } from '../components/ui/Button';
@@ -16,11 +16,13 @@ import {
   RotateCcwIcon,
   HomeIcon,
   ListIcon,
+  InfoIcon,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createSession } from '../store/userProgress';
 
 type QuizStep = 'setup' | 'quiz' | 'results' | 'review';
+type QuizSource = 'pyq' | 'practice' | 'both';
 
 interface QuizAnswer {
   selectedOption: OptionKey | null;
@@ -28,7 +30,7 @@ interface QuizAnswer {
 
 export function Quiz() {
   const [searchParams] = useSearchParams();
-  const { questions, loading, years, subjects } = useQuestions();
+  const { questions: pyqQuestions, loading: pyqLoading, years, subjects } = useQuestions();
   const { progress, bookmark, isBookmarked, recordQuestionAnswer, completeSession } = useProgress();
 
   const [step, setStep] = useState<QuizStep>('setup');
@@ -39,6 +41,7 @@ export function Quiz() {
   const startTimeRef = useRef<number>(Date.now());
 
   // Setup options
+  const [selectedSource, setSelectedSource] = useState<QuizSource>('pyq');
   const [selectedSubject, setSelectedSubject] = useState(searchParams.get('subject') ?? 'All');
   const [selectedYear, setSelectedYear] = useState(
     searchParams.get('year') ? parseInt(searchParams.get('year')!) : 0
@@ -46,8 +49,29 @@ export function Quiz() {
   const [questionCount, setQuestionCount] = useState(20);
   const [reviseWrong, setReviseWrong] = useState(searchParams.get('mode') === 'revise');
 
+  // Lazy-load practice questions only when a specific subject is selected
+  const practiceSubjectsToLoad = useMemo(() => {
+    if (selectedSource === 'pyq') return [];
+    if (selectedSubject === 'All') return [];
+    return [selectedSubject];
+  }, [selectedSource, selectedSubject]);
+
+  const { questions: practiceQuestions, loading: practiceLoading } =
+    usePracticeQuestions(practiceSubjectsToLoad);
+
+  // Combined pool for quiz setup preview
+  const allQuestions = useMemo(() => {
+    if (selectedSource === 'pyq') return pyqQuestions;
+    if (selectedSource === 'practice') return practiceQuestions;
+    return [...pyqQuestions, ...practiceQuestions];
+  }, [selectedSource, pyqQuestions, practiceQuestions]);
+
+  // Whether the user needs to pick a subject before practice can load
+  const needsSubjectForPractice =
+    selectedSource !== 'pyq' && selectedSubject === 'All';
+
   const startQuiz = useCallback(() => {
-    let pool = questions;
+    let pool = allQuestions;
     if (reviseWrong) {
       const incorrectIds = new Set(progress.incorrectQuestionIds ?? []);
       pool = pool.filter((q) => incorrectIds.has(q.id));
@@ -69,11 +93,12 @@ export function Quiz() {
       {
         subject: selectedSubject !== 'All' ? selectedSubject : undefined,
         year: selectedYear > 0 ? selectedYear : undefined,
+        source: selectedSource,
       }
     );
     setSession(newSession);
     setStep('quiz');
-  }, [questions, selectedSubject, selectedYear, questionCount]);
+  }, [allQuestions, selectedSubject, selectedYear, questionCount, selectedSource, reviseWrong, progress.incorrectQuestionIds]);
 
   const handleSelectOption = (opt: OptionKey) => {
     const q = quizQuestions[currentIdx];
@@ -104,7 +129,8 @@ export function Quiz() {
       if (sel) {
         const isCorrect = sel === q.correctAnswer;
         const timeTaken = Math.round((Date.now() - startTimeRef.current) / 1000);
-        recordQuestionAnswer(q.id, q.subject, q.year, isCorrect, timeTaken);
+        const qSource = q.source ?? 'pyq';
+        recordQuestionAnswer(q.id, q.subject, q.year, isCorrect, timeTaken, qSource);
       }
     });
 
@@ -137,7 +163,7 @@ export function Quiz() {
     (q) => answers[q.id]?.selectedOption === q.correctAnswer
   ).length;
 
-  if (loading) {
+  if (pyqLoading) {
     return (
       <div className="flex items-center justify-center h-64">
         <div className="w-8 h-8 border-3 border-blue-600 border-t-transparent rounded-full animate-spin" />
@@ -155,6 +181,57 @@ export function Quiz() {
 
         <Card>
           <CardContent className="space-y-5">
+            {/* Source toggle */}
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Question Bank</label>
+              <div className="flex rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden text-sm font-medium">
+                {(['pyq', 'practice', 'both'] as const).map((src) => (
+                  <button
+                    key={src}
+                    onClick={() => setSelectedSource(src)}
+                    className={`flex-1 py-2 px-3 transition-colors ${
+                      selectedSource === src
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-750'
+                    }`}
+                  >
+                    {src === 'pyq' ? 'PYQ' : src === 'practice' ? 'Practice' : 'Both'}
+                  </button>
+                ))}
+              </div>
+              {selectedSource === 'pyq' && (
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1.5">
+                  {pyqQuestions.length.toLocaleString()} NEET PG previous year questions (2012–2024)
+                </p>
+              )}
+              {selectedSource === 'practice' && (
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1.5">
+                  117,003 practice questions from MedMCQA — select a subject below
+                </p>
+              )}
+              {selectedSource === 'both' && (
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1.5">
+                  PYQ + practice questions mixed — select a subject to include practice
+                </p>
+              )}
+            </div>
+
+            {/* Hint when practice needs a subject */}
+            {needsSubjectForPractice && (
+              <div className="flex items-start gap-2.5 px-3 py-2.5 rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300">
+                <InfoIcon className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
+                <span>Select a specific <strong>Subject</strong> to load practice questions. "All Subjects" would load too much data.</span>
+              </div>
+            )}
+
+            {/* Practice loading indicator */}
+            {practiceLoading && (
+              <div className="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400">
+                <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
+                Loading practice questions…
+              </div>
+            )}
+
             {/* Subject */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Subject</label>
@@ -170,20 +247,22 @@ export function Quiz() {
               </select>
             </div>
 
-            {/* Year */}
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Year</label>
-              <select
-                value={selectedYear}
-                onChange={(e) => setSelectedYear(parseInt(e.target.value))}
-                className="w-full border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-              >
-                <option value={0}>All Years</option>
-                {years.map((y) => (
-                  <option key={y} value={y}>{y}</option>
-                ))}
-              </select>
-            </div>
+            {/* Year — only for PYQ */}
+            {selectedSource !== 'practice' && (
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Year</label>
+                <select
+                  value={selectedYear}
+                  onChange={(e) => setSelectedYear(parseInt(e.target.value))}
+                  className="w-full border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                >
+                  <option value={0}>All Years</option>
+                  {years.map((y) => (
+                    <option key={y} value={y}>{y}</option>
+                  ))}
+                </select>
+              </div>
+            )}
 
             {/* Question count */}
             <div>
@@ -226,9 +305,16 @@ export function Quiz() {
               </div>
             )}
 
-            <Button className="w-full" size="lg" onClick={startQuiz}>
+            <Button
+              className="w-full"
+              size="lg"
+              onClick={startQuiz}
+              disabled={needsSubjectForPractice && selectedSource === 'practice'}
+            >
               <PlayIcon className="w-4 h-4" />
-              Start Quiz
+              {needsSubjectForPractice && selectedSource === 'practice'
+                ? 'Select a subject first'
+                : 'Start Quiz'}
             </Button>
           </CardContent>
         </Card>

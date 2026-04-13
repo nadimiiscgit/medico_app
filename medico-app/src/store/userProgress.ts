@@ -7,6 +7,7 @@ const DEFAULT_PROGRESS: UserProgress = {
   totalAttempted: 0,
   totalCorrect: 0,
   subjectStats: {},
+  practiceSubjectStats: {},
   yearStats: {},
   streak: 0,
   lastStudied: undefined,
@@ -22,6 +23,7 @@ export function loadProgress(): UserProgress {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return { ...DEFAULT_PROGRESS };
+    // Merge with defaults so new fields (practiceSubjectStats) are initialised on existing saves
     return { ...DEFAULT_PROGRESS, ...JSON.parse(raw) };
   } catch {
     return { ...DEFAULT_PROGRESS };
@@ -59,22 +61,10 @@ export function recordAnswer(
   subject: string,
   year: number,
   isCorrect: boolean,
-  timeTaken: number
+  timeTaken: number,
+  source: 'pyq' | 'practice' = 'pyq'
 ): UserProgress {
-  const subjectStats = { ...progress.subjectStats };
-  const yearStats = { ...progress.yearStats };
-
-  subjectStats[subject] = {
-    attempted: (subjectStats[subject]?.attempted ?? 0) + 1,
-    correct: (subjectStats[subject]?.correct ?? 0) + (isCorrect ? 1 : 0),
-  };
-
-  yearStats[year] = {
-    attempted: (yearStats[year]?.attempted ?? 0) + 1,
-    correct: (yearStats[year]?.correct ?? 0) + (isCorrect ? 1 : 0),
-  };
-
-  // Track incorrectly answered questions
+  // Track incorrectly answered questions (works across both sources — IDs are globally unique)
   let incorrectQuestionIds = progress.incorrectQuestionIds ?? [];
   if (isCorrect) {
     incorrectQuestionIds = incorrectQuestionIds.filter((id) => id !== questionId);
@@ -88,6 +78,39 @@ export function recordAnswer(
   const dailyStats = prevDaily.date === today
     ? { date: today, attempted: prevDaily.attempted + 1 }
     : { date: today, attempted: 1 };
+
+  if (source === 'practice') {
+    // Practice questions: update practiceSubjectStats only (no year stats)
+    const practiceSubjectStats = { ...progress.practiceSubjectStats };
+    practiceSubjectStats[subject] = {
+      attempted: (practiceSubjectStats[subject]?.attempted ?? 0) + 1,
+      correct: (practiceSubjectStats[subject]?.correct ?? 0) + (isCorrect ? 1 : 0),
+    };
+
+    return {
+      ...progress,
+      totalAttempted: progress.totalAttempted + 1,
+      totalCorrect: progress.totalCorrect + (isCorrect ? 1 : 0),
+      totalStudyTime: progress.totalStudyTime + timeTaken,
+      practiceSubjectStats,
+      incorrectQuestionIds,
+      dailyStats,
+    };
+  }
+
+  // PYQ: update subjectStats + yearStats (existing behaviour, unchanged)
+  const subjectStats = { ...progress.subjectStats };
+  const yearStats = { ...progress.yearStats };
+
+  subjectStats[subject] = {
+    attempted: (subjectStats[subject]?.attempted ?? 0) + 1,
+    correct: (subjectStats[subject]?.correct ?? 0) + (isCorrect ? 1 : 0),
+  };
+
+  yearStats[year] = {
+    attempted: (yearStats[year]?.attempted ?? 0) + 1,
+    correct: (yearStats[year]?.correct ?? 0) + (isCorrect ? 1 : 0),
+  };
 
   return {
     ...progress,
@@ -109,7 +132,7 @@ export function saveSession(progress: UserProgress, session: TestSession): UserP
 export function createSession(
   mode: 'practice' | 'quiz',
   questionIds: string[],
-  options?: { subject?: string; year?: number; timeLimit?: number }
+  options?: { subject?: string; year?: number; timeLimit?: number; source?: 'pyq' | 'practice' | 'both' }
 ): TestSession {
   return {
     id: generateId(),

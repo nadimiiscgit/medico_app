@@ -1,5 +1,6 @@
 export interface Question {
   id: string;
+  source?: 'pyq' | 'practice'; // optional — existing questions.json has no field, defaults to 'pyq'
   year: number;
   shift: number;
   questionNumber: number;
@@ -31,6 +32,7 @@ export interface UserAnswer {
 export interface TestSession {
   id: string;
   mode: 'practice' | 'quiz';
+  source?: 'pyq' | 'practice' | 'both';
   startedAt: string;
   completedAt?: string;
   questionIds: string[];
@@ -45,8 +47,9 @@ export interface TestSession {
 export interface UserProgress {
   totalAttempted: number;
   totalCorrect: number;
-  subjectStats: Record<string, { attempted: number; correct: number }>;
-  yearStats: Record<number, { attempted: number; correct: number }>;
+  subjectStats: Record<string, { attempted: number; correct: number }>;       // PYQ only
+  practiceSubjectStats: Record<string, { attempted: number; correct: number }>; // practice only
+  yearStats: Record<number, { attempted: number; correct: number }>;           // PYQ only
   streak: number;
   lastStudied?: string;
   totalStudyTime: number; // seconds
@@ -58,6 +61,7 @@ export interface UserProgress {
 }
 
 export interface Filters {
+  source: 'pyq' | 'practice' | 'both';
   years: number[];
   subjects: string[];
   difficulty: string[];

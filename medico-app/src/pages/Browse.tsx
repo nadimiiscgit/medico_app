@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { useQuestions, useFilteredQuestions } from '../hooks/useQuestions';
+import { useQuestions, useFilteredQuestions, usePracticeQuestions } from '../hooks/useQuestions';
 import { useProgress } from '../hooks/useProgress';
 import { useNotes } from '../hooks/useNotes';
 import { QuestionCard } from '../components/QuestionCard';
@@ -8,16 +8,17 @@ import { Badge } from '../components/ui/Badge';
 import type { Filters, OptionKey } from '../types';
 import {
   SearchIcon,
-  FilterIcon,
   XIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   SlidersIcon,
+  InfoIcon,
 } from 'lucide-react';
 
 const PAGE_SIZE = 20;
 
 const DEFAULT_FILTERS: Filters = {
+  source: 'pyq',
   years: [],
   subjects: [],
   difficulty: [],
@@ -27,7 +28,7 @@ const DEFAULT_FILTERS: Filters = {
 };
 
 export function Browse() {
-  const { questions, loading, years, subjects } = useQuestions();
+  const { questions: pyqQuestions, loading: pyqLoading, years, subjects } = useQuestions();
   const { progress, bookmark, isBookmarked } = useProgress();
   const { notes, saveNote } = useNotes();
   const [filters, setFilters] = useState<Filters>(DEFAULT_FILTERS);
@@ -36,7 +37,26 @@ export function Browse() {
   const [selectedOptions, setSelectedOptions] = useState<Record<string, OptionKey | null>>({});
   const [revealedQuestions, setRevealedQuestions] = useState<Set<string>>(new Set());
 
-  const filtered = useFilteredQuestions(questions, filters, progress.bookmarks);
+  // Only load practice subjects that are explicitly filtered (avoids loading 100MB all at once)
+  const practiceSubjectsToLoad = useMemo(() => {
+    if (filters.source === 'pyq') return [];
+    // Require at least one subject to be selected before loading practice questions
+    return filters.subjects.length > 0 ? filters.subjects : [];
+  }, [filters.source, filters.subjects]);
+
+  const { questions: practiceQuestions, loading: practiceLoading } =
+    usePracticeQuestions(practiceSubjectsToLoad);
+
+  // Build the question pool based on the source toggle
+  const pool = useMemo(() => {
+    if (filters.source === 'pyq') return pyqQuestions;
+    if (filters.source === 'practice') return practiceQuestions;
+    return [...pyqQuestions, ...practiceQuestions];
+  }, [filters.source, pyqQuestions, practiceQuestions]);
+
+  const loading = pyqLoading || practiceLoading;
+
+  const filtered = useFilteredQuestions(pool, filters, progress.bookmarks);
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
   const paginated = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
@@ -65,7 +85,7 @@ export function Browse() {
   };
 
   const clearFilters = () => {
-    setFilters(DEFAULT_FILTERS);
+    setFilters((prev) => ({ ...DEFAULT_FILTERS, source: prev.source }));
     setPage(0);
   };
 
@@ -81,7 +101,11 @@ export function Browse() {
     });
   };
 
-  if (loading) {
+  // Whether to show a hint that a subject must be selected for practice
+  const needsSubjectSelect =
+    filters.source !== 'pyq' && filters.subjects.length === 0;
+
+  if (pyqLoading) {
     return (
       <div className="flex items-center justify-center h-64">
         <div className="w-8 h-8 border-3 border-blue-600 border-t-transparent rounded-full animate-spin" />
@@ -96,7 +120,9 @@ export function Browse() {
         <div>
           <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">Browse Questions</h1>
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
-            {filtered.length.toLocaleString()} of {questions.length.toLocaleString()} questions
+            {needsSubjectSelect
+              ? `${pyqQuestions.length.toLocaleString()} PYQ questions`
+              : `${filtered.length.toLocaleString()} of ${pool.length.toLocaleString()} questions`}
           </p>
         </div>
         <Button
@@ -114,6 +140,39 @@ export function Browse() {
           )}
         </Button>
       </div>
+
+      {/* Source toggle */}
+      <div className="flex rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden text-xs font-semibold">
+        {(['pyq', 'practice', 'both'] as const).map((src) => (
+          <button
+            key={src}
+            onClick={() => { updateFilter('source', src); }}
+            className={`flex-1 py-2 px-3 transition-colors ${
+              filters.source === src
+                ? 'bg-blue-600 text-white'
+                : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800'
+            }`}
+          >
+            {src === 'pyq' ? 'PYQ Only' : src === 'practice' ? 'Practice' : 'Both'}
+          </button>
+        ))}
+      </div>
+
+      {/* Hint when practice selected but no subject chosen */}
+      {needsSubjectSelect && (
+        <div className="flex items-start gap-2.5 px-4 py-3 rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-sm text-amber-800 dark:text-amber-300">
+          <InfoIcon className="w-4 h-4 flex-shrink-0 mt-0.5" />
+          <span>Select a <strong>Subject</strong> below to load practice questions. Loading all at once is too large.</span>
+        </div>
+      )}
+
+      {/* Practice loading indicator */}
+      {practiceLoading && (
+        <div className="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400">
+          <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
+          Loading practice questions…
+        </div>
+      )}
 
       {/* Search */}
       <div className="relative">
@@ -138,29 +197,33 @@ export function Browse() {
       {/* Filter panel */}
       {showFilters && (
         <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-4 space-y-4">
-          {/* Year filter */}
-          <div>
-            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Year</p>
-            <div className="flex flex-wrap gap-1.5">
-              {years.map((y) => (
-                <button
-                  key={y}
-                  onClick={() => toggleArrayFilter('years', y)}
-                  className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors ${
-                    filters.years.includes(y)
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                  }`}
-                >
-                  {y}
-                </button>
-              ))}
+          {/* Year filter — only relevant for PYQ */}
+          {filters.source !== 'practice' && (
+            <div>
+              <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Year</p>
+              <div className="flex flex-wrap gap-1.5">
+                {years.map((y) => (
+                  <button
+                    key={y}
+                    onClick={() => toggleArrayFilter('years', y)}
+                    className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors ${
+                      filters.years.includes(y)
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    }`}
+                  >
+                    {y}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Subject filter */}
           <div>
-            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Subject</p>
+            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+              Subject {filters.source !== 'pyq' && <span className="text-amber-600 dark:text-amber-400 normal-case font-normal">(required for practice)</span>}
+            </p>
             <div className="flex flex-wrap gap-1.5">
               {subjects.map((s) => (
                 <button
@@ -249,7 +312,7 @@ export function Browse() {
       )}
 
       {/* Questions */}
-      {paginated.length === 0 ? (
+      {needsSubjectSelect ? null : paginated.length === 0 ? (
         <div className="text-center py-16">
           <p className="text-gray-500 dark:text-gray-400">No questions match your filters.</p>
           <Button variant="ghost" onClick={clearFilters} className="mt-3 text-blue-600 dark:text-blue-400">
@@ -281,7 +344,7 @@ export function Browse() {
       )}
 
       {/* Pagination */}
-      {totalPages > 1 && (
+      {!needsSubjectSelect && totalPages > 1 && (
         <div className="flex items-center justify-center gap-2 pt-4">
           <Button
             variant="outline"

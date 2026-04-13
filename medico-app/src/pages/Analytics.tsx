@@ -354,6 +354,46 @@ export function Analytics() {
         </Card>
       )}
 
+      {/* Practice performance */}
+      {Object.keys(progress.practiceSubjectStats ?? {}).length > 0 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base flex items-center gap-2">
+              <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
+                Practice
+              </span>
+              Practice Performance
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {Object.entries(progress.practiceSubjectStats)
+                .map(([subject, stats]) => ({
+                  subject,
+                  accuracy: percentage(stats.correct, stats.attempted),
+                  attempted: stats.attempted,
+                  correct: stats.correct,
+                }))
+                .sort((a, b) => b.attempted - a.attempted)
+                .map((d) => (
+                  <div key={d.subject} className="space-y-1">
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="font-medium text-gray-700 dark:text-gray-300">{d.subject}</span>
+                      <span className="text-gray-500 dark:text-gray-400 text-xs">
+                        {d.correct}/{d.attempted} · <span className={getScoreColor(d.accuracy)}>{d.accuracy}%</span>
+                      </span>
+                    </div>
+                    <Progress
+                      value={d.accuracy}
+                      color={d.accuracy >= 80 ? 'green' : d.accuracy >= 60 ? 'yellow' : 'red'}
+                    />
+                  </div>
+                ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
+
       {/* Recent sessions */}
       {sessions.length > 0 && (
         <Card>
@@ -376,10 +416,20 @@ export function Analytics() {
                       {pct}%
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100 flex items-center gap-1.5 flex-wrap">
                         {s.mode === 'practice' ? 'Practice Test' : 'Quiz'}
                         {s.subject && ` · ${s.subject}`}
                         {s.year && ` · ${s.year}`}
+                        {s.source === 'practice' && (
+                          <span className="inline-flex items-center rounded-full px-1.5 py-0.5 text-[10px] font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
+                            Practice
+                          </span>
+                        )}
+                        {s.source === 'both' && (
+                          <span className="inline-flex items-center rounded-full px-1.5 py-0.5 text-[10px] font-semibold bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">
+                            Mixed
+                          </span>
+                        )}
                       </p>
                       <p className="text-xs text-gray-500 dark:text-gray-400">
                         {c}/{t} correct · {new Date(s.startedAt).toLocaleDateString()}
