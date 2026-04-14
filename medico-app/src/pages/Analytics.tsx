@@ -16,12 +16,15 @@ import {
 import {
   BarChart,
   Bar,
+  LineChart,
+  Line,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
+import { CalendarIcon, ClockIcon, TrendingUpIcon } from 'lucide-react';
 
 export function Analytics() {
   const { progress } = useProgress();
@@ -51,6 +54,57 @@ export function Analytics() {
     .sort((a, b) => parseInt(a.year) - parseInt(b.year));
 
   const sessions = progress.sessions;
+
+  // Avg time per question
+  const avgTimePerQ = progress.totalAttempted > 0
+    ? Math.round(progress.totalStudyTime / progress.totalAttempted)
+    : 0;
+
+  // Performance trend — last 20 completed sessions with answers
+  const trendData = useMemo(() => {
+    return sessions
+      .filter((s) => Object.keys(s.answers).length > 0)
+      .slice(0, 20)
+      .reverse()
+      .map((s, i) => {
+        const total = Object.keys(s.answers).length;
+        const correct = Object.values(s.answers).filter((a) => a.isCorrect).length;
+        return {
+          index: i + 1,
+          accuracy: percentage(correct, total),
+          date: new Date(s.startedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }),
+        };
+      });
+  }, [sessions]);
+
+  // 90-day study planner — allocate days by weakness × question volume
+  const studyPlan = useMemo(() => {
+    const totalBySubject: Record<string, number> = {};
+    questions.forEach((q) => {
+      totalBySubject[q.subject] = (totalBySubject[q.subject] ?? 0) + 1;
+    });
+
+    const subjectList = Object.entries(totalBySubject).map(([subject, total]) => {
+      const stats = progress.subjectStats[subject];
+      const accuracy = stats ? percentage(stats.correct, stats.attempted) : 0;
+      const attempted = stats?.attempted ?? 0;
+      // Weight: (100 - accuracy) × sqrt(total) — weak subjects with many questions get more days
+      const coverageGap = 1 - Math.min(attempted / total, 1);
+      const weakness = (100 - accuracy) / 100;
+      const weight = (weakness * 0.6 + coverageGap * 0.4) * Math.sqrt(total);
+      return { subject, total, attempted, accuracy, weight };
+    });
+
+    const totalWeight = subjectList.reduce((a, s) => a + s.weight, 0);
+    const TOTAL_DAYS = 90;
+
+    return subjectList
+      .map((s) => ({
+        ...s,
+        days: Math.max(1, Math.round((s.weight / totalWeight) * TOTAL_DAYS)),
+      }))
+      .sort((a, b) => b.days - a.days);
+  }, [questions, progress.subjectStats]);
 
   // Build 12-week activity heatmap
   const heatmap = useMemo(() => {
@@ -163,6 +217,15 @@ export function Analytics() {
             <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">{sessions.length}</div>
           </CardContent>
         </Card>
+        <Card>
+          <CardContent className="py-4">
+            <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">Avg Time / Q</div>
+            <div className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex items-center gap-1">
+              <ClockIcon className="w-4 h-4 text-gray-400" />
+              {avgTimePerQ}s
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       {/* Activity heatmap */}
@@ -209,6 +272,32 @@ export function Analytics() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Performance trend */}
+      {trendData.length >= 3 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base flex items-center gap-2">
+              <TrendingUpIcon className="w-4 h-4 text-blue-500" />
+              Performance Trend (Last {trendData.length} Sessions)
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ResponsiveContainer width="100%" height={200}>
+              <LineChart data={trendData} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
+                <XAxis dataKey="date" tick={{ fontSize: 10, fill: axisColor }} interval="preserveStartEnd" />
+                <YAxis tick={{ fontSize: 11, fill: axisColor }} domain={[0, 100]} unit="%" />
+                <Tooltip
+                  contentStyle={{ backgroundColor: tooltipBg, border: `1px solid ${tooltipBorder}`, borderRadius: '8px', color: tooltipText }}
+                  formatter={(v) => [`${v}%`, 'Accuracy']}
+                />
+                <Line type="monotone" dataKey="accuracy" stroke="#3b82f6" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 5 }} />
+              </LineChart>
+            </ResponsiveContainer>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Focus areas */}
       {weakestSubjects.length > 0 && (
@@ -350,6 +439,50 @@ export function Analytics() {
                 </div>
               ))}
             </div>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* 90-day study planner */}
+      {studyPlan.length > 0 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base flex items-center gap-2">
+              <CalendarIcon className="w-4 h-4 text-indigo-500" />
+              90-Day Study Planner
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+              Days allocated per subject based on your current accuracy and coverage gaps. Weak subjects with more questions get more time.
+            </p>
+            <div className="space-y-2.5">
+              {studyPlan.map((s) => (
+                <div key={s.subject} className="flex items-center gap-3">
+                  <div className="w-32 flex-shrink-0">
+                    <span className="text-xs font-medium text-gray-700 dark:text-gray-300 truncate block">{s.subject}</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <div
+                        className="h-5 rounded bg-indigo-500 dark:bg-indigo-600 flex items-center justify-end pr-1.5 min-w-[2rem] transition-all"
+                        style={{ width: `${Math.max(8, (s.days / 90) * 100)}%` }}
+                      >
+                        <span className="text-[10px] font-bold text-white">{s.days}d</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-16 flex-shrink-0 text-right">
+                    <span className={`text-xs font-semibold ${getScoreColor(s.accuracy)}`}>
+                      {s.attempted > 0 ? `${s.accuracy}%` : 'Not started'}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-gray-400 dark:text-gray-500 mt-4">
+              Tip: Start with your weakest subjects. Revisit the plan monthly as your accuracy improves.
+            </p>
           </CardContent>
         </Card>
       )}

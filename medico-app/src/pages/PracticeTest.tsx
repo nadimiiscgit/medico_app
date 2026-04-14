@@ -221,6 +221,44 @@ export function PracticeTest() {
             </Button>
           </CardContent>
         </Card>
+
+        {/* Year-wise full paper */}
+        <div>
+          <h2 className="text-base font-semibold text-gray-900 dark:text-gray-100 mb-3">Take a Full Year Paper</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {years.map((y) => {
+              const count = questions.filter((q) => q.year === y).length;
+              return (
+                <button
+                  key={y}
+                  onClick={() => {
+                    const pool = questions
+                      .filter((q) => q.year === y)
+                      .sort((a, b) => a.questionNumber - b.questionNumber);
+                    if (pool.length === 0) return;
+                    setTestQuestions(pool);
+                    setSelectedOptions({});
+                    setMarkedForReview(new Set());
+                    setCurrentIdx(0);
+                    setTimeLeft(210 * 60); // 3h 30m
+                    setIsSubmitted(false);
+                    setSelectedConfig(0);
+                    const newSession = createSession('practice', pool.map((q) => q.id), {
+                      year: y,
+                      timeLimit: 210 * 60,
+                    });
+                    setSession(newSession);
+                    setStep('test');
+                  }}
+                  className="p-3 rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/30 text-left transition-all"
+                >
+                  <div className="font-bold text-gray-900 dark:text-gray-100 text-sm">{y}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{count} questions</div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </div>
     );
   }
