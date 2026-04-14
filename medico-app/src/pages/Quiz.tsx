@@ -70,10 +70,21 @@ export function Quiz() {
   const needsSubjectForPractice =
     selectedSource !== 'pyq' && selectedSubject === 'All';
 
+  // In revise mode we can only reliably access PYQ wrong answers (always loaded).
+  // Practice wrong answers require subject selection (lazy-loaded), so we separate them.
+  const pyqWrongIds = useMemo(
+    () => (progress.incorrectQuestionIds ?? []).filter((id) => !id.startsWith('medmcqa-')),
+    [progress.incorrectQuestionIds]
+  );
+  const practiceWrongCount = useMemo(
+    () => (progress.incorrectQuestionIds ?? []).filter((id) => id.startsWith('medmcqa-')).length,
+    [progress.incorrectQuestionIds]
+  );
+
   const startQuiz = useCallback(() => {
     let pool = allQuestions;
     if (reviseWrong) {
-      const incorrectIds = new Set(progress.incorrectQuestionIds ?? []);
+      const incorrectIds = new Set(pyqWrongIds);
       pool = pool.filter((q) => incorrectIds.has(q.id));
     }
     if (selectedSubject !== 'All') pool = pool.filter((q) => q.subject === selectedSubject);
@@ -98,7 +109,7 @@ export function Quiz() {
     );
     setSession(newSession);
     setStep('quiz');
-  }, [allQuestions, selectedSubject, selectedYear, questionCount, selectedSource, reviseWrong, progress.incorrectQuestionIds]);
+  }, [allQuestions, selectedSubject, selectedYear, questionCount, selectedSource, reviseWrong, pyqWrongIds]);
 
   const handleSelectOption = (opt: OptionKey) => {
     const q = quizQuestions[currentIdx];
@@ -286,7 +297,7 @@ export function Quiz() {
             </div>
 
             {/* Revise Wrong Answers */}
-            {(progress.incorrectQuestionIds?.length ?? 0) > 0 && (
+            {pyqWrongIds.length > 0 && (
               <div>
                 <label className="flex items-center gap-3 cursor-pointer p-3 rounded-lg border-2 transition-all border-gray-200 dark:border-gray-700 hover:border-orange-400 has-[:checked]:border-orange-500 has-[:checked]:bg-orange-50 dark:has-[:checked]:bg-orange-950/30">
                   <input
@@ -298,7 +309,8 @@ export function Quiz() {
                   <div>
                     <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Revise Wrong Answers</p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">
-                      Practice {progress.incorrectQuestionIds.length} questions you got wrong
+                      Practice {pyqWrongIds.length} PYQ questions you got wrong
+                      {practiceWrongCount > 0 && ` · ${practiceWrongCount} practice wrongs: select subject above`}
                     </p>
                   </div>
                 </label>
@@ -309,10 +321,10 @@ export function Quiz() {
               className="w-full"
               size="lg"
               onClick={startQuiz}
-              disabled={needsSubjectForPractice && selectedSource === 'practice'}
+              disabled={!reviseWrong && needsSubjectForPractice && selectedSource === 'practice'}
             >
               <PlayIcon className="w-4 h-4" />
-              {needsSubjectForPractice && selectedSource === 'practice'
+              {!reviseWrong && needsSubjectForPractice && selectedSource === 'practice'
                 ? 'Select a subject first'
                 : 'Start Quiz'}
             </Button>
@@ -406,7 +418,7 @@ export function Quiz() {
               questionIndex={idx}
               totalQuestions={quizQuestions.length}
               isBookmarked={isBookmarked(q.id)}
-              onBookmark={() => bookmark(q.id)}
+              onBookmark={() => bookmark(q)}
               selectedOption={sel}
               showAnswer
               isAnswered
@@ -436,7 +448,7 @@ export function Quiz() {
           questionIndex={currentIdx}
           totalQuestions={quizQuestions.length}
           isBookmarked={isBookmarked(currentQ.id)}
-          onBookmark={() => bookmark(currentQ.id)}
+          onBookmark={() => bookmark(currentQ)}
           selectedOption={currentAnswer?.selectedOption ?? null}
           onSelectOption={handleSelectOption}
           showAnswer={false}

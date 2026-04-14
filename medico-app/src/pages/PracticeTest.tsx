@@ -347,7 +347,7 @@ export function PracticeTest() {
             questionIndex={idx}
             totalQuestions={testQuestions.length}
             isBookmarked={isBookmarked(q.id)}
-            onBookmark={() => bookmark(q.id)}
+            onBookmark={() => bookmark(q)}
             selectedOption={selectedOptions[q.id] ?? null}
             showAnswer
             isAnswered
@@ -402,7 +402,7 @@ export function PracticeTest() {
             questionIndex={currentIdx}
             totalQuestions={testQuestions.length}
             isBookmarked={isBookmarked(currentQ.id)}
-            onBookmark={() => bookmark(currentQ.id)}
+            onBookmark={() => bookmark(currentQ)}
             selectedOption={selectedOptions[currentQ.id] ?? null}
             onSelectOption={(opt) => handleSelectOption(currentQ.id, opt)}
             mode="browse"

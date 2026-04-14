@@ -1,4 +1,4 @@
-import type { UserProgress, TestSession } from '../types';
+import type { UserProgress, TestSession, Question } from '../types';
 import { generateId } from '../lib/utils';
 
 const STORAGE_KEY = 'neetpg_progress';
@@ -14,6 +14,7 @@ const DEFAULT_PROGRESS: UserProgress = {
   totalStudyTime: 0,
   sessions: [],
   bookmarks: [],
+  practiceBookmarkSubjects: {},
   incorrectQuestionIds: [],
   dailyGoal: 20,
   dailyStats: { date: '', attempted: 0 },
@@ -144,11 +145,25 @@ export function createSession(
   };
 }
 
-export function toggleBookmark(progress: UserProgress, questionId: string): UserProgress {
-  const bookmarks = progress.bookmarks.includes(questionId)
-    ? progress.bookmarks.filter((id) => id !== questionId)
-    : [...progress.bookmarks, questionId];
-  return { ...progress, bookmarks };
+export function toggleBookmark(progress: UserProgress, question: Question): UserProgress {
+  const { id, source, subject } = question;
+  const alreadyBookmarked = progress.bookmarks.includes(id);
+  const bookmarks = alreadyBookmarked
+    ? progress.bookmarks.filter((bid) => bid !== id)
+    : [...progress.bookmarks, id];
+
+  // For practice questions, track subject so Bookmarks page can lazy-load the right file
+  const isPractice = source === 'practice' || id.startsWith('medmcqa-');
+  const practiceBookmarkSubjects = { ...(progress.practiceBookmarkSubjects ?? {}) };
+  if (isPractice) {
+    if (alreadyBookmarked) {
+      delete practiceBookmarkSubjects[id];
+    } else {
+      practiceBookmarkSubjects[id] = subject;
+    }
+  }
+
+  return { ...progress, bookmarks, practiceBookmarkSubjects };
 }
 
 export function isBookmarked(progress: UserProgress, questionId: string): boolean {

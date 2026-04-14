@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import type { UserProgress, TestSession } from '../types';
+import type { UserProgress, TestSession, Question } from '../types';
 import {
   loadProgress,
   saveProgress,
@@ -21,8 +21,8 @@ export function useProgress() {
   }, []);
 
   const bookmark = useCallback(
-    (questionId: string) => {
-      update((p) => toggleBookmark(p, questionId));
+    (question: Question) => {
+      update((p) => toggleBookmark(p, question));
     },
     [update]
   );
@@ -68,6 +68,7 @@ export function useProgress() {
         totalStudyTime: 0,
         sessions: [],
         bookmarks: p.bookmarks,
+        practiceBookmarkSubjects: p.practiceBookmarkSubjects ?? {},
         incorrectQuestionIds: [],
         dailyGoal: p.dailyGoal,
         dailyStats: { date: '', attempted: 0 },

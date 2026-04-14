@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import { useQuestions } from '../hooks/useQuestions';
+import { useState, useMemo } from 'react';
+import { useQuestions, usePracticeQuestions } from '../hooks/useQuestions';
 import { useProgress } from '../hooks/useProgress';
 import { useNotes } from '../hooks/useNotes';
 import { QuestionCard } from '../components/QuestionCard';
-import { Button } from '../components/ui/Button';
 import type { OptionKey } from '../types';
 import { BookmarkIcon } from 'lucide-react';
 
@@ -14,9 +13,32 @@ export function Bookmarks() {
   const [selectedOptions, setSelectedOptions] = useState<Record<string, OptionKey | null>>({});
   const [revealedQuestions, setRevealedQuestions] = useState<Set<string>>(new Set());
 
-  const bookmarkedQuestions = questions.filter((q) => progress.bookmarks.includes(q.id));
+  // Determine which practice subjects we need to load (from stored subject map)
+  const practiceSubjectsToLoad = useMemo(() => {
+    const subjectMap = progress.practiceBookmarkSubjects ?? {};
+    const subjects = new Set<string>();
+    progress.bookmarks.forEach((id) => {
+      if (id.startsWith('medmcqa-') && subjectMap[id]) {
+        subjects.add(subjectMap[id]);
+      }
+    });
+    return [...subjects];
+  }, [progress.bookmarks, progress.practiceBookmarkSubjects]);
 
-  if (loading) {
+  const { questions: practiceQuestions, loading: practiceLoading } =
+    usePracticeQuestions(practiceSubjectsToLoad);
+
+  // Combine PYQ + practice bookmarked questions
+  const bookmarkedQuestions = useMemo(() => {
+    const ids = new Set(progress.bookmarks);
+    const pyqBookmarked = questions.filter((q) => ids.has(q.id));
+    const practiceBookmarked = practiceQuestions.filter((q) => ids.has(q.id));
+    return [...pyqBookmarked, ...practiceBookmarked];
+  }, [questions, practiceQuestions, progress.bookmarks]);
+
+  const isAnyLoading = loading || practiceLoading;
+
+  if (isAnyLoading) {
     return (
       <div className="flex items-center justify-center h-64">
         <div className="w-8 h-8 border-3 border-blue-600 border-t-transparent rounded-full animate-spin" />
@@ -24,7 +46,7 @@ export function Bookmarks() {
     );
   }
 
-  if (bookmarkedQuestions.length === 0) {
+  if (progress.bookmarks.length === 0) {
     return (
       <div className="text-center py-20">
         <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -55,7 +77,7 @@ export function Bookmarks() {
             questionIndex={idx}
             totalQuestions={bookmarkedQuestions.length}
             isBookmarked={isBookmarked(q.id)}
-            onBookmark={() => bookmark(q.id)}
+            onBookmark={() => bookmark(q)}
             showAnswer={revealedQuestions.has(q.id)}
             selectedOption={selectedOptions[q.id] ?? null}
             onSelectOption={(opt) => setSelectedOptions((prev) => ({ ...prev, [q.id]: opt }))}
