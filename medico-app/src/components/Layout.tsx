@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { cn } from '../lib/utils';
 import {
@@ -11,6 +12,8 @@ import {
   LayersIcon,
   PencilIcon,
   FileTextIcon,
+  GridIcon,
+  XIcon,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -25,16 +28,28 @@ const NAV_ITEMS = [
   { to: '/settings', icon: SettingsIcon, label: 'Settings' },
 ];
 
+// First 4 always visible in bottom bar; rest go into the "More" drawer
+const BOTTOM_NAV = NAV_ITEMS.slice(0, 4);
+const MORE_NAV = NAV_ITEMS.slice(4);
+
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 export function Layout({ children }: LayoutProps) {
   const location = useLocation();
+  const [showMore, setShowMore] = useState(false);
+
+  // Is the current route one of the "more" items? If so, highlight the More button.
+  const isMoreActive = MORE_NAV.some((item) =>
+    item.to === '/'
+      ? location.pathname === '/'
+      : location.pathname.startsWith(item.to)
+  );
 
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-gray-950">
-      {/* Sidebar */}
+      {/* ── Desktop sidebar ─────────────────────────────────────── */}
       <aside className="hidden md:flex w-60 flex-col bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 fixed h-full z-10">
         {/* Logo */}
         <div className="flex items-center gap-3 px-5 py-5 border-b border-gray-100 dark:border-gray-800">
@@ -48,7 +63,7 @@ export function Layout({ children }: LayoutProps) {
         </div>
 
         {/* Nav */}
-        <nav className="flex-1 px-3 py-4 space-y-1">
+        <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
           {NAV_ITEMS.map(({ to, icon: Icon, label }) => (
             <NavLink
               key={to}
@@ -65,7 +80,10 @@ export function Layout({ children }: LayoutProps) {
             >
               {({ isActive }) => (
                 <>
-                  <Icon className={cn('flex-shrink-0', isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500')} style={{width: '18px', height: '18px'}} />
+                  <Icon
+                    className={cn('flex-shrink-0', isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500')}
+                    style={{ width: '18px', height: '18px' }}
+                  />
                   {label}
                 </>
               )}
@@ -80,7 +98,7 @@ export function Layout({ children }: LayoutProps) {
         </div>
       </aside>
 
-      {/* Mobile top bar */}
+      {/* ── Mobile top bar ───────────────────────────────────────── */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-20 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-7 h-7 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -90,9 +108,9 @@ export function Layout({ children }: LayoutProps) {
         </div>
       </div>
 
-      {/* Mobile bottom nav */}
+      {/* ── Mobile bottom nav (4 items + More) ──────────────────── */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-20 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 flex">
-        {NAV_ITEMS.slice(0, 5).map(({ to, icon: Icon, label }) => (
+        {BOTTOM_NAV.map(({ to, icon: Icon, label }) => (
           <NavLink
             key={to}
             to={to}
@@ -112,9 +130,81 @@ export function Layout({ children }: LayoutProps) {
             )}
           </NavLink>
         ))}
+
+        {/* More button */}
+        <button
+          onClick={() => setShowMore(true)}
+          className={cn(
+            'flex-1 flex flex-col items-center gap-0.5 py-2 text-xs font-medium transition-colors',
+            isMoreActive ? 'text-blue-600' : 'text-gray-500 dark:text-gray-400'
+          )}
+        >
+          <GridIcon className={cn('w-5 h-5', isMoreActive ? 'text-blue-600' : 'text-gray-400 dark:text-gray-500')} />
+          <span className="text-[10px]">More</span>
+        </button>
       </nav>
 
-      {/* Main content */}
+      {/* ── More drawer (slide-up) ───────────────────────────────── */}
+      {showMore && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="md:hidden fixed inset-0 z-30 bg-black/40 backdrop-blur-sm"
+            onClick={() => setShowMore(false)}
+          />
+
+          {/* Sheet */}
+          <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white dark:bg-gray-900 rounded-t-2xl border-t border-gray-200 dark:border-gray-800 shadow-xl">
+            {/* Handle + header */}
+            <div className="flex items-center justify-between px-5 pt-4 pb-3 border-b border-gray-100 dark:border-gray-800">
+              <div className="w-10 h-1 rounded-full bg-gray-300 dark:bg-gray-700 mx-auto absolute left-1/2 -translate-x-1/2 top-2" />
+              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">All Pages</span>
+              <button
+                onClick={() => setShowMore(false)}
+                className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              >
+                <XIcon className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Grid of nav items */}
+            <div className="grid grid-cols-3 gap-2 p-4 pb-8">
+              {MORE_NAV.map(({ to, icon: Icon, label }) => {
+                const isActive =
+                  to === '/'
+                    ? location.pathname === '/'
+                    : location.pathname.startsWith(to);
+                return (
+                  <NavLink
+                    key={to}
+                    to={to}
+                    end={to === '/'}
+                    onClick={() => setShowMore(false)}
+                    className={cn(
+                      'flex flex-col items-center gap-2 p-3 rounded-xl border-2 transition-all',
+                      isActive
+                        ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/50'
+                        : 'border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 hover:border-blue-300 hover:bg-blue-50 dark:hover:bg-blue-950/30'
+                    )}
+                  >
+                    <Icon
+                      className={cn('w-6 h-6', isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400')}
+                    />
+                    <span className={cn(
+                      'text-xs font-medium text-center leading-tight',
+                      isActive ? 'text-blue-700 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'
+                    )}>
+                      {label}
+                    </span>
+                  </NavLink>
+                );
+              })}
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* ── Main content ─────────────────────────────────────────── */}
       <main className="flex-1 md:ml-60 pt-14 md:pt-0 pb-16 md:pb-0">
         <div className="max-w-5xl mx-auto px-4 md:px-6 py-6">
           {children}
