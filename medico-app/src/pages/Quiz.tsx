@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useMemo } from 'react';
+import { useState, useCallback, useRef, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useQuestions, usePracticeQuestions } from '../hooks/useQuestions';
 import { useProgress } from '../hooks/useProgress';
@@ -7,7 +7,7 @@ import { Button } from '../components/ui/Button';
 import { Card, CardContent } from '../components/ui/Card';
 import { Progress } from '../components/ui/Progress';
 import type { Question, OptionKey, TestSession } from '../types';
-import { shuffleArray, generateId, percentage } from '../lib/utils';
+import { shuffleArray, percentage } from '../lib/utils';
 import {
   PlayIcon,
   ChevronLeftIcon,
@@ -17,9 +17,11 @@ import {
   HomeIcon,
   ListIcon,
   InfoIcon,
+  XCircleIcon,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createSession } from '../store/userProgress';
+import { cn } from '../lib/utils';
 
 type QuizStep = 'setup' | 'quiz' | 'results' | 'review';
 type QuizSource = 'pyq' | 'practice' | 'both';
@@ -39,6 +41,7 @@ export function Quiz() {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [session, setSession] = useState<TestSession | null>(null);
   const startTimeRef = useRef<number>(Date.now());
+  const reviseRef = useRef<HTMLDivElement>(null);
 
   // Setup options
   const [selectedSource, setSelectedSource] = useState<QuizSource>('pyq');
@@ -47,7 +50,32 @@ export function Quiz() {
     searchParams.get('year') ? parseInt(searchParams.get('year')!) : 0
   );
   const [questionCount, setQuestionCount] = useState(20);
-  const [reviseWrong, setReviseWrong] = useState(searchParams.get('mode') === 'revise');
+
+  // Scroll to wrong-answers section if navigated with ?mode=revise
+  useEffect(() => {
+    if (searchParams.get('mode') === 'revise' && reviseRef.current) {
+      setTimeout(() => reviseRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+  }, [searchParams]);
+
+  // Wrong answers — PYQ only (always loaded, no subject selection needed)
+  const pyqWrongIds = useMemo(
+    () => (progress.incorrectQuestionIds ?? []).filter((id) => !id.startsWith('medmcqa-')),
+    [progress.incorrectQuestionIds]
+  );
+
+  // Group wrong PYQ questions by subject
+  const wrongBySubject = useMemo(() => {
+    const wrongSet = new Set(pyqWrongIds);
+    const map: Record<string, Question[]> = {};
+    pyqQuestions.forEach((q) => {
+      if (wrongSet.has(q.id)) {
+        if (!map[q.subject]) map[q.subject] = [];
+        map[q.subject].push(q);
+      }
+    });
+    return Object.entries(map).sort((a, b) => b[1].length - a[1].length);
+  }, [pyqWrongIds, pyqQuestions]);
 
   // Lazy-load practice questions only when a specific subject is selected
   const practiceSubjectsToLoad = useMemo(() => {
@@ -59,37 +87,17 @@ export function Quiz() {
   const { questions: practiceQuestions, loading: practiceLoading } =
     usePracticeQuestions(practiceSubjectsToLoad);
 
-  // Combined pool for quiz setup preview
+  // Combined pool for quiz setup
   const allQuestions = useMemo(() => {
     if (selectedSource === 'pyq') return pyqQuestions;
     if (selectedSource === 'practice') return practiceQuestions;
     return [...pyqQuestions, ...practiceQuestions];
   }, [selectedSource, pyqQuestions, practiceQuestions]);
 
-  // Whether the user needs to pick a subject before practice can load
-  const needsSubjectForPractice =
-    selectedSource !== 'pyq' && selectedSubject === 'All';
+  const needsSubjectForPractice = selectedSource !== 'pyq' && selectedSubject === 'All';
 
-  // In revise mode we can only reliably access PYQ wrong answers (always loaded).
-  // Practice wrong answers require subject selection (lazy-loaded), so we separate them.
-  const pyqWrongIds = useMemo(
-    () => (progress.incorrectQuestionIds ?? []).filter((id) => !id.startsWith('medmcqa-')),
-    [progress.incorrectQuestionIds]
-  );
-  const practiceWrongCount = useMemo(
-    () => (progress.incorrectQuestionIds ?? []).filter((id) => id.startsWith('medmcqa-')).length,
-    [progress.incorrectQuestionIds]
-  );
-
-  const startQuiz = useCallback(() => {
-    let pool = allQuestions;
-    if (reviseWrong) {
-      const incorrectIds = new Set(pyqWrongIds);
-      pool = pool.filter((q) => incorrectIds.has(q.id));
-    }
-    if (selectedSubject !== 'All') pool = pool.filter((q) => q.subject === selectedSubject);
-    if (selectedYear > 0) pool = pool.filter((q) => q.year === selectedYear);
-
+  // Start a quiz with the given pool (shuffled + sliced to questionCount)
+  const launchQuiz = useCallback((pool: Question[], options?: { subject?: string; source?: QuizSource }) => {
     const shuffled = shuffleArray(pool).slice(0, questionCount);
     if (shuffled.length === 0) return;
 
@@ -98,26 +106,28 @@ export function Quiz() {
     setCurrentIdx(0);
     startTimeRef.current = Date.now();
 
-    const newSession = createSession(
-      'quiz',
-      shuffled.map((q) => q.id),
-      {
-        subject: selectedSubject !== 'All' ? selectedSubject : undefined,
-        year: selectedYear > 0 ? selectedYear : undefined,
-        source: selectedSource,
-      }
-    );
+    const newSession = createSession('quiz', shuffled.map((q) => q.id), {
+      subject: options?.subject,
+      source: options?.source ?? selectedSource,
+    });
     setSession(newSession);
     setStep('quiz');
-  }, [allQuestions, selectedSubject, selectedYear, questionCount, selectedSource, reviseWrong, pyqWrongIds]);
+  }, [questionCount, selectedSource]);
+
+  const startQuiz = useCallback(() => {
+    let pool = allQuestions;
+    if (selectedSubject !== 'All') pool = pool.filter((q) => q.subject === selectedSubject);
+    if (selectedYear > 0) pool = pool.filter((q) => q.year === selectedYear);
+    launchQuiz(pool, {
+      subject: selectedSubject !== 'All' ? selectedSubject : undefined,
+      source: selectedSource,
+    });
+  }, [allQuestions, selectedSubject, selectedYear, selectedSource, launchQuiz]);
 
   const handleSelectOption = (opt: OptionKey) => {
     const q = quizQuestions[currentIdx];
     if (!q) return;
-    setAnswers((prev) => ({
-      ...prev,
-      [q.id]: { selectedOption: opt },
-    }));
+    setAnswers((prev) => ({ ...prev, [q.id]: { selectedOption: opt } }));
   };
 
   const handleNext = () => {
@@ -128,9 +138,7 @@ export function Quiz() {
     }
   };
 
-  const handlePrev = () => {
-    setCurrentIdx((i) => Math.max(0, i - 1));
-  };
+  const handlePrev = () => setCurrentIdx((i) => Math.max(0, i - 1));
 
   const finishQuiz = () => {
     if (!session) return;
@@ -140,8 +148,7 @@ export function Quiz() {
       if (sel) {
         const isCorrect = sel === q.correctAnswer;
         const timeTaken = Math.round((Date.now() - startTimeRef.current) / 1000);
-        const qSource = q.source ?? 'pyq';
-        recordQuestionAnswer(q.id, q.subject, q.year, isCorrect, timeTaken, qSource);
+        recordQuestionAnswer(q.id, q.subject, q.year, isCorrect, timeTaken, q.source ?? 'pyq');
       }
     });
 
@@ -170,9 +177,7 @@ export function Quiz() {
   const currentQ = quizQuestions[currentIdx];
   const currentAnswer = currentQ ? answers[currentQ.id] : null;
   const answeredCount = Object.values(answers).filter((a) => a.selectedOption).length;
-  const correctCount = quizQuestions.filter(
-    (q) => answers[q.id]?.selectedOption === q.correctAnswer
-  ).length;
+  const correctCount = quizQuestions.filter((q) => answers[q.id]?.selectedOption === q.correctAnswer).length;
 
   if (pyqLoading) {
     return (
@@ -190,6 +195,56 @@ export function Quiz() {
           <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">Practice questions at your own pace</p>
         </div>
 
+        {/* ── Revise Wrong Answers section ─────────────────────── */}
+        {wrongBySubject.length > 0 && (
+          <div ref={reviseRef} className="space-y-3">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-base font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+                  <XCircleIcon className="w-4 h-4 text-orange-500" />
+                  Revise Wrong Answers
+                </h2>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                  {pyqWrongIds.length} question{pyqWrongIds.length !== 1 ? 's' : ''} across {wrongBySubject.length} subject{wrongBySubject.length !== 1 ? 's' : ''}
+                </p>
+              </div>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => launchQuiz(pyqQuestions.filter((q) => new Set(pyqWrongIds).has(q.id)))}
+              >
+                Practice All
+              </Button>
+            </div>
+
+            <div className="space-y-2">
+              {wrongBySubject.map(([subject, qs]) => (
+                <div
+                  key={subject}
+                  className="flex items-center justify-between px-4 py-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800"
+                >
+                  <div>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">{subject}</p>
+                    <p className="text-xs text-orange-500 dark:text-orange-400 mt-0.5">
+                      {qs.length} wrong answer{qs.length !== 1 ? 's' : ''}
+                    </p>
+                  </div>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => launchQuiz(qs, { subject, source: 'pyq' })}
+                  >
+                    Practice
+                  </Button>
+                </div>
+              ))}
+            </div>
+
+            <div className="border-t border-gray-200 dark:border-gray-800 pt-2" />
+          </div>
+        )}
+
+        {/* ── Regular quiz setup ───────────────────────────────── */}
         <Card>
           <CardContent className="space-y-5">
             {/* Source toggle */}
@@ -200,11 +255,12 @@ export function Quiz() {
                   <button
                     key={src}
                     onClick={() => setSelectedSource(src)}
-                    className={`flex-1 py-2 px-3 transition-colors ${
+                    className={cn(
+                      'flex-1 py-2 px-3 transition-colors',
                       selectedSource === src
                         ? 'bg-blue-600 text-white'
                         : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-750'
-                    }`}
+                    )}
                   >
                     {src === 'pyq' ? 'PYQ' : src === 'practice' ? 'Practice' : 'Both'}
                   </button>
@@ -296,35 +352,14 @@ export function Quiz() {
               </div>
             </div>
 
-            {/* Revise Wrong Answers */}
-            {pyqWrongIds.length > 0 && (
-              <div>
-                <label className="flex items-center gap-3 cursor-pointer p-3 rounded-lg border-2 transition-all border-gray-200 dark:border-gray-700 hover:border-orange-400 has-[:checked]:border-orange-500 has-[:checked]:bg-orange-50 dark:has-[:checked]:bg-orange-950/30">
-                  <input
-                    type="checkbox"
-                    checked={reviseWrong}
-                    onChange={(e) => setReviseWrong(e.target.checked)}
-                    className="w-4 h-4 accent-orange-600"
-                  />
-                  <div>
-                    <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Revise Wrong Answers</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">
-                      Practice {pyqWrongIds.length} PYQ questions you got wrong
-                      {practiceWrongCount > 0 && ` · ${practiceWrongCount} practice wrongs: select subject above`}
-                    </p>
-                  </div>
-                </label>
-              </div>
-            )}
-
             <Button
               className="w-full"
               size="lg"
               onClick={startQuiz}
-              disabled={!reviseWrong && needsSubjectForPractice && selectedSource === 'practice'}
+              disabled={needsSubjectForPractice && selectedSource === 'practice'}
             >
               <PlayIcon className="w-4 h-4" />
-              {!reviseWrong && needsSubjectForPractice && selectedSource === 'practice'
+              {needsSubjectForPractice && selectedSource === 'practice'
                 ? 'Select a subject first'
                 : 'Start Quiz'}
             </Button>
@@ -468,10 +503,7 @@ export function Quiz() {
           Finish Quiz
         </Button>
 
-        <Button
-          onClick={handleNext}
-          disabled={!currentAnswer?.selectedOption}
-        >
+        <Button onClick={handleNext} disabled={!currentAnswer?.selectedOption}>
           {currentIdx === quizQuestions.length - 1 ? (
             <>Finish <CheckCircleIcon className="w-4 h-4" /></>
           ) : (
