@@ -235,39 +235,44 @@ export function Flashcard() {
               {currentCard.question}
             </p>
 
-            {/* Answer (revealed) */}
-            {revealed ? (
-              <div className="space-y-3">
-                <div className="space-y-2">
-                  {(['A', 'B', 'C', 'D'] as const).map((key) => {
-                    const isCorrect = key === currentCard.correctAnswer;
-                    return (
-                      <div
-                        key={key}
-                        className={cn(
-                          'flex items-center gap-3 px-4 py-2.5 rounded-lg border-2',
-                          isCorrect
-                            ? 'border-green-500 bg-green-50 dark:bg-green-950/50'
-                            : 'border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 opacity-60'
-                        )}
-                      >
-                        <span className={cn(
-                          'flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold',
-                          isCorrect ? 'bg-green-600 text-white' : 'bg-gray-300 dark:bg-gray-600 text-gray-700 dark:text-gray-300'
-                        )}>{key}</span>
-                        <span className="text-sm text-gray-800 dark:text-gray-200">{currentCard.options[key]}</span>
-                        {isCorrect && <CheckCircleIcon className="w-4 h-4 text-green-600 ml-auto flex-shrink-0" />}
-                      </div>
-                    );
-                  })}
-                </div>
-                {currentCard.explanation && (
-                  <p className="text-xs text-gray-500 dark:text-gray-400 px-1 leading-relaxed">
-                    {currentCard.explanation.slice(0, 200)}{currentCard.explanation.length > 200 ? '…' : ''}
-                  </p>
-                )}
-              </div>
-            ) : (
+            {/* Options — always visible; highlighted only after reveal */}
+            <div className="space-y-2">
+              {(['A', 'B', 'C', 'D'] as const).map((key) => {
+                const isCorrect = key === currentCard.correctAnswer;
+                return (
+                  <div
+                    key={key}
+                    className={cn(
+                      'flex items-center gap-3 px-4 py-2.5 rounded-lg border-2 transition-all duration-300',
+                      revealed && isCorrect
+                        ? 'border-green-500 bg-green-50 dark:bg-green-950/50'
+                        : revealed && !isCorrect
+                        ? 'border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 opacity-40'
+                        : 'border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50'
+                    )}
+                  >
+                    <span className={cn(
+                      'flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-colors duration-300',
+                      revealed && isCorrect
+                        ? 'bg-green-600 text-white'
+                        : 'bg-gray-300 dark:bg-gray-600 text-gray-700 dark:text-gray-300'
+                    )}>{key}</span>
+                    <span className="text-sm text-gray-800 dark:text-gray-200">{currentCard.options[key]}</span>
+                    {revealed && isCorrect && <CheckCircleIcon className="w-4 h-4 text-green-600 ml-auto flex-shrink-0" />}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Explanation after reveal */}
+            {revealed && currentCard.explanation && (
+              <p className="text-xs text-gray-500 dark:text-gray-400 px-1 leading-relaxed">
+                {currentCard.explanation.slice(0, 200)}{currentCard.explanation.length > 200 ? '…' : ''}
+              </p>
+            )}
+
+            {/* Reveal button — hidden once revealed */}
+            {!revealed && (
               <Button
                 className="w-full"
                 variant="outline"
