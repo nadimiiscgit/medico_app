@@ -148,6 +148,18 @@ export function QuestionCard({
         <p className="text-gray-900 dark:text-gray-100 font-medium leading-relaxed text-[15px]">
           {question.question}
         </p>
+
+        {/* Question image (2022–2024 papers) */}
+        {question.imageUrl && (
+          <div className="mt-4 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+            <img
+              src={question.imageUrl}
+              alt="Question image"
+              className="w-full max-h-72 object-contain"
+              loading="lazy"
+            />
+          </div>
+        )}
       </div>
 
       {/* Options */}

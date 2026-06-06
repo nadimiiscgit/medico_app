@@ -20,6 +20,8 @@ export interface Question {
   topic: string;
   difficulty: 'Easy' | 'Medium' | 'Hard';
   tags: string[];
+  imageUrl?: string;    // primary question image (2022–2024 papers)
+  imageUrls?: string[]; // additional images if more than one
 }
 
 export type OptionKey = 'A' | 'B' | 'C' | 'D';
