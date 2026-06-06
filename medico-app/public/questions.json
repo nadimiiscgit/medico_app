@@ -136462,9 +136462,9 @@
     "year": 2016,
     "shift": 1,
     "questionNumber": 70,
-    "question": "Which is typical intercostal nerve? a)",
+    "question": "Which is a typical intercostal nerve?",
     "options": {
-      "A": "",
+      "A": "First",
       "B": "Second",
       "C": "Third",
       "D": "Seventh"
@@ -165950,9 +165950,9 @@
     "year": 2016,
     "shift": 1,
     "questionNumber": 1649,
-    "question": "If the anal spincter is injured, it is which degree of Perineal Tear ? a)",
+    "question": "If the anal sphincter is injured, it is which degree of Perineal Tear?",
     "options": {
-      "A": "",
+      "A": "First",
       "B": "Second",
       "C": "Third",
       "D": "Fourth"
@@ -165969,9 +165969,9 @@
     "year": 2016,
     "shift": 1,
     "questionNumber": 1650,
-    "question": "If the rectal mucosa is injured, it is which degree of Perineal Tear ? a)",
+    "question": "If the rectal mucosa is injured, it is which degree of Perineal Tear?",
     "options": {
-      "A": "",
+      "A": "First",
       "B": "Second",
       "C": "Third",
       "D": "Fourth"
@@ -169885,9 +169885,9 @@
     "questionNumber": 171,
     "question": "RET proto oncogene is associate with development of",
     "options": {
-      "A": "Medullary carcinoma thyroid B >Astrocytoma C >Paraganglioma",
-      "B": "",
-      "C": "",
+      "A": "Medullary carcinoma thyroid",
+      "B": "Astrocytoma",
+      "C": "Paraganglioma",
       "D": "Hurthle cell tumor thyroid"
     },
     "correctAnswer": "A",
@@ -194414,8 +194414,8 @@
     "options": {
       "A": "3",
       "B": "2",
-      "C": "1 O4 : 4",
-      "D": ""
+      "C": "1",
+      "D": "4"
     },
     "correctAnswer": "A",
     "explanation": "",
@@ -196036,8 +196036,8 @@
     "question": "A Female with mild CHL and tinnitus. The PTA is shown. What is the interpretation.",
     "options": {
       "A": "Otosclerosis",
-      "B": "Meniere's disease C.NIHL",
-      "C": "",
+      "B": "Meniere's disease",
+      "C": "NIHL",
       "D": "None"
     },
     "correctAnswer": "A",
@@ -196056,8 +196056,8 @@
     "question": "A nasal surgery was done in this patient anda the incision mark is shown. Which of these is probably done?",
     "options": {
       "A": "Septoplasty",
-      "B": "Rhinoplasty C.FESS",
-      "C": "",
+      "B": "Rhinoplasty",
+      "C": "FESS",
       "D": "Young's surgery"
     },
     "correctAnswer": "B",
@@ -196446,8 +196446,8 @@
     "questionNumber": 77,
     "question": "Many people have consumed contaminated alcohol and present with abdominal pain, confusion, decreased vision. Methyl alcohol conc detected as 20 mg %. On assessment which metabolites will be found",
     "options": {
-      "A": "Formic acid & lactic acid B Glycolic acid & oxalic acid",
-      "B": "",
+      "A": "Formic acid & lactic acid",
+      "B": "Glycolic acid & oxalic acid",
       "C": "Oxalic acid & formic acid",
       "D": "Glyoxylic acid & formic acid"
     },
@@ -196522,8 +196522,8 @@
     "questionNumber": 81,
     "question": "MTP in 21-year-old, 10-week pregnancy is to be done by medical methods by using A Intra uterine hyperosmotics B Dinoprostone",
     "options": {
-      "A": "",
-      "B": "",
+      "A": "Intra uterine hyperosmotics",
+      "B": "Dinoprostone",
       "C": "Oxytocin infusion",
       "D": "M +M"
     },
@@ -196773,8 +196773,8 @@
     "question": "A young patient presented with recurrent colicky abdominal pain, urine microscopy found to have crystals and RBC, what is the diagnosis ?",
     "options": {
       "A": "Oxalate stone",
-      "B": "PKD с. Cystine stones",
-      "C": "",
+      "B": "PKD",
+      "C": "Cystine stones",
       "D": "Glomerulonephritis"
     },
     "correctAnswer": "C",
@@ -196918,8 +196918,8 @@
     "question": "Identify the structure maarked in the intra operative image of congenital inguinal hernia ?",
     "options": {
       "A": "Femoral vein",
-      "B": "Obturator vein с. Testicular vein",
-      "C": "",
+      "B": "Obturator vein",
+      "C": "Testicular vein",
       "D": "Inferior epigastric vein"
     },
     "correctAnswer": "C",
@@ -196956,8 +196956,8 @@
     "question": "How does skin graft derives its nutrition on day 3",
     "options": {
       "A": "Plasma imbibition",
-      "B": "Inosculation с. Neovascularization",
-      "C": "",
+      "B": "Inosculation",
+      "C": "Neovascularization",
       "D": "None"
     },
     "correctAnswer": "B",
