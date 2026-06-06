@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { useQuestions } from '../hooks/useQuestions';
 import { useProgress } from '../hooks/useProgress';
 import { Button } from '../components/ui/Button';
@@ -8,6 +8,7 @@ import { Progress } from '../components/ui/Progress';
 import { shuffleArray } from '../lib/utils';
 import type { Question } from '../types';
 import { cn } from '../lib/utils';
+import { isDue, getDueCount, getNewCount } from '../lib/spacedRepetition';
 import {
   PlayIcon,
   ChevronLeftIcon,
@@ -17,10 +18,15 @@ import {
   RotateCcwIcon,
   HomeIcon,
   EyeIcon,
+  BrainIcon,
+  StarIcon,
+  CalendarClockIcon,
+  SparklesIcon,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 type FlashStep = 'setup' | 'flash' | 'results';
+type FlashMode = 'spaced' | 'classic';
 
 interface FlashResult {
   questionId: string;
@@ -29,45 +35,78 @@ interface FlashResult {
 
 export function Flashcard() {
   const { questions, loading, years, subjects } = useQuestions();
-  const { progress } = useProgress();
+  const { progress, reviewSRCard } = useProgress();
 
   const [step, setStep] = useState<FlashStep>('setup');
+  const [mode, setMode] = useState<FlashMode>('spaced');
   const [cards, setCards] = useState<Question[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [results, setResults] = useState<FlashResult[]>([]);
 
-  // Setup options
+  // Classic mode setup options
   const [selectedSubject, setSelectedSubject] = useState('All');
   const [selectedYear, setSelectedYear] = useState(0);
   const [cardCount, setCardCount] = useState(20);
-  const [onlyWrong, setOnlyWrong] = useState(false);
 
-  const wrongCount = progress.incorrectQuestionIds?.length ?? 0;
+  const srCards = progress.srCards ?? {};
 
-  const startSession = useCallback(() => {
-    let pool = questions;
-    if (onlyWrong && (progress.incorrectQuestionIds?.length ?? 0) > 0) {
-      const wrongIds = new Set(progress.incorrectQuestionIds);
-      pool = pool.filter((q) => wrongIds.has(q.id));
-    }
-    if (selectedSubject !== 'All') pool = pool.filter((q) => q.subject === selectedSubject);
-    if (selectedYear > 0) pool = pool.filter((q) => q.year === selectedYear);
+  // SR stats
+  const dueCount = useMemo(() => getDueCount(srCards), [srCards]);
+  const newCount = useMemo(
+    () => getNewCount(questions.map((q) => q.id), srCards),
+    [questions, srCards]
+  );
 
-    const shuffled = shuffleArray(pool).slice(0, cardCount);
-    if (shuffled.length === 0) return;
+  // Due cards sorted: overdue first, then new
+  const dueQuestions = useMemo(() => {
+    const dueIds = new Set(
+      Object.values(srCards)
+        .filter(isDue)
+        .map((c) => c.questionId)
+    );
+    const newIds = questions
+      .filter((q) => !srCards[q.id])
+      .map((q) => q.id);
 
-    setCards(shuffled);
-    setCurrentIdx(0);
-    setRevealed(false);
-    setResults([]);
-    setStep('flash');
-  }, [questions, selectedSubject, selectedYear, cardCount, onlyWrong, progress.incorrectQuestionIds]);
+    const due = questions.filter((q) => dueIds.has(q.id));
+    const newCards = questions.filter((q) => newIds.includes(q.id));
+
+    return [...shuffleArray(due), ...shuffleArray(newCards)].slice(0, 50);
+  }, [questions, srCards]);
+
+  const startSession = useCallback(
+    (sessionMode: FlashMode) => {
+      let pool: Question[] = [];
+
+      if (sessionMode === 'spaced') {
+        pool = dueQuestions;
+      } else {
+        pool = questions;
+        if (selectedSubject !== 'All') pool = pool.filter((q) => q.subject === selectedSubject);
+        if (selectedYear > 0) pool = pool.filter((q) => q.year === selectedYear);
+        pool = shuffleArray(pool).slice(0, cardCount);
+      }
+
+      if (pool.length === 0) return;
+
+      setCards(pool);
+      setCurrentIdx(0);
+      setRevealed(false);
+      setResults([]);
+      setMode(sessionMode);
+      setStep('flash');
+    },
+    [questions, dueQuestions, selectedSubject, selectedYear, cardCount]
+  );
 
   const handleKnew = (knew: boolean) => {
     const q = cards[currentIdx];
     const newResults = [...results, { questionId: q.id, knew }];
     setResults(newResults);
+
+    // Always update SR data regardless of mode
+    reviewSRCard(q.id, knew);
 
     if (currentIdx < cards.length - 1) {
       setCurrentIdx((i) => i + 1);
@@ -87,16 +126,90 @@ export function Flashcard() {
     );
   }
 
+  // ── Setup ──────────────────────────────────────────────────────────────────
   if (step === 'setup') {
     return (
       <div className="max-w-xl mx-auto space-y-6">
         <div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Flashcard Mode</h1>
-          <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">Quick revision — read the question, then reveal the answer</p>
+          <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
+            Quick revision — read the question, then reveal the answer
+          </p>
         </div>
 
+        {/* ── Spaced Repetition Card ── */}
+        <div
+          className={cn(
+            'rounded-2xl border-2 p-5 transition-all cursor-pointer',
+            'border-violet-400 bg-gradient-to-br from-violet-50 to-indigo-50 dark:from-violet-950/40 dark:to-indigo-950/40 dark:border-violet-600'
+          )}
+          onClick={() => startSession('spaced')}
+        >
+          <div className="flex items-start justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-violet-600 flex items-center justify-center flex-shrink-0">
+                <BrainIcon className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <div className="font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+                  Smart Review
+                  <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-violet-200 dark:bg-violet-800 text-violet-800 dark:text-violet-200">
+                    SM-2 Algorithm
+                  </span>
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                  Reviews cards at the optimal time — just like Anki
+                </p>
+              </div>
+            </div>
+            <PlayIcon className="w-5 h-5 text-violet-600 dark:text-violet-400 flex-shrink-0 mt-1" />
+          </div>
+
+          <div className="grid grid-cols-3 gap-3 mt-4">
+            <div className="text-center px-3 py-2 rounded-xl bg-white/70 dark:bg-gray-900/50">
+              <div className="text-xl font-bold text-red-600">{dueCount}</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400 flex items-center justify-center gap-1 mt-0.5">
+                <CalendarClockIcon className="w-3 h-3" /> Due today
+              </div>
+            </div>
+            <div className="text-center px-3 py-2 rounded-xl bg-white/70 dark:bg-gray-900/50">
+              <div className="text-xl font-bold text-blue-600">{Math.min(newCount, 999)}</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400 flex items-center justify-center gap-1 mt-0.5">
+                <SparklesIcon className="w-3 h-3" /> New
+              </div>
+            </div>
+            <div className="text-center px-3 py-2 rounded-xl bg-white/70 dark:bg-gray-900/50">
+              <div className="text-xl font-bold text-green-600">
+                {Object.values(srCards).filter((c) => !isDue(c)).length}
+              </div>
+              <div className="text-xs text-gray-500 dark:text-gray-400 flex items-center justify-center gap-1 mt-0.5">
+                <StarIcon className="w-3 h-3" /> Learned
+              </div>
+            </div>
+          </div>
+
+          {dueCount + Math.min(newCount, 50) === 0 && (
+            <p className="text-center text-sm text-green-600 dark:text-green-400 font-medium mt-3">
+              🎉 All caught up! Come back tomorrow.
+            </p>
+          )}
+        </div>
+
+        <div className="relative flex items-center gap-3">
+          <div className="flex-1 border-t border-gray-200 dark:border-gray-700" />
+          <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">OR</span>
+          <div className="flex-1 border-t border-gray-200 dark:border-gray-700" />
+        </div>
+
+        {/* ── Classic Mode ── */}
         <Card>
           <CardContent className="space-y-5">
+            <div className="flex items-center gap-2">
+              <RotateCcwIcon className="w-4 h-4 text-gray-500" />
+              <span className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Classic Mode</span>
+              <span className="text-xs text-gray-400 dark:text-gray-500">Custom selection</span>
+            </div>
+
             {/* Subject */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Subject</label>
@@ -138,25 +251,9 @@ export function Flashcard() {
               </div>
             </div>
 
-            {/* Wrong only */}
-            {wrongCount > 0 && (
-              <label className="flex items-center gap-3 cursor-pointer p-3 rounded-lg border-2 border-gray-200 dark:border-gray-700 hover:border-orange-400 has-[:checked]:border-orange-500 has-[:checked]:bg-orange-50 dark:has-[:checked]:bg-orange-950/30">
-                <input
-                  type="checkbox"
-                  checked={onlyWrong}
-                  onChange={(e) => setOnlyWrong(e.target.checked)}
-                  className="w-4 h-4 accent-orange-600"
-                />
-                <div>
-                  <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">Wrong answers only</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">{wrongCount} questions</p>
-                </div>
-              </label>
-            )}
-
-            <Button className="w-full" size="lg" onClick={startSession}>
+            <Button className="w-full" size="lg" onClick={() => startSession('classic')}>
               <PlayIcon className="w-4 h-4" />
-              Start Flashcards
+              Start Classic Flashcards
             </Button>
           </CardContent>
         </Card>
@@ -164,6 +261,7 @@ export function Flashcard() {
     );
   }
 
+  // ── Results ────────────────────────────────────────────────────────────────
   if (step === 'results') {
     const pct = Math.round((knewCount / cards.length) * 100);
     return (
@@ -174,6 +272,15 @@ export function Flashcard() {
               {pct}%
             </div>
             <p className="text-gray-500 dark:text-gray-400">Knew it</p>
+
+            {mode === 'spaced' && (
+              <div className="mt-3 px-4 py-2 bg-violet-50 dark:bg-violet-950/30 rounded-xl inline-block">
+                <p className="text-xs text-violet-700 dark:text-violet-400 font-medium">
+                  🧠 Cards scheduled for optimal review — next due dates updated
+                </p>
+              </div>
+            )}
+
             <div className="grid grid-cols-2 gap-4 mt-6">
               <div>
                 <div className="text-2xl font-bold text-green-600">{knewCount}</div>
@@ -184,10 +291,13 @@ export function Flashcard() {
                 <div className="text-xs text-gray-500 dark:text-gray-400">Need to review</div>
               </div>
             </div>
-            <div className="mt-6 flex gap-3 justify-center">
-              <Button variant="outline" onClick={startSession}>
+            <div className="mt-6 flex gap-3 justify-center flex-wrap">
+              <Button variant="outline" onClick={() => startSession(mode)}>
                 <RotateCcwIcon className="w-4 h-4" />
                 Again
+              </Button>
+              <Button variant="outline" onClick={() => setStep('setup')}>
+                Change Mode
               </Button>
               <Link to="/">
                 <Button variant="secondary">
@@ -202,15 +312,23 @@ export function Flashcard() {
     );
   }
 
-  // Flashcard in progress
+  // ── Flash in progress ──────────────────────────────────────────────────────
   const currentCard = cards[currentIdx];
-  const progressPct = ((currentIdx) / cards.length) * 100;
+  const progressPct = (currentIdx / cards.length) * 100;
+  const srData = srCards[currentCard?.id];
 
   return (
     <div className="max-w-xl mx-auto space-y-4">
-      {/* Progress */}
+      {/* Header */}
       <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-1">
-        <span className="font-medium">{currentIdx + 1} / {cards.length}</span>
+        <div className="flex items-center gap-2">
+          {mode === 'spaced' && (
+            <span className="flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 font-medium">
+              <BrainIcon className="w-3 h-3" /> Smart Review
+            </span>
+          )}
+          <span className="font-medium">{currentIdx + 1} / {cards.length}</span>
+        </div>
         <span>{knewCount} knew · {currentIdx - knewCount} missed</span>
       </div>
       <Progress value={progressPct} />
@@ -227,6 +345,17 @@ export function Flashcard() {
               </span>
               {currentCard.topic && (
                 <span className="text-xs text-gray-400 dark:text-gray-500">· {currentCard.topic}</span>
+              )}
+              {/* SR info for this card */}
+              {mode === 'spaced' && srData && (
+                <span className="ml-auto text-xs text-violet-500 dark:text-violet-400">
+                  interval: {srData.interval}d · ease: {srData.easeFactor.toFixed(1)}
+                </span>
+              )}
+              {mode === 'spaced' && !srData && (
+                <span className="ml-auto text-xs text-blue-500 dark:text-blue-400">
+                  ✨ New card
+                </span>
               )}
             </div>
 
@@ -271,13 +400,9 @@ export function Flashcard() {
               </p>
             )}
 
-            {/* Reveal button — hidden once revealed */}
+            {/* Reveal button */}
             {!revealed && (
-              <Button
-                className="w-full"
-                variant="outline"
-                onClick={() => setRevealed(true)}
-              >
+              <Button className="w-full" variant="outline" onClick={() => setRevealed(true)}>
                 <EyeIcon className="w-4 h-4" />
                 Reveal Answer
               </Button>
@@ -285,7 +410,7 @@ export function Flashcard() {
           </CardContent>
         </Card>
 
-        {/* Know it / Didn't know buttons */}
+        {/* Know it / Didn't know */}
         {revealed && (
           <div className="grid grid-cols-2 gap-3 mt-3">
             <button

@@ -7,6 +7,7 @@ import {
   saveSession,
   updateStreak,
   recordAnswer,
+  updateSRCard,
 } from '../store/userProgress';
 
 export function useProgress() {
@@ -70,6 +71,7 @@ export function useProgress() {
         bookmarks: p.bookmarks,
         practiceBookmarkSubjects: p.practiceBookmarkSubjects ?? {},
         incorrectQuestionIds: [],
+        srCards: p.srCards ?? {},  // preserve SR schedules on reset
         dailyGoal: p.dailyGoal,
         dailyStats: { date: '', attempted: 0 },
       };
@@ -84,6 +86,13 @@ export function useProgress() {
     [update]
   );
 
+  const reviewSRCard = useCallback(
+    (questionId: string, knew: boolean) => {
+      update((p) => updateSRCard(p, questionId, knew));
+    },
+    [update]
+  );
+
   return {
     progress,
     bookmark,
@@ -91,6 +100,7 @@ export function useProgress() {
     recordQuestionAnswer,
     resetProgress,
     setDailyGoal,
+    reviewSRCard,
     isBookmarked: (id: string) => progress.bookmarks.includes(id),
   };
 }

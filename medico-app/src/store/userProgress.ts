@@ -1,5 +1,6 @@
 import type { UserProgress, TestSession, Question } from '../types';
 import { generateId } from '../lib/utils';
+import { createSRCard, reviewCard } from '../lib/spacedRepetition';
 
 const STORAGE_KEY = 'neetpg_progress';
 
@@ -16,6 +17,7 @@ const DEFAULT_PROGRESS: UserProgress = {
   bookmarks: [],
   practiceBookmarkSubjects: {},
   incorrectQuestionIds: [],
+  srCards: {},
   dailyGoal: 20,
   dailyStats: { date: '', attempted: 0 },
 };
@@ -168,4 +170,24 @@ export function toggleBookmark(progress: UserProgress, question: Question): User
 
 export function isBookmarked(progress: UserProgress, questionId: string): boolean {
   return progress.bookmarks.includes(questionId);
+}
+
+/**
+ * Apply SM-2 review to a single card and return updated progress.
+ * Creates a new card entry if this question hasn't been reviewed via SR before.
+ */
+export function updateSRCard(
+  progress: UserProgress,
+  questionId: string,
+  knew: boolean
+): UserProgress {
+  const existing = progress.srCards?.[questionId] ?? createSRCard(questionId);
+  const updated = reviewCard(existing, knew);
+  return {
+    ...progress,
+    srCards: {
+      ...(progress.srCards ?? {}),
+      [questionId]: updated,
+    },
+  };
 }
