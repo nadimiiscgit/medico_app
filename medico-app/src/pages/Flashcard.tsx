@@ -428,7 +428,7 @@ export function Flashcard() {
             {/* Explanation after reveal */}
             {revealed && flashExpText && (
               <p className="text-xs text-gray-500 dark:text-gray-400 px-1 leading-relaxed">
-                {flashExpText.slice(0, 200)}{flashExpText.length > 200 ? '…' : ''}
+                {flashExpText}
               </p>
             )}
 
