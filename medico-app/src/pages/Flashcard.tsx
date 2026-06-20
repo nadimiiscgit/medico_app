@@ -1,4 +1,5 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
+import { getExplanation } from '../lib/explanations';
 import { useQuestions } from '../hooks/useQuestions';
 import { useProgress } from '../hooks/useProgress';
 import { Button } from '../components/ui/Button';
@@ -42,7 +43,16 @@ export function Flashcard() {
   const [cards, setCards] = useState<Question[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [revealed, setRevealed] = useState(false);
+  const [flashExpText, setFlashExpText] = useState<string | null>(null);
   const [results, setResults] = useState<FlashResult[]>([]);
+
+  // Reset explanation when card changes, fetch when revealed
+  useEffect(() => { setFlashExpText(null); }, [currentIdx]);
+  useEffect(() => {
+    if (revealed && flashExpText === null && cards[currentIdx]) {
+      getExplanation(cards[currentIdx].id).then((e) => setFlashExpText(e?.text ?? ''));
+    }
+  }, [revealed, currentIdx, flashExpText, cards]);
 
   // Classic mode setup options
   const [selectedSubject, setSelectedSubject] = useState('All');
@@ -416,9 +426,9 @@ export function Flashcard() {
             </div>
 
             {/* Explanation after reveal */}
-            {revealed && currentCard.explanation && (
+            {revealed && flashExpText && (
               <p className="text-xs text-gray-500 dark:text-gray-400 px-1 leading-relaxed">
-                {currentCard.explanation.slice(0, 200)}{currentCard.explanation.length > 200 ? '…' : ''}
+                {flashExpText.slice(0, 200)}{flashExpText.length > 200 ? '…' : ''}
               </p>
             )}
 

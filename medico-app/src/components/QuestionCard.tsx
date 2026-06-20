@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getExplanation } from '../lib/explanations';
 import type { Question, OptionKey } from '../types';
 import { Badge } from './ui/Badge';
 import { Button } from './ui/Button';
@@ -63,6 +64,20 @@ export function QuestionCard({
 }: QuestionCardProps) {
   const [showExplanation, setShowExplanation] = useState(false);
   const [showNotes, setShowNotes] = useState(false);
+  const [expText, setExpText] = useState<string | null>(null);
+  const [expAI, setExpAI] = useState(false);
+  const [expLoading, setExpLoading] = useState(false);
+
+  useEffect(() => {
+    if (showExplanation && expText === null && !expLoading) {
+      setExpLoading(true);
+      getExplanation(question.id).then((entry) => {
+        setExpText(entry?.text ?? '');
+        setExpAI(entry?.ai ?? false);
+        setExpLoading(false);
+      });
+    }
+  }, [showExplanation, question.id, expText, expLoading]);
   const [noteText, setNoteText] = useState(note);
   const subjectColor = SUBJECT_COLORS[question.subject] ?? 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300';
 
@@ -210,7 +225,7 @@ export function QuestionCard({
       )}
 
       {/* Explanation */}
-      {isRevealed && question.explanation && (
+      {isRevealed && (
         <div className="mx-5 mb-4">
           <button
             onClick={() => setShowExplanation(!showExplanation)}
@@ -221,12 +236,20 @@ export function QuestionCard({
           </button>
           {showExplanation && (
             <div className="mt-2 px-4 py-3 bg-blue-50 dark:bg-blue-950/40 rounded-lg text-sm text-gray-700 dark:text-gray-300 leading-relaxed border border-blue-100 dark:border-blue-900">
-              {question.explanationAI && (
-                <span className="inline-flex items-center gap-1 mb-2 px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
-                  ✦ AI Generated
-                </span>
+              {expLoading ? (
+                <span className="text-gray-400 dark:text-gray-500">Loading…</span>
+              ) : expText ? (
+                <>
+                  {expAI && (
+                    <span className="inline-flex items-center gap-1 mb-2 px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
+                      ✦ AI Generated
+                    </span>
+                  )}
+                  {expText}
+                </>
+              ) : (
+                <span className="text-gray-400 dark:text-gray-500">No explanation available.</span>
               )}
-              {question.explanation}
             </div>
           )}
         </div>
