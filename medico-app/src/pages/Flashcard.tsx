@@ -360,9 +360,31 @@ export function Flashcard() {
             </div>
 
             {/* Question */}
-            <p className="text-gray-900 dark:text-gray-100 font-medium leading-relaxed text-[15px] flex-1">
+            <p className="text-gray-900 dark:text-gray-100 font-medium leading-relaxed text-[15px]">
               {currentCard.question}
             </p>
+
+            {/* Question image(s) */}
+            {currentCard.imageUrl && (
+              <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+                <img
+                  src={currentCard.imageUrl}
+                  alt="Question image"
+                  className="w-full max-h-72 object-contain"
+                  loading="lazy"
+                />
+              </div>
+            )}
+            {currentCard.imageUrls?.map((url, i) => (
+              <div key={i} className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+                <img
+                  src={url}
+                  alt={`Question image ${i + 1}`}
+                  className="w-full max-h-72 object-contain"
+                  loading="lazy"
+                />
+              </div>
+            ))}
 
             {/* Options — always visible; highlighted only after reveal */}
             <div className="space-y-2">

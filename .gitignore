@@ -76,3 +76,7 @@ data/pdfs/
 
 # Large extracted data files (too big for GitHub)
 data/extracted/practice_questions.json
+serviceAccountKey.json
+
+# Claude Code local settings (may contain personal API keys)
+.claude/settings.local.json
