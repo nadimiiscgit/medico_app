@@ -16,6 +16,7 @@ export interface Question {
   };
   correctAnswer: 'A' | 'B' | 'C' | 'D';
   explanation: string;
+  explanationAI?: boolean;
   subject: string;
   topic: string;
   difficulty: 'Easy' | 'Medium' | 'Hard';

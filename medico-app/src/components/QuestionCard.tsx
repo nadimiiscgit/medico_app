@@ -221,6 +221,11 @@ export function QuestionCard({
           </button>
           {showExplanation && (
             <div className="mt-2 px-4 py-3 bg-blue-50 dark:bg-blue-950/40 rounded-lg text-sm text-gray-700 dark:text-gray-300 leading-relaxed border border-blue-100 dark:border-blue-900">
+              {question.explanationAI && (
+                <span className="inline-flex items-center gap-1 mb-2 px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
+                  ✦ AI Generated
+                </span>
+              )}
               {question.explanation}
             </div>
           )}
