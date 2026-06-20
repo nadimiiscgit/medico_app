@@ -50,7 +50,7 @@ PDF_CONFIG = [
     ("FR_neet-pg-2014-question-paper-with-answers.pdf",    2014, 1, "A"),
     ("FR_neet-pg-2015-question-paper-with-answers.pdf",    2015, 1, "A"),
     ("FR_neet-pg-2016-question-paper-with-answers.pdf",    2016, 1, "A"),
-    ("FR_neet-pg-2017-question-paper-with-answers.pdf",    2017, 1, "A"),
+    ("FR_neet-pg-2017-question-paper-with-answers.pdf",    2017, 1, "E"),
     ("FR_neet-pg-2018-question-paper-with-answers.pdf",    2018, 1, "A"),
     ("FR_neet-pg-2019-question-paper-with-answers.pdf",    2019, 1, "A"),
     ("FR_neet-pg-2020-question-paper-with-answers.pdf",    2020, 1, "A"),
@@ -160,151 +160,72 @@ def extract_format_a(pdf_path: Path, year: int, shift: int) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Format D extractor  (2024: multiple questions per page)
+# Shared extractor for multi-question-per-page formats (C, D, E)
 # ---------------------------------------------------------------------------
 
-def extract_format_d(pdf_path: Path, year: int, shift: int) -> dict:
+def _extract_multi_q(
+    pdf_path: Path,
+    year: int,
+    shift: int,
+    marker_pattern: str,
+    min_h: int = MIN_HEIGHT,
+) -> dict:
     """
-    Multiple questions per page. For each page, find question number markers
-    near each image using text position (bounding boxes).
-    Returns: { questionId: [image_paths] }
+    Generic extractor for PDFs with multiple questions per page.
+
+    marker_pattern — regex with one capture group for the question number,
+                     e.g. r'Ques\\s*No[:\\s]+(\\d+)' or r'Ques\\s+(\\d+)\\.'
+    min_h          — minimum image height (some formats use smaller images)
+
+    Cross-page fix: when an image appears above the first Q-marker on a page,
+    it belongs to the last question seen on the previous page.
     """
-    mapping = {}
+    mapping: dict = {}
     out_dir = IMAGE_DIR / f"{year}_s{shift}"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     doc = fitz.open(str(pdf_path))
-
-    for page_num, page in enumerate(doc):
-        # Get all text spans with their bounding boxes
-        blocks = page.get_text("dict")["blocks"]
-
-        # Build list of (y_top, question_number) for all "Ques N." markers on page
-        q_markers = []
-        for block in blocks:
-            if block.get("type") != 0:  # text block
-                continue
-            for line in block.get("lines", []):
-                line_text = " ".join(s["text"] for s in line.get("spans", []))
-                m = re.search(r'Ques\s+(\d+)\.', line_text)
-                if m:
-                    y_top = line["bbox"][1]
-                    q_markers.append((y_top, int(m.group(1))))
-
-        q_markers.sort(key=lambda x: x[0])   # sort top→bottom
-
-        # Match images to their bounding boxes on the page.
-        # get_image_info() uses non-sequential 'number' keys so we can't index-match.
-        # Instead we correlate by (width, height) — good enough since logos are filtered out.
-        img_infos = page.get_image_info(hashes=False)
-        images    = page.get_images(full=True)
-
-        # Map (w, h) → list of bboxes (multiple images can share same size)
-        size_to_bboxes: dict = {}
-        for info in img_infos:
-            key = (info["width"], info["height"])
-            size_to_bboxes.setdefault(key, []).append(info["bbox"])
-
-        used_bboxes: set = set()
-
-        for img in images:
-            xref = img[0]
-            base = doc.extract_image(xref)
-            w, h = base["width"], base["height"]
-
-            if not is_real_image(w, h):
-                continue
-
-            # Pick the first unused bbox for this size
-            bboxes = size_to_bboxes.get((w, h), [])
-            bbox   = None
-            for b in bboxes:
-                key = tuple(b)
-                if key not in used_bboxes:
-                    bbox = b
-                    used_bboxes.add(key)
-                    break
-            if not bbox:
-                continue
-
-            img_y_top = bbox[1]   # top of image on page
-
-            # Find the nearest "Ques N." above this image
-            q_num = None
-            for (q_y, q_n) in reversed(q_markers):
-                if q_y <= img_y_top:
-                    q_num = q_n
-                    break
-            if q_num is None and q_markers:
-                q_num = q_markers[0][1]   # fallback: first question on page
-            if q_num is None:
-                continue
-
-            q_id     = make_question_id(year, shift, q_num)
-            filename = f"q{q_num:04d}_p{page_num+1}_{xref}.png"
-            out_path = out_dir / filename
-            rel_path = f"images/{year}_s{shift}/{filename}"
-
-            if save_image(doc, xref, out_path):
-                if q_id not in mapping:
-                    mapping[q_id] = []
-                if rel_path not in mapping[q_id]:
-                    mapping[q_id].append(rel_path)
-
-    doc.close()
-    return mapping
-
-
-# ---------------------------------------------------------------------------
-# Format C extractor  (2022-2023: similar to D but diff markers)
-# ---------------------------------------------------------------------------
-
-def extract_format_c(pdf_path: Path, year: int, shift: int) -> dict:
-    """
-    2022-2023 format: 'Ques No: N' markers.
-    """
-    mapping = {}
-    out_dir = IMAGE_DIR / f"{year}_s{shift}"
-    out_dir.mkdir(parents=True, exist_ok=True)
-
-    doc = fitz.open(str(pdf_path))
+    last_q_num: int | None = None   # last Q number seen, carried across pages
 
     for page_num, page in enumerate(doc):
         blocks = page.get_text("dict")["blocks"]
 
-        q_markers = []
+        # Collect (y, q_num) for all markers on this page
+        q_markers: list[tuple[float, int]] = []
         for block in blocks:
             if block.get("type") != 0:
                 continue
             for line in block.get("lines", []):
                 line_text = " ".join(s["text"] for s in line.get("spans", []))
-                m = re.search(r'Ques\s*No[:\s]+(\d+)', line_text, re.IGNORECASE)
+                m = re.search(marker_pattern, line_text, re.IGNORECASE)
                 if m:
-                    y_top = line["bbox"][1]
-                    q_markers.append((y_top, int(m.group(1))))
+                    q_markers.append((line["bbox"][1], int(m.group(1))))
 
         q_markers.sort(key=lambda x: x[0])
+        if q_markers:
+            # Update last_q_num to the highest question number seen on this page
+            page_max_q = max(q_markers, key=lambda x: x[1])[1]
 
-        img_infos = page.get_image_info(hashes=False)
-        images    = page.get_images(full=True)
-
+        # Build (w,h) → [bbox, …] map for image position lookup
         size_to_bboxes: dict = {}
-        for info in img_infos:
+        for info in page.get_image_info(hashes=False):
             key = (info["width"], info["height"])
             size_to_bboxes.setdefault(key, []).append(info["bbox"])
 
         used_bboxes: set = set()
 
-        for img in images:
+        for img in page.get_images(full=True):
             xref = img[0]
             base = doc.extract_image(xref)
             w, h = base["width"], base["height"]
 
-            if not is_real_image(w, h):
+            # Use caller-supplied min_h; keep other filters
+            if (w, h) in LOGO_SIZES or w < MIN_WIDTH or h < min_h or w > MAX_WIDTH:
                 continue
 
+            # Find this image's position on the page
             bboxes = size_to_bboxes.get((w, h), [])
-            bbox   = None
+            bbox = None
             for b in bboxes:
                 key = tuple(b)
                 if key not in used_bboxes:
@@ -314,14 +235,18 @@ def extract_format_c(pdf_path: Path, year: int, shift: int) -> dict:
             if not bbox:
                 continue
 
-            img_y_top = bbox[1]
-            q_num = None
+            img_y = bbox[1]
+
+            # Find nearest Q-marker at or above the image
+            q_num: int | None = None
             for (q_y, q_n) in reversed(q_markers):
-                if q_y <= img_y_top:
+                if q_y <= img_y:
                     q_num = q_n
                     break
-            if q_num is None and q_markers:
-                q_num = q_markers[0][1]
+
+            if q_num is None:
+                # Image is above all markers on this page → belongs to previous page's Q
+                q_num = last_q_num
             if q_num is None:
                 continue
 
@@ -331,19 +256,37 @@ def extract_format_c(pdf_path: Path, year: int, shift: int) -> dict:
             rel_path = f"images/{year}_s{shift}/{filename}"
 
             if save_image(doc, xref, out_path):
-                if q_id not in mapping:
-                    mapping[q_id] = []
+                mapping.setdefault(q_id, [])
                 if rel_path not in mapping[q_id]:
                     mapping[q_id].append(rel_path)
 
+        if q_markers:
+            last_q_num = page_max_q
+
     doc.close()
     return mapping
+
+
+def extract_format_c(pdf_path: Path, year: int, shift: int) -> dict:
+    """2022-2023: 'Ques No: N' markers."""
+    return _extract_multi_q(pdf_path, year, shift, r'Ques\s*No[:\s]+(\d+)')
+
+
+def extract_format_d(pdf_path: Path, year: int, shift: int) -> dict:
+    """2024: 'Ques N.' markers."""
+    return _extract_multi_q(pdf_path, year, shift, r'Ques\s+(\d+)\.')
+
+
+def extract_format_e(pdf_path: Path, year: int, shift: int) -> dict:
+    """2017: 'Question N' markers, images can be as small as 50px tall."""
+    return _extract_multi_q(pdf_path, year, shift, r'Question\s+(\d+)', min_h=50)
 
 
 EXTRACTORS = {
     "A": extract_format_a,
     "C": extract_format_c,
     "D": extract_format_d,
+    "E": extract_format_e,
 }
 
 
