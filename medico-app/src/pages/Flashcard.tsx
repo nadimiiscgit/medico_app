@@ -6,7 +6,7 @@ import { Button } from '../components/ui/Button';
 import { Card, CardContent } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { Progress } from '../components/ui/Progress';
-import { shuffleArray } from '../lib/utils';
+import { shuffleArray, mdToHtml } from '../lib/utils';
 import type { Question } from '../types';
 import { cn } from '../lib/utils';
 import { isDue, getDueCount, getNewCount } from '../lib/spacedRepetition';
@@ -427,9 +427,8 @@ export function Flashcard() {
 
             {/* Explanation after reveal */}
             {revealed && flashExpText && (
-              <p className="text-xs text-gray-500 dark:text-gray-400 px-1 leading-relaxed">
-                {flashExpText}
-              </p>
+              <p className="text-xs text-gray-500 dark:text-gray-400 px-1 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: mdToHtml(flashExpText) }} />
             )}
 
             {/* Reveal button */}

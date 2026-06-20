@@ -3,7 +3,7 @@ import { getExplanation } from '../lib/explanations';
 import type { Question, OptionKey } from '../types';
 import { Badge } from './ui/Badge';
 import { Button } from './ui/Button';
-import { cn } from '../lib/utils';
+import { cn, mdToHtml } from '../lib/utils';
 import { BookmarkIcon, ChevronDownIcon, ChevronUpIcon, CheckCircleIcon, XCircleIcon, PencilIcon } from 'lucide-react';
 
 interface QuestionCardProps {
@@ -245,7 +245,7 @@ export function QuestionCard({
                       ✦ AI Generated
                     </span>
                   )}
-                  {expText}
+                  <p dangerouslySetInnerHTML={{ __html: mdToHtml(expText) }} />
                 </>
               ) : (
                 <span className="text-gray-400 dark:text-gray-500">No explanation available.</span>

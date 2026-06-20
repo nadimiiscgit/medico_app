@@ -75,3 +75,15 @@ export const NEET_PG_SUBJECTS = [
 ] as const;
 
 export const DIFFICULTY_ORDER = { Easy: 0, Medium: 1, Hard: 2 };
+
+/** Convert a subset of markdown (bold, italic, paragraphs) to safe HTML. */
+export function mdToHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\n\n+/g, '</p><p class="mt-2">')
+    .replace(/\n/g, '<br>');
+}
