@@ -4,7 +4,7 @@ import type { Question, OptionKey } from '../types';
 import { Badge } from './ui/Badge';
 import { Button } from './ui/Button';
 import { cn, mdToHtml } from '../lib/utils';
-import { BookmarkIcon, ChevronDownIcon, ChevronUpIcon, CheckCircleIcon, XCircleIcon, PencilIcon } from 'lucide-react';
+import { BookmarkIcon, ChevronDownIcon, ChevronUpIcon, CheckCircleIcon, XCircleIcon, PencilIcon, CopyIcon, CheckIcon } from 'lucide-react';
 
 interface QuestionCardProps {
   question: Question;
@@ -67,6 +67,14 @@ export function QuestionCard({
   const [expText, setExpText] = useState<string | null>(null);
   const [expAI, setExpAI] = useState(false);
   const [expLoading, setExpLoading] = useState(false);
+  const [idCopied, setIdCopied] = useState(false);
+
+  const handleCopyId = () => {
+    navigator.clipboard.writeText(question.id).then(() => {
+      setIdCopied(true);
+      setTimeout(() => setIdCopied(false), 1500);
+    });
+  };
 
   useEffect(() => {
     if (showExplanation && expText === null && !expLoading) {
@@ -145,17 +153,31 @@ export function QuestionCard({
             <span className="text-xs text-gray-400 dark:text-gray-500">· {question.topic}</span>
           )}
         </div>
-        {onBookmark && (
+        <div className="flex items-center gap-3 flex-shrink-0">
           <button
-            onClick={onBookmark}
-            className="text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex-shrink-0"
-            title={isBookmarked ? 'Remove bookmark' : 'Bookmark question'}
+            onClick={handleCopyId}
+            className="flex items-center gap-1.5 text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            title={`Copy question ID: ${question.id}`}
           >
-            <BookmarkIcon
-              className={cn('w-5 h-5', isBookmarked && 'fill-blue-500 text-blue-500')}
-            />
+            <span className="font-mono text-xs truncate max-w-[110px] sm:max-w-none">{question.id}</span>
+            {idCopied ? (
+              <CheckIcon className="w-3.5 h-3.5 text-green-600 dark:text-green-400" />
+            ) : (
+              <CopyIcon className="w-3.5 h-3.5" />
+            )}
           </button>
-        )}
+          {onBookmark && (
+            <button
+              onClick={onBookmark}
+              className="text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              title={isBookmarked ? 'Remove bookmark' : 'Bookmark question'}
+            >
+              <BookmarkIcon
+                className={cn('w-5 h-5', isBookmarked && 'fill-blue-500 text-blue-500')}
+              />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Question */}

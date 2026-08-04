@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { cn } from '../lib/utils';
+import { SearchByIdModal } from './SearchByIdModal';
 import {
   HomeIcon,
   ClockIcon,
@@ -14,6 +15,7 @@ import {
   FileTextIcon,
   GridIcon,
   XIcon,
+  SearchIcon,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -39,6 +41,7 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   const location = useLocation();
   const [showMore, setShowMore] = useState(false);
+  const [showSearchById, setShowSearchById] = useState(false);
 
   // Is the current route one of the "more" items? If so, highlight the More button.
   const isMoreActive = MORE_NAV.some((item) =>
@@ -60,6 +63,17 @@ export function Layout({ children }: LayoutProps) {
             <p className="font-bold text-gray-900 dark:text-gray-100 text-sm leading-tight">NEET PG</p>
             <p className="text-xs text-gray-500 dark:text-gray-400">Question Bank</p>
           </div>
+        </div>
+
+        {/* Jump to question by ID */}
+        <div className="px-3 pt-3">
+          <button
+            onClick={() => setShowSearchById(true)}
+            className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-blue-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          >
+            <SearchIcon className="w-4 h-4 flex-shrink-0" />
+            Jump to question ID
+          </button>
         </div>
 
         {/* Nav */}
@@ -106,6 +120,13 @@ export function Layout({ children }: LayoutProps) {
           </div>
           <span className="font-bold text-gray-900 dark:text-gray-100 text-sm">NEET PG QB</span>
         </div>
+        <button
+          onClick={() => setShowSearchById(true)}
+          className="p-2 -mr-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          title="Jump to question ID"
+        >
+          <SearchIcon className="w-5 h-5" />
+        </button>
       </div>
 
       {/* ── Mobile bottom nav (4 items + More) ──────────────────── */}
@@ -210,6 +231,8 @@ export function Layout({ children }: LayoutProps) {
           {children}
         </div>
       </main>
+
+      {showSearchById && <SearchByIdModal onClose={() => setShowSearchById(false)} />}
     </div>
   );
 }
