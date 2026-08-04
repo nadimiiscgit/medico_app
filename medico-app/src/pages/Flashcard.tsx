@@ -44,13 +44,17 @@ export function Flashcard() {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [flashExpText, setFlashExpText] = useState<string | null>(null);
+  const [flashExpImages, setFlashExpImages] = useState<string[]>([]);
   const [results, setResults] = useState<FlashResult[]>([]);
 
   // Reset explanation when card changes, fetch when revealed
-  useEffect(() => { setFlashExpText(null); }, [currentIdx]);
+  useEffect(() => { setFlashExpText(null); setFlashExpImages([]); }, [currentIdx]);
   useEffect(() => {
     if (revealed && flashExpText === null && cards[currentIdx]) {
-      getExplanation(cards[currentIdx].id).then((e) => setFlashExpText(e?.text ?? ''));
+      getExplanation(cards[currentIdx].id).then((e) => {
+        setFlashExpText(e?.text ?? '');
+        setFlashExpImages(e?.images ?? []);
+      });
     }
   }, [revealed, currentIdx, flashExpText, cards]);
 
@@ -430,6 +434,16 @@ export function Flashcard() {
               <p className="text-xs text-gray-500 dark:text-gray-400 px-1 leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: mdToHtml(flashExpText) }} />
             )}
+            {revealed && flashExpImages.map((url, i) => (
+              <div key={i} className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+                <img
+                  src={url}
+                  alt={`Explanation image ${i + 1}`}
+                  className="w-full max-h-72 object-contain"
+                  loading="lazy"
+                />
+              </div>
+            ))}
 
             {/* Reveal button */}
             {!revealed && (

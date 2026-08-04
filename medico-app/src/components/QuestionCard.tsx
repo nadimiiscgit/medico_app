@@ -66,6 +66,7 @@ export function QuestionCard({
   const [showNotes, setShowNotes] = useState(false);
   const [expText, setExpText] = useState<string | null>(null);
   const [expAI, setExpAI] = useState(false);
+  const [expImages, setExpImages] = useState<string[]>([]);
   const [expLoading, setExpLoading] = useState(false);
 
   useEffect(() => {
@@ -74,6 +75,7 @@ export function QuestionCard({
       getExplanation(question.id).then((entry) => {
         setExpText(entry?.text ?? '');
         setExpAI(entry?.ai ?? false);
+        setExpImages(entry?.images ?? []);
         setExpLoading(false);
       });
     }
@@ -175,6 +177,19 @@ export function QuestionCard({
             />
           </div>
         )}
+        {question.imageUrls?.map((url, i) => (
+          <div
+            key={i}
+            className="mt-4 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50"
+          >
+            <img
+              src={url}
+              alt={`Question image ${i + 1}`}
+              className="w-full max-h-72 object-contain"
+              loading="lazy"
+            />
+          </div>
+        ))}
       </div>
 
       {/* Options */}
@@ -238,14 +253,27 @@ export function QuestionCard({
             <div className="mt-2 px-4 py-3 bg-blue-50 dark:bg-blue-950/40 rounded-lg text-sm text-gray-700 dark:text-gray-300 leading-relaxed border border-blue-100 dark:border-blue-900">
               {expLoading ? (
                 <span className="text-gray-400 dark:text-gray-500">Loading…</span>
-              ) : expText ? (
+              ) : expText || expImages.length > 0 ? (
                 <>
                   {expAI && (
                     <span className="inline-flex items-center gap-1 mb-2 px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
                       ✦ AI Generated
                     </span>
                   )}
-                  <p dangerouslySetInnerHTML={{ __html: mdToHtml(expText) }} />
+                  {expText && <p dangerouslySetInnerHTML={{ __html: mdToHtml(expText) }} />}
+                  {expImages.map((url, i) => (
+                    <div
+                      key={i}
+                      className="mt-3 rounded-lg overflow-hidden border border-blue-100 dark:border-blue-900 bg-white dark:bg-gray-800/50"
+                    >
+                      <img
+                        src={url}
+                        alt={`Explanation image ${i + 1}`}
+                        className="w-full max-h-72 object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
                 </>
               ) : (
                 <span className="text-gray-400 dark:text-gray-500">No explanation available.</span>

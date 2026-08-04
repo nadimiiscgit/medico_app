@@ -1,6 +1,7 @@
 interface ExplanationEntry {
   text: string;
   ai?: boolean;
+  images?: string[];
 }
 
 type ExplanationsMap = Record<string, ExplanationEntry>;
