@@ -250,10 +250,10 @@ export function Settings() {
         </CardHeader>
         <CardContent className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
           <p><strong className="text-gray-900 dark:text-gray-100">NEET PG Question Bank</strong></p>
-          <p>10,368 questions from NEET PG papers (2012–2024)</p>
-          <p>Includes detailed explanations for 2012–2020 papers</p>
+          <p>{questions.length.toLocaleString()} questions from NEET PG papers (2012–2024)</p>
+          <p>Includes detailed explanations for 2012–2021 papers</p>
           <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
-            Note: 2021 paper not included (image-only PDF). 2024 papers are recall-based (partial).
+            Note: 2024 papers are recall-based (partial).
           </p>
         </CardContent>
       </Card>

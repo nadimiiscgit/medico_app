@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { cn } from '../lib/utils';
 import { SearchByIdModal } from './SearchByIdModal';
+import { useQuestions } from '../hooks/useQuestions';
 import {
   HomeIcon,
   ClockIcon,
@@ -42,6 +43,7 @@ export function Layout({ children }: LayoutProps) {
   const location = useLocation();
   const [showMore, setShowMore] = useState(false);
   const [showSearchById, setShowSearchById] = useState(false);
+  const { questions } = useQuestions();
 
   // Is the current route one of the "more" items? If so, highlight the More button.
   const isMoreActive = MORE_NAV.some((item) =>
@@ -108,7 +110,7 @@ export function Layout({ children }: LayoutProps) {
         {/* Footer */}
         <div className="px-5 py-4 border-t border-gray-100 dark:border-gray-800">
           <p className="text-xs text-gray-400 dark:text-gray-600">NEET PG 2012–2024</p>
-          <p className="text-xs text-gray-400 dark:text-gray-600">10,368 Questions</p>
+          <p className="text-xs text-gray-400 dark:text-gray-600">{questions.length.toLocaleString()} Questions</p>
         </div>
       </aside>
 
