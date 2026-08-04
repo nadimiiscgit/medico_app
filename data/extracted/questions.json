@@ -196990,5 +196990,3292 @@
     "topic": "",
     "difficulty": "Easy",
     "tags": []
+  },
+  {
+    "id": "neetpg-2021-s1-q0001",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 1,
+    "question": "Pen Test is for which nerve",
+    "options": {
+      "A": "Median Nerve",
+      "B": "Ulnar nerve",
+      "C": "PIN",
+      "D": "Musculocutaneous"
+    },
+    "correctAnswer": "A",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The doctor places a small needle electrode into muscles in your hand and arm that get impulses \nfrom the median nerve. The needle sends electric impulses into the muscle. You relax and flex your \nhand several times. The doctor can tell if your median nerve is damaged or being squeezed."
+  },
+  {
+    "id": "neetpg-2021-s1-q0002",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 2,
+    "question": "A small boy with multiple fracture of Humerus following which there is loss of sensation over lateral side of forearm, difficulty in flexion of elbow & supination of forearm.",
+    "options": {
+      "A": "Musculocutaneous nerve",
+      "B": "Median nerve",
+      "C": "Axillary",
+      "D": "Radial nerve"
+    },
+    "correctAnswer": "A",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Nerve roots – C5-C7. \n Motor functions – muscles in the anterior compartment of the arm (coracobrachialis, biceps \nbrachii and the brachialis). \n Sensory functions – gives rise to the lateral cutaneous nerve of forearm, which innervates \nthe lateral aspect of the forearm. \n These muscles flex the upper arm at the shoulder and the elbow. In addition, the biceps \nbrachii also supinates the forearm."
+  },
+  {
+    "id": "neetpg-2021-s1-q0003",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 3,
+    "question": "Which blood vessel carries deoxygenated blood back to placenta",
+    "options": {
+      "A": "Umbilical Artery",
+      "B": "Umbilical vein",
+      "C": "Uterine artery",
+      "D": "Descending aorta"
+    },
+    "correctAnswer": "A",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The umbilical arteries carry deoxygenated fetal blood toward the placenta for replenishment, and \nthe umbilical vein carries newly oxygenated and nutrient-rich blood back to the fetus."
+  },
+  {
+    "id": "neetpg-2021-s1-q0004",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 4,
+    "question": "Structure preventing vertical descent of spleen",
+    "options": {
+      "A": "Phrenocolic ligament",
+      "B": "Hepatogastric ligament",
+      "C": "Ligamentum teres",
+      "D": "Ligamentum flavum"
+    },
+    "correctAnswer": "A",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The phrenicocolic ligament is continued from the left colic flexure to the thoracic diaphragm \nopposite the tenth and eleventh ribs; it passes below and serves to support the spleen.This \nligament marks the site where the colon exits the peritoneal cavity: the phrenicocolic ligament so \nis an important point of intersection of abdominal anatomy and, consequently, a crucial point for \nspread of abdominal disease."
+  },
+  {
+    "id": "neetpg-2021-s1-q0005",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 5,
+    "question": "Which nerve is required for GAG reflex",
+    "options": {
+      "A": "9th cranial nerve",
+      "B": "10th cranial nerve",
+      "C": "11th cranial nerve",
+      "D": "12th cranial nerve"
+    },
+    "correctAnswer": "A",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The gag reflex, also called the pharyngeal reflex, is a contraction of the throat that happens when \nsomething touches the roof of the mouth, the back of the tongue or throat, or the area around the \ntonsils. This reflexive action helps to prevent choking. The afferent nerve for gag reflex is \nglossopharyngeal nerve and efferent nerve is vagus nerve."
+  },
+  {
+    "id": "neetpg-2021-s1-q0006",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 6,
+    "question": "The Great saphenous vein graft was used for a patient in CABG. Post surgery the patient is having a neuralgia on the medial aspect of leg and foot. Which nerve has been injured?",
+    "options": {
+      "A": "Saphenous Nerve",
+      "B": "Femoral vein",
+      "C": "Profunda femoris vein",
+      "D": "Popliteal vein"
+    },
+    "correctAnswer": "A",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Saphenous neuralgia after harvest of GSV for CABG is common. The main symptom is anaesthesia \nand certain areas may persist for some considerable time post-operatively.Hyperaesthesia and \npain, for the early onset and the early disappearance, are considered as a normal consequence of \nsurgical procedure from around 5 days to 8 weeks and anaesthesia does not last longer than 2 \nmonths.\n \n \nPhysiology"
+  },
+  {
+    "id": "neetpg-2021-s1-q0007",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 7,
+    "question": "Beta 2 receptors act via following secondary messenger",
+    "options": {
+      "A": "Adenylate Cyclase",
+      "B": "Tyrosine kinase receptors",
+      "C": "TGF-beta receptors",
+      "D": "Cytokine receptors"
+    },
+    "correctAnswer": "A",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Activation of β adrenergic receptors leads to relaxation of smooth muscle in the lung, and dilation \nand opening of the airways. β adrenergic receptors are coupled to a stimulatory G protein of \nadenylyl cyclase. This enzyme produces the second messenger cyclic adenosine monophosphate \n(cAMP)."
+  },
+  {
+    "id": "neetpg-2021-s1-q0008",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 8,
+    "question": "A child presented with dehydration and was supplemented with ORS solution for management. Which of the following receptors help in the absorption of glucose fromGIT?",
+    "options": {
+      "A": "SGLT 1",
+      "B": "SGLT 2",
+      "C": "GLUT 1",
+      "D": "GLUT 2"
+    },
+    "correctAnswer": "A",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Majority of glucose is absorbed via GLUT transporters in the body. However, the exception for this \nis the GIT and the Kidneys, where it is absorbed via the SGLT 1 and SGLT 2 receptors, which act as \nSodium Glucose Co-transporters. Since ORS has both sodium and glucose, it is absorbed from the \nintestinal cell from the lumen via SGLT 1 receptors."
+  },
+  {
+    "id": "neetpg-2021-s1-q0009",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 9,
+    "question": "A patient presented with cold skin, fatigue, shortness of breath with activity and enlarged liver. His JVP was measured which showed higher amplitude of “a” wave JVP is due to",
+    "options": {
+      "A": "Tricuspid Regurgitation",
+      "B": "Tricuspid Stenosis",
+      "C": "Mitral Regurgitation",
+      "D": "Mitral Stenosis"
+    },
+    "correctAnswer": "B",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The a wave of JVP represents the atrial systole. Stenosis of the tricuspid valve leads to increase in \nright atrial pressure. \nCannon a wave is seen in AV dissociation from heart block (intermittent). \nA wave is absent in atrial fibrillation."
+  },
+  {
+    "id": "neetpg-2021-s1-q0010",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 10,
+    "question": "The body fluid compartments of a patient were measured, which showed the following values: Na-10 K-140 Cl-15 Name the fluid compartment.",
+    "options": {
+      "A": "Interstitial fluid",
+      "B": "ECF",
+      "C": "ICF",
+      "D": "Total body fluid"
+    },
+    "correctAnswer": "C",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The given values show low sodium and high potassium levels. ECF always has higher sodium \nconcentration than IC. Hence the given fluid compartment is ICF."
+  },
+  {
+    "id": "neetpg-2021-s1-q0011",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 11,
+    "question": "An elderly female presented with dribbling of urine only on coughing and straining. What type of urinary incontinence is she suffering from?",
+    "options": {
+      "A": "Stress incontinence",
+      "B": "Urge incontinence",
+      "C": "Overflow incontinence",
+      "D": "Neurogenic bladder"
+    },
+    "correctAnswer": "A",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "During coughing or straining, the intra-abdominal pressure increases, resulting in stress \nincontinence due to relaxed pelvic floor muscles. \n \nSome common types of incontinence are depicted in the image below."
+  },
+  {
+    "id": "neetpg-2021-s1-q0012",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 12,
+    "question": "A young patient presented with muscle spasms, numbness in hands and feet, seizures and difficulty in breathing due to laryngospasm.. His blood picture showed electrolyte imbalance. What is the cause for these manifestations in the patient.",
+    "options": {
+      "A": "Respiratory Acidosis",
+      "B": "Respiratory Alkalosis",
+      "C": "Metabolic acidosis",
+      "D": "Metabolic Alkalosis"
+    },
+    "correctAnswer": "B",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The given patient is suffering from tetany due to hypocalcemia. The levels of free and bound \ncalcium are determined by : \n1) Albumin \n2) Blood pH levels \nAlkalosis results in decreased H+ ion concentration, resulting in more albumin binding to calcium. \nThis causes reduced free calcium levels leading to hypocalcemia and tetany in this patient. \n \n \n \nBiochemistry"
+  },
+  {
+    "id": "neetpg-2021-s1-q0013",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 13,
+    "question": "A patient on a maize diet presented with diarrhea, dementia and dysentry . Which vitamin deficiency is responsible for the features",
+    "options": {
+      "A": "Niacin",
+      "B": "Thiamine",
+      "C": "Riboflavin",
+      "D": "Pyridoxine"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Maize in Low in Tryptophan which is an essential amino acid required for Niacin synthesis. \nThis leads to Niacin deficiency in the population who have a diet majorly consisting of \nmaize. \n \n Niacin Deficiency leads to pellagra which classically presents with diarrhoea , dementia and \ndysentry."
+  },
+  {
+    "id": "neetpg-2021-s1-q0014",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 14,
+    "question": "A patient presented with dryness in eye with a gritty sensation along with corneal softening. What is the most probable cause ?",
+    "options": {
+      "A": "Vitamin A deficiency",
+      "B": "Riboflavin Deficiency",
+      "C": "Viral Keratitis",
+      "D": "Follicular conjunctivitis"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Xeropthalmia [Dryness of Eye] is the a common presenting feature of Vitamin A Deficiency along \nwith Keratomalacia [Softening of Cornea]"
+  },
+  {
+    "id": "neetpg-2021-s1-q0015",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 15,
+    "question": "Which amino acid needs to be supplemented through diet in patient with cystathionine beta synthase",
+    "options": {
+      "A": "Cysteine",
+      "B": "Methionine",
+      "C": "Serine",
+      "D": "Tryptophan"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Since Cystathionine is broken down into Cysteine and Homoserine with the help of \nCystathioninase. \nThe deficiency of Cystathionine beta synthase will lead to deficiency of cystathionine and hence \ncysteine cannot be formed and need to be supplemented in the diet."
+  },
+  {
+    "id": "neetpg-2021-s1-q0016",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 16,
+    "question": "Corneal Transparency is maintained by which of the following GAGs",
+    "options": {
+      "A": "Keratan Sulphate",
+      "B": "Dermatan Sulphate",
+      "C": "Heparan Sulphate",
+      "D": "Chondroitin Sulphate"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Keratan Sulphate is made up of N Acetyl Glucosamine + Galactose \n It was first discovered in cornea [and responsible is corneal transparency] \n Also it is the only glycosaminoglycan without any acid sugar [Hence does not require uronic \nacid pathway]"
+  },
+  {
+    "id": "neetpg-2021-s1-q0017",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 17,
+    "question": "Which of the following is associated with defect in mismatch repair",
+    "options": {
+      "A": "Hereditary NPCC",
+      "B": "SCID",
+      "C": "Bloom Disorder",
+      "D": "MUTYH Associated Polyposis"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Hereditary NPCC"
+  },
+  {
+    "id": "neetpg-2021-s1-q0018",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 18,
+    "question": "A patient had dinner at 8 PM in the night and dose his blood sugar test at 7 AM in the morning. What is the major source of glucose",
+    "options": {
+      "A": "Muscle Glycogen",
+      "B": "Liver Glycogen",
+      "C": "Gluconeogenesis",
+      "D": "Dietary Carbohydrate"
+    },
+    "correctAnswer": "B",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Liver Glycogen \n \n: Source of Blood Glucose \n \n Fed State [0-4 Hrs after Meal]- Dietary Carbohydrate \n Fasting Stage I [4-16 Hrs Post Prandial]- Liver Glycogen [Note Muscle Glycogen never \ncontributes to blood glucose] \n Fasting Stage II /III /IV [16-48 Hrs Post Prandial]- Gluconeogenesis . Liver Glycogen \nexhausted after 16 hrs."
+  },
+  {
+    "id": "neetpg-2021-s1-q0019",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 19,
+    "question": "A patient with tendon xanthomas , Increased LDL and cholesterol . What is the most probable diagnosis ?",
+    "options": {
+      "A": "Type I Hyperlipoproteinemia",
+      "B": "Type II Hyperlipoproteinemia",
+      "C": "Type III Hyperlipoproteinemia",
+      "D": "Abetalipoproteinemia"
+    },
+    "correctAnswer": "B",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Type II Hyperlipoproteinemia"
+  },
+  {
+    "id": "neetpg-2021-s1-q0020",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 20,
+    "question": "A 5 year old child was brought to the physician with a history of black urine . There is no history of fever or any other complaints. There is no growth retardation and all the developmental milestones are normal. The child is suspected to have an enzyme defect for metabolism of an aromatic amino acid. What is the enzyme deficient ?",
+    "options": {
+      "A": "Homogentistae oxidase",
+      "B": "Homogentisate dehydrogenase",
+      "C": "Tryptophan Hydroxylase",
+      "D": "Tyrosine Transaminase"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Diagnosis - Alkaptonuria \n \n \n\n\n \n \n \n \n→ Autosomal Recessive Disorder \n→ Garrod’s Tetrad *Alkaptonuria, Albinis, Pentosuria , Cystinuria+ \n→ Normal Life till 3-4 Decade . Urine Darkening on standing is the only symptom in children \n→ Ochronosis *Adult+- Pigmentation d/t Alkaptone Bodies in I/V Disc, Cartilage of nose / ear \n→ Arthritis . There is No Intellectual Defect \n \n \n \n \nPathology"
+  },
+  {
+    "id": "neetpg-2021-s1-q0021",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 21,
+    "question": "A Patient presents to you with generalized weakness and easy fatigability. He gives you a history of working in a factory with an exposure to Benzene. Which of the following cases would you suspect in this patient",
+    "options": {
+      "A": "Blood Cancer",
+      "B": "Urinary Bladder Cancer",
+      "C": "Carcinoma Gall Bladder",
+      "D": "Hepatocellular Carcinoma"
+    },
+    "correctAnswer": "A",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Benzene causes harmful effects on the bone marrow and can cause a decrease in red blood \ncells, leading to anemia. It can also cause excessive bleeding and can affect the immune \nsystem, increasing the chance for infection. \n The Department of Health and Human Services (DHHS) has determined that benzene causes \ncancer in humans. Long-term exposure to high levels of benzene in the air can cause \nleukemia, cancer of the blood-forming organs."
+  },
+  {
+    "id": "neetpg-2021-s1-q0022",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 22,
+    "question": "Chronic Alcoholic patient with history of increasing abdominal girth . On liver biopsy there are reddish inclusions . What are these made up of",
+    "options": {
+      "A": "Actin",
+      "B": "Microtubules",
+      "C": "Intermediate filaments",
+      "D": "Myofibril"
+    },
+    "correctAnswer": "C",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Accumulation of intermediate filaments in lung macrophages and endotheliocytes has been found \nin patients with chronic alcoholism and purulent destructive pulmonary diseases. Excess \naccumulation of cytoskeletal elements reflects cell dystrophy."
+  },
+  {
+    "id": "neetpg-2021-s1-q0023",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 23,
+    "question": "All are increased in IDA except?",
+    "options": {
+      "A": "TIBC",
+      "B": "Soluble transferrin receptor",
+      "C": "Transferrin saturation",
+      "D": "Erythropoietin"
+    },
+    "correctAnswer": "C",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " High iron binding capacity and low transferrin saturation are suggestive of iron deficiency \n(even in the presence of a normal or elevated ferritin). \n\n\n \n \n \n Soluble transferrin receptor-Elevated in tissue iron deficiency"
+  },
+  {
+    "id": "neetpg-2021-s1-q0024",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 24,
+    "question": "Woman on pap smear having disorganised growth of cells with hyperchromatic nuclei, which phenomenon is occurring here",
+    "options": {
+      "A": "Dysplasia",
+      "B": "Metaplasia",
+      "C": "Hypertrophy",
+      "D": "Carcinoma"
+    },
+    "correctAnswer": "D",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Differentiation: refers to the morphology of cells compared to normal cells of the same tissue. \nWell differentiated tumour cells look and function like normal cells of the tissue. Poorly \ndifferentiated tumour cells (anaplastic cells) do not function like the normal tissue and appear \nabnormal on microscopy. Anaplastic cells have the following features: \n● Pleomorphic: continual variation in size and shape. \n● Hyperchromatic: cells are dark-staining with large nuclei. \n● Loss of polarity: normal cells are anchored and oriented to the basement membrane; \nanaplastic cells lose this uniform orientation and the tumour cells grow in a disorganized \nway. \n● Mitoses: increased proliferation results in abnormally large number of cells undergoing \nmitosis."
+  },
+  {
+    "id": "neetpg-2021-s1-q0025",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 25,
+    "question": "Poor prognostic marker in MM is-",
+    "options": {
+      "A": "S. creatinine",
+      "B": "Hypercalcemia",
+      "C": "B2 microglobulins",
+      "D": "Telomerase"
+    },
+    "correctAnswer": "C",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Beta 2 microglobulin is a low molecular weight protein found on the surface of all nucleated cells: \nit is the light chain of the HL-A histocompatibility complex. The increased levels of serum beta 2 \nmicroglobulin in patients with multiple myeloma have been associated with a poor prognosis."
+  },
+  {
+    "id": "neetpg-2021-s1-q0026",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 26,
+    "question": "A 34 year old female presenting to the OPD with migratory arthritis and examination revealed a pan systolic murmur. ECHO was performed which is suggestive of mitral regurgitation. Biopsy image is provided. Diagnosis will be?",
+    "options": {
+      "A": "Infective endocarditis",
+      "B": "Rheumatic heart disease",
+      "C": "SABE",
+      "D": "Cardiac failure"
+    },
+    "correctAnswer": "B",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "An endomyocardial biopsy performed at cardiac catheterization demonstrated and Aschoff's body \nin the endocardium and thus confirmed a clinical suspicion of active carditis. \nAschoff bodies are nodules found in the hearts of individuals with rheumatic fever. They result \nfrom inflammation in the heart muscle and are characteristic of rheumatic heart disease."
+  },
+  {
+    "id": "neetpg-2021-s1-q0027",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 27,
+    "question": "A 18 year old male presented to the OPD with gum bleeding, fever low TLC and low platelet count. General examination is unremarkable. Further investigation show a low reticulocyte count, absent megakaryocytes and no immature cells. DIagnosis will be?",
+    "options": {
+      "A": "Aplastic anemia",
+      "B": "MDS",
+      "C": "PNH",
+      "D": "None"
+    },
+    "correctAnswer": "A",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Symptoms are due to the underproduction of red cells, white cells, & platelets. Symptoms may be \nsevere from the start or gradually worsen over time as the disease progresses \nLow red cell count can cause: \n \n● Fatigue \n● Pallor \n● Rapid heart rate \n● Shortness of breath with excercise \n● Weakness \n● Lightheadedness upon standing \n● Leukopenia can cause increase risk of infection \n● Thrombocytopenia can cause bleeding:- Bleeding gums, easy bruising, Nose bleeds, rash \n \nBlood test will show \n \n● Anaemia \n● Leukopenia \n● Low reticulocyte count \n● Low platelet count"
+  },
+  {
+    "id": "neetpg-2021-s1-q0028",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 28,
+    "question": "HNPCC has defect in",
+    "options": {
+      "A": "Nucleotide excision",
+      "B": "Base pair excision",
+      "C": "Point mutation",
+      "D": "Mismatch repair gene"
+    },
+    "correctAnswer": "D",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Hereditary nonpolyposis colorectal cancer (HNPCC) is a common inherited form of neoplasia \ncaused by germline mutations in DNA mismatch repair (MMR) genes. MMR proteins have been \nreported to associate with several proteins, including the human exonuclease 1 (hEXO1)."
+  },
+  {
+    "id": "neetpg-2021-s1-q0029",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 29,
+    "question": "Patient with general fatigue and tiredness. Primary clinical examination is uneventful.Normal TLC, DL",
+    "options": {
+      "C": "No immature cells seen. Superficial discrete lymphnodes enlarged. On biopsy effaced architecture, indented nucleus and prominent nucleolus containing atypical cells. CD 10 & BCL-2 positive.",
+      "A": "Follicular",
+      "B": "Burkitts",
+      "D": "Mycosis Fungoides"
+    },
+    "correctAnswer": "A",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The diagnosis of follicular lymphoma is confirmed by removing all or part of an enlarged lymph \nnode to examine its cells under a microscope, a procedure known as a biopsy. \nCD10 expression is present in cases of FL. Follicles demonstrated strong positivity. One CD10 -\npositive case of FL showed equivocal staining for BCL2 and one an absence of staining for BCL2. \n \n \n \n \nPharmacology"
+  },
+  {
+    "id": "neetpg-2021-s1-q0030",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 30,
+    "question": "What is the mechanism of action of Tocilizumab?",
+    "options": {
+      "A": "Inhibits binding of IL-1",
+      "B": "Inhibits binding of IL-6 to its receptor IL-6R",
+      "C": "TNF Alpha inhibition",
+      "D": "IL-18 inhibition"
+    },
+    "correctAnswer": "B",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Tocilizumab is a novel monoclonal antibody that competitively inhibits the binding of interleukin -6 \n(IL-6) to its receptor (IL-6R). Inhibiting the entire receptor complex prevents IL-6 signal \ntransduction to inflammatory mediators that summon B and T cells. Tocilizumab has a nonlinear \npharmacokinetic profile. It may be beneficial for the treatment of RA in patients who do not \nrespond to methotrexate or disease-modifying antirheumatic drugs."
+  },
+  {
+    "id": "neetpg-2021-s1-q0031",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 31,
+    "question": "What is the mechanism of action of Methotrexate",
+    "options": {
+      "A": "Inhibition of Dihydrofolate reductase",
+      "B": "Inhibits cell replication by acting on G phase of cell cycle",
+      "C": "Inhibits pyrimidine synthesis",
+      "D": "Inhibits Thymidylate synthase"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Methotrexate inhibits dihydrofolate reductase, preventing the reduction of dihydrobiopterin (BH2) \nto tetrahydrobiopterin (BH4), leading to nitric oxide synthase uncoupling and increased sensitivity \nof T cells to apoptosis, thereby diminishing immune responses"
+  },
+  {
+    "id": "neetpg-2021-s1-q0032",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 32,
+    "question": "Which antitubercular drug inhibits the action of OCPs?",
+    "options": {
+      "A": "Rifampicin",
+      "B": "Ethambutol",
+      "C": "Isoniazid",
+      "D": "Pyrazinamide"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Rifampicin causes an increase in the rate of metabolism of OCPs, resulting in unacceptable rates of \nbreakthrough bleeding and pregnancy.Rifampin, an inducer of enzymes that metabolizes \nestrogens, decreases the effectiveness of OCPs. Other drugs that cause a reduction in the efficacy \nof OCPs include anticonvulsants including carbamazepine, phenytoin, topiramate and selected \n\n\n \n \n \nantibiotics like azithromycin , erythromycin, ketoconazole, penicillin (and derivatives), rifabutin , \nand tetracycline antibiotics"
+  },
+  {
+    "id": "neetpg-2021-s1-q0033",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 33,
+    "question": "A patient is on digoxin therapy with some concomitant medications. At presentation, the patient develops atrial fibrillation with control ventricular rate & his serum digoxin raised from his previous value. Which of the following medication have enhanced digoxin toxicity?",
+    "options": {
+      "A": "Atenolol",
+      "B": "Clarithromycin",
+      "C": "KCL",
+      "D": "Triamterene"
+    },
+    "correctAnswer": "B",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Atrial fibrillation along with AV Node block is the characteristic arrhythmia observed in \nDigoxin toxicity. The serum digoxin level must not be more than 2.0ng/ml. \n Digoxin inhibits Na+K+ATPase pump by binding to the potassium binding site on the \nmyocardial cell. This in turn leads to increased intracellular Ca leading to increased \nionotropic effects.In cases of hypokalemia in blood, more digoxin binds to the myocardium \nand precipitates digoxin toxicity. Loop and thiazide diuretics produce hypokalemia. RAAS \ninhibitors cause hyperkalemia. Beta blockers decrease renin release and produce \nhyperkalemia. Potassium sparing diuretics inhibit the action of aldosterone. \n P-glycoprotein inhibitors like clarithromycin increase the digoxin toxicity."
+  },
+  {
+    "id": "neetpg-2021-s1-q0034",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 34,
+    "question": "A patient is taking metronidazole for anaerobic infection. Which of the following should be avoided during this period.",
+    "options": {
+      "A": "Alcohol",
+      "B": "Ciprofloxacin",
+      "C": "Rifampicin",
+      "D": "Colchicine"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Consumption of alcohol while taking metronidazole results in disulfiram like reaction in the body. \nThe patient experiences headaches, stomach cramps, nausea, vomiting, and flushing (warmth, \nredness, or tingly feeling)."
+  },
+  {
+    "id": "neetpg-2021-s1-q0035",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 35,
+    "question": "Topiramate is used in the treatment of",
+    "options": {
+      "A": "Migraine",
+      "B": "LGS",
+      "C": "ADHD",
+      "D": "Dementia"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The recommended dosage of topiramate for migraine prevention is 50 mg twice per day. Patients \nshould start with 25 mg once per day, then increase by 25 mg per week up to the recommended \ndosage. Topiramate is a neuromodulatory compound with neuron stabilizing properties and is \napproved for the preventive treatment of migraine."
+  },
+  {
+    "id": "neetpg-2021-s1-q0036",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 36,
+    "question": "Which of the following drugs is used for the long term management of obesity?",
+    "options": {
+      "A": "Sibutramine",
+      "B": "Fenfluramine",
+      "C": "Metformin",
+      "D": "Liraglutide"
+    },
+    "correctAnswer": "D",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Liraglutide acts as a GLP-1 agonist and helps in long term management of obesity. Fenfluramine \nand Sibutramine are banned due to their increased cardiovascular toxicity. Bupropion in \ncombination with naltrexone or zonisamide is also used for the management of obesity. \n \n \nForensic"
+  },
+  {
+    "id": "neetpg-2021-s1-q0037",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 37,
+    "question": "A child accidentally ingested some fruit which he plucked from a tree while playing . After the ingestion of the fruit , he presented with restlessness, painful swallowing, photophobia, dry skin , urinary retention and elevated body temperature. What is the possible poisoning and the appropriate antidote for it?",
+    "options": {
+      "A": "Datura & Physostigmine",
+      "B": "Yellow oleander & Physostigmine",
+      "C": "Datura & Pralidoxime",
+      "D": "Yellow oleander & Pralidoxime"
+    },
+    "correctAnswer": "A",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "This is a case of datura poisoning showing the manifestations of excess atropine levels.. The \nantidote of choice is physostigmine as neostigmine does not cross the blood brai n barrier. \nPhysostigmine acts as anticholinesterase and increases the levels of acetylcholine in the \nneuromuscular junction."
+  },
+  {
+    "id": "neetpg-2021-s1-q0038",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 38,
+    "question": "A 30 year old male presents with a history of consumption of some unknown substance. The attending doctor notices the person to be having diaphoresis, headache and acute coronary spasm like features. The person is least likely to show which clinical feature?",
+    "options": {
+      "A": "Bradycardia",
+      "B": "Tachycardia",
+      "C": "Hyperthermia",
+      "D": "Hypertension"
+    },
+    "correctAnswer": "A",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "This is a case of cocaine overdose.Cocaine is predominantly a vasoconstrictor. It leads to an \nincrease in the heart rate. Respiratory rate and blood pressure. It also causes a rise in the body \ntemperature, known as ‘Cocaine Fever’."
+  },
+  {
+    "id": "neetpg-2021-s1-q0039",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 39,
+    "question": "A doctor at autopsy noticed the following finding on a cadaver. Which of the following is true regarding this finding?",
+    "options": {
+      "A": "It is due to sulphaemoglobin pigment",
+      "B": "This change is seen at 24 hours",
+      "C": "It is non bacterial",
+      "D": "It is associated with lightning case"
+    },
+    "correctAnswer": "A",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The finding in the above image is Marbling. This change starts at about 24hours after death. It \nbecomes visible to the naked eye at 36-48 hours after death. It is due to sulphaemoglobin \npigment."
+  },
+  {
+    "id": "neetpg-2021-s1-q0040",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 40,
+    "question": "While recording evidence in the court of law, lawyer asked the witness, “Were you present when A killed B?”, and the witness answered “yes”. This type of questioning is permitted in?",
+    "options": {
+      "A": "Examination in chief",
+      "B": "Direct examination",
+      "C": "Redirect examination",
+      "D": "Cross examination"
+    },
+    "correctAnswer": "D",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "this is a type of leading question and it is permitted in cross examination."
+  },
+  {
+    "id": "neetpg-2021-s1-q0041",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 41,
+    "question": "A dead body was recovered from near a pond by the police. During autopsy, the following finding was observed. The below phenomenon is due to",
+    "options": {
+      "A": "Case of torture in hot water",
+      "B": "Case of postmortem hanging",
+      "C": "Case of immersion in water for 36 hours",
+      "D": "Case of colliquative liquefaction"
+    },
+    "correctAnswer": "C",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "this is a case of immersion in water for more than 36hrs which is characterized by mottling and \ngreenish black discolouration of the skin due to putrefactive changes."
+  },
+  {
+    "id": "neetpg-2021-s1-q0042",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 42,
+    "question": "A woman gave birth to twins. However, her husband asked for a DNA fingerprinting test as he believed that the babies did not belong to him. The results showed that one baby did not belong to him. This is a case of:",
+    "options": {
+      "A": "Superfecundation",
+      "B": "Superfetation",
+      "C": "Atavism",
+      "D": "Posthumus child"
+    },
+    "correctAnswer": "A",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Superfecundation- two different acts of coitus leading to foetus formation. It can be with two \ndifferent males. \nActual twins occur due to single act of coitus \nSuperfoetation- conceiving to foetuses in two different cycles of mensruation"
+  },
+  {
+    "id": "neetpg-2021-s1-q0043",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 43,
+    "question": "A man was sitting in the balcony which was overlooking a park. He was sitting naked for sexual gratification. This is called",
+    "options": {
+      "A": "Voyeurism",
+      "B": "Masochism",
+      "C": "Exhibitionism",
+      "D": "Fetishism"
+    },
+    "correctAnswer": "C",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Exhibitionism- display of private parts in public. It is punishable under section 294 IPC. \nMasochism- Giving pain to others \nFetishism-Sexual gratification is obtained from inanimate objects belonging to the opposite \ngender. \nStalking- Following a female physically or digitally, inspite of clear prior disinterest showed by the \nfemale."
+  },
+  {
+    "id": "neetpg-2021-s1-q0044",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 44,
+    "question": "A daily wage labourer was working in the farm on a hot summer day and suddenly collapsed. He was brought to the hospital and the attending doctor measured his body temperature as 106 degrees fahrenheit. Which of the following symptoms is least likely to be seen?",
+    "options": {
+      "A": "Sweating",
+      "B": "Hot skin",
+      "C": "Hypotension",
+      "D": "Disorientation"
+    },
+    "correctAnswer": "A",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The given person is doing muscular activity in hot weather conditions. His body temperature is \n40.5 degrees centigrade. These conditions result in heat stroke. At this temperature, the \nhypothalamus ceases to function causing an absence of sweating."
+  },
+  {
+    "id": "neetpg-2021-s1-q0045",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 45,
+    "question": "Identify the active principle in the poisonous seed shown below",
+    "options": {
+      "A": "Abrin",
+      "B": "Ricin",
+      "C": "Cannabinol",
+      "D": "Bhilawanol"
+    },
+    "correctAnswer": "D",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The nut shown in the image is Marking Nut or Semecarpus Anacardium. It is also known as \nBhilawa. The two active principles in this are Bhilawanol and Semi Carpool \n \n \n \n \nMicrobiology"
+  },
+  {
+    "id": "neetpg-2021-s1-q0046",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 46,
+    "question": "A child admitted with fever, rash begins behind ears, conjunctivitis, coryza, cough and koplik spot. Based on the clinical manifestations, choose the correct description of the pathogen?",
+    "options": {
+      "A": "SS enveloped RNA virus",
+      "B": "DS enveloped RNA virus",
+      "C": "SS naked RNA virus",
+      "D": "DS naked RNA virus"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "SS enveloped RNA virus \n \n The pathogen causing Measles is paramyxovirus. \n The tubelike, helically symmetrical nucleocapsid contains a monopartite, single-stranded, \nnegative-sense RNA genome and an RNA-directed RNA polymerase. The nucleocapsid \nassociates with the matrix protein (M) at the base of a double-layered lipid envelope."
+  },
+  {
+    "id": "neetpg-2021-s1-q0047",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 47,
+    "question": "Name the parasite whose microfilariae have a sheath with no nuclei at the tail end.",
+    "options": {
+      "A": "Wuchereria Bancrofti",
+      "B": "Brugia malayi",
+      "C": "Loa loa",
+      "D": "None"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Wuchereria Bancrofti \n \n Wuchereria bancrofti is a filarial (arthropod-borne) nematode (roundworm) that is the \nmajor cause of lymphatic filariasis. \n It has a short cephalic or head region connected to the main body by a short neck, which \nappears as a constriction. Dark spots are dispersed nuclei throughout the body cavity, with \nno nuclei at the tail tip. \n The tip of the tail has 15 pairs of minute caudal papillae, the sensory organs."
+  },
+  {
+    "id": "neetpg-2021-s1-q0048",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 48,
+    "question": "History of Pastry intake causing food poisoning. What is the causative agent",
+    "options": {
+      "A": "S aureus",
+      "B": "B. cereus",
+      "C": "EIEC",
+      "D": "Verotoxin E.coli"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "S aureus \nStaphylococcal food poisoning (SFP) is one of the most common food-borne diseases and results \nfrom the ingestion of staphylococcal enterotoxins (SEs) preformed in food by enterotoxigenic \nstrains of Staphylococcus aureus."
+  },
+  {
+    "id": "neetpg-2021-s1-q0049",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 49,
+    "question": "A patient presented with 70% burns. A test was done on a sample collected from the burnt site as shown in the picture in suspicion of the probable causative organism which is an obligate aerobe. What's the microbe?",
+    "options": {
+      "A": "Pseudomonas aeruginosa",
+      "B": "Meningococcus",
+      "C": "Streptococcus pyogenes",
+      "D": "Pneumococcus"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Invasive burn wound sepsis with Pseudomonas aeruginosa is a major concern in burn patient care \nsettings. PSEUDOMONAS AERUGINOSA (Bacillus pyocyaneus) is normally an organism of low \ninvasiveness and virulence, frequently noted as a local inhabitant of burns, surgical wounds and \n\n\n \n \n \nthe genitourinary tract. Under suitable host conditions, however, this gram-negative, motile rod \ncan assume the role of a life-threatening pathogen"
+  },
+  {
+    "id": "neetpg-2021-s1-q0050",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 50,
+    "question": "A truck driver presented with a painless, demarcated ulcer on penis with inguinal lymphadenopathy. What is the best method of visualization of motility of the probable causative agent?",
+    "options": {
+      "A": "Dark field microscopy",
+      "B": "Light microscopy",
+      "C": "Fluorescent microscopy",
+      "D": "Electron microscopy"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " The patient has developed syphilis. \n Direct detection methods for Treponema pallidum include dark-field microscopy (DFM), \ndirect fluorescence antibody (DFA) testing, immunohistochemistry (IHC), and nucleic acid \namplification tests (NAATs)."
+  },
+  {
+    "id": "neetpg-2021-s1-q0051",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 51,
+    "question": "Swab is discarded in which color bin?",
+    "options": {
+      "A": "Yellow bag",
+      "B": "Red bag",
+      "C": "White bag",
+      "D": "Blue bag"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Yellow Bin : \n \n\n\n \n \n \n Human Anatomical Waste, Animal Anatomical Waste, \n Items contaminated with blood, body fluids like dressings, plaster casts, cotton swabs and \nbags containing residual or discarded blood and blood components. \n Discarded linen, mattresses, beddings contaminated with blood or body fluid, routine mask \n& gown. \n Pharmaceutical waste like antibiotics, cytotoxic drugs including all items contaminated with \ncytotoxic drugs along with glass or plastic ampoules, vials etc. \n Liquid waste generated due to use of chemicals in production of biological and used or \ndiscarded disinfectants, Silver X - ray film developing liquid, discarded Formalin, infected \nsecretions, aspirated body fluids, liquid from laboratories and floor washings, cleaning, \nhouse - keeping and disinfecting activities etc \n Blood bags, Laboratory cultures, stocks or specimens of microorganisms, live or attenuated \nvaccines, human and animal cell cultures used in research, production of biological, \nresidual toxins, dishes and devices used for cultures \n \nRed bin : \n \n Wastes generated from disposable items such as tubing, bottles, intravenous tubes and \nsets, catheters, urine bags, syringes without needles, fixed needle syringes with their \nneedles cut, vacutainers and gloves. \n \nWHITE Bin : \n \n Waste Sharps including metals Needles, syringes with fixed needles, needles from needle \ntip cutter or burner, scalpels, blades, or any other contaminated sharp object that may \ncause puncture and cuts. This includes both used, discarded and contaminated metal sharps \nBlue bin : \n \n Broken or discarded and contaminated glass including medicine vials and ampoules except \nthose contaminated with cytotoxic wastes."
+  },
+  {
+    "id": "neetpg-2021-s1-q0052",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 52,
+    "question": "A female engineer works for 12- 14 hours a day and gives a history of consuming only fast food. There are no vegetables or fruits in his diet. Her Hb count is 9gm/dl MCV 120 fl. On examination, PS shows macrocytes. What will be the diagnosis?",
+    "options": {
+      "A": "Vitamin B12 deficiency",
+      "B": "Folic acid deficiency",
+      "C": "Vitamin D deficiency",
+      "D": "None"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Vitamin B12 deficiency \n \nThe patient has vitamin B12 deficiency as there is lack of dietary intake. \nDietary Insufficiency: Vitamin B12 is stored in excess in the liver; however, patients who have \nfollowed a strict vegan diet for approximately three years may develop a B12 deficiency from a \nlack of dietary intake."
+  },
+  {
+    "id": "neetpg-2021-s1-q0053",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 53,
+    "question": "A patient was suspected of having brucellosis. Serum sample was sent for a standard agglutination test. It came negative initially but after dilution of the serum sample, the test was positive. What could be the reason for the initial negative test?",
+    "options": {
+      "A": "Prozone",
+      "B": "Postzone",
+      "C": "Complement inactivation",
+      "D": "Antigen antibody complexes"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Prozone is a zone of excess antibodies. The immune complexes formed in this zone are smaller in \nsize making them difficult to be detected. Standard Agglutination Test is used to detect IgG, IgA \nand IgM antibodies. The sample is incubated at 37 degrees celsius for 48 hrs. A titre of 1:160 or \n\n\n \n \n \nmore is considered significant. False negative SAT is seen in prozone phenomenon and in the \npresence of incomplete antibodies or blocking antibodies."
+  },
+  {
+    "id": "neetpg-2021-s1-q0054",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 54,
+    "question": "A patient who was on steroids presented with nocturnal cough and chronic urticaria. BAL stain was done. Identify the organism.",
+    "options": {
+      "A": "Strongyloides stercoralis",
+      "B": "Enterobius",
+      "C": "Ancylostoma",
+      "D": "Capillaria philippinensis"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The question states that the patient has been using steroids, indicating that he is \nimmunocompromised. Strongyloides stercoralis is known to cause severe infection in \nimmunocompromised patients, known as Disseminated Strongyloidiasis. It is characterised by the \npresence of the larvae of this organism in various organs of the body."
+  },
+  {
+    "id": "neetpg-2021-s1-q0055",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 55,
+    "question": "Blood spill management",
+    "options": {
+      "A": "Ethyl Alcohol",
+      "B": "Chlorhexidine",
+      "C": "Formaldehyde",
+      "D": "Sodium Hypochlorite"
+    },
+    "correctAnswer": "D",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Saturate the area again with sodium hypochlorite 0.5% (10 000 ppm available chlorine). This is a \n1:10 dilution of 5.25% sodium hypochlorite bleach, which should be prepared daily."
+  },
+  {
+    "id": "neetpg-2021-s1-q0056",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 56,
+    "question": "A child presented with bloody stools and abdominal pain. What enrichment medium should be used for the faeces sample?",
+    "options": {
+      "A": "Selenite F broth",
+      "B": "Alkaline peptone water",
+      "C": "Blood agar",
+      "D": "Muller Hinton Broth"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The given scenario suggests that the child most probably is suffering from Shigellosis. Selenite F \nBroth is used for the culture of Shigella."
+  },
+  {
+    "id": "neetpg-2021-s1-q0057",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 57,
+    "question": "What is the vector for a parasite which has kinetoplast in one of its morphological forms?",
+    "options": {
+      "A": "Sand fly",
+      "B": "TseTse fly",
+      "C": "Female Anopheles Mosquito",
+      "D": "Triatomine bug"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Kinetoplast is the organelle that helps in the motility of the amastigote form in leishmania \ndonovani. The vector is sandfly. Tse tse fly is vector for sleeping sickness. Female anopheles \nmosquito is vector for malaria and reduvid bud is for Chaga’s disease."
+  },
+  {
+    "id": "neetpg-2021-s1-q0058",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 58,
+    "question": "A known case of AIDS with productive cough and fever was found to have consolidation in the right infrascapular area. X-Ray chest showed right lower lobe consolidation with CD4 count of 55 per microlitre. What is the most common cause of this?",
+    "options": {
+      "A": "Staphylococcus aureus",
+      "B": "Streptococcus pneumoniae",
+      "C": "Mycoplasma",
+      "D": "Pneumocystis jirovecii"
+    },
+    "correctAnswer": "B",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Persons with HIV-1 infection are more susceptible to bacterial infections because of defects in \nboth cell-mediated and humoral immunity. HIV-1 seropositive individuals are particularly \nsusceptible to infections with encapsulated bacteria, such as Streptococcus pneumoniae. Infection \ncaused by the bacterium Streptococcus pneumoniae, which is spread through contact with \nrespiratory droplets from a person who is carrying the bacteria. The bacteria are a major cause of \ncommon illnesses, such as inflammation of the sinuses (sinusitis), but can also result in life -\nthreatening infections, including meningitis and pneumonia. People with weakened immune \n\n\n \n \n \nsystems, including people with HIV, are at higher risk for bacterial pneumonia, including \nStreptococcus pneumoniae infection, than people with healthy immune systems. \n \n \n \nPSM"
+  },
+  {
+    "id": "neetpg-2021-s1-q0059",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 59,
+    "question": "Following admission of a RTA case, there is a spillage of blood on the hospital floor. Which disinfectant will you use to clean the floor",
+    "options": {
+      "A": "Sodium Hypochlorite",
+      "B": "Ethyl alcohol",
+      "C": "Formaldehyde",
+      "D": "Chlorhexidine"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Wipe the area with water and detergent until it is visibly clean. Saturate the area again with \nsodium hypochlorite 0.5% (10 000 ppm available chlorine). This is a 1:10 dilution of 5.25% sodium \nhypochlorite bleach, which should be prepared daily."
+  },
+  {
+    "id": "neetpg-2021-s1-q0060",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 60,
+    "question": "There is an outbreak of buboes in a community . What is the vector",
+    "options": {
+      "A": "Xenopsylla [Rat Flea]",
+      "B": "Tse tse fly",
+      "C": "Human flea",
+      "D": "Sand fly"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " While rats are the preferred host of Xenopsylla cheopis, while facing starvation this flea will \nfeed off of almost any mammal. \n If infected rat fleas begin biting human, most of whom do not have resistance to plague, the \ndisease can reach epidemic levels. In that instance individuals usually dies within 5 days \nfrom the first onset of symptoms, in some cases overnight. The human immune system is \ntypically overwhelmed by yersinia pestis which reproduces wildly within the victims \nbloodstream. But if it responds quickly enough, survival is possible."
+  },
+  {
+    "id": "neetpg-2021-s1-q0061",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 61,
+    "question": "Global Hunger index does not include",
+    "options": {
+      "A": "Under 5 mortality rate",
+      "B": "IMR",
+      "C": "Child mortality rate",
+      "D": "Child undernutrition"
+    },
+    "correctAnswer": "B",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " The Global Hunger Index (GHI) is a tool that measures and tracks hunger globally as well as \nby region and by country. The GHI is calculated annually, and its results appear in a report \nissued in October each year. \n The Global Hunger Index measures hunger on a 100-point scale, with 0 being the best score \n(no hunger) and 100 being the worst, although neither of these extremes is reached in \npractice. The severity of hunger associated with the range of possible GHI scores is as \nfollows: \nLevel Value \nLow 9.9 \nModerate 10.0-19.9 \nSerious 20.0-34.9 \nAlarming 35.0-49.9 \nExtremely \nalarming \n≥ 50.0 \n \nThe GHI combines 4 component indicators: \n1) the proportion of the undernourished as a percentage of the population; \n\n\n \n \n \n2) the proportion of children under the age of five suffering from wasting, a sign of acute \nundernutrition; \n3) the proportion of children under the age of five suffering from stunting, a sign of chronic \nundernutrition; and \n4) themortality rate of children under the age of five."
+  },
+  {
+    "id": "neetpg-2021-s1-q0062",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 62,
+    "question": "16 month old child, 8kg weight. On assessing in a growth chart, child falls between standard & -2sd. What should be done next for the management.",
+    "options": {
+      "A": "Assure mother that no malnutrition",
+      "B": "Mild malnutrition- home treatment",
+      "C": "Moderate malnutrition-teach mother on how to feed",
+      "D": "Severe malnutrition: refer to NRC"
+    },
+    "correctAnswer": "D",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Nutrition Rehabilitation Center (NRC) is a in a health facility where children with Severe Acute \nMalnutrition (SAM) are admitted and managed. A steady linkage with ICDS identifies and refers \nseverely malnourished children in the community using MUAC tape."
+  },
+  {
+    "id": "neetpg-2021-s1-q0063",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 63,
+    "question": "An anganwadi teacher takes weight & height of a 4 yr old & finds out that height for age <- 2SD, likely cause is",
+    "options": {
+      "A": "Chronic malnutrition",
+      "B": "Acute malnutrition",
+      "C": "Recent malnutrition",
+      "D": "No malnutrition"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Chronic malnutrition is defined as a form of growth failure that causes both physical and cognitive \ndelays in growth and development. \nWorld Health Organization (WHO) classification of nutritional status of infants and children \n \nNutritional status \nAge: birth to 5 years \nIndicator and cut-off value compared to the median of \nthe WHO child growth standardsa \nObese Weight-for-length/heightb or BMI-for-age >3 standard \ndeviations (SD) of the median \nOverweight Weight-for-length/heightb or BMI-for-age >2 SD and \n≤3 SD of the median \nModerately underweight Weight-for-age <−2 SD and ≥−3 SD of the median \nSeverely underweight Weight-for-age <−3 SD of the median \nModerate acute \nmalnutrition \nWeight-for-length/heightb or BMI-for-age ≤−2 SD and \n≥−3 SD of the median, or mid-upper arm \ncircumference ≥115 mm and <125 mm \nSevere acute malnutrition \nWeight-for-length/heightb or BMI-for-age <− 3 SD of \nthe median or mid-upper arm circumference <115 \nmm, or bilateral pitting oedema \nModerately stunted \n(moderate chronic \nmalnutrition) \nLength/height-for-ageb ≤−2 SD and ≥−3 SD of the \nmedian \n\n\n \n \n \nSeverely stunted (severe \nchronic malnutrition) Length/height-for-ageb<−3 SD of the median \nModerately wasted Weight-for-length/height ≤−2 SD and ≥−3 SD of the \nmedian \nSeverely wasted Weight-for-length/height <−3 SD of the median"
+  },
+  {
+    "id": "neetpg-2021-s1-q0064",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 64,
+    "question": "A farmer is having ℅ skin rash which increase on sun exposure. There is also redness of tongue. Maize in his staple diet. Which of the following vitamin deficiency can cause this type of feature",
+    "options": {
+      "A": "Niacin deficiency",
+      "B": "Folic acid deficiency",
+      "C": "Vit C deficiency",
+      "D": "Vit K deficiency"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "min B3) deficiency results in a condition known as pellagra. Pellagra includes the triad of \ndermatitis, dementia, and diarrhea and can result in death. Niacin deficiency can occur through \ngenetic disorders, malabsorptive conditions, and interaction with certain medications. \nPellagra is common in poor parts of the world, such as Africa and India, where corn (or maize) is a \nstaple food. This is because corn is a poor source of tryptophan and niacin. In the United States, \npellagra was prevalent in the early 1900's in the South where corn played a large role in the diet."
+  },
+  {
+    "id": "neetpg-2021-s1-q0065",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 65,
+    "question": "A 45 year old man presents with following skin changes. What relevant history will you take to diagnose this condition?",
+    "options": {
+      "A": "H/o dietary pattern, dementia, diarrhea",
+      "B": "Dietary history",
+      "C": "Dementia",
+      "D": "Depression"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Niacin (vitamin B3) deficiency results in a condition known as pellagra. Pellagra includes the triad \nof dermatitis, dementia, and diarrhea and can result in death. Niacin deficiency can occur through \ngenetic disorders, malabsorptive conditions, and interaction with certain medications."
+  },
+  {
+    "id": "neetpg-2021-s1-q0066",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 66,
+    "question": "A girl child has had recurrent yeast & respiratory virus infection since she was 3 months old. Now considering studies for immune status, which vaccine is contraindicated?",
+    "options": {
+      "A": "TT/Td",
+      "B": "Measles/MMR",
+      "C": "DPT",
+      "D": "Killed IPV"
+    },
+    "correctAnswer": "B",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Contraindications for MMR vaccination include history of a severe (anaphylactic) reaction to a \nprevious dose or to any component of the vaccine (such as gelatin or neomycin), pregnancy and \nimmunosuppression."
+  },
+  {
+    "id": "neetpg-2021-s1-q0067",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 67,
+    "question": "In a 10 year school child under school health program, which vaccine has to be given?",
+    "options": {
+      "A": "BCG",
+      "B": "MMR",
+      "C": "TT,Td",
+      "D": "DPT"
+    },
+    "correctAnswer": "C",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Because immunity to tetanus decreases as one ages, older children need a Tdap vaccine that has a \nfull dose of tetanus but contains a lower dose of diphtheria and pertussis. Once children are in \ntheir preteens, they should get a Tdap vaccine during their regular annual checkups until they \nreach 18 years of age."
+  },
+  {
+    "id": "neetpg-2021-s1-q0068",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 68,
+    "question": "There is an outbreak of encephalitis in a community. According to the universal immunization schedule, the route of administration of vaccine for the likely infection is ?",
+    "options": {
+      "A": "Live & subcutaneous",
+      "B": "Killed & subcutaneous",
+      "C": "Live & intramuscular",
+      "D": "Killed & intramuscular"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Currently, there are three types of JE vaccines in use:"
+  },
+  {
+    "id": "neetpg-2021-s1-q0069",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 69,
+    "question": "Low air velocity will be measured by",
+    "options": {
+      "A": "Kata thermometer",
+      "B": "Globe thermometer",
+      "C": "Wet thermometer",
+      "D": "Beckmans thermometer"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The kata thermometer is a heated-alcohol thermometer; the time it takes to cool is measured and \nused to determine air current. It is useful for measuring low speeds in studies of air circulation."
+  },
+  {
+    "id": "neetpg-2021-s1-q0070",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 70,
+    "question": "A researcher wants to know whether there is an association of CRP values with risk of MI/Cancer. They started to take CRP readings. 4 Values of RR was plotted (0.5, 1.5,1.7,1.8) with respect to CRP",
+    "options": {
+      "A": "CRP increase disease/cancer risk",
+      "B": "CRP has no relationship",
+      "C": "CRP decreases & disease decreases",
+      "D": "No association in first interval"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Epidemiologic studies suggest that in patients with several types of solid cancers, elevated \ncirculating levels of CRP are associated with poor prognosis, whereas in apparently healthy \nindividuals from the general population, elevated levels of CRP are associated with increased \nfuture risk of cancer of any type, lung cancer, and possibly colorectal cancer, but not breast or \nprostate cancer. The robust association between circulating levels of CRP and cancer risk may be \ndue to (1) causality: elevated CRP levels cause cancer, (2) reverse causality: occult cancer increases \nCRP levels, (3) or confounding: a third factor, e.g. inflammation, increases both CRP levels and the \nrisk of cancer."
+  },
+  {
+    "id": "neetpg-2021-s1-q0071",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 71,
+    "question": "A child known case of HIV. His CD count is 50. Which vaccine is avoided in him/her",
+    "options": {
+      "A": "MMR",
+      "B": "TT",
+      "C": "DPT",
+      "D": "BCG"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Contraindications for MMR vaccination include history of a severe (anaphylactic) reaction to a \nprevious dose or to any component of the vaccine (such as gelatin or neomycin), pregnancy and \nimmunosuppression."
+  },
+  {
+    "id": "neetpg-2021-s1-q0072",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 72,
+    "question": "For functioning of a health centre with reference to evaluation, which is the most important determinant for assessing clinical management.",
+    "options": {
+      "A": "Input",
+      "B": "Process",
+      "C": "Structure",
+      "D": "Outcome"
+    },
+    "correctAnswer": "D",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The outcome of medical care, in terms of recovery, restoration of function and of survival, has \nbeen frequently used as an indicator of the quality of medical care."
+  },
+  {
+    "id": "neetpg-2021-s1-q0073",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 73,
+    "question": "A male presented with urethral discharge as shown in figure? What can be the cause ?",
+    "options": {
+      "A": "Gonorrhea",
+      "B": "B. Hemophyli Ducreii",
+      "C": "Syphillis",
+      "D": "HIV"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Many men with gonorrhea are asymptomatic. When present, signs and symptoms of urethral \ninfection in men include dysuria or a white, yellow, or green urethral discharge that usually \nappears one to fourteen days after infection"
+  },
+  {
+    "id": "neetpg-2021-s1-q0074",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 74,
+    "question": "A group of people had pastries late at night followed by bouts of vomiting early in the morning. What could be the cause?",
+    "options": {
+      "A": "S. aureus",
+      "B": "B cereus",
+      "C": "E. coli",
+      "D": "Lactobacillus"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Staph food poisoning is characterized by a sudden start of nausea, vomiting, and stomach cramps. \nMost people also have diarrhea. Symptoms usually develop within 30 minutes to 8 hours after \neating or drinking an item containing Staph toxin, and last no longer than 1 day. Severe illness is \nrare."
+  },
+  {
+    "id": "neetpg-2021-s1-q0075",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 75,
+    "question": "A pregnant woman whose niece contracted varicella in same house was negative for serum antibodies of varicella. What would this mean?",
+    "options": {
+      "A": "She is susceptible to zoster",
+      "B": "She is susceptible to chicken pox",
+      "C": "She is immune to chicken pox",
+      "D": "She is immune to zoster"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "A negative result indicates no detectable VZV antibody, but does not rule out acute infection. It \nshould be noted that the test usually scores negative in infected patients during the incubation \nperiod and the early stages of infection."
+  },
+  {
+    "id": "neetpg-2021-s1-q0076",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 76,
+    "question": "Child learning steps of hand hygiene",
+    "options": {
+      "A": "Cognitive",
+      "B": "Psychomotor",
+      "C": "Affective",
+      "D": "Affective & cognitive"
+    },
+    "correctAnswer": "B",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Hand washing is one of the most important disease preventative skills you can teach your \nchildren. Teaching kids about hand washing is not just important to keep them healthier in \nchildhood but all through life. Because of their age, children have less developed immune \nsystems for fighting diseases and infections. \n Hand hygiene is also a psychomotor skill critical for patient safety and needs to be taught \ncorrectly or students are being set up to fail."
+  },
+  {
+    "id": "neetpg-2021-s1-q0077",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 77,
+    "question": "What is the SI Unit of brightness/illuminance",
+    "options": {
+      "A": "Candella",
+      "B": "Luminance",
+      "C": "Lumen",
+      "D": "Lux"
+    },
+    "correctAnswer": "D",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The SI unit for illuminance is lux (lx). In the U.S. people sometimes use the non-SI term foot-candle \nwhen referencing illuminance. The term “foot-candle” means “the illuminance on a surface by a \ncandela source one foot away”. One foot-candle is equivalent to one lumen per square foot which \nis approximately 10.764 lux."
+  },
+  {
+    "id": "neetpg-2021-s1-q0078",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 78,
+    "question": "Receptor for absorption of glucose in intestine when person is given ORS is",
+    "options": {
+      "A": "SGLT-1",
+      "B": "SGLT-2",
+      "C": "GLP-1",
+      "D": "GLUT-1"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Sodium-glucose cotransporter (SGLT) activity mediates apical sodium and glucose transport across \ncell membranes. Cotransport is driven by active sodium extrusion by the basolateral \nsodium/potassium-ATPase, thus facilitating glucose uptake against an intracellular up-hill gradient."
+  },
+  {
+    "id": "neetpg-2021-s1-q0079",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 79,
+    "question": "A 55 year old patient from chattisgarh presents with progressive muscle weakness, stiffness of both lower limbs & complete paralysis. Most important history asked",
+    "options": {
+      "A": "Dietary history",
+      "B": "Medical history",
+      "C": "Present illness",
+      "D": "socioeconomic"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Neurolathyrism is the type associated with the consumption of legumes in the genus Lathyrus that \ncontain the toxin ODAP. ODAP ingestion results in motorneuron death. The result is paralysis and \nmuscle atrophy of the lower limbs. \n \n \n \nENT"
+  },
+  {
+    "id": "neetpg-2021-s1-q0080",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 80,
+    "question": "A women visited ENT opd with nasal obstruction. On examination greenish black crusts were present in the nasal cavity covering turbinate and septum. She also had merciful anosmia. What other sign will you find in this case on examination?",
+    "options": {
+      "A": "Polyp",
+      "B": "Hypertrophied inferior turbinate",
+      "C": "Roomy nasal cavity",
+      "D": "Foreign antibody"
+    },
+    "correctAnswer": "A",
+    "subject": "ENT",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Chronic atrophic rhinitis, or simply atrophic rhinitis, is a chronic inflammation of the nose \ncharacterised by atrophy of nasal mucosa, including the glands, turbinate bones and the \nnerve elements supplying the nose. Chronic atrophic rhinitis may be primary and \nsecondary.It is most commonly seen in females.It is reported among patients from lower \nsocioeconomic groups. \n The nasal cavities become roomy and are filled with foul smelling crusts which are black or \ndark green and dry, making expiration painful and difficult. \n Microorganisms are known to multiply and produce a foul smell from the nose, though the \npatients may not be aware of this, because the nerve endings (responsible for the \nperception of smell) have become atrophied. This is called merciful anosmia. \n Patients usually complain of nasal obstruction despite the roomy nasal cavity, which can be \ncaused either by the obstruction produced by the discharge in the nose, or as a result of \nsensory loss due to atrophy of nerves in the nose, so the patient is unaware of the air flow. \nIn the case of the second cause, the sensation of obstruction is subjective. \n Bleeding from the nose, also called epistaxis, may occur when the dried discharge (crusts) \nare removed. \n Septal perforation and dermatitis of nasal vestibule can occur. The nose may show a saddle -\nnose deformity. \n\n\n \n \n \n Atrophic rhinitis is also associated with similar atrophic changes in the pharynx or larynx, \nproducing symptoms pertaining to these structures. Hearing impairment can occur due to \nEustachian tube blockage causing middle ear effusion."
+  },
+  {
+    "id": "neetpg-2021-s1-q0081",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 81,
+    "question": "A 35 year old male presented with epistaxis . Conservative management was done to stop the bleeding which failed . What is the next step of management?",
+    "options": {
+      "A": "Endoscopic Sphenopalantine artery lligation",
+      "B": "ICA ligation",
+      "C": "ECA ligation",
+      "D": "Maxillary artery ligation"
+    },
+    "correctAnswer": "A",
+    "subject": "ENT",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Endoscopic ligation of sphenopalatine artery is done in cases that do not respond to conservative \nmanagement. In cases that do not respond to this, maxillary artery ligation, ECA ligation is done in \nthat order."
+  },
+  {
+    "id": "neetpg-2021-s1-q0082",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 82,
+    "question": "Which of the following is the topical use of the medicine shown in the image:",
+    "options": {
+      "A": "Subglottic stenosis",
+      "B": "Inlay type I myringoplasty",
+      "C": "Post-adenoidectomy to control bleeding",
+      "D": "Rhino cerebral mucormycosis"
+    },
+    "correctAnswer": "A",
+    "subject": "ENT",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Mitomycin C is used to control or prevent stenosis. It is also used to treat pre existing stenosis. It is \nused in nasal surgeries like FESS, septoplasty, tracheal stenosis after tracheostomy, and laryngeal \nstenosis. Mitomycin C is also used to treat intubation granuloma."
+  },
+  {
+    "id": "neetpg-2021-s1-q0083",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 83,
+    "question": "A post tonsillectomy child was lying in the ward. He started bleeding in the ward. Which of the following should be done",
+    "options": {
+      "A": "Take to OT, remove the clot & re-ligation",
+      "B": "Take to OT & pressure packing",
+      "C": "Cautery",
+      "D": "Conservative management"
+    },
+    "correctAnswer": "A",
+    "subject": "ENT",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "This is a case of reactionary haemorrhage because the child is in the ward and the bleeding is \noccuring within 24hrs or surgery. Pressure packing and cautery are done for primary bleeding. In \nreactionary and sexcondary bleeding, religation is the main modality of management."
+  },
+  {
+    "id": "neetpg-2021-s1-q0084",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 84,
+    "question": "Patient with a history of chronic middle ear infection now presents with neurological manifestations, headache and vomiting. CT Brain is shown. What is the probable diagnosis?",
+    "options": {
+      "A": "Extradural Abscess",
+      "B": "Cerebral Abscess",
+      "C": "Temporal lobe Abscess",
+      "D": "Meningitis"
+    },
+    "correctAnswer": "C",
+    "subject": "ENT",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "A ring like mass is noted on CT Brain, which is characteristic of temporal abscess. Most common \ncause of brain abscess is CSOM. The pathogen enters the ear and reaches the tegmen tympani \nresulting in temporal lobe abscess. It can also enter through the sinodural abscess resulting in \nposterior fossa abscess."
+  },
+  {
+    "id": "neetpg-2021-s1-q0085",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 85,
+    "question": "A patient was admitted with skull base trauma. The doctor was testing the marked structure. Which of the following nerves was being tested:",
+    "options": {
+      "A": "Vagus",
+      "B": "Facial nerve",
+      "C": "Glossopharyngeal nerve",
+      "D": "Trigeminal nerve"
+    },
+    "correctAnswer": "C",
+    "subject": "ENT",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The structure being examined is glossopharyngeal nerve."
+  },
+  {
+    "id": "neetpg-2021-s1-q0086",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 86,
+    "question": "Identify the papillae of the tongue shown in the image below:",
+    "options": {
+      "A": "Circumvallate",
+      "B": "Fungiform",
+      "C": "Filiform",
+      "D": "Foliate"
+    },
+    "correctAnswer": "C",
+    "subject": "ENT",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " The round shaped paella shown in the image is circumvallate papilla. \n Fungiform papillae are mushroom shaped \n Filiform is cone shaped papilla \n Foliate is club shaped papilla \n \n \n \nOphthalmology"
+  },
+  {
+    "id": "neetpg-2021-s1-q0087",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 87,
+    "question": "A 33 year old female patient presented with inability to see the right side from both the eyes What is the most probable cause",
+    "options": {
+      "A": "Injury to Left Optic Tract",
+      "B": "Right occipital lobe lesion",
+      "C": "Optic chiasma lesion",
+      "D": "Right optic nerve lesion"
+    },
+    "correctAnswer": "A",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Lesions of left optic tract result in Right homonymous Hemianopia.. \nVarious visual pathway defects include:"
+  },
+  {
+    "id": "neetpg-2021-s1-q0088",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 88,
+    "question": "A patient with contact lens since 2 years presented with the below features. What is the most probable cause.",
+    "options": {
+      "A": "Giant Papillary conjunctivitis",
+      "B": "Trachoma",
+      "C": "Vernal Keratoconjunctivitis",
+      "D": "OSSN"
+    },
+    "correctAnswer": "A",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Giant papillary conjunctivitis is a syndrome that occurrs in both hard and soft contact lens wearers \nand is characterized by increased mucus, itching, decreased lens tolerance, and giant papillae in \nthe upper tarsal conjunctiva. It developes in as few as three weeks with soft lens wearers but also \noccurs after months or even years of successful wear. The histology is characterized by basophils, \neosinophils, and mast cells in the epithelium, and these cells as well as increased numbers of \nlymphocytes, plasma cells, and polymorphonuclear leukocytes in the stroma. The syndrome may \nbe immunologic in origin with deposits on the lenses as the antigen, and the syndrome may be a \nmajor cause of difficulty in wearing contact lenses once they have been successfully fit ."
+  },
+  {
+    "id": "neetpg-2021-s1-q0089",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 89,
+    "question": "A 15 year old girl patient does not want to use specs for myopic astigmatism. What is the best alternative for her?",
+    "options": {
+      "A": "ICL",
+      "B": "FEMTO Lasik",
+      "C": "LASIK",
+      "D": "Spherical Specs"
+    },
+    "correctAnswer": "A",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "the minimum age required to be eligible for LASIK surgery is 18 years. \nImplantable Contact Lenses (ICL), the ICLs are micro-thin lenses placed inside the eye to correct \nshort-sightedness (myopia), far-sightedness (hyperopia) and astigmatism. The procedure can be \nreversed and can be used to treat a high range of correction needs. For those with thin or \nabnormal corneas, Keratoconus and dry eye, this is an excellent alternative to laser eye surgery"
+  },
+  {
+    "id": "neetpg-2021-s1-q0090",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 90,
+    "question": "A boy working on a hammer & chisel had a Foreing body entering eye. Detrimental investigation for this boy is",
+    "options": {
+      "A": "X-ray",
+      "B": "B scan orbit",
+      "C": "CT Scan",
+      "D": "MRI"
+    },
+    "correctAnswer": "D",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "MRI is contraindicated in the presence of metallic foreign bodies/implants in the patient’s body."
+  },
+  {
+    "id": "neetpg-2021-s1-q0091",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 91,
+    "question": "A one month baby presents with watering and increased corneal size. What is the diagnosis?",
+    "options": {
+      "A": "Buphthalmos",
+      "B": "Hurlers Syndrome",
+      "C": "Galactosemia",
+      "D": "Cataract"
+    },
+    "correctAnswer": "A",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Primary congenital glaucoma (PCG) is a rare disease due to genetically-determined abnormalities \nin the trabecular meshwork and anterior chamber angle resulting in elevated intraocular pressure \n(IOP), without other ocular or systemic developmental anomalies. Other terms have been used \npreviously to describe this entity, including trabeculodysgenesis, goniodysgenesis and primary \ninfantile glaucoma, however the term PCG replaces these in the 2013 International Classification \nof Childhood Glaucoma. There are three variants based on the age of presentation as follows: \n \n newborn onset (0-1 month) \n infantile onset (>1-24 months) \n late onset or late-recognized (>24 months) \n spontaneously arrested cases (very rare, classic findings of eye stretching including Haab \nstriae with normal IOP; must follow as glaucoma suspects nonetheless) \n\n\n \n \n \nPCG commonly presents between the ages of 3-9 months, but the most severe form is the \nnewborn onset. Elevated IOP is associated with the classic “triad” of symptoms (photophobia, \nepiphora and blepharospasm), which occurs due to rapid expansion of the child’s eye causing \nbuphthalmos (Greek = “ox eye”), corneal enlargement, horizontal or oblique breaks in Descemet's \nmembrane (Haab striae) and subsequent corneal edema and opacification."
+  },
+  {
+    "id": "neetpg-2021-s1-q0092",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 92,
+    "question": "An elderly woman presented with gradual painless diminution of vision. The fundus picture is shown below. What is the diagnosis.",
+    "options": {
+      "A": "Hard Exudates in Diabetic Retinopathy",
+      "B": "Flame shaped haemorrhages in Hypertensive Retinopathy",
+      "C": "Soft Exudates in Hypertensive Retinopathy",
+      "D": "CRVO"
+    },
+    "correctAnswer": "A",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The deposition of hard macular exudates is a sight threatening consequence of macular edema in \npatients with diabetes mellitus. Visual impairment has been correlated with the deposition of hard \nfoveal exudates which are one of the most common and early clinical signs of diabetic retinopathy. \nHard exudates are lipid and lipoprotein deposits and appear as white, yellowish or waxy lesions \nsituated mainly in the outer plexiform layer of the retina. Large deposits of hard exudates increase \n\n\n \n \n \nthe risk of developing subretinal fibrosis, which is one of the most devastating sequelae of diabetic \nmaculopathy."
+  },
+  {
+    "id": "neetpg-2021-s1-q0093",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 93,
+    "question": "A patient complained of gradual diminution of vision. On examination the patient had dry eyes and a rough corneal surface. What could be the deficiency in the patient causing these manifestations.",
+    "options": {
+      "A": "Iron",
+      "B": "Protein",
+      "C": "Niacin",
+      "D": "Retinoic Acid"
+    },
+    "correctAnswer": "D",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "An association between eye dryness and vitamin A deficiency is well known. Vitamin A is an \nimportant component for the visual pigments and the integrity of the ocular surface, and it is used \nin the treatment of peripheral vision loss, age-related macular degeneration, retinitis pigmentosa, \nand superior limbic keratoconjunctivitis. Dry eye disease can result from vitamin A deficiency, with \nmild deficiency resulting in conjunctival changes and severe deficiency resulting in \nxerophthalmia.Topical and oral preparations of retinoic acid are used to treat this condition."
+  },
+  {
+    "id": "neetpg-2021-s1-q0094",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 94,
+    "question": "A young boy with thin built and long fingers presents with diminished vision. On examination subluxation of lens is observed and cystathione synthase deficiency was detected. Which aminoacid should the patient be supplied with?",
+    "options": {
+      "A": "Serine",
+      "B": "Tyrosine",
+      "C": "Methionine",
+      "D": "Cysteine"
+    },
+    "correctAnswer": "D",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "This is a case of ectopia lentils due to homocysteinuria. It is managed with cysteine and vitamin B6 \nsupplementation."
+  },
+  {
+    "id": "neetpg-2021-s1-q0095",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 95,
+    "question": "What is the most likely complication of the condition shown in the image below?",
+    "options": {
+      "A": "Cataract",
+      "B": "Exposure Keratitis",
+      "C": "Difficulty in eye movement",
+      "D": "Glaucoma"
+    },
+    "correctAnswer": "B",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Due to a deficient eye lid, the cornea is always exposed to the external environment resulting in \nexposure keratitis and secondary bacterial infections."
+  },
+  {
+    "id": "neetpg-2021-s1-q0096",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 96,
+    "question": "Young male presents with acute redness of eye. His X-Ray spine is shown below. What is the condition?",
+    "options": {
+      "A": "Ankylosing Spondylitis",
+      "B": "Psoriatic Arthritis",
+      "C": "Rheumatoid Arthritis",
+      "D": "Sjogeren Syndrome"
+    },
+    "correctAnswer": "A",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Acute red eye in a young male with morning stiffness is characteristic of acute anterior uveitis \nalong with ankylosing spondylitis.Other related conditions are psoriatic arthritis, reiter syndrome, \njuvenile rheumatoid arthritis."
+  },
+  {
+    "id": "neetpg-2021-s1-q0097",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 97,
+    "question": "A patient has been diagnosed with Primary Open Angle Glaucoma. On elliciting history, it was observed that the patient is a known case of bronchial asthma. What is the drug of choice for POAG in this patient?",
+    "options": {
+      "A": "Latanoprost",
+      "B": "Gemeprost",
+      "C": "Carboprost",
+      "D": "Alprostadil"
+    },
+    "correctAnswer": "A",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Beta blockers are contraindicated in cases of POAG along with a history of bronchial asthma as \nthey result in further constriction of airways and precipitation of asthma. Resting and provoked \nairway function and asthma symptoms are unaffected by latanoprost treatment in patients with \nasthma with no previous exposure to corticosteroids. Latanoprost can be used in patients with \nglaucoma and concomitant bronchial asthma. \n \n \nMedicine"
+  },
+  {
+    "id": "neetpg-2021-s1-q0098",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 98,
+    "question": "Pt. has h/o vomiting & doctor gave antiemetic. Patient developed abnormal movements. What would be given",
+    "options": {
+      "A": "Methyl dopa",
+      "B": "Benzhexol",
+      "C": "Hyoscine",
+      "D": "Cyproheptadine"
+    },
+    "correctAnswer": "B",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Trihexyphenidyl, aka also known as benzhexol, trihex, Artane, or even THP is an antiparkinsonian \nagent of the antimuscarinic class. It was approved by the FDA for the treatment of Parkinson's \n\n\n \n \n \nARTANE (trihexyphenidyl) is indicated as an adjunct in the treatment of all forms of parkinsonism \n(postencephalitic, arteriosclerotic, and idiopathic). It is often useful as adjuvant therapy when \ntreating these forms of parkinsonism with levodopa."
+  },
+  {
+    "id": "neetpg-2021-s1-q0099",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 99,
+    "question": "A 56 yr old pt. Has developed excruciating chest discomfort in past 72 hours relieved on GTN spray. TROP I is normal. ECG shows feature of LVH with T wave flattening. He is already on statins, aspirin & metoprolol 50mg. What is next best step?",
+    "options": {
+      "A": "LMWH",
+      "B": "Increase beta blocker dose",
+      "C": "IV NTG Drip",
+      "D": "Add tap clopidogrel"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Given clinical scenario is pointing towards the diagnosis of unstable angina. \nA number of LMWHs-dalteparin, enoxaparin and nadroparin-have been evaluated in unstable \nangina. In a small open trial, nadroparin reduced the risk of ischaemic outcomes compared with \naspirin alone or a combination of aspirin and standard heparin. \n \nLow-molecular-weight heparin (LMWH) is a class of anticoagulant medications. They are used in \nthe prevention of blood clots and treatment of venous thromboembolism (deep vein thrombosis \nand pulmonary embolism) and in the treatment of myocardial infarction."
+  },
+  {
+    "id": "neetpg-2021-s1-q0100",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 100,
+    "question": "A patient with mediastinal mass was diagnosed with red cell aplasia. What is the probable cause?",
+    "options": {
+      "A": "Bronchogenic carcinoma",
+      "B": "NHL",
+      "C": "Thymic neoplasia",
+      "D": "T cell ALL"
+    },
+    "correctAnswer": "C",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Acquired Pure Red Cell Aplasia is thought to be an autoimmune disorder possibly caused either by \na tumor of the thymus gland, certain drugs or a viral infection. It is one of a group of bone marrow \nfailure syndromes."
+  },
+  {
+    "id": "neetpg-2021-s1-q0101",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 101,
+    "question": "A software engineer presented to OPD with complaints of easy fatiguability, He gives a history of sitting in front of the computer for 12-14 hrs a day and consuming junk food and less fruits and vegetables. CBC picture showed Hb concentration as 7gm%, MCV-120. What is the most likely cause of anemia?",
+    "options": {
+      "A": "Folate deficiency",
+      "B": "Sideroblastic anemia",
+      "C": "Cyanocobalamin deficiency",
+      "D": "Acute blood loss"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Folate, or folic acid, is a type of B vitamin. It helps to: \n● make DNA \n● repair DNA \n● produce red blood cells (RBCs) \nIf you don’t have enough folate in your diet, you may end up with a folate deficiency. Certain \ndrinks and foods, such as citrus juices and dark green vegetables, are particularly good sources of \nfolate.Not eating enough folate can lead to a deficiency in just a few weeks. Deficiency may also \noccur if you have a disease or genetic mutation that prevents your body from absorbing or \nconverting folate to its usable form.Folate deficiency can cause anemia."
+  },
+  {
+    "id": "neetpg-2021-s1-q0102",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 102,
+    "question": "False about pheochromocytoma",
+    "options": {
+      "A": "Propanolol is prefered drug for hypertension control",
+      "B": "Surgery is t/t of choice",
+      "C": "VMA are diagnostic test",
+      "D": "catecholamines are diagnostic test"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Phenoxybenzamine, a non-selective alpha blocker, is the most common medication used to alpha \nblock patients prior to pheochromocytoma resection."
+  },
+  {
+    "id": "neetpg-2021-s1-q0103",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 103,
+    "question": "A 50 yr old pt. With renal insufficiency was recently operated for pyelolithotomy, which drug you will give for post op analgesia.",
+    "options": {
+      "A": "Diclofenac sodium",
+      "B": "Naproxen",
+      "C": "Indomethacin",
+      "D": "Acetaminophen"
+    },
+    "correctAnswer": "D",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Acetaminophen is the drug often recommended for occasional use in patients with kidney disease. \nVarious studies have been conducted & it was found that The combination of intravenous \nparacetamol 1 gr and ketamine 0.5 mg/kg resulted in an overall reduction in pain scores, \ndecreased postoperative analgesic requirements, and lower agitation score compared with \nintravenous paracetamol 1 gr and tramadol 0.7 mg/kg for patients undergoing renal surgery."
+  },
+  {
+    "id": "neetpg-2021-s1-q0104",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 104,
+    "question": "3 patients feel numb finger tips. Facial skin is tightened. ANA +ve. IF nucleolar pattern",
+    "options": {
+      "A": "Systemic sclerosis",
+      "B": "Sjogren’s syndrome",
+      "C": "SLE",
+      "D": "RA"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Systemic sclerosis (SS) is an autoimmune disorder. This means it's a condition in which the \nimmune system attacks the body. Healthy tissue is destroyed because the immune system \nmistakenly thinks it's a foreign substance or infection. There are many kinds of autoimmune \ndisorders that can affect different body systems. \nNucleolar pattern, is common in people with scleroderma."
+  },
+  {
+    "id": "neetpg-2021-s1-q0105",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 105,
+    "question": "A hyperventilating patient has ABG value of pH=7.53, pCO2= 20mmHg, HCO3=26meq",
+    "options": {
+      "A": "Respiratory acidosis",
+      "B": "Respiratory alkalosis",
+      "C": "Metabolic acidosis",
+      "D": "Metabolic alkalosis"
+    },
+    "correctAnswer": "B",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Respiratory alkalosis is a primary decrease in carbon dioxide partial pressure (Pco 2) with or without \ncompensatory decrease in bicarbonate (HCO3\n−); pH may be high or near normal. Cause is an \nincrease in respiratory rate or volume (hyperventilation) or both. Respiratory alkalosis can be \nacute or chronic."
+  },
+  {
+    "id": "neetpg-2021-s1-q0106",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 106,
+    "question": "Patient presents with breathlessness & wheezing. Absolute Eosinophil count is 500. Milliary pattern on CXR. Diagnosis",
+    "options": {
+      "A": "Miliary TB",
+      "B": "Tropical pulmonary eosinophilia",
+      "C": "Bronchial asthma",
+      "D": "Hypersensitivity pneumonitis"
+    },
+    "correctAnswer": "B",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Tropical (pulmonary) eosinophilia, or TPE, is characterized by coughing, asthmatic attacks, \nand an enlarged spleen, and is caused by Wuchereria bancrofti, a filarial infection. It occurs \nmost frequently in India and Southeast Asia. Tropical eosinophilia is considered a \nmanifestation of a species of microfilaria. \n Absolute eosinophilia counts are usually more than 3, cells 000 /mm3 and may range from \n5,000 to 80,000. Erythrocyte sedimentation rate is elevated in 90% of cases and returns to \nnormal following specific treatment. Microfilariae are rarely seen in the peripheral blood."
+  },
+  {
+    "id": "neetpg-2021-s1-q0107",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 107,
+    "question": "Breathing difficulty with generalized weakness. On auscultation a mid diastolic murmur with prominent wave is seen in",
+    "options": {
+      "A": "TS",
+      "B": "MS",
+      "C": "MR",
+      "D": "TR"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Tricuspid stenosis (TS) is narrowing of the tricuspid orifice that obstructs blood flow from \nthe right atrium to the right ventricle. Almost all cases result from rheumatic fever. \nSymptoms include a fluttering discomfort in the neck, fatigue, cold skin, and right upper \nquadrant abdominal discomfort. \n It has strong or forceful right atrial contraction"
+  },
+  {
+    "id": "neetpg-2021-s1-q0108",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 108,
+    "question": "Patient behaving strangely, & CNS features were described. Urine osm=1000 & plasma osmolality= 250",
+    "options": {
+      "A": "Hyponatremia",
+      "B": "Hypernatremia",
+      "C": "Hypokalemia",
+      "D": "Hyperkalemia"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " A condition that occurs when the level of sodium in the blood is too low. \n With this condition, the body holds onto too much water. This dilutes the amount of \nsodium in the blood and causes levels to be low. \n Symptoms include nausea, headache, confusion and fatigue. \n Limited fluid intake, medication and hospitalisation may be required."
+  },
+  {
+    "id": "neetpg-2021-s1-q0109",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 109,
+    "question": "30 y/F, 70 kg man with serum sodium=120. Calculate total sodium deficit",
+    "options": {
+      "A": "420",
+      "B": "840",
+      "C": "1400",
+      "D": "280"
+    },
+    "correctAnswer": "B",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Formula for sodium deficit= TB water% X wt.(Kgs) X (Desired Na+ - Actual Sodium) \n =0.6 x 70 x (140-120) \n =840meq"
+  },
+  {
+    "id": "neetpg-2021-s1-q0110",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 110,
+    "question": "Hypertension with peripheral edema & CKD",
+    "options": {
+      "A": "Aliskiren",
+      "B": "Chlorthalidone",
+      "C": "Prazosin",
+      "D": "Beta blocker"
+    },
+    "correctAnswer": "B",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Chlorthalidone is a prescription drug used to treat high blood pressure (hypertension). Lowering \nhigh blood pressure helps prevent strokes, heart attacks, and kidney problems. It is also used to \nreduce extra salt and water in the body caused by conditions such as heart failure, liver disease, \nand kidney disease. \n \n \n \n\n\n \n \n \n \nSurgery"
+  },
+  {
+    "id": "neetpg-2021-s1-q0111",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 111,
+    "question": "What surgery is shown here in the image",
+    "options": {
+      "A": "Thiersch wiring",
+      "B": "Wells procedure",
+      "C": "Aktemeier operation",
+      "D": "Hemorrhoidectomy"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Thiersch procedure (anal encirclement) is performed frequently in patients with old age or high \nrisks with rectal prolapse. It is a simple procedure using a suture or prosthesis that narrows the \nanus."
+  },
+  {
+    "id": "neetpg-2021-s1-q0112",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 112,
+    "question": "Post MRM patient presented with upper limb swelling . What is the most probable cause",
+    "options": {
+      "A": "Upper limb Lymphedema",
+      "B": "Angiosarcoma",
+      "C": "Recurrence",
+      "D": "Metastasis"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Post mastectomy lymphoedema is MC upper limb lymphoedema. (Ranges from 2- 10%) \nFactors increasing risk of lymphoedema. \n \ni) Lymph node removal \nii) Radiation to axilla \niii) Infection in the upper limb."
+  },
+  {
+    "id": "neetpg-2021-s1-q0113",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 113,
+    "question": "Repair done for direct inguinal hernia",
+    "options": {
+      "A": "Lichtenstein repair",
+      "B": "Bassini's repair",
+      "C": "Herniotomy",
+      "D": "All"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Surgery of Choice Lichtenstein tension free mesh hernioplasty. \nIt has least recurrence rate"
+  },
+  {
+    "id": "neetpg-2021-s1-q0114",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 114,
+    "question": "A patient presented with RTA leading to breathlessness and decreased air entry into right lung and patient is hypotensive. What is the next step?",
+    "options": {
+      "A": "Needle inserted at 2nd ICS in MCL",
+      "B": "Needle inserted at 5th ICS in mid axillary",
+      "C": "Fluid resuscitation using wide bore cannula",
+      "D": "Wide bore needle decompression"
+    },
+    "correctAnswer": "B",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The patient has developed tension pneumothorax where on diagnosis by FAST we get Seashore \nsign or Stratosphere sign in M mode. \n \nAnd managed by- \n In adults - wide bore needle now inserted in Mid axillary line at 5th ICS \n In children- same 2nd ICS at MCL is allowed"
+  },
+  {
+    "id": "neetpg-2021-s1-q0115",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 115,
+    "question": "After total thyroidectomy, the surgeon is unable to extubate and the patient shows cyanosis and respiratory distress. Cause of unable to extubate this-",
+    "options": {
+      "A": "Bilateral recurrent laryngeal nerve palsy",
+      "B": "UL recurrent laryngeal nerve palsy",
+      "C": "Hemorrhage",
+      "D": "Supra laryngeal nerve palsy"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Postoperative respiratory distress \n Laryngeal edema (MC) \n Bilateral RLN injury \n Laryngomalacia \n Tension hematoma"
+  },
+  {
+    "id": "neetpg-2021-s1-q0116",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 116,
+    "question": "60 years old male patient has antral carcinoma which is spreading to the head of the pancreas and multiple small metastasis to the right lobe of liver. What will be the best treatment?",
+    "options": {
+      "A": "Whipple’s surgery",
+      "B": "Gastrectomy + Right lobectomy",
+      "C": "Gastrojejunostomy",
+      "D": "Palliative care"
+    },
+    "correctAnswer": "C",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Obstruction of the duodenum occurs in 15% cases approx. If this occurs early in the course of \ndisease, surgical bypass by gastrojejunostomy is done."
+  },
+  {
+    "id": "neetpg-2021-s1-q0117",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 117,
+    "question": "MC nerve injured during Submandibular gland surgery?",
+    "options": {
+      "A": "Lingual nerve",
+      "B": "Inferior alveolar nerve",
+      "C": "Hypoglossal nerve",
+      "D": "Nerve to mylohyoid"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Submandibular glands are paired below the mandible on either side. \nMC nerve injured Lingual nerve > Hypoglossal nerve"
+  },
+  {
+    "id": "neetpg-2021-s1-q0118",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 118,
+    "question": "Which statement is true among all?",
+    "options": {
+      "A": "Associated with mixed aerobic and anaerobic infection",
+      "B": "Orchidectomy should be done",
+      "C": "Anti- gas gangrene serum should always be used",
+      "D": "Urinary diversion done"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Necrotizing fasciitis which involves perineal region. \nSynergistic gangrene (aerobic + anaerobic) \nTestis is not involved in this condition due to the presence of dual blood supply."
+  },
+  {
+    "id": "neetpg-2021-s1-q0119",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 119,
+    "question": "85 year with Ca prostate with Gleason 6 and PSA <8 ng/ml. Best management?",
+    "options": {
+      "A": "TURP",
+      "B": "Radiation",
+      "C": "Radical prostatectomy",
+      "D": "Keep on active surveillance"
+    },
+    "correctAnswer": "D",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Well-differentiated tumors have a Gleason sum of 2–4, moderately differentiated tumors have a \nGleason sum of 5–6, and poorly differentiated tumors have a Gleason sum of 8–10. \nTo better assess risk and guide treatment selection, a combination of the initial T stage, Gleason \nscore, and baseline PSA are used. \nBut here in the question as the age of patient is 85 years so the patient will have comorbidities. \nTherefore we will keep the patient on active surveillance."
+  },
+  {
+    "id": "neetpg-2021-s1-q0120",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 120,
+    "question": "Post cholecystectomy, CBD stone detected after 2 years What type of stone is it?",
+    "options": {
+      "A": "Primary",
+      "B": "Secondary",
+      "C": "Tertiary",
+      "D": "Retained stone"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Choledocholithiasis can be primary from stones originally formed in the choledocho or secondary \nfrom stones that have migrated from the gallbladder to the choledocho. \n\n\n \n \n \nResidual or secondary choledocholithiasis was defined as those which appear in the first two years \nafter cholecystectomy and primary choledocholithiasis was defined as those which appear two \nyears after cholecystectomy."
+  },
+  {
+    "id": "neetpg-2021-s1-q0121",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 121,
+    "question": "Gas under diaphragm is seen in-",
+    "options": {
+      "A": "Viscus perforation",
+      "B": "Liver abscess",
+      "C": "Spontaneous rupture of oesophagus",
+      "D": "Empyema Thorax"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The most common cause of gas under diaphragm is hollow viscous perforation. In 10% of cases it \ncan be due to rare causes, both abdominal and extra-abdominal, one of them being intra \nabdominal infection by gas forming organisms."
+  },
+  {
+    "id": "neetpg-2021-s1-q0122",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 122,
+    "question": "Left hypochondrium contusion SBP- 70 mm Hg PR 110. So what needs to be done next?",
+    "options": {
+      "A": "FAST",
+      "B": "CECT",
+      "C": "DPL",
+      "D": "Abdomen X-ray"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The Focused Assessment with Sonography in Trauma (FAST) is an ultrasound protocol developed \nto assess for hemoperitoneum and hemopericardium. As FAST exam in less than 5 minutes, and its \nuse decreases time to surgical intervention, patient length of stay, and rates of CT and DPL."
+  },
+  {
+    "id": "neetpg-2021-s1-q0123",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 123,
+    "question": "Mr Ramu faced an accident and had straddle injury and presents with blood at urethral meatus. What will be the next step?",
+    "options": {
+      "A": "Foleys catheter insertion",
+      "B": "SPC and drain the urine",
+      "C": "Do retrograde urethrogram",
+      "D": "CECT pelvis is taken"
+    },
+    "correctAnswer": "B",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Suspected urethral injury after blunt perineal trauma when man cannot void, when there i s \nperineal bruising and when there is blood at the urethral meatus. \nDIagnosis is made by urethrography using water soluble contrast \nThe safest initial management is to insert a suprapubic catheter (SPC)"
+  },
+  {
+    "id": "neetpg-2021-s1-q0124",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 124,
+    "question": "Identify the condition?",
+    "options": {
+      "A": "Intestinal obstruction",
+      "B": "Valvulae conniventes",
+      "C": "Haustrations",
+      "D": "None"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Stepladder sign represents the appearance of distended small bowel loops with gas-fluid levels \nthat appear to be stacked on top of each other, typically observed on erect abdominal \nradiographs in the setting of small bowel obstruction."
+  },
+  {
+    "id": "neetpg-2021-s1-q0125",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 125,
+    "question": "What is the metabolic finding seen in a baby with CHPS?",
+    "options": {
+      "A": "Hyperchloremic hypernatremic metabolic alkalosis",
+      "B": "Hypochloremic hypernatremic metabolic acidosis",
+      "C": "Hypochloremic hyponatremic metabolic alkalosis",
+      "D": "Hyperchloremic hyponatremic metabolic alkalosis"
+    },
+    "correctAnswer": "C",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " CHPS \n MC surgical cause of vomiting in infants \n MC age of presentation- 4 weeks \n Palpation of a olive live structure in right upper quadrant is pathognomonic \n Hypochloremia, hypokalemia and metabolic alkalosis happens during severe vomiting \n \n \nObs/Gyne"
+  },
+  {
+    "id": "neetpg-2021-s1-q0126",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 126,
+    "question": "A Hypertensive patient wants to conceive . Which of the following medicines needs to be Stopped",
+    "options": {
+      "A": "Calcium Channel Blockers",
+      "B": "ACE inhibitors",
+      "C": "Alpha Methyl dopa",
+      "D": "Labetolol"
+    },
+    "correctAnswer": "B",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Both labetalol and methyldopa are considered safe for use in pregnant women, while angiotensin -\nconverting enzyme (ACE) inhibitors and angiotensin II receptor blockers (ARB) are contraindicated \nduring all trimesters of pregnancy based on their potential teratogenic and fetotoxic effects."
+  },
+  {
+    "id": "neetpg-2021-s1-q0127",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 127,
+    "question": "Uterine didelphys will cause all of the following symptoms except?",
+    "options": {
+      "A": "Transverse lie",
+      "B": "Endometriosis",
+      "C": "Repeated abortion",
+      "D": "Premature labor"
+    },
+    "correctAnswer": "B",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Many women with a double uterus have normal sex lives, pregnancies and deliveries. \nBut sometimes a double uterus and other abnormalities of uterine development are associated \nwith: \n● Infertility \n● Miscarriage \n● Premature birth \n● Kidney problems \n● Transverse lie"
+  },
+  {
+    "id": "neetpg-2021-s1-q0128",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 128,
+    "question": "Management of uterine septum?",
+    "options": {
+      "A": "Laparoscopic resection of septum",
+      "B": "Hysteroscopic resection of septum",
+      "C": "Uterine metroplasty",
+      "D": "Laparotomy and reseaction"
+    },
+    "correctAnswer": "B",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Hysteroscopic treatment of uterine septa is a safe, simple, and effective procedure. It can be used \nfor all types of uterine septa, it attains optimal obstetric outcomes, and it should be undertaken \nwhenever a uterine septum is diagnosed."
+  },
+  {
+    "id": "neetpg-2021-s1-q0129",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 129,
+    "question": "What is the modality of this test?",
+    "options": {
+      "A": "Hysterosalpingography",
+      "B": "Laparoscopy",
+      "C": "Hysteroscopy",
+      "D": "Saline infusion sonography"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Hysterosalpingography, also known as uterosalpingography, is a radiologic procedure to \ninvestigate the shape of the uterine cavity and the shape and patency of the fallopian tubes. This \nmeans it is a special x-ray using dye to look at the womb and Fallopian tubes."
+  },
+  {
+    "id": "neetpg-2021-s1-q0130",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 130,
+    "question": "A 24 year old female pt. With weeks of amenorrhea, left adnexal mass on USG, B-hcg 2500, no fetal heart rate. What's the management?",
+    "options": {
+      "A": "Expectant management",
+      "B": "Salpingectomy",
+      "C": "Single dose methotrexate",
+      "D": "Milking of tube"
+    },
+    "correctAnswer": "C",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Methotrexate (MTX), a folic acid antagonist, inhibits DNA synthesis in actively dividing cells, \nincluding trophoblasts. Administered to properly selected patients, it has a success rate of up to \n94%. The success in ectopic pregnancy depends mainly on β-hCG concentration. \n \nThe criteria for MTX treatment of ectopic pregnancy are as follows: \n● Hemodynamic stability. \n● Ability and willingness of the patient to comply with post-treatment monitoring. \n● Pretreatment serum β-hCG concentration less than 5000 IU/L. \n● Absence of ultrasound evidence of fetal cardiac activity."
+  },
+  {
+    "id": "neetpg-2021-s1-q0131",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 131,
+    "question": "H/o primary infertility, 2 fibroids in the cornua, & both sides tubal blockage, ovulation of women & semen analysis is normal. Treatment ?",
+    "options": {
+      "A": "ART",
+      "B": "Lap Myomectomy",
+      "C": "Hysterectomy",
+      "D": "Uterine artery embolization"
+    },
+    "correctAnswer": "B",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Laparoscopic Myomectomy, also called Robotic Myomectomy is a surgical procedure of removing \nfibroids through small abdominal incisions. Laparoscopic Myomectomy is suggested and advised \nfor those who experience problems due to fibroids."
+  },
+  {
+    "id": "neetpg-2021-s1-q0132",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 132,
+    "question": "Lady using OCP since 5 month. Amenorrhea since last 6 weeks. Which is best to calculate gestational age in this case?",
+    "options": {
+      "A": "280 days from LMP",
+      "B": "256 days from LMP",
+      "C": "CRL by USG",
+      "D": "Abdominal girth"
+    },
+    "correctAnswer": "C",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "CRL is measured as the largest dimension of embryo, excluding the yolk sac and extremities. It is \nused as a primary measure of gestational age between 6-13 weeks. After 13 weeks, head \ncircumference, biparietal diameter, and femur length measurements become more useful \nmeasurements for assessing fetal growth."
+  },
+  {
+    "id": "neetpg-2021-s1-q0133",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 133,
+    "question": "Order of ligation of devascularization in PPH",
+    "options": {
+      "A": "Uterine artery, pudendal artery, vaginal artery",
+      "B": "Uterine artery, internal iliac, obturator artery",
+      "C": "Uterine artery, ovarian artery, internal iliac artery",
+      "D": "Uterine artery, ovarian artery, vaginal artery"
+    },
+    "correctAnswer": "C",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Bilateral ligation of the uterine vessels (O'Leary stitch) is the preferred approach for controlling \nPPH from laceration of the uterine artery or branches of the utero-ovarian artery. If this does not \ncontrol bleeding, the vessels of the utero-ovarian arcade are similarly ligated. \nHypogastric (internal iliac) artery ligation was pioneered by Howard Kelly for the treatment of \nintraoperative bleeding from cervical cancer prior to its application in postpartum hemorrhage \n(PPH)."
+  },
+  {
+    "id": "neetpg-2021-s1-q0134",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 134,
+    "question": "Patient with post molar evacuation, now has lesion in lungs cannon ball appearance . Which is the best management?",
+    "options": {
+      "A": "Hysterectomy",
+      "B": "Emaco regimen",
+      "C": "Inj. methotrexate",
+      "D": "Multiple dose of Inj. methotrexate"
+    },
+    "correctAnswer": "B",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Treatment protocol for high risk cases: \nEMACO Regimen \n \nDay 1 \n Actinomycin D 0.5 mg i.v. bolus \n Etoposide 100 mg/m2 iv. in 500 ml normal saline over 30 min \n Methotrexate 100 mg/m2 i.v. push slowly \n Methotrexate 200 mg/m2 i.v. in 500 ml 5% dextrose over 12 hr \n \n \nDay 2 \n Actinomycin D 0.5 mg i.v. bolus \n Etoposide 100 mg/m2 i.v. in 500 ml N saline over 30 min \n Folinic acid 15 mg i.m. 12-hourly × 4 doses starting 30 hr after commencingMethotrexate \n \nDay 8 \n Vincristine 1 mg/m2 i.v. bolus (max. 2mg) \n Cyclophosphamide 600 mg/m2 i.v. in 500 ml N saline over 30 min."
+  },
+  {
+    "id": "neetpg-2021-s1-q0135",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 135,
+    "question": "Pregnant female with herpetic lesions in the vulva. Management is?",
+    "options": {
+      "A": "Acyclovir & elective Cs",
+      "B": "Induction of labor",
+      "C": "Acyclovir & allow spontaneous progression of labor",
+      "D": "Wait & watch"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Genital herpes simplex virus (HSV) infection during pregnancy poses a risk to the \ndeveloping fetus and newborn. \n Cesarean delivery is indicated in women with active genital lesions or prodromal \nsymptoms, such as vulvar pain or burning at delivery, because these symptoms may \nindicate viral shedding. Although in the setting of recurrent active maternal disease the \nincidence of neonatal disease is low, cesarean birth is recommended because of the \npotentially serious nature of the disease."
+  },
+  {
+    "id": "neetpg-2021-s1-q0136",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 136,
+    "question": "Husband asks for paternal testing of his twins. One twin is found to be his son & other is not. Diagnosis?",
+    "options": {
+      "A": "Superfecundation",
+      "B": "Superfoetation",
+      "C": "Posthumous child",
+      "D": "None of the above"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Superfecundation is the fertilization of two or more ova from the same cycle by sperm from \nseparate acts of sexual intercourse, which can lead to twin babies from two separate biological \nfathers. The term superfecundation is derived from fecund, meaning the ability to produce \noffspring."
+  },
+  {
+    "id": "neetpg-2021-s1-q0137",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 137,
+    "question": "Teenage patient with transverse vaginal septum with dysmennorhea & chronic pelvic pain. Diagnosis?",
+    "options": {
+      "A": "Endometriosis",
+      "B": "Tubovarian abscess",
+      "C": "Dermoid cyst",
+      "D": "Theca lutein cyst"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Secondary dysmenorrhea typically appears 12 months post menarche and is associated with \nprogressively worsening pain, chronic pelvic pain (CPP), midcycle or acyclic pain, and irregular or \nheavy menstrual bleeding . Common etiologies include: endometriosis, adenomyosis and \nobstructive anomalies."
+  },
+  {
+    "id": "neetpg-2021-s1-q0138",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 138,
+    "question": "28 years old married female anxious about conception. C/o profuse vaginal discharge. No h/o itching. 12 days since LMP",
+    "options": {
+      "A": "Candida",
+      "B": "Trichomonas",
+      "C": "Bacterial vaginosis",
+      "D": "Physiological"
+    },
+    "correctAnswer": "D",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Normal physiological vaginal discharge is a white or clear, non-offensive discharge that changes \nwith the menstrual cycle. It is thick and sticky for most of the cycle but becomes clearer, wetter, \nand stretchy for a short period around the time of ovulation."
+  },
+  {
+    "id": "neetpg-2021-s1-q0139",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 139,
+    "question": "H/o recurrent abortions at 8,11& 22 weeks. Cardiac activity is normal in all the three. H/o of preeclampsia in last pregnancy. What is the most probable cause",
+    "options": {
+      "A": "Syphilis",
+      "B": "APLA",
+      "C": "TORCH",
+      "D": "GDM"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Syphilis may seriously complicate pregnancy and result in miscarriage, stillbirth, nonimmune \nhydrops, intrauterine growth restriction and perinatal death, and serious sequelae in \nsurviving infected children. \n Kassowitz Law:-As the no. of Pregnancy loss ↑ the period at which pregnancy ends also ↑. \n Infections never leads to RPL Except Syphilis ( Perform VDRL Test). \n TORCH Test have no role in RPL."
+  },
+  {
+    "id": "neetpg-2021-s1-q0140",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 140,
+    "question": "Female missed OCP on 4 different days in 1st 2 weeks of menstrual cycle. What will you advice?",
+    "options": {
+      "A": "Continue taking pill",
+      "B": "Take all 4 pills at once & continue taking pills",
+      "C": "Adopt another method of contraception",
+      "D": "Continue current pack, consider additional contraceptive method for remaining days"
+    },
+    "correctAnswer": "D",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "If two or more consecutive hormonal pills have been missed: (≥48 hours since a pill should have \nbeen taken) \n Take the most recent missed pill as soon as possible (any other missed pills should be \ndiscarded). \n Continue taking the remaining pills at the usual time (even if it means taking two pills on the \nsame day). Use back-up contraception (e.g., condoms) or avoid sexual intercourse until \nhormonal pills have been taken for 7 consecutive days. If pills were missed in the last week \nof hormonal pills (e.g., days 15-21 for 28-day pill packs): - Omit the hormone-free interval by \nfinishing the hormonal pills in the current pack and starting a new pack the next day. - If \nunable to start a new pack immediately, use backup contraception (e.g., condoms) or avoid \nsexual intercourse until hormonal pills from a new pack have been taken for 7 consecutive \ndays. \n Emergency contraception should be considered if hormonal pills were missed during the \nfirst week and unprotected sexual intercourse occurred in the previous 5 days. \n Emergency contraception may also be considered at other times as appropriate."
+  },
+  {
+    "id": "neetpg-2021-s1-q0141",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 141,
+    "question": "36 weeks pregnant female on warfarin with mitral stenosis. What should we do",
+    "options": {
+      "A": "Shift to LMW Heparin",
+      "B": "Warfarin",
+      "C": "Switch to Aspirin",
+      "D": "Asprin + heparin"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Heart valve replacement with a prosthetic mechanical valve requires lifelong anticoagulation \nThe literature recommends switching to a LMWH for anticoagulation from the beginning of \npregnancy through the first 12 weeks (end of first trimester). LMWH is preferred during the first \ntrimester as it does not cross the placenta."
+  },
+  {
+    "id": "neetpg-2021-s1-q0142",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 142,
+    "question": "Indomethacin when given beyond 36 weeks what will happen",
+    "options": {
+      "A": "Premature closure of PDA",
+      "B": "Still birth",
+      "C": "No effect",
+      "D": "Teratogenic"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Pharmacological closure by indomethacin is customary if symptoms of PDA are not controlled \nadequately with fluid restriction and diuretics. Its use, however, requires a comprehensive clinical \nassessment of all the vital perinatal factors and a vigilant monitoring of the sick infant. Prophylactic \nuse of indomethacin is discouraged."
+  },
+  {
+    "id": "neetpg-2021-s1-q0143",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 143,
+    "question": "A pt. 2nd degree cervical prolapse C/o dribbling of urine on cough",
+    "options": {
+      "A": "Stress incontinence",
+      "B": "Overflow incontinence",
+      "C": "Cystitis",
+      "D": "Functional incontinence"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " If it deteriorates enough, the bladder can prolapse, meaning it is no longer supported and \ndescends into the vagina. This may trigger problems such as urinary difficulties, discomfort, \nand stress incontinence (urine leakage caused by sneezing, coughing, and exertion, for \nexample). \n Urinary incontinence is the unintentional loss of urine. Stress incontinence happens when \nphysical movement or activity — such as coughing, laughing, sneezing, running or heavy \nlifting — puts pressure (stress) on your bladder, causing you to leak urine."
+  },
+  {
+    "id": "neetpg-2021-s1-q0144",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 144,
+    "question": "What does umbilical artery do",
+    "options": {
+      "A": "Carrying deoxygenated blood from fetus to placenta",
+      "B": "Carrying oxygenated blood from placenta to fetus",
+      "C": "Provide nutrients",
+      "D": "None of the above"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The umbilical arteries carry deoxygenated blood from fetal circulation to the placenta. The two \numbilical arteries converge together about at 5 mm from the insertion of the cord, forming a type \nof vascular connection called the Hyrtl's anastomosis. \n \n \nPeds"
+  },
+  {
+    "id": "neetpg-2021-s1-q0145",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 145,
+    "question": "A child with rachitic changes in limbs, which was not responding to Vitamin",
+    "options": {
+      "D": "Investigations done shows- Calcium- 9.5mg/dl, Phosphorous- 1.6 mg/dl, ALP- 814 IU, Sr. PTH- 24.2.Sr. Electrolytes, Creatinine and blood gases- normal.Diagnosis?",
+      "A": "Vitamin D dependent rickets type 1",
+      "B": "Vitamin D dependent rickets type 2",
+      "C": "Hypophosphatemic rickets"
+    },
+    "correctAnswer": "C",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Hypophosphatemic rickets is a disorder of bone mineralization caused due to defects \n(inherited/acquired) in the renal handling of phosphorus. \n Rickets can be classified into two major groups: calcipenic and phosphopenic \n In the absence of apoptosis, the hypertrophic cells accumulate in the growth plate and form \nthe rachitic bone. \n In phosphopenic rickets (hypophosphatemic rickets), phosphate deficiency is the primary \ndefect that results most commonly from increased renal excretion of phosphate. It is \nassociated with normal or slightly elevated serum parathyroid hormone (PTH)."
+  },
+  {
+    "id": "neetpg-2021-s1-q0146",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 146,
+    "question": "Contraindicated vaccine in 3 months old with recurrent respiratory illness-",
+    "options": {
+      "A": "Inactivated polio",
+      "B": "Measles",
+      "C": "DPT",
+      "D": "DT"
+    },
+    "correctAnswer": "B",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "MMR vaccine should not be administered to severely immunocompromised persons as it is LAIV."
+  },
+  {
+    "id": "neetpg-2021-s1-q0147",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 147,
+    "question": "In a child height for age < -2 SD likely cause is-",
+    "options": {
+      "A": "Chronic malnutrition",
+      "B": "Acute malnutrition",
+      "C": "Recent infection",
+      "D": "No malnutrition"
+    },
+    "correctAnswer": "A",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Stunting is defined as low height-for-age. It is the result of chronic or recurrent undernutrition, \nusually associated with poverty, poor maternal health and nutrition, frequent illness and/or \ninappropriate feeding and care in early life."
+  },
+  {
+    "id": "neetpg-2021-s1-q0148",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 148,
+    "question": "Child presents with myoclonus jerk, decrease performance in school. There is history of fever at the age of 1 year with rash. It is suggestive of-",
+    "options": {
+      "A": "Subacute sclerosing panencephalitis",
+      "B": "Mesial temporal sclerosis",
+      "C": "Polio",
+      "D": "Measles"
+    },
+    "correctAnswer": "A",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Subacute sclerosing panencephalitis (SSPE) is a progressive neurological disorder of children \nand young adults that affects the central nervous system (CNS). It is a slow, but persistent, \nviral infection caused by defective measles virus. \n Most youngsters with SSPE have a history of measles infection at an early age, usually \nyounger than 2 years, followed by a latent period of 6 to 8 years. \n The initial symptoms of SSPE are subtle and include mild mental deterioration (such as \nmemory loss) and changes in behavior (such as irritability) followed by disturbances in \nmotor function, including uncontrollable involuntary jerking movements of the head, trunk \nor limbs called myoclonic jerks. Seizures may also occur. \n In advanced stages of the disease, individuals may lose the ability to walk, as their muscles \nstiffen or spasm."
+  },
+  {
+    "id": "neetpg-2021-s1-q0149",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 149,
+    "question": "Webbed neck, short stature, low posterior hairline. Diagnosis-",
+    "options": {
+      "A": "Turner syndrome",
+      "B": "Downs syndrome",
+      "C": "Patau syndrome",
+      "D": "Edwards syndrome"
+    },
+    "correctAnswer": "A",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "In the female newborn, Turner syndrome can present with congenital lymphedema of the hands \nand feet, webbed neck, nail dysplasia, narrow and high-arched palate, and short fourth \nmetacarpals or metatarsals. As they grow up, the girls develop short stature, “shield” chest with \nwidely spaced nipples, webbed neck, low hairline at the base of the neck, cubitus valgus, and \nMadelung deformity of the forearm and the wrist"
+  },
+  {
+    "id": "neetpg-2021-s1-q0150",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 150,
+    "question": "A 12 year old boy presented with weak pulses in upper limbs. His BP was 90/60mmHg. He also had retinal haemorrhages. Most likely diagnosis is",
+    "options": {
+      "A": "PAn",
+      "B": "Microscopic polyangiitis",
+      "C": "Takayasu arteritis",
+      "D": "HSP"
+    },
+    "correctAnswer": "C",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Takayasu arteritis, also known as pulseless disease, occlusive thromboaortopathy, and Martorell \nsyndrome. \n Clinical features \n weakness or pain in your limbs \n lightheadedness or dizziness \n trouble concentrating \n vision problems \n high blood pressure \n \n \n\n\n \n \nPDF Compiled by Medicoapps. To Know about our products Goto:https://medicoapps.org/store/"
+  },
+  {
+    "id": "neetpg-2021-s1-q0151",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 151,
+    "question": "A 10 year old male child presented with generalised edema. His cholesterol was 238mg/dl and urine protein was 3+. Stool microscopy showed fat in stool.",
+    "options": {
+      "A": "Goodpasture syndrome",
+      "B": "Urine infection",
+      "C": "Nephrotic syndrome",
+      "D": "Nephritic syndrome"
+    },
+    "correctAnswer": "C",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Nephrotic syndrome is the combination of nephrotic-range proteinuria with a low serum albumin \nlevel and edema. Nephrotic-range proteinuria is the loss of 3 grams or more per day of protein into \nthe urine or, on a single spot urine collection, the presence of 2 g of protein per gram of urine \ncreatinine."
+  },
+  {
+    "id": "neetpg-2021-s1-q0152",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 152,
+    "question": "X-ray of a 5 year old child is shown in the image below. Bone mineral density is normal. Identify the condition.",
+    "options": {
+      "A": "Rickets",
+      "B": "Scurvy",
+      "C": "Metaphyseal dysplasia",
+      "D": "Osteopetrosis"
+    },
+    "correctAnswer": "B",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Ortho"
+  },
+  {
+    "id": "neetpg-2021-s1-q0153",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 153,
+    "question": "A 26 years old male with backache, morning stiffness, chest expansion and reddening of eyes with an X-ray presented in OP",
+    "options": {
+      "D": "Most likely diagnosis for this patient is",
+      "A": "Rheumatoid arthritis",
+      "B": "Ankylosing spondylitis",
+      "C": "Paget’s disease"
+    },
+    "correctAnswer": "B",
+    "subject": "Orthopaedics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Ankylosing spondylitis has a bamboo spine appearance. \n Progressive musculoskeletal, and often extraskeletal, signs and symptoms are characteristic \nof the disease. \n Spinal stiffness, immobility, and postural changes, especially hyperkyphosis, are also \ncommonly seen."
+  },
+  {
+    "id": "neetpg-2021-s1-q0154",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 154,
+    "question": "60 year old elderly female with previous h/o colles fracture is complaining of backache. Which of the given statement is wrong in relation to treatment of this patient",
+    "options": {
+      "A": "Teriparatide should be started before supplementing bisphosphonates",
+      "B": "Bisphosphonates not given for more than a year",
+      "C": "Calcium requirement is 1200mg per day",
+      "D": "Oral vit D3 given along with orl calcium"
+    },
+    "correctAnswer": "A",
+    "subject": "Orthopaedics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Antiresorptive agents such as bisphosphonates, which suppress bone turnover by inhibiting \nosteoclast activity , are commonly used prior to teriparatide as treatment for osteoporosis"
+  },
+  {
+    "id": "neetpg-2021-s1-q0155",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 155,
+    "question": "A patient fell down from bicycle & started having pain around hip, shortening of limb & attitude was flexion, adduction, IR of hip",
+    "options": {
+      "A": "Anterior dislocation",
+      "B": "Transcervical fracture",
+      "C": "Posterior dislocation",
+      "D": "IT Fracture"
+    },
+    "correctAnswer": "C",
+    "subject": "Orthopaedics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The classic mechanisms of posterior dislocation involve tonic-clonic seizures, electrical shock, or \nanterior-directed shoulder trauma (such as a grabbing the dashboard in a motor vehicle collision \nor falling on an outstretched hand). These injuries create forceful internal rotation, adduction, and \nflexion of the shoulder. Posterior dislocations can be subclassified into three anatomic types based \non the final resting position of the humeral head: (1) subacromial, the most common, (2) \n\n\n \n \n \nsubglenoid, and (3) subspinous. Posterior dislocations usually result in the humeral head being \nposterior to the glenoid and inferior to the acromion."
+  },
+  {
+    "id": "neetpg-2021-s1-q0156",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 156,
+    "question": "A 20 year old patient presenting with chronic low backache and early morning stiffness since last 2 years. Since 6 months there are bilateral heel pain also. Most likely diagnosis for this patient is –",
+    "options": {
+      "A": "TB spine",
+      "B": "Ankylosing spondylitis",
+      "C": "Mechanical pain",
+      "D": "Disc prolapsed"
+    },
+    "correctAnswer": "B",
+    "subject": "Orthopaedics",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Ankylosing spondylitis (AS) is a chronic inflammatory disease with an insidious onset. \nProgressive musculoskeletal, and often extraskeletal, signs and symptoms are characteristic \nof the disease. \n The characteristic type of back pain in AS is \"inflammatory\" in nature. Inflammatory back \npain typically exhibits at least four of the five following characteristics: age of onset less \nthan 40 years, insidious onset, improvement with exercise, no improvement with rest, and \npain at night with an improvement upon arising. Spinal stiffness, immobility, and postural \nchanges, especially hyperkyphosis, are also commonly seen. \n \n \n \n \n \n \n \n\n\n \n \n \nSkin"
+  },
+  {
+    "id": "neetpg-2021-s1-q0157",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 157,
+    "question": "What is the most suitable antibiotic for this condition?",
+    "options": {
+      "A": "Amoxycillin & Clavulinic acid",
+      "B": "Amikacin",
+      "C": "Norfloxacin",
+      "D": "Metronidazole"
+    },
+    "correctAnswer": "A",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Erysipelas is a common skin condition involving the upper dermis and extending into the \nsuperficial lymphatics of the skin. It is characterized by raised, well defined, tender, bright red rash. \nThe causative organism is Streptococcus pyogenes, also known as A beta haemolytic streptococci. \nIt is treated with penicillin group of drugs, which include amoxycillin-clavulanic acid."
+  },
+  {
+    "id": "neetpg-2021-s1-q0158",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 158,
+    "question": "A male patient came to OPD with White Discharge from urethra [Image Shown]. What is the most probable organism involved",
+    "options": {
+      "A": "Nisseria gonorrhoeae",
+      "B": "Haemophilus ducreyi",
+      "C": "Calymmatobacterium granulomatis",
+      "D": "Treponema pallidum"
+    },
+    "correctAnswer": "A",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Nisseria gonorrhoeae causes gonococcal infection in both males and females. Males are \nsymptomatic for this infection while females remain asymptomatic and act as the reservoirs or \ncarriers of infection. It sometimes presents as endocervicitis in females."
+  },
+  {
+    "id": "neetpg-2021-s1-q0159",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 159,
+    "question": "A woman, anxious to conceive, complains of profuse white discharge per vaginum, which was non foul smelling and not itchy. Her LMP was 13-15 days back. What is the most probable diagnosis?",
+    "options": {
+      "A": "Candidiasis",
+      "B": "Bacterial Vaginosis",
+      "C": "Physiological",
+      "D": "Trichomoniasis"
+    },
+    "correctAnswer": "C",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The amount and consistency of vaginal discharge changes with the menstrual cycle. In the days \nright after menstruation, vaginal discharge is minimal, and its consistency is thick and sticky. When \napproaching ovulation, the rising estrogen levels cause a concomitant increase in vaginal \ndischarge. The amount of discharge produced at ovulation is 30 times greater than the amount \nproduced directly following menstruation. The discharge also changes in color and con sistency \nduring this time, becoming clear with an elastic consistency."
+  },
+  {
+    "id": "neetpg-2021-s1-q0160",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 160,
+    "question": "A 30 year old woman came with flaccid bullae on her skin which were easy to rupture. Biopsy of the lesion revealed a suprabasal split. What is the most likely diagnosis?",
+    "options": {
+      "A": "Pemphigus vegetans",
+      "B": "Pemphigus vulgaris",
+      "C": "Pemphigus foliaceous",
+      "D": "Erythema multiforme"
+    },
+    "correctAnswer": "B",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Histopathology demonstrates an intradermal blister. The earliest changes consist of intercellular \nedema with loss of intercellular attachments in the basal layer. Suprabasal epidermal cells \nseparate from the basal cells to form clefts and blisters. Basal cells are separated from one another \nand stand like a row of tombstones on the floor of the blister, but they remain attached to the \nbasement membrane. Blister cells contain some acantholytic cells. Histopathology can help \ndifferentiate pemphigus vulgaris from pemphigus foliaceous, which demonstrates a more \nsuperficial epidermal cleavage."
+  },
+  {
+    "id": "neetpg-2021-s1-q0161",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 161,
+    "question": "A patient who has been on MBMDT presents with inflammation over pre-existing lesions and nerve involvement. What will be the best approach of treatment?",
+    "options": {
+      "A": "Stop ALT and start steroids",
+      "B": "Stop ALT and start thalidomide",
+      "C": "Continue ALT and start steroids",
+      "D": "Continue ALT and give thalidomide"
+    },
+    "correctAnswer": "C",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " This is a presentation of Lepra Reaction. In both the types of Lepra reactions, ALT should be \ncontinued and steroids must be started for the management. \n Type 1 reactions are due to changes in cell-mediated immunity (CMI) to the infectious agent \nMycobacterium leprae. Type 1 reactions may occur in any subtype of leprosy, but patients \nwith borderline leprosy are most frequently affected. Patients present with increased \nerythema, edema, and warmth of preexisting cutaneous plaques and nodules. There is \noften accompanying edema of the hands and feet. New ulcerations of preexisting lesions \nmay also occur, as well as the formation of new plaques. Additionally, there may be swelling \nand tenderness of peripheral nerves and loss of neurologic function. Systemic symptoms \nare uncommon. This reaction may be seen after pregnancy or immunosuppressive \ntreatment. It may also occur in patients co-infected with human immunodeficiency virus \n(HIV) within months of starting antiretroviral therapy. \n The type 2 reaction is also known as erythema nodosum leprosum. Patients present with \nsudden onset crops of painful, tender, and erythematous subcutaneous nodules that may \nsubsequently ulcerate. The lesions are common on the face and extensor surfaces of the \nupper and lower extremities. In addition, there may be systemic signs such as fever, \nmalaise, arthralgias, and myalgias. Other affected organs may include the eyes, kidneys, \ntestes, and lymph nodes. Type 2 reactions are caused by immune complex formation and \ndeposition. They typically are seen in patients with borderline lepromatous or polar \n\n\n \n \n \nlepromatous disease. Reactions may last from days to weeks; they may recur or persist over \nmonths."
+  },
+  {
+    "id": "neetpg-2021-s1-q0162",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 162,
+    "question": "A 13 year old male presented with erythematous edematous plaques on face over his previously existing hypoanaesthetic patches. He also complained of pain since 10 days. He has been on MBMDT since the past 2 months. What is your diagnosis?",
+    "options": {
+      "A": "Cellulitis of face",
+      "B": "Type 1 lepra reaction",
+      "C": "Erythema Nodosum Leprosum",
+      "D": "Erysipelas"
+    },
+    "correctAnswer": "B",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Type 1 reactions are due to changes in cell-mediated immunity (CMI) to the infectious agent \nMycobacterium leprae. Type 1 reactions may occur in any subtype of leprosy, but patients \nwith borderline leprosy are most frequently affected. Patients present with increased \nerythema, edema, and warmth of preexisting cutaneous plaques and nodules. \n\n\n \n \n \n There is often accompanying edema of the hands and feet. New ulcerations of preexisting \nlesions may also occur, as well as the formation of new plaques. Additionally, there may be \nswelling and tenderness of peripheral nerves and loss of neurologic function. \n Systemic symptoms are uncommon. This reaction may be seen after pregnancy or \nimmunosuppressive treatment. It may also occur in patients co-infected with human \nimmunodeficiency virus (HIV) within months of starting antiretroviral therapy."
+  },
+  {
+    "id": "neetpg-2021-s1-q0163",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 163,
+    "question": "What are the associated features of this deficiency disorder?",
+    "options": {
+      "A": "History of diarrhoea & dementia associated with cognitive impairment",
+      "B": "Bitot’s spots",
+      "C": "Angular stomatitis",
+      "D": "Loss of muscle coordination"
+    },
+    "correctAnswer": "A",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The image shows “Casal’s Necklace” which is a classical manifestation of Pellagra due to Niacin, \ni.e., Vitamin B3 deficiency. Pellagra is clinically manifested by the 4 D' s: photosensitive dermatitis, \ndiarrhea, dementia, and death. This is the only photosensitivity syndrome where death is included \nas a cardinal clinical feature.The full tetrad of symptoms is usually not well developed in infants \nand children. This vitamin deficiency responds to treatment with nicotinic acid."
+  },
+  {
+    "id": "neetpg-2021-s1-q0164",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 164,
+    "question": "A young girl presented to the OPD with rough surfaced lesions over her elbows and knees. She also complained of diminished vision in the night. What is the most likely diagnosis?",
+    "options": {
+      "A": "Keratosis pilaris",
+      "B": "Phrynoderma",
+      "C": "Folliculitis",
+      "D": "Pyoderma"
+    },
+    "correctAnswer": "B",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " This is a case of Phrynoderma. \n Phrynoderma is a form of follicular hyperkeratosis that is associated with nutritional \ndeficiencies. It is endemic to poor populations but is rare in developed countries. \n The term “phrynoderma” was coined by Nicholls in 1933 to describe the “toad-like” \nappearance of the skin of undernourished labourers. This form of dermatosis can be caused \nby isolated deficiencies of vitamins A, B complex, C and E. Adjunctive symptoms, such as \ncheilitis, glossitis, blepharitis, night blindness, diarrhea, muscle weakness and neuritis, may \ndevelop when hypovitaminosis A is predominant relative to other vitamin deficiencie"
+  },
+  {
+    "id": "neetpg-2021-s1-q0165",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 165,
+    "question": "A male child was brought with a mild painful swelling on his scalp since the last 3 months, as shown in the image below. History reveals that there is a pet dog in the child’s house. What is the diagnosis?",
+    "options": {
+      "A": "Folliculitis",
+      "B": "Abscess",
+      "C": "Kerion",
+      "D": "Scabies"
+    },
+    "correctAnswer": "C",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Kerion is an acute inflammatory process which is the result of the host's response to a \nfungal ringworm infection of the hair follicles of the scalp (occasionally the beard) that can \nbe accompanied by secondary bacterial infection. \n It usually appears as raised, spongy lesions, and typically occurs in children. \n This honeycomb is a painful inflammatory reaction with deep suppurative lesions on the \nscalp. Follicles may be seen discharging pus. \n There may be sinus formation and rarely mycetoma-like grains are produced. It is usually \ncaused by dermatophytes (fungal infections of the skin affecting humans and animals) such \nas Trichophyton verrucosum, T. mentagrophytes, and Microsporum canis. Treatment is with \noral griseofulvin."
+  },
+  {
+    "id": "neetpg-2021-s1-q0166",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 166,
+    "question": "A 23 year old primi gravida stays in the same house as her school going nephew, who contracted varicella infection. The woman approached the medical centre to get tested for the same and the result for varicella antibody was negative. Which of the following statements are true?",
+    "options": {
+      "A": "She is susceptible to zoster",
+      "B": "She is susceptible to chickenpox",
+      "C": "She is immune to chickenpox",
+      "D": "She is immune to zoster"
+    },
+    "correctAnswer": "B",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Varicella zoster causes 2 diseases in the infected persons; varicella(chickenpox) and zoster. \nChickenpox or Varicella is a childhood disease. \n Zoster is the reactivation of this disease in adults. As a rule, the first episode of infection \nalways manifests as chickenpox. \n In the given question, the pregnant lady is negative for varicella antibodies, indicating that \nshe has not been infected even once in her life time. \n Hence she is susceptible to contracting chickenpox from her contact."
+  },
+  {
+    "id": "neetpg-2021-s1-q0167",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 167,
+    "question": "Hair perforation test is positive for",
+    "options": {
+      "A": "Trichophyton mentagrophytes",
+      "B": "Microsporum adouinii",
+      "C": "Epidermophyton floccosum",
+      "D": "Microsporum gypsum"
+    },
+    "correctAnswer": "A",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Hair perforation test is done for dermatophytes, particularly Trichophyton mentagrophytes and its \nvariants. \n \nIngredients: \n Autoclaved blonde prepubital hair cut into small pieces \n 5ml sterile distilled water in suitable vial \n \nProcedure: \n Place hair in the vial \n Inoculate the test fungus into the hair in the vial \n Incubate at room temperature \n Individiual hairs are removed at intervals upto 4 weeks and examined microscopically \nin lactophenol cotton blue. \n \nAnesthesia"
+  },
+  {
+    "id": "neetpg-2021-s1-q0168",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 168,
+    "question": "A 30 year old male was intubated for surgery. The best method to confirm the position of Endotracheal tube is",
+    "options": {
+      "A": "X-ray chest",
+      "B": "Auscultation",
+      "C": "Capnography",
+      "D": "Chest expansion"
+    },
+    "correctAnswer": "C",
+    "subject": "Anaesthesia",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": " Use an end-tidal carbon dioxide detector (i.e., continuous waveform capnography, \ncolorimetric and non-waveform capnography) to evaluate and confirm endotracheal tube \nposition in patients who have adequate tissue perfusion. \n Capnography is the most reliable method to confirm endotracheal tube placement in \nemergency conditions in the prehospital setting."
+  },
+  {
+    "id": "neetpg-2021-s1-q0169",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 169,
+    "question": "The below image procedure is done to maintain airway includes?",
+    "options": {
+      "A": "Head tilt, chin lift",
+      "B": "Jaw thrust",
+      "C": "In line manual stabilization",
+      "D": "Head stabilization"
+    },
+    "correctAnswer": "A",
+    "subject": "Anaesthesia",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The triple airway manoeuvre is used to maintain a patent upper airway and combines head tilt, \njaw thrust and mouth open."
+  },
+  {
+    "id": "neetpg-2021-s1-q0170",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 170,
+    "question": "A young male was given regional anaesthesia with 0.25% bupivacaine. The pt. Become unresponsive & pulse become unrecordable. Best Management would be",
+    "options": {
+      "A": "CPCR with 20% Intralipid",
+      "B": "CPCR with sod. Bicarbonate",
+      "C": "CPCR with dobutamine",
+      "D": "CPCR with calcium"
+    },
+    "correctAnswer": "A",
+    "subject": "Anaesthesia",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Patient will be started with CPCR as patient became unresponsive and pulse became unrecordable \nand should be given antidote Intralipid 20%"
+  },
+  {
+    "id": "neetpg-2021-s1-q0171",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 171,
+    "question": "While doing lumbar puncture, last structure to be encountered will be in a patient who presented with fever, neck rigidity & altered sensorium",
+    "options": {
+      "A": "Arachnoid membrane",
+      "B": "Ligamentum flavum",
+      "C": "Dura mater",
+      "D": "Pia mater"
+    },
+    "correctAnswer": "A",
+    "subject": "Anaesthesia",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "The Lumbar Puncture needle pierces in order: skin, subcutaneous tissue, supraspinous ligament, \ninterspinous ligament, ligamentum flavum, epidural space containing the internal vertebral \nvenous plexus, dura, arachnoid, and finally the subarachnoid space."
+  },
+  {
+    "id": "neetpg-2021-s1-q0172",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 172,
+    "question": "A pt. Is undergoing surgery where anaesthesia is maintained on halothane. The pt. Developed hyperthermia & m/s rigidity. Which of the agents is responsible?",
+    "options": {
+      "A": "D-tubocurarine",
+      "B": "Suxamethonium",
+      "C": "Cisatracurium",
+      "D": "Rocuronium"
+    },
+    "correctAnswer": "B",
+    "subject": "Anaesthesia",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "This patient has developed malignant hyperthermia. And the MC agent to trigger this condition is \nSuxamethonium \n \n \nRadiology"
+  },
+  {
+    "id": "neetpg-2021-s1-q0173",
+    "year": 2021,
+    "shift": 1,
+    "questionNumber": 173,
+    "question": "A 50 year old male suddenly stopped alcohol consumption for 3 days in hospital with agitation, altered sensorium, paranoid delusions and hallucinations. The most likely diagnosis is",
+    "options": {
+      "A": "Wernicke's Encephalopathy",
+      "B": "Korsakoff's psychosis",
+      "C": "Hangover",
+      "D": "Delirium Tremens"
+    },
+    "correctAnswer": "D",
+    "subject": "Psychiatry",
+    "topic": "",
+    "difficulty": "Easy",
+    "tags": [],
+    "explanation": "Delirium tremens is the most severe form of ethanol withdrawal, manifested by altered mental \nstatus (global confusion) and sympathetic overdrive (autonomic hyperactivity), which can progress \nto cardiovascular collapse. Minor alcohol withdrawal is characterized by tremor, anxiety, nausea, \nvomiting, and insomnia. Major alcohol withdrawal signs and symptoms include visual \nhallucinations and auditory hallucinations, whole body tremor, vomiting, diaphoresis, and \nhypertension (high blood pressure)."
   }
 ]
