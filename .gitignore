@@ -80,3 +80,6 @@ serviceAccountKey.json
 
 # Claude Code local settings (may contain personal API keys)
 .claude/settings.local.json
+
+# Pro redeem codes (plaintext) — never commit, distribute manually to buyers
+PRO_REDEEM_CODES.SECRET.txt
