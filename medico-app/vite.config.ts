@@ -45,9 +45,9 @@ export default defineConfig({
         runtimeCaching: [
           {
             urlPattern: /\/questions\.json$/,
-            handler: 'CacheFirst',
+            handler: 'StaleWhileRevalidate',
             options: {
-              cacheName: 'questions-cache',
+              cacheName: 'questions-cache-v2',
               expiration: {
                 maxEntries: 1,
                 maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
