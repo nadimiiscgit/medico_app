@@ -56,6 +56,16 @@ export function useQuestions(): UseQuestionsReturn {
   return { questions, loading, error, years, subjects };
 }
 
+/** Fetches (and caches) the full PYQ question set outside of React, e.g. for ID lookups. */
+export async function fetchPyqQuestions(): Promise<Question[]> {
+  if (pyqCache) return pyqCache;
+  const r = await fetch('/questions.json');
+  if (!r.ok) throw new Error('Failed to load questions');
+  const data: Question[] = await r.json();
+  pyqCache = data;
+  return data;
+}
+
 // ---------------------------------------------------------------------------
 // Practice questions — lazy loaded per subject, cached globally
 // ---------------------------------------------------------------------------
@@ -67,6 +77,16 @@ function subjectSlug(subject: string): string {
 
 // Global per-subject cache so each file is only fetched once per session
 const practiceCache: Record<string, Question[]> = {};
+
+/** Fetches (and caches) practice questions for a single subject outside of React, e.g. for ID lookups. */
+export async function fetchPracticeQuestionsForSubject(subject: string): Promise<Question[]> {
+  if (practiceCache[subject]) return practiceCache[subject];
+  const r = await fetch(`/practice_${subjectSlug(subject)}.json`);
+  if (!r.ok) throw new Error(`Failed to load practice questions for ${subject}`);
+  const data: Question[] = await r.json();
+  practiceCache[subject] = data;
+  return data;
+}
 
 interface UsePracticeQuestionsReturn {
   questions: Question[];
