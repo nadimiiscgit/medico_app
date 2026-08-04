@@ -2,11 +2,12 @@ import { useState } from 'react';
 import { useProgress } from '../hooks/useProgress';
 import { useQuestions } from '../hooks/useQuestions';
 import { useTheme } from '../hooks/useTheme';
+import { usePro } from '../hooks/usePro';
 import type { Theme } from '../hooks/useTheme';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { percentage } from '../lib/utils';
-import { AlertTriangleIcon, DownloadIcon, Trash2Icon, SunIcon, MoonIcon, MonitorIcon, TargetIcon } from 'lucide-react';
+import { AlertTriangleIcon, DownloadIcon, Trash2Icon, SunIcon, MoonIcon, MonitorIcon, TargetIcon, SparklesIcon, CheckCircle2Icon } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 const THEME_OPTIONS: { value: Theme; label: string; icon: React.ElementType }[] = [
@@ -19,8 +20,15 @@ export function Settings() {
   const { progress, resetProgress, setDailyGoal } = useProgress();
   const { questions } = useQuestions();
   const { theme, setTheme } = useTheme();
+  const { isPro, redeem, error: redeemError, isRedeeming } = usePro();
   const [confirmReset, setConfirmReset] = useState(false);
   const [goalInput, setGoalInput] = useState(String(progress.dailyGoal ?? 20));
+  const [codeInput, setCodeInput] = useState('');
+
+  const handleRedeem = async () => {
+    const ok = await redeem(codeInput);
+    if (ok) setCodeInput('');
+  };
 
   const exportData = () => {
     const data = {
@@ -74,6 +82,51 @@ export function Settings() {
   return (
     <div className="max-w-xl space-y-6">
       <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">Settings</h1>
+
+      {/* Pro */}
+      <Card className={isPro ? 'border-green-300 dark:border-green-800' : 'border-blue-200 dark:border-blue-900'}>
+        <CardHeader>
+          <CardTitle className="text-base flex items-center gap-2">
+            {isPro ? (
+              <CheckCircle2Icon className="w-4 h-4 text-green-600" />
+            ) : (
+              <SparklesIcon className="w-4 h-4 text-blue-600" />
+            )}
+            {isPro ? 'Pro Unlocked' : 'NEET PG Pro'}
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          {isPro ? (
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              You have full access to the 200-question full-length mock exam and every year's full paper. Good luck with your prep!
+            </p>
+          ) : (
+            <>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                Unlock the full-length 200-question mock exam and complete year-wise papers under real exam-timing conditions. Got a code? Redeem it below.
+              </p>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={codeInput}
+                  onChange={(e) => setCodeInput(e.target.value)}
+                  placeholder="NEETPG-XXXX-XXXX"
+                  className="flex-1 border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') handleRedeem();
+                  }}
+                />
+                <Button size="sm" onClick={handleRedeem} disabled={isRedeeming || !codeInput.trim()}>
+                  Redeem
+                </Button>
+              </div>
+              {redeemError && (
+                <p className="text-xs text-red-600 dark:text-red-400 mt-2">{redeemError}</p>
+              )}
+            </>
+          )}
+        </CardContent>
+      </Card>
 
       {/* Theme */}
       <Card>

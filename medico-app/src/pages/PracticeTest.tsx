@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useQuestions } from '../hooks/useQuestions';
 import { useProgress } from '../hooks/useProgress';
+import { usePro } from '../hooks/usePro';
 import { QuestionCard } from '../components/QuestionCard';
 import { Button } from '../components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
@@ -14,6 +15,7 @@ import {
   FlagIcon,
   RotateCcwIcon,
   CheckCircleIcon,
+  LockIcon,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createSession } from '../store/userProgress';
@@ -21,15 +23,16 @@ import { createSession } from '../store/userProgress';
 type TestStep = 'setup' | 'test' | 'review' | 'results';
 
 const PRESET_CONFIGS = [
-  { label: 'Full NEET PG', questions: 200, time: 210 * 60, description: '200 Qs · 3h 30m' },
-  { label: 'Half Exam', questions: 100, time: 105 * 60, description: '100 Qs · 1h 45m' },
-  { label: 'Quick Mock', questions: 50, time: 50 * 60, description: '50 Qs · 50m' },
-  { label: 'Subject Drill', questions: 30, time: 30 * 60, description: '30 Qs · 30m' },
+  { label: 'Full NEET PG', questions: 200, time: 210 * 60, description: '200 Qs · 3h 30m', pro: true },
+  { label: 'Half Exam', questions: 100, time: 105 * 60, description: '100 Qs · 1h 45m', pro: false },
+  { label: 'Quick Mock', questions: 50, time: 50 * 60, description: '50 Qs · 50m', pro: false },
+  { label: 'Subject Drill', questions: 30, time: 30 * 60, description: '30 Qs · 30m', pro: false },
 ];
 
 export function PracticeTest() {
   const { questions, loading, years, subjects } = useQuestions();
   const { progress, bookmark, isBookmarked, recordQuestionAnswer, completeSession } = useProgress();
+  const { isPro } = usePro();
 
   const [step, setStep] = useState<TestStep>('setup');
   const [testQuestions, setTestQuestions] = useState<Question[]>([]);
@@ -49,6 +52,7 @@ export function PracticeTest() {
 
   const startTest = useCallback(() => {
     const config = PRESET_CONFIGS[selectedConfig];
+    if (config.pro && !isPro) return;
     let pool = questions;
     if (customYear > 0) pool = pool.filter((q) => q.year === customYear);
     if (customSubject !== 'All') pool = pool.filter((q) => q.subject === customSubject);
@@ -70,7 +74,7 @@ export function PracticeTest() {
     });
     setSession(newSession);
     setStep('test');
-  }, [questions, selectedConfig, customYear, customSubject]);
+  }, [questions, selectedConfig, customYear, customSubject, isPro]);
 
   // Timer
   useEffect(() => {
@@ -160,6 +164,7 @@ export function PracticeTest() {
         <div className="grid grid-cols-2 gap-3">
           {PRESET_CONFIGS.map((config, idx) => {
             const isSelected = selectedConfig === idx;
+            const isLocked = config.pro && !isPro;
             return (
               <button
                 key={config.label}
@@ -171,8 +176,11 @@ export function PracticeTest() {
                     : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/30'
                 )}
               >
-                {isSelected && (
+                {isSelected && !isLocked && (
                   <CheckCircleIcon className="absolute top-2.5 right-2.5 w-4 h-4 text-white/90" />
+                )}
+                {isLocked && (
+                  <LockIcon className={cn('absolute top-2.5 right-2.5 w-4 h-4', isSelected ? 'text-white/90' : 'text-gray-400 dark:text-gray-500')} />
                 )}
                 <div className={cn('font-semibold text-sm', isSelected ? 'text-white' : 'text-gray-900 dark:text-gray-100')}>
                   {config.label}
@@ -215,23 +223,47 @@ export function PracticeTest() {
               </div>
             </div>
 
-            <Button className="w-full" size="lg" onClick={startTest}>
-              <PlayIcon className="w-4 h-4" />
-              Start Practice Test
-            </Button>
+            {PRESET_CONFIGS[selectedConfig].pro && !isPro ? (
+              <div className="flex flex-col items-center gap-2">
+                <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+                  The full-length mock exam is a Pro feature.
+                </p>
+                <Link to="/settings" className="w-full">
+                  <Button className="w-full" size="lg" variant="outline">
+                    <LockIcon className="w-4 h-4" />
+                    Unlock Pro to Start
+                  </Button>
+                </Link>
+              </div>
+            ) : (
+              <Button className="w-full" size="lg" onClick={startTest}>
+                <PlayIcon className="w-4 h-4" />
+                Start Practice Test
+              </Button>
+            )}
           </CardContent>
         </Card>
 
         {/* Year-wise full paper */}
         <div>
-          <h2 className="text-base font-semibold text-gray-900 dark:text-gray-100 mb-3">Take a Full Year Paper</h2>
+          <div className="flex items-center gap-2 mb-3">
+            <h2 className="text-base font-semibold text-gray-900 dark:text-gray-100">Take a Full Year Paper</h2>
+            {!isPro && <LockIcon className="w-3.5 h-3.5 text-gray-400 dark:text-gray-500" />}
+          </div>
+          {!isPro && (
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+              Full year papers are a Pro feature. <Link to="/settings" className="text-blue-600 dark:text-blue-400 underline">Unlock Pro</Link> to take any year as a complete timed exam.
+            </p>
+          )}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {years.map((y) => {
               const count = questions.filter((q) => q.year === y).length;
               return (
                 <button
                   key={y}
+                  disabled={!isPro}
                   onClick={() => {
+                    if (!isPro) return;
                     const pool = questions
                       .filter((q) => q.year === y)
                       .sort((a, b) => a.questionNumber - b.questionNumber);
@@ -250,7 +282,12 @@ export function PracticeTest() {
                     setSession(newSession);
                     setStep('test');
                   }}
-                  className="p-3 rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/30 text-left transition-all"
+                  className={cn(
+                    'p-3 rounded-xl border-2 text-left transition-all',
+                    isPro
+                      ? 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/30'
+                      : 'border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50 opacity-60 cursor-not-allowed'
+                  )}
                 >
                   <div className="font-bold text-gray-900 dark:text-gray-100 text-sm">{y}</div>
                   <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{count} questions</div>
