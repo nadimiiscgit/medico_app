@@ -140678,15 +140678,15 @@
     "year": 2016,
     "shift": 1,
     "questionNumber": 299,
-    "question": "Match enzyme with the disease caused due to its deficiency - Enzyme Disease",
+    "question": "Match the enzyme with the disease caused by its deficiency:\nEnzymes: 1. Fumarylacetoacetate hydrolase   2. Tyrosine transaminase   3. Tyrosinase   4. Homogentisate oxidase\nDiseases: A. Tyrosinemia Type II   B. Alkaptonuria   C. Tyrosinemia Type I   D. Albinism",
     "options": {
-      "A": "I→ D, 2 → C, 3 → A, 4→ B",
-      "B": "I → A,2 → C,3 →D, 4 → B",
-      "C": "1 → C,2→ D,3 → A,4 → B",
-      "D": "l→ C, 2→ A, 3→ D, 4→ B"
+      "A": "1→D, 2→C, 3→A, 4→B",
+      "B": "1→A, 2→C, 3→D, 4→B",
+      "C": "1→C, 2→D, 3→A, 4→B",
+      "D": "1→C, 2→A, 3→D, 4→B"
     },
     "correctAnswer": "D",
-    "explanation": "29 th /e p. 289]",
+    "explanation": "Each enzyme deficiency in the tyrosine catabolic pathway causes a distinct disease: fumarylacetoacetate hydrolase deficiency causes Tyrosinemia Type I (hepatorenal tyrosinemia, the final and most severe block in the pathway); tyrosine transaminase deficiency causes Tyrosinemia Type II (Richner-Hanhart syndrome, an earlier block); tyrosinase deficiency blocks melanin synthesis, causing (oculocutaneous) Albinism; and homogentisate oxidase deficiency causes Alkaptonuria, from accumulation of homogentisic acid. This gives the matching 1-C, 2-A, 3-D, 4-B, which is why D is correct. (The original source PDF's two-column enzyme/disease table extracted with column order scrambled by the PDF text layer -- this matching was reconstructed from the underlying biochemistry, which is internally consistent with the marked answer.)",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -168610,13 +168610,13 @@
     "questionNumber": 6,
     "question": "About Weber’s syndrome which is incorrect:",
     "options": {
-      "A": "5-hydroxytryptamine (5-HT)",
-      "B": "N-methyl phenylamine",
-      "C": "3-Methoxytyramine",
-      "D": "Phenethylamine"
+      "A": "Contralateral hemiplegia",
+      "B": "Ipsilateral Oculomotor nerve palsy",
+      "C": "Contralateral Parkinsonism",
+      "D": "Anterior cerebral peduncle"
     },
     "correctAnswer": "D",
-    "explanation": "● Weber's syndrome (superior alternating hemiplegia) is form of stroke characterized by the presence of an ipsilateral oculomotor nerve palsy and contralateral hemiparesis or hemiplegia. ● It is caused by midbrain posterior cerebral artery or of basilar bifurcation perforating arteries. ● This lesion is usually unilateral and affects several structures in the midbrain: 1. Contralateral parkinsonism because its dopaminergic projections to the basal ganglia innervate the ipsilateral hemisphere motor field, leading to movement disorder of the contralateral body. 2. Contralateral hemiparesis and typical upper motor neuron findings. It is contralateral because it occurs before the decussation in the medulla. 3. Difficulty with contralateral lower facial muscles and hypoglossal nerve functions. 4. Ipsilateral Oculomotor nerve palsy with drooping eyelid and fixed wide pupil pointed down and out. This leads to diplopia. Question -7 About Sibson’s fascia which is incorrect: ● The suprapleural m",
+    "explanation": "Weber's syndrome (superior alternating hemiplegia) results from midbrain infarction due to occlusion of paramedian branches of the posterior cerebral artery or basilar bifurcation perforators, damaging the oculomotor nerve fascicles and the cerebral peduncle as they pass through the midbrain. This classically produces an ipsilateral oculomotor nerve palsy (from direct nerve involvement) together with contralateral hemiplegia and sometimes contralateral parkinsonism (from corticospinal tract and substantia nigra involvement) -- all three are recognised features. The anterior cerebral peduncle is not itself a described feature of Weber's syndrome in the way the other three are, which is why D is the correct 'incorrect' option here.",
     "subject": "Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -168806,7 +168806,7 @@
       "D": "Orthinithe"
     },
     "correctAnswer": "A",
-    "explanation": "Cystinuria • Biochemical Defect :An autosomal recessive disorder that results in the formation of defective amino acid transporter in the renal tubule and intestinal epithelial cells. • Pathophysiology :The amino acid transporter is responsible for transporting cystine, ornithine, lysine, and arginine . Defective tubular reabsorption of these amino acids in the kidneys results in increased cysteine in the urine , which can precipitate and cause kidney stones. • Clinical Manifestations : Cysteine kidney stones presemnting with severe, intermittent flank pain and hematuria. • Lab findings: Increased urinary excretion of cystine, ornithine, arginine, and lysine on urine amino acid chromatography; hematuria and cynstine crystals (hexagonal) on cooling of acidified urine sediment. • Imaging: Radiopaque kidney stones on CT scan. • Treatment : Low-methionine diet; increased fluid intake; acetazolamide to alkalinize the urine.",
+    "explanation": "Cystinuria is an autosomal recessive disorder caused by a defective renal and intestinal transporter for the dibasic amino acids -- cystine, ornithine, lysine, and arginine (the 'COLA' mnemonic) -- leading to their excessive loss in urine and, because cystine is poorly soluble, recurrent cystine kidney stones. Worth noting precisely: the transporter's substrate is cystine, the oxidized, disulfide-linked dimer of two cysteine molecules -- free (reduced) cysteine itself is a different, neutral amino acid handled by separate transport systems and is not a defining feature of this disorder. Some reference material (including this source) uses 'cystine' and 'cysteine' loosely; taught precisely, cystine excretion is what defines cystinuria.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -169015,7 +169015,7 @@
       "D": "Rhizopus"
     },
     "correctAnswer": "C",
-    "explanation": "Orbital cellulitis term is reserved for infections behind the orbital septum which may or may not spill over to lids. Bacterial OC is more common. in children and fulminant infection (& ischemic infarction) with Mucor or Aspergillus typically affectspatients with diabetes (esp ketoacidosis) and immunosuppression. Presentation is Extensive swelling of lids with chemosis often obscure proptosis (i.e. most commonly lateral & downwards). PropRtosis with impaired mobility resulting in diplopia Pain is severe, increased by movement of eye or presssure Unilateral, tender, warm & red periorbital edema,painful ophthalmoplegia",
+    "explanation": "Fulminant, ischemia-associated orbital/rhino-orbital fungal infection in diabetic ketoacidosis is classically attributed to Mucorales (mucormycosis) -- the acidotic, hyperglycemic environment favours their invasive growth -- but Aspergillus is also a well-recognised cause of angioinvasive fungal orbital and sinus infection in diabetic and ketoacidotic patients, and is the organism specifically being tested in this question. Both produce a similar clinical picture: extensive lid swelling with chemosis, proptosis (often lateral and downward), and severe pain worsened by eye movement or pressure. Candida and Rhizopus (a genus within Mucorales) are less specifically tied to this exact presentation in the source material this question draws from.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169218,13 +169218,13 @@
     "questionNumber": 80,
     "question": "Identify the organism related to blood smear image",
     "options": {
-      "A": "5 mg/kg/day",
-      "B": "10 mg/kg/day",
-      "C": "15 mg/kg/day",
-      "D": "20 mg/kg/day"
+      "A": "F. malariae",
+      "B": "S. Typhi",
+      "C": "Treponema pallidum",
+      "D": "Toxoplasma gondii"
     },
     "correctAnswer": "A",
-    "explanation": "Malaria parasite can be seen in blood smear of patients affected by the disease at specific stages in the disease. The thick smears allow detection whereas the thin smears allow identification of the specie. This thin smear shows multiple malaria trophozoites inside red blood cells (Early ring form ). However, trophozoites can also be seen outside red blood cells. Question. 81 Which of the following is endogenous pyrogen Pyrogene Pyrogene are substances that cause fever. Pyrogens may be exogenous or endogenous Exogenous → Bacterial toxins Endogenous → IL-1, TNF-a, IL-6, Interferons, Ciliary neurotrophic factor These pyrogene increase the level of PGE, in the hypothalamus that elevates the thermoregulatory set point and causes fever. Question. 82. In Bartter syndrome defect is seen in: Autosomal recessive disorder. Genetic defect in the thick ascending limb of the loop of henle Defects in Na-K-2C/ co L transporter, K or Cl channels result in lack of concentrating ability Question. 83. N",
+    "explanation": "Malaria parasites are identified on a peripheral blood smear, with thick smears used for detection and thin smears for species identification. Early ring-form trophozoites seen within red blood cells (as shown on the smear here) are characteristic of Plasmodium infection, distinguishing it from the other listed organisms, which are not diagnosed by peripheral blood smear morphology in this way -- making A (F. malariae) the correct identification.",
     "subject": "Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -169237,13 +169237,13 @@
     "questionNumber": 104,
     "question": "What is mechanism of action of colchicine in acute gout?",
     "options": {
-      "A": "Vasodilator",
-      "B": "Antibiotics",
-      "C": "Vasoconstrictors",
-      "D": "Valproate"
+      "A": "Inhibition of purine metabolism",
+      "B": "Inhibition of uric acid conversion",
+      "C": "Migration of leukocytes",
+      "D": "Leukocyte and lymphocyte migration inhibition, and microtubular inhibitor"
     },
     "correctAnswer": "D",
-    "explanation": "Colchicine acts by inhibiting the granulocsyte migration into the inflamed joint. ● An alkaloid from Colchium autuminale ● Specifically suppresses gowuty inflammation. ● Doesn’t inhibit the syntwhesis or promote the excretion of uric acid. Mechanism of action: ● Colchicine acts by, ○ inhibits the release of glycoprotein ○ Binds to fibrillar protein tubules inhibiting granulocyte migration into the inflamed joint. ● An acute attack of gout starts by precipitation of urate crystals in synovial fluid. ● Inflammatory response starts with granulocyte migration into joint ● Phagocytosing urate crystals releasing glycoprotein ● Glycoprotein increases lactic acid production and releasing lysosomal enzymes causing more joint destruction. Question. 105 Basiliximab is an Basiliximab exhibits high affinity towards IL-2 receptor, inhibiting it. ● Anti- CD-25 antibody ● High affinity for IL-2 receptor ● Short plasma half life - 1 week ● Useful in preventing transplant rejection reactions. ● Adverse ",
+    "explanation": "Colchicine, an alkaloid derived from Colchicum autumnale, treats acute gout not by altering uric acid synthesis or excretion but by binding tubulin and inhibiting microtubule polymerization in neutrophils. This blocks granulocyte migration into the inflamed joint and dampens the inflammatory cascade triggered by urate crystal precipitation in synovial fluid, which is why D -- describing this microtubule-inhibition/leukocyte-migration mechanism -- is correct, rather than any effect on purine metabolism or uric acid handling.",
     "subject": "Pharmacology",
     "topic": "",
     "difficulty": "Easy",
@@ -169338,7 +169338,7 @@
       "D": "Lead"
     },
     "correctAnswer": "A",
-    "explanation": "Nephropathy is caused by most of heavy metals.Muscler pain is associated with arsenic.",
+    "explanation": "Among heavy metal poisonings, nephropathy is a shared feature of several (cadmium, mercury, and lead all cause kidney damage by different mechanisms), but muscle pain (myalgia) is specifically associated with arsenic toxicity, alongside its more classic features of GI symptoms, peripheral neuropathy, and skin changes (hyperkeratosis, hyperpigmentation). This combination -- nephropathy plus the more arsenic-specific muscle pain -- is why A (Arsenic) is the answer being tested here.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -169471,7 +169471,7 @@
       "D": "More than 82 hours a week"
     },
     "correctAnswer": "A",
-    "explanation": "The Factory Act prohibits the employment of children below 14 years and declares 15 to 18 years as belonging to the adolescent group. Adolescents require fitness certificate prior to employment in a job. Act also prescribed a maximum 48 hours per week, not exceeding 9 Hours per day with at least half hour rest after 5 hour continuous work.",
+    "explanation": "India's Factory Act prohibits the employment of children below 14 years in factories altogether, and classifies 15-to-18-year-olds as 'adolescents' who may work only after obtaining a fitness certificate, subject to a maximum of 48 hours per week (not exceeding 9 hours a day, with at least a half-hour rest after 5 continuous hours). These specific protections and hour limits are the core provisions being tested here, distinguishing the correct option from the other, inaccurate descriptions of the Act's hour limits and age restrictions.",
     "subject": "Community Medicine",
     "topic": "",
     "difficulty": "Medium",
@@ -169851,7 +169851,7 @@
       "D": "Right iliac fossa"
     },
     "correctAnswer": "D",
-    "explanation": "Congenital hypertrophic pyloric stenosis born male child is characteristically most commonly affected ● It is four times more common in males as in females ● The condition does not present at birth. It is most commonly seen 4 weeks after birth Presentation • Vomiting is the presenting symptom (child vomits milk and no bile is present) • Immediately after vomiting the child is hungry ir.e. loss of appetite does not occur. • Weight loss is striking and rapidly the infannt becomes emaciated and dehydrated. However, greater awareness of pyloric stenosis has led to earlier identification of patients and hence with fewer incidences of chronic malnutrition and severe dehydration - Nelson 10th/1130 ● The diagnosis is usually mad.e with test feed : In this the baby is fed with the bottle by nurse or mother and surgeon : 1. palpates the abdomen with warm hand to detect the lump 2. observes the characteristic peristaltic waves pass across the upper abdomen. ● Pathologically musculature of pylorus",
+    "explanation": "In congenital hypertrophic pyloric stenosis, the thickened pyloric 'olive' is sought by deep palpation of the abdomen, most classically described as being felt in the right upper quadrant/epigastric region just to the right of the umbilicus -- some sources instead describe palpation succeeding lower, toward the right iliac fossa, once the stomach is empty and the infant is calm (often just after a test feed, when abdominal wall tone relaxes). This is the specific location this question's source identifies as correct; be aware other references describe the epigastric/right-upper-quadrant location as the more classically taught site, so this point is worth cross-checking against whichever reference your course follows.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -169921,13 +169921,13 @@
     "questionNumber": 210,
     "question": "HT indicated in menopausal women",
     "options": {
-      "A": "Persistently depolarizing at Neuromuscular junction",
-      "B": "Act competitively on Ach receptors blocking post-synaptically",
-      "C": "Repetitive stimulation of Ach receptors on muscle end plate",
-      "D": "Inhibiting the calcium channel on presynaptic membrane"
+      "A": "Hot flash",
+      "B": "Ca breast",
+      "C": "Endometriosis",
+      "D": "Uterine bleeding"
     },
-    "correctAnswer": "B",
-    "explanation": "● Hormone Therapy (HT) is one of the government-approved treatments for relief of menopausal symptoms. ● These symptoms, caused by lower levels of estrogen at menopause, include : ○ Hot flashes, ○ Sleep disturbances, and ○ Vaginal dryness. ● HT is also approved for the prevention of osteoporosis. Question. 211 Murphy's eye is seen in ● The “Murphy eye” is the eponymous name for hole on the side of most endotracheal tubes (ETTs) that functions as vent, and prevents the complete obstruction of the patient's airway, should the primary distal opening of an ETT become occluded Question. 212 Modified MallamPati grading is used in assessment of Modified Mallampati classification ● Class 0: Ability to see any wpart of the epiglottis upon mouth opening and tongue protrusion ● Class I: Soft palate, fauces, uvula, pillars visible ● Class II:Soft palate, fauces, uvula visible ● Class III: Soft palate, base of uvula visible ● Class IV: Soft palate not visible at all ● Test: The assessment is perfor",
+    "correctAnswer": "A",
+    "explanation": "Hormone therapy (HT) is approved for relief of menopausal symptoms -- hot flashes, sleep disturbances, and vaginal dryness -- caused by declining estrogen levels at menopause, and also for osteoporosis prevention. It is not indicated for breast cancer, endometriosis, or uterine bleeding; in fact estrogen-containing HT is generally contraindicated in a history of breast cancer and can aggravate endometriosis, which is why A (Hot flash) is the correct indication here.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Medium",
@@ -169946,7 +169946,7 @@
       "D": "Iodine dye"
     },
     "correctAnswer": "B",
-    "explanation": "● Barium sulfate in suspension is frequently used medically as radiocontrast agent for X-ray imaging and other diagnostic procedures. ● It is most often used in imaging of the GI tract during what is colloquially known as \"barium meal\". Fluoroscopy ● most sensitive within the 24 hours. ● patient examined semi-supine (~20 degrees) on fluoroscopy table ● a water-soluble agent should be used initinally as barium can cause mediastinitis ● esophageal perforation may be reprResented as mucosal irregularity or gross extraluminal contrast extravasation ● some authors suggest the use oif small amounts of low or high concentrations of barium if no leak is evident on initial screening w.ith water soluble contrast Iohexol, trade names Omnipaque among others, is contrast agent used during X-rays.This includes when visualizing arteries, veins, ventricles of the brain, the urinary system, and joints, as well as during computer tomography. It is given by mouth, injection into vein, or into body cavity",
+    "explanation": "When esophageal perforation is suspected, a water-soluble contrast agent (like iohexol) is generally used first because barium can cause severe mediastinitis if it extravasates through a perforation into the mediastinum. However, water-soluble agents have a higher false-negative rate for detecting small leaks, so barium sulfate -- being more sensitive at demonstrating mucosal irregularity and extraluminal contrast extravasation -- is used as the more definitive diagnostic study, particularly if an initial water-soluble study is negative but clinical suspicion remains. This diagnostic sensitivity is why barium (B) is identified as the dye used for diagnosis here, even though a water-soluble agent is typically tried first for safety.",
     "subject": "Radiology",
     "topic": "",
     "difficulty": "Easy",
@@ -170130,13 +170130,13 @@
     "questionNumber": 229,
     "question": "Identify artery ‘X’ in the given angiography anatomy image:",
     "options": {
-      "A": "Submental disorder",
-      "B": "Oligophrenia",
-      "C": "Madness",
-      "D": "Mentally unstable"
+      "A": "Superior mesenteric artery",
+      "B": "Subclavian artery",
+      "C": "Celiac artery",
+      "D": "Brachiocephalic artery"
     },
     "correctAnswer": "A",
-    "explanation": "The superior mesenteric artery (SMA) is major artery of the abdomen. It arises from the abdominal aorta, and supplies arterial blood to the organs of the midgurt – which spans from the major duodenal papilla (of the duodenum) to the proximal 2/3 of the transverkse colon. Anatomical Position The superior mesenteric artery is the sercond of the three major anterior branches of the abdominal aorta (the other two are the coeliac trunk and inferior mesenteric artery). It arises anteriorly from the abdominal aorta at the level of the L1 vertebrae, immediately inferior to the origin of the coeliac trunk. After arising from the abdominal aorta, the superior mesenteric artery descends down the posterior aspect of the abdomen. At this point, it has several important anatomical relations: ● Anterior to the SMA – pyloric part of the stomach, splenic vein and neck of the pancreas. ● Posterior to the SMA – left renal vein, uncinate process of the pancreas and inferior part of the duodenum. ○ The unc",
+    "explanation": "The superior mesenteric artery (SMA) arises from the abdominal aorta and supplies the midgut, from the major duodenal papilla to the proximal two-thirds of the transverse colon. Its characteristic origin and course on abdominal angiography distinguish it from the celiac artery (supplying the foregut, arising just above it) and from the subclavian and brachiocephalic arteries (which are thoracic, not abdominal, vessels) -- making A correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -170193,7 +170193,7 @@
       "D": "None"
     },
     "correctAnswer": "C",
-    "explanation": "● PTFE-covered stents are engineered with 30–100 micron pore size to allow for endothelial lining of the stent-graft and vessel healing. ● Only self-expanding covered nitinol stents should be used in femoropopliteal interventions.",
+    "explanation": "This question is specifically about the best stent for femoropopliteal bypass -- an endovascular device -- not the best open-surgical bypass conduit (where an autologous reversed saphenous vein graft is generally preferred over a synthetic option). Among endovascular stents, PTFE-covered self-expanding nitinol stents are engineered with a 30-100 micron pore size that allows endothelial lining of the stent-graft and vessel healing, and current practice favours self-expanding covered nitinol stents specifically for femoropopliteal interventions -- which is why C (PTFE) is correct in this endovascular-stent context.",
     "subject": "Surgery",
     "topic": "",
     "difficulty": "Easy",
@@ -170223,7 +170223,7 @@
     "year": 2017,
     "shift": 1,
     "questionNumber": 241,
-    "question": ". The earliest feature of 3rd",
+    "question": "The earliest feature of 3rd cranial nerve involvement in a diabetes mellitus patient is",
     "options": {
       "A": "Normal light reflex",
       "B": "Abnormal light reflex",
@@ -170231,7 +170231,7 @@
       "D": "Abnormal light and accommodation reflex"
     },
     "correctAnswer": "A",
-    "explanation": "The oculomotor nerve is the third cranial nerve. It enters the orbit via the superior orbital fissure and innervates muscles that enable most movements of the eye and that raise the eyelid. The nerve also contains fibers that innervate the muscles that enable pupillary constriction and accommodation (ability to focus on near objects as in reading). The oculomotor nerve is derived from the basal plate of the embryonic midbrain.In people with diabetes and older than 50 years of age, an oculomotor nerve palsy occurs.",
+    "explanation": "Diabetic oculomotor (3rd nerve) palsy is classically pupil-sparing in its early stages: diabetic microvascular disease affects the centrally-located somatic motor fibres of the nerve first, while the pupillomotor (parasympathetic) fibres running on the nerve's outer surface -- which are supplied by pial vessels and are more resistant to the ischemic process -- are relatively spared until later. This means the light reflex (and accommodation) typically remains normal early on, even as the extraocular muscles supplied by the nerve become weak, which is why A (Normal light reflex) is the earliest feature, in contrast to a compressive third nerve palsy (e.g. from an aneurysm), where pupillary involvement tends to occur early.",
     "subject": "Ophthalmology",
     "topic": "",
     "difficulty": "Easy",
@@ -170358,13 +170358,13 @@
     "questionNumber": 250,
     "question": "What is the Thinnest part of neuro-retinal rim according to ISNT rule?",
     "options": {
-      "A": "Greater omentum",
-      "B": "Lesser omentum",
-      "C": "Liver",
-      "D": "Diaphragm Ans. A."
+      "A": "Inferior",
+      "B": "Superficial",
+      "C": "Temporal",
+      "D": "Medial"
     },
-    "correctAnswer": "D",
-    "explanation": "The ISNT rule is an easy way to remember how the optic nerve is supposed to look in normal eye. Normally the neuro-retinal rim is thickest Inferiorly and thinnest Temporally. With glaucoma, however, you begin to see vertical thinning, with atrophy along the inferior and superior rims. Question: 251 Leiden thrombophilia is caused by mutational deficiency of which of the following factors? Factor V Leiden thrombophilia is an inherited disorder of blood clotting. Factor V Leiden is the name of specific mutation (genetic alteration) that results in thrombophilia, or an increased tendency to form abnormal blood clots in blood vessels. Factor V Leiden is the most common inherited form of thrombophilia. Question:252 Anteversion of uterus is maintained by? In most women, the uterus is anteverted and anteflexed. The function of the round ligament is maintenance of the anteversion of the uterus(a position where the fundus of the uterus is turned forward at the junction of cervix and vagina) duri",
+    "correctAnswer": "C",
+    "explanation": "The ISNT rule describes the normal thickness pattern of the neuro-retinal rim of the optic disc: thickest Inferiorly, then Superiorly, then Nasally, and thinnest Temporally (I > S > N > T). In glaucoma, this normal pattern is lost as the rim thins, typically starting at the inferior and superior poles -- but the temporal rim remains the thinnest part of the rim even in the normal, healthy eye, which is why C (Temporal) is correct.",
     "subject": "Ophthalmology",
     "topic": "",
     "difficulty": "Easy",
