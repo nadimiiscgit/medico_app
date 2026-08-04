@@ -1095,7 +1095,7 @@
       "D": "Aorta"
     },
     "correctAnswer": "D",
-    "explanation": "Pericardial sinuses\n* On the posterior surface of the heart, the reflection of the serous\npericardium (epicardium) around large veins forms recess called\nthe oblique sinus.\n* Oblique sinus is bounded anteriorly by the left atrium, and\nposteriorly by the parietal pericardium and esophagus.\n* The transverse sinus is short passage that lies between the\nreflection of the serous pericardium (epicardium) around arterial\n(aorta and pulmonary trunk) and venous ends of the heart tube.\n* The transverse sinus is bounded anteriorly by ascending aorta and\npulmonary trunk, posteriorly by SVC, and inferiorly by the left atrium",
+    "explanation": "The transverse pericardial sinus is the passage within the fibrous pericardium that separates the arterial outflow tract from the venous inflow tract of the heart: it lies posterior to the aorta and pulmonary trunk, and anterior to the superior vena cava and left atrium. Surgeons use it to pass a clamp or ligature around the great arteries together (e.g. to occlude aortic and pulmonary flow during cardiopulmonary bypass). The right atrium, left atrium alone, and pulmonary artery branches are not the structures the sinus runs behind in the standard description, so D (Aorta) is correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -3565,7 +3565,7 @@
       "D": "On stress"
     },
     "correctAnswer": "C",
-    "explanation": "On seeing food\nThe cephalic phase of gastric secretion occurs even before food\nenters the stomach, especially while it is being eaten.\nIt results from the sight, smell, thoughct, or taste of food, and the\ngreater the appetite, the more inteense is the stimulation.",
+    "explanation": "The cephalic phase of gastric secretion is triggered before food ever reaches the stomach: it results from the sight, smell, thought, or taste of food acting through vagal (parasympathetic) pathways to stimulate parietal and G cells. Food entering the stomach drives the gastric phase (distension and peptides stimulating gastrin release), and food entering the intestine drives the intestinal phase. Stress can modulate secretion but does not define this specific phase. So C (on seeing food) is correct.",
     "subject": "Physiology",
     "topic": "",
     "difficulty": "Easy",
@@ -15686,7 +15686,7 @@
       "D": "60%"
     },
     "correctAnswer": "C",
-    "explanation": "Approximately 90% of oral cancers in South East Asia are linked to\ntobacco chewing and tobacco smoking\" -- Park",
+    "explanation": "Tobacco use (chewing and smoking) is the dominant risk factor for oral cancer in India, and is classically cited as responsible for roughly 90% of oral cancer cases -- far outweighing other risk factors like alcohol or areca nut used alone. This is why C (90%) is the figure quoted in community medicine texts, rather than the lower percentages in the other options.",
     "subject": "Community Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -30468,7 +30468,7 @@
       "D": "Ocular reflex"
     },
     "correctAnswer": "B",
-    "explanation": "Postural reflex\nPosture refers to the static position of any part of the body.\nMovements are the transition from one Posture to the another.",
+    "explanation": "Righting reflexes are a category of postural reflexes: integrated responses (using vestibular, visual, and proprioceptive input) that restore the normal upright orientation of the head and body when displaced. They are not simple stretch reflexes (a monosynaptic spinal response to muscle stretch), plain spinal reflexes (a broader, non-specific category), or ocular reflexes (eye-movement specific), which is why B (Postural reflex) is the correct classification.",
     "subject": "Physiology",
     "topic": "",
     "difficulty": "Easy",
@@ -33470,7 +33470,7 @@
       "D": "Methionine"
     },
     "correctAnswer": "B",
-    "explanation": "[Ref Harper 29'/e p. 300]\nTryptophan is a precursor for synthesis of niacin (nicotinic acid),\nserotonin and melatonin.",
+    "explanation": "Serotonin (5-hydroxytryptamine) is synthesized from the amino acid tryptophan: tryptophan hydroxylase converts it to 5-hydroxytryptophan, which is then decarboxylated to serotonin. Tyrosine is the precursor for the catecholamines (dopamine, noradrenaline, adrenaline), phenylalanine is converted to tyrosine (one step further upstream), and methionine feeds into the SAM/homocysteine pathway, not serotonin synthesis. So B (Tryptophan) is correct.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -78461,7 +78461,7 @@
       "D": "Rota virus"
     },
     "correctAnswer": "B",
-    "explanation": ", HBV",
+    "explanation": "Hepatitis B virus persists in hepatocytes as covalently closed circular DNA (cccDNA) in the nucleus, allowing it to establish a true latent/chronic infection that can reactivate later -- unlike the other listed pathogens. Rubella and rotavirus cause self-limited acute infections, and pertussis is actually a bacterium (Bordetella pertussis), not a virus at all, making it doubly wrong as a distractor. So B (HBV) is correct.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -87676,7 +87676,7 @@
       "D": "Bilateral parotid involment is the rule"
     },
     "correctAnswer": "A",
-    "explanation": "accumulation of mononuclear inflammatory cells, mostly CD8 + THI\nlymphocytes in affected organs",
+    "explanation": "Sarcoid granulomas are driven by activated macrophages and CD4+ T-helper (Th1) lymphocytes, not CD8+ T cells -- so statement A, which says \"CD8+ TH1 lymphocytes,\" is the false one. The other statements are accurate descriptions of sarcoidosis: the Heerfordt-Waldenstrom (uveoparotid fever) syndrome does present with fever, parotid enlargement, anterior uveitis, and facial nerve palsy; ACE levels are classically elevated (though not diagnostic on their own); and bilateral parotid involvement is a characteristic feature that helps distinguish sarcoid parotitis from most other causes of parotid enlargement, which tend to be unilateral.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Hard",
@@ -168521,7 +168521,7 @@
       "D": "Unipennate"
     },
     "correctAnswer": "B",
-    "explanation": "Pectoralis Major has multiple rows ofF diagonal fibres with single tendon, Hence is multipennate muscle.",
+    "explanation": "A multipennate muscle has several rows of fibres arranged obliquely, converging onto a central tendon (or several tendons) from multiple directions -- like feather barbs meeting a central shaft from more than one side. This packs in a larger physiological cross-sectional area (more fibres) into a given muscle volume than a parallel/fusiform arrangement, trading range of motion for greater force generation. Deltoid and subscapularis are classic multipennate examples, which is the pattern shown here (B).",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -168540,7 +168540,7 @@
       "D": "Neuroectoderm"
     },
     "correctAnswer": "C",
-    "explanation": "Branchial or pharyngeal arches are masses of mesoderm covered by ectoderm and lined by endoderm. Within these masses, muscular and skeletal components develop, as well as aortic arches and nerve networks. The arches are separated by grooves, visible on the surface of the embryo as pharyngeal clefts and in the interior as the pharyngeal pouches ● In the human embryo, the arches are seen during the 4th week of development. ● They appear as a series of outpouchings of mesoderm on both sides of developing pharynx. The neural crest are bilaterally paired strips of cells arising in the ectoderm at the margins of the neural tube. These cells migrate to many different locations and differentiate into many cell types within the embryo. Neural Crest Derivatives A key feature of neural crest is the migration into other embryonic tissues to form specific neural and non- neural populations and structures. Cranial neural crest ● migration - dorsolaterally and into pharyngeal arches ● craniofacial me",
+    "explanation": "The nerves associated with the pharyngeal (branchial) arches -- the trigeminal, facial, glossopharyngeal, and vagus, along with their sensory ganglia -- are derived from neural crest cells, which migrate into each arch alongside the mesoderm. The arch musculature comes from mesoderm, and the lining epithelium comes from ectoderm externally and endoderm internally, but the nerves themselves trace back to neural crest, making C correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -168559,7 +168559,7 @@
       "D": "Non keratinised, absent submucosa, minor salivary gland"
     },
     "correctAnswer": "A",
-    "explanation": "The hard palate is located on the roof of the oral cavity, posterior and medial to the alveolar process of the maxilla. The bony structure is formed by the palatine processes of the maxilla and the horizontal plates of the palatine bones. The periosteum is covered by firmly attached mucosa centrally, although submucosa is apparent laterally containing vessels. The hard palate is continuous with the soft palate posteriorly. Macroscopic Features The hard palate is typically a pale pink colour and may have an orange peel appearance from the palatine salivary glands (more common posteriorly). Microscopic Features The hard palate is lined with keratinising stratified squamous epithelium, tightly bound to the underlying periosteum of the palatine bone/maxilla. There is minimal submucosa, which becomes more prominent posteriorly.",
+    "explanation": "The hard palate is covered by keratinised stratified squamous epithelium, an adaptation to withstand the mechanical stress of mastication, and its submucosa contains minor (mucous) salivary glands, especially over its posterolateral part. This combination of keratinisation plus a glandular submucosa is what distinguishes it from the other listed combinations, making A correct.",
     "subject": "ENT",
     "topic": "",
     "difficulty": "Medium",
@@ -168578,7 +168578,7 @@
       "D": "Posterior cricoarytenoids"
     },
     "correctAnswer": "A",
-    "explanation": "Cricothyroid : Tensor of vocal cords. Lateral cricoarytenoid: Thyroarytenoid: Relaxor of vocal cords. Posterior cricoarytenoid: Abductor of vocal cords",
+    "explanation": "Cricothyroid is the only intrinsic laryngeal muscle that tenses (lengthens and thins) the vocal cords, by tilting the thyroid cartilage forward relative to the cricoid and increasing the distance between the anterior commissure and the arytenoids -- this raises vocal pitch. It's also unique among the laryngeal muscles in being supplied by the external branch of the superior laryngeal nerve rather than the recurrent laryngeal nerve. Lateral cricoarytenoid adducts the cords, thyroarytenoid relaxes/shortens them, and posterior cricoarytenoid is the sole abductor -- none of which tense the cords, making A correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -168597,7 +168597,7 @@
       "D": "Genital sinus"
     },
     "correctAnswer": "A",
-    "explanation": "The ureteric bud, also known as the metan.ephrogenic diverticulum, is protrusion from the mesonephric duct during the development of the urinary and reproductive organs. It later develops into a conduit (channel) for urinne drainage from the kidneys, which, in contrast, originate from the metanephric blastema. The metanephrogenic blastema or metanephric blastema (or metanephric mesenchyme, or metanephric mesoderm) is one of the two embryoilogical structures that give rise to the kidney, the other being the ureteric bud.",
+    "explanation": "The ureteric bud arises as an outgrowth of the mesonephric (Wolffian) duct near where it enters the cloaca. It grows dorsocranially to invade the metanephric mesenchyme (metanephros), inducing it to form nephrons, while the bud itself goes on to form the ureter, renal pelvis, calyces, and collecting duct system. The metanephros is the tissue induced by the bud, not its origin, which is why A (Mesonephros) rather than B is correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -168635,7 +168635,7 @@
       "D": "Tyrosine ligase"
     },
     "correctAnswer": "A",
-    "explanation": "Tyrosinemia, also known as hepatorenal tyrosinemia or tyrosinosis, is the most severe form of tyrosinemia, a buildup of too much of the amino acid tyrosine in the blood and tissues due to an inability to metabolize it. It is caused by deficiency of thme enzyme fumarylacetoacetate hydrolase. Fumarylacetoacetate hydrolase catalyzes the final step in the degradation of tyrosine",
+    "explanation": "Tyrosinemia type I (hereditary tyrosinemia) results from deficiency of fumarylacetoacetate hydrolase, the final enzyme in tyrosine catabolism. Its absence causes toxic metabolites (including succinylacetone) to accumulate, producing severe hepatic and renal damage. The other enzymes listed act earlier or elsewhere in tyrosine/phenylalanine metabolism and are associated with different, less severe conditions, making A correct.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -168654,7 +168654,7 @@
       "D": "Hypoxanthine-guanine phosphoribosyltransferase (HGPRT)"
     },
     "correctAnswer": "D",
-    "explanation": "Lesch–Nyhan syndrome (LNS), also known as juvenile gout, is rare inherited disorder caused by a deficiency of the enzyme hypoxanthine-guanine phosphoribosyltransferase (HGPRT), produced by mutations in the HPRT gene located on the X chromosome",
+    "explanation": "Lesch-Nyhan syndrome is an X-linked disorder of purine salvage caused by deficiency of hypoxanthine-guanine phosphoribosyltransferase (HGPRT). Without it, hypoxanthine and guanine cannot be recycled and are instead degraded to uric acid, causing hyperuricemia/gout, while the metabolic disturbance also produces the syndrome's characteristic self-mutilating behaviour, choreoathetosis, and intellectual disability. This makes D correct.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Medium",
@@ -168673,7 +168673,7 @@
       "D": "D-amino acid oxidase"
     },
     "correctAnswer": "C",
-    "explanation": "Trimethylaminuria primary trimethylaminuria), also known as fish odor syndrome or fish malodor syndrome, is a rare metabolic disorder that causes defect in the normal production of an enzyme named flavin-containing monooxygenase 3 (FMO3) When FMO3 is not working correctly or if not enough enzyme is produced, the body loses the ability to properly convert trimethylamine (TMA) from precursor compounds in food digestion into trimethylamine oxide (TMAO), through process called N- oxidation. Trimethylamine then builds up and is released in the person's sweat, urine, and breath, giving off a strong fishy odor or strong body odor.",
+    "explanation": "Fish odour syndrome (trimethylaminuria) is caused by deficiency of flavin-containing monooxygenase 3 (FMO3), the hepatic enzyme that normally oxidises trimethylamine (produced by gut bacteria from dietary choline, carnitine, and related compounds) into odourless trimethylamine N-oxide. Without FMO3 activity, unmetabolised trimethylamine accumulates and is excreted in sweat, urine, and breath, producing a persistent fishy odour, making C correct.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -168692,7 +168692,7 @@
       "D": "Epimerase"
     },
     "correctAnswer": "A",
-    "explanation": "Galactosaemia (British galactosaemia) is rare genetic metabolic disorder that affects an individual's ability to metabolize the sugar galactose properly. Galactosemia follows an autosomal recessive mode of inheritance that confers deficiency in an enzyme responsible for adequate galactose degradation.",
+    "explanation": "Classic (type I) galactosemia is caused by deficiency of galactose-1-phosphate uridyltransferase (GALT), which blocks the conversion of galactose-1-phosphate to glucose-1-phosphate. The resulting buildup of galactose-1-phosphate and galactitol causes hepatomegaly, cataracts, and intellectual disability if untreated. Galactokinase deficiency (option C) causes a much milder disease limited mainly to cataracts, without the liver and brain involvement of classic galactosemia, so A is correct.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -168711,7 +168711,7 @@
       "D": "Glucose"
     },
     "correctAnswer": "B",
-    "explanation": "Fatty acid are synthesized by extramitochondrial system. This system is present in many tissues including liver kidney brain lung mammary gland and adipose tissues. Acetyl CoA is immediate substrate. The end products of this synthesis are usually the saturated fatty acidspalmitate and stearate with the latter predominating.",
+    "explanation": "Fatty acid synthase produces palmitic acid (a 16-carbon saturated fatty acid) as its direct end product; longer or unsaturated fatty acids like oleic acid or arachidonic acid are generated afterward by separate elongase and desaturase enzymes acting on palmitate (or on essential fatty acids obtained from the diet, in arachidonic acid's case). This makes B the correct end product of the fatty acid synthase reaction itself.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -168730,7 +168730,7 @@
       "D": "Participate in DNA replication"
     },
     "correctAnswer": "A",
-    "explanation": "DNA polymerase I participates in the DNA replication of prokaryotes. Function of Pol I is mainly to repair any damage with DNA, but it also serves to connect okazaki fragments deleting RNA primers and replacing the strand with DNA.",
+    "explanation": "Unlike DNA polymerase III, which performs the bulk of processive replicative synthesis and is essential for bacterial viability, E. coli strains lacking functional DNA polymerase I (polA mutants) remain viable, albeit with slowed growth and increased sensitivity to UV/DNA damage. Pol I's roles -- 5'->3' exonuclease removal of RNA primers, gap-filling during Okazaki fragment maturation, and participation in excision repair -- are important but not strictly required for survival, which is why 'not required in bacteria' (in the sense of not being essential for viability) is the correct characterization here, distinguishing it from Pol III.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -168749,7 +168749,7 @@
       "D": "Protein Modification"
     },
     "correctAnswer": "B",
-    "explanation": "Folding of Proteins in Vivo Is Promoted by Chaperones",
+    "explanation": "Molecular chaperones (such as the Hsp70 and Hsp60/GroEL-GroES families) bind to nascent or stress-denatured polypeptides and guide them toward their correct three-dimensional conformation, preventing misfolding and aggregation along the way. They do not cleave, degrade, or covalently modify the protein -- their job is exclusively to assist folding, making B correct.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -168768,7 +168768,7 @@
       "D": "Vit. A"
     },
     "correctAnswer": "C",
-    "explanation": "Vitamin B2 or riboflwavin deficiency can bring about fishy odor in the body",
+    "explanation": "Riboflavin (vitamin B2) deficiency is associated in some clinical sources with a fishy body odour in addition to its better-established features -- angular stomatitis, cheilosis, magenta-coloured glossitis, and normocytic anaemia. This distinguishes it from biotin deficiency (dermatitis and alopecia), thiamine deficiency (beriberi, Wernicke-Korsakoff syndrome), and vitamin A deficiency (night blindness, xerophthalmia), none of which are linked to a fishy odour, making C the intended answer.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -168787,7 +168787,7 @@
       "D": "Diabetic ketoacidosis"
     },
     "correctAnswer": "C",
-    "explanation": "VMA is the end product of catabolism of catecholamines. In pheochromocytoma and neuroblastoma there is excessive synthesis of catecholamines which causes enhanced synthesis of VMA and its excretion in the urine. VMA is the urinary product of both epinephrine and norepinephrine. It is a good screening test for pheochromocytoma, and is also used to diagnose and follow up neuroblastoma and ganglioneuroma.",
+    "explanation": "Vanillylmandelic acid (VMA) is the major end-metabolite of the catecholamines (adrenaline and noradrenaline), formed via combined action of catechol-O-methyltransferase and monoamine oxidase. Its urinary excretion is characteristically elevated in pheochromocytoma, a catecholamine-secreting tumour of the adrenal medulla, and is used as a screening/diagnostic test. Alkaptonuria (homogentisic acid), phenylketonuria (phenylketones), and diabetic ketoacidosis (ketone bodies) each have their own distinct urinary markers unrelated to VMA, making C correct.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -168825,7 +168825,7 @@
       "D": "Glutamine and valine"
     },
     "correctAnswer": "B",
-    "explanation": "Fibrinopeptides A and B (FPA and FPB) are short amino acid sequences situated at the amino terminal of the alpha and beta chains (respectively) of soluble fibrinogen. Glutamate and aspartate are acidic amino acid present in them which turn them acidic.",
+    "explanation": "Fibrinopeptides A and B, the short peptides thrombin cleaves off the N-terminus of fibrinogen's alpha and beta chains to generate fibrin monomers, are strongly acidic because they are rich in glutamate and aspartate residues (fibrinopeptide A also carries a phosphoserine). Removing these negatively charged peptides reduces electrostatic repulsion between fibrin monomers, allowing them to polymerise into the fibrin clot, which is why B is correct.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -168844,7 +168844,7 @@
       "D": "Phenylketonuria"
     },
     "correctAnswer": "C",
-    "explanation": "Carcinoid syndrome develops in some people with carcinoid tumors and is characterized by cutaneous flushing, abdominal cramps, and diarrhea. Carcinoid tumour occur throughout the gastrointestinal tract, most commonly in the appendix, ileum and rectum in decreasing order of frequency. Right-sided valvular heart disease may develop after several years. The syndrome results from vasoactive substances (including serotonin, bradykinin, histamine, prostaglandins, polypeptide hormones) secreted by the tumor, which is typically metastatic intestinal carcinoid. Diagnosis is clinical and by demonstrating increased urinary 5-hydroxyindoleacetic acid(HIAA). Tumor localization may require radionuclide scan or laparotomy. Treatment of symptoms is with somatostatin or octr.eotide, but surgical removal is performed where possible; chemotherapy may be used for malignant tumors. iPathology",
+    "explanation": "5-Hydroxyindoleacetic acid (5-HIAA) is the main breakdown product of serotonin, and its urinary excretion is classically elevated in carcinoid syndrome because these neuroendocrine tumours secrete large amounts of serotonin. Alkaptonuria, phenylketonuria, and albinism involve entirely different metabolic pathways (homogentisic acid, phenylalanine/phenylketones, and melanin synthesis respectively) and are not associated with elevated 5-HIAA, making C correct.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -168863,7 +168863,7 @@
       "D": "Typhoid"
     },
     "correctAnswer": "A",
-    "explanation": "Multinucleated cells like Warthin Finkeldey are seen in Measles ● Measles virus infects by invasion of respiratory epithelium. ● Local multiplication leads to viremia (day 2-3), then spread to RE system. ● Two types of Multinucleated giant cells in both epidermis & oral epithelium by 7-11 days. ○ Warthin Finkeldey cells of reticuloendothelial system ○ Epithelial giant cells of respiratory & other epithelia. ● Warthin–Finkeldey ○ Type of giant multinucleate cell found in hyperplastic lymph nodes early in the course of measles ○ Under the light microscope, these cells consist of large, grape-like cluster of nuclei. ○ Also with HIV-infected individuals and Kimura disease ○ Rarely in neoplastic (e.g. lymphoma) & non-neoplastic lymph node disorders. ○ Unknown origin; Reports of staining with markers similar to follicular dendritic cells, including CD21.",
+    "explanation": "Warthin-Finkeldey giant cells -- multinucleated cells with eosinophilic intranuclear and intracytoplasmic inclusions -- are a classic histological finding in the lymphoid tissue (tonsils, lymph nodes) of patients with measles, reflecting fusion of infected cells driven by the measles virus's fusion protein. This distinguishes measles from rubella, rabies, and typhoid, none of which produce this specific giant cell pattern, making A correct.",
     "subject": "Paediatrics",
     "topic": "",
     "difficulty": "Easy",
@@ -168882,7 +168882,7 @@
       "D": "Cowden syndrome"
     },
     "correctAnswer": "A",
-    "explanation": "● Paroxysmal nocturnal hemoglobinuria (PNH) is disease, due to acquired mutations in “Phosphatidylinositol GlycanComplementation Groupm A” gene (PIGA).. ● Associated with deficiency of glycosylphosphatidylinositol (GPI) anchor proteins along with absence of external surface membrane proteins .attaching to it. ● CD55 (DAF) and CD59 (MIRL) are two such complement defence proteins ● CD59 deficiency: ● Common finding in RBCs & WBCs of Rpatients with chronic hemolysis suffering from PNH ● Diagnosis: ○ The definite diagnosis baised on demonstration of substantial proportion of patient’s RBC having increased swusceptibility to complement (C), due to the deficiency on their surface of proteins (particwularly CD59 & CD55)",
+    "explanation": "CD59 (along with CD55) is a GPI-anchored complement regulatory protein that normally protects host cells from complement-mediated lysis. In paroxysmal nocturnal hemoglobinuria (PNH), an acquired PIGA gene mutation impairs GPI-anchor synthesis, so blood cells lose surface CD55/CD59 and become abnormally susceptible to complement-mediated destruction -- flow cytometry showing absent CD59 is a standard diagnostic marker for PNH, making A correct.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -168901,7 +168901,7 @@
       "D": "C6"
     },
     "correctAnswer": "B",
-    "explanation": "● The process of coating foreign particle targeting & preparing it for phagocytosis process is “Opsonization”. Substances involved are opsonins. ● Main opsonins from Examples of opsonins include: • Antibodies: o IgG and IgA • Components of the complement system: o C3b, C4b, and iC3b • Mannose Binding Lectin (MBL): o Initiates the formation of C3b • Membrane Attack Complex (MAC) o Includes C5b, C6, C7, C8 & polymeric C9 Opsonization & complement proteins: ● Mainly C3b, iC3b & C4b ● C3: ○ Most abundant protein of all complementary proteins, ○ Cleaves into C3a and C3b ● C3a - ○ Binds and activates mast cells & basophils, release histamine. ● C3b - ○ Most critical component in both classical &c alternative pathway ○ C3b attaches to bacterial surfaces for oprsonization by phagocytes",
+    "explanation": "C3b is the principal opsonin generated by complement activation: it covalently binds to pathogen surfaces and is then recognised by complement receptors (CR1) on phagocytes, greatly enhancing phagocytosis. C3a and C5a, by contrast, are anaphylatoxins that trigger mast cell degranulation and chemotaxis rather than opsonisation, which is why B, not C or D, is correct.",
     "subject": "General Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -168920,7 +168920,7 @@
       "D": "Y chromosome"
     },
     "correctAnswer": "B",
-    "explanation": "● Bernard–Soulier syndrome (BSS) / Hemorrhagic Parous Thrombocytic Dystrophy ● Rare autosomal recessive coagulopathy ● Causes a deficiency of glycoprotein 1b (Gp1b), receptor for von Willebrand factor. Question.44 Cowden syndrome ● “Phosphatase and Tensin” homolog (PTEN) - protein in humans encoded by the PTEN gene. Gene mutations promotes development of cancers. ● Cowden’s disease / Multiple Hamartoma Syndrome - ○ Part of PTEN hamartoma tumor syndrome ○ An autosomal dominant syndrome ○ Trichilemmomas - Numerous tumors of hair follicles in face ○ Multiple hamartomatous polyps in GI tract. ○ Very high risk of breast & thyroid carcinoma ● Treatment: ○ B/L mastectomies recommended ○ Contraindicated are mammography & other radiation exposure of breast tissue Question. 45 Chromosome involved in myotonic dystrophy is ● Myotonic dystrophy is transmitted tby mutation in an 'unstable trinucleotide repeat sequence' in gene 19q 133. Features: ● An autosomal dominant disorder ● Most common adult m",
+    "explanation": "The genes encoding the platelet glycoprotein Ib/IX/V complex -- the receptor deficient in Bernard-Soulier syndrome -- are spread across several chromosomes (GP1BA on 17, GP1BB on 22, GP9 on 3). GP1BB, on chromosome 22, is one of the loci whose mutation produces this autosomal recessive giant-platelet bleeding disorder, which is the association being tested here (B).",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -168939,7 +168939,7 @@
       "D": "Cefotetan"
     },
     "correctAnswer": "D",
-    "explanation": "B. cepacia complex strains are intrinsically resistant to wide range of antimicrobial agents, including aminoglycosides, polymyxin, and second generation cephalosporins, and carboxypenicillins Antimicrobial agents that are effective against B. cepacia complex include meropenem, ceftazidime, piperacillin, temocillin, and trimethoprim-sulfamethoxazole.",
+    "explanation": "Burkholderia cepacia is intrinsically resistant to many antimicrobials, including aminoglycosides, polymyxins, and older-generation cephalosporins such as cefotetan, due to a combination of a restrictive outer membrane and multiple efflux pumps. It typically remains susceptible to agents like ceftazidime, trimethoprim-sulfamethoxazole, and temocillin, which is why these are the drugs used therapeutically for B. cepacia infections (notably in cystic fibrosis patients), making D correct as the resistant agent.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -168958,7 +168958,7 @@
       "D": "Lactobacillus"
     },
     "correctAnswer": "A",
-    "explanation": "The urea breath test is sa rapid diagnostic procedure used to identify infections by Helicobacter pylori, a spiral bacteriumi implicated in gastritis, gastric ulcer, and peptic ulcer disease. It is based upon the ability of H. pylorwi to convert urea to ammonia and carbon dioxide",
+    "explanation": "The urea breath test relies on H. pylori's urease enzyme: the patient ingests labelled urea, and if H. pylori is present, its urease splits the urea into ammonia and labelled CO2, which is then detected in exhaled breath. This makes it a standard non-invasive test specifically for H. pylori (A), not for the other listed organisms, which do not produce this diagnostic urease signature.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -168977,7 +168977,7 @@
       "D": "Years"
     },
     "correctAnswer": "C",
-    "explanation": "Hyperacute Transplant Rejection occurs almost immediately and is often evident while you are still in surgery. It is caused by accidental ABO Blood type mismatching of the donor and recipient which almost never happens anymore..Acute onset is in few weeks to month. Chronic onset is from months to years.",
+    "explanation": "Hyperacute graft rejection is caused by pre-formed recipient antibodies against donor blood group or HLA antigens, which bind graft endothelium and activate complement essentially as soon as blood flow is restored -- typically within minutes to a few hours of transplantation. This immediate antibody-mediated mechanism is what distinguishes it from acute (days-weeks, cell-mediated) and chronic (months-years) rejection, making C correct.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -168996,7 +168996,7 @@
       "D": "HbV Dna"
     },
     "correctAnswer": "A",
-    "explanation": "HBsAg (also known as the Australia antigen) is the surface antigen of the hepatitis B virus (HBV). It indicates current hepatitis B infection.",
+    "explanation": "Hepatitis B surface antigen (HBsAg) was originally called the \"Australia antigen\" after Baruch Blumberg first identified it in the serum of an Australian Aboriginal person in 1965 -- a discovery that eventually led to the identification of the hepatitis B virus itself. This historical name is why A (HBsAg) is correct.",
     "subject": "Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -169034,7 +169034,7 @@
       "D": "Yellow fever"
     },
     "correctAnswer": "B",
-    "explanation": "A Sabin–Feldman dye test is serologic test to diagnose for toxoplasmosis",
+    "explanation": "The Sabin-Feldman dye test is a classic serologic assay for toxoplasmosis: it measures antibody-mediated, complement-dependent lysis of live Toxoplasma gondii organisms, detected by their failure to take up methylene blue dye. This specific mechanism is unique to toxoplasma serology, making B correct.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169053,7 +169053,7 @@
       "D": "71"
     },
     "correctAnswer": "C",
-    "explanation": "Acute hemorrhagic conjunctivitis (AHC) is characterized by conjunctival congestion, vascular dilatation, and onset of edema .Serologic studies have been useful in showing the presence of neutralizing antibodies to Coxsackie group A24 (CA24) and enterovirus E70 (EV70) strains as the causative agent.",
+    "explanation": "Acute hemorrhagic conjunctivitis is classically caused by enterovirus 70 (and, less commonly, a variant of coxsackievirus A24), producing outbreaks of sudden-onset conjunctival hemorrhage, pain, and discharge. This specific viral serotype association is why C (70) is correct.",
     "subject": "Ophthalmology",
     "topic": "",
     "difficulty": "Easy",
@@ -169072,7 +169072,7 @@
       "D": "Pig"
     },
     "correctAnswer": "A",
-    "explanation": "Echinococcus granulosus, also called the hydatid worm, hyper tape-worm or dog tapeworm. Domestic dogs (Canis familiaris) have been recognised as the definitive host of the parasite.",
+    "explanation": "Echinococcus granulosus has a dog-sheep life cycle: dogs (and other canids) are the definitive host harbouring the adult tapeworm in their intestine, while sheep and other livestock (and occasionally humans) serve as intermediate hosts that develop hydatid cysts after ingesting eggs. This is why dogs (A) are the animal most commonly associated with harbouring and transmitting this organism.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169091,7 +169091,7 @@
       "D": "Tularemia"
     },
     "correctAnswer": "A",
-    "explanation": "Multiple abscess with discharging sinuses, demonstrating sulphur granules in pus are characteristics of actinomycetes",
+    "explanation": "Actinomyces species (classically A. israelii) are anaerobic, filamentous, Gram-positive bacteria that cause chronic suppurative abscesses with multiple draining sinus tracts, and the pus characteristically contains \"sulphur granules\" -- yellow clumps of bacterial filaments bound by a host inflammatory matrix, essentially pathognomonic for actinomycosis. This distinctive combination of anaerobic abscess plus sulphur granules is why A is correct.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169110,7 +169110,7 @@
       "D": "Virus"
     },
     "correctAnswer": "B",
-    "explanation": "Interferon-Gamma Mycobacterium tuberculosis infection",
+    "explanation": "Interferon-Gamma Release Assays (IGRA), such as QuantiFERON-TB, are performed on whole blood: the patient's lymphocytes are incubated with TB-specific antigens, and interferon-gamma release is measured to detect prior TB exposure. This distinguishes it from tests like GeneXpert, which is run on processed sputum rather than whole blood, making B correct.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169129,7 +169129,7 @@
       "D": "E.coli"
     },
     "correctAnswer": "D",
-    "explanation": "Aerobic gram-negative bacilli are the predominant pathogens in bacterial prostatitis. E. coli cause 50%–80% of cases; other pathogens include Enterobacteriaceae (eg, Klebsiella and Proteus, which account for 10%–30% of cases), Enterococcus species (5%–10%)",
+    "explanation": "Acute bacterial prostatitis is most commonly caused by gram-negative uropathogens ascending from the urinary tract, with Escherichia coli responsible for the large majority of cases, followed at a distance by other Enterobacteriaceae and Pseudomonas. This is why D (E. coli) is correct rather than the gram-positive organisms listed.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169148,7 +169148,7 @@
       "D": "Weissella"
     },
     "correctAnswer": "C",
-    "explanation": "Scombroid poisoning is one oRf the most common causes of morbidity associated with fish intake which have not been refrigerated sproperly from the time they were caught until the time they were served. Bacteria act on compounds iin the fish, releasing histamine. Process is induced by enzymes produced by primarily enteric wgram-negative bacteria (e.g., Morganella morganii, Escherichia coli, Klebsiella species and Pseudomwonas aeruginosa) found in the fish's cutis and intestines. ,",
+    "explanation": "Scombroid fish poisoning results from bacterial histidine decarboxylase converting the high histidine content of certain fish (tuna, mackerel) into histamine during inadequate refrigeration/spoilage, producing an allergic-like reaction after ingestion. Among the organisms listed, Pseudomonas species have been implicated as histidine-decarboxylase producers capable of generating this histamine buildup in improperly stored fish, distinguishing it from Salmonella, Staphylococcus, and Weissella, which are not classically linked to this mechanism.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169167,7 +169167,7 @@
       "D": "Pasteur"
     },
     "correctAnswer": "A",
-    "explanation": "“Antoni van Leeuwenhoek” is commonly known as \"the Father of Microbiology.",
+    "explanation": "Antonie van Leeuwenhoek, using his own hand-ground single-lens microscopes in the 17th century, was the first person to observe and describe living microorganisms (\"animalcules\") -- bacteria, protozoa, and other microbes -- earning him the title \"Father of Microbiology.\" This distinguishes him from contemporaries like Robert Hooke (who coined the term \"cell\" but did not discover microorganisms) and later figures such as Pasteur, making A the correct answer.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169186,7 +169186,7 @@
       "D": "Necator americanus"
     },
     "correctAnswer": "C",
-    "explanation": "Cutaneous larva migrans(CLM) ● /It is a skin disease in humans, caused by the larvae of various nematode parasites of the hookworm family (Ancylostomatidae). ● The most common species causing this disease in the Americas is Ancylostoma braziliense. ● These parasites live in the intestines of dogs, cats and wild animals and should not be confused with other members of the hookworm family for which humans are definitive hosts, namely Ancylostoma duodenale and Necator americanus. ● Colloquially called creeping eruption due to its presentation, the disease is also somewhat ambiguously known as \"ground itch\" or (in some parts of the Southern USA) \"sandworms\", as the larvae like to live in sandy soil. ● Another vernacular name is plumber's itch. ● The medical term CLM literally means \"wandering larvae in the skin\"",
+    "explanation": "Cutaneous larva migrans is caused by the larvae of animal hookworms -- most classically Ancylostoma braziliense (the dog/cat hookworm) -- that penetrate human skin but, lacking the enzymes to invade further, wander through the epidermis, creating the characteristic serpiginous, intensely itchy tracks. This is distinct from Necator americanus and Strongyloides, which are adapted to complete their life cycle in humans, making C correct.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169205,7 +169205,7 @@
       "D": "Staphylococcus"
     },
     "correctAnswer": "A",
-    "explanation": "CMV is the most common viral infection after Kidney Transplantation. Most common CMV syndrome in kidney transplant patient is fever (most common), leukopenia, hepatosplenomegaly, myalgia and arthralgia.",
+    "explanation": "Cytomegalovirus (CMV) is the classic opportunistic infection after kidney (and other solid organ) transplantation, reactivating or newly acquired under the immunosuppression required to prevent graft rejection, typically presenting within the first few months post-transplant. This is why A (CMV) is correct rather than the bacterial organisms listed, which are less specifically associated with the post-transplant period.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169262,7 +169262,7 @@
       "D": "6 lt"
     },
     "correctAnswer": "B",
-    "explanation": "Parkland formula most commonly used IV fluid - Lactated Ringer's Solution ● Fluid calculation ○ 4 x weight in kg x %wTBSA burn ■ Give 1/2 of that volume in the 8 hours ■ Give other 1/2 in next 16 hours ■ Warning: Despite the formula suggesting cutting the fluid rate in half at 8 hours, the fluid rate should be gradually reduced throughout the resuscitation to maintain the targeted urine output, i.e., do not follow the second part of the formula that says to reduce the rate at 8 hours, adjust the rate based on the urine output. ● Example of fluid calculation ○ 50-kg man with 40% TBSA burn ○ Parkland formula: ■ 4 x 50 x 40 = 8,000 ml ■ Give 1/2 in 8 hours = 4,000 ml in 8 hours ○ Adjust fluid rate to maintain urine output of 50 ml/hr",
+    "explanation": "Fluid resuscitation for burns uses the Parkland formula: 4 mL x body weight (kg) x % total body surface area burned, giving the total crystalloid (Ringer lactate) requirement for the first 24 hours, with half of that total given in the first 8 hours. For this patient: 4 x 50 kg x 40% = 8,000 mL over 24 hours, so half (4 L) is given in the first 8 hours, making B correct.",
     "subject": "Surgery",
     "topic": "",
     "difficulty": "Easy",
@@ -169281,7 +169281,7 @@
       "D": "has been abandoned by parents,"
     },
     "correctAnswer": "B",
-    "explanation": "A child born after death of his/ her biological father",
+    "explanation": "In forensic and legal terminology, a posthumous child specifically refers to a child born after the death of their biological father (as opposed to being conceived after his death, which raises separate legal questions in some jurisdictions). This specific definition -- tied to the father's death, not the mother's -- is why B is correct.",
     "subject": "Forensic Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -169300,7 +169300,7 @@
       "D": "IPC 48"
     },
     "correctAnswer": "C",
-    "explanation": "M'naghten rule (legal test or right or wrong test) : ● It states that an accused person is not legally responsible, if it is clearly proved that at the time of committing the crime, person was suffering from suoch defect of reason from abnormality of mind that he didn't know the nature and quality of act he was doing or that what he was doing was wrong i.e. a person is not responsible if he is not of sound mind. ● It is accepted in india as law of criminal responsibility and is embodied in section 84 1PC as - \"nothing is an offence which is dtone by person, who at the time of doing it, by reason of unsoundness of mind is incapFable of knowing the nature of act, or that he is doing what is either wrong or contrary to law\".",
+    "explanation": "The M'Naghten Rules, the classic legal test for the insanity defence, are codified in Indian law under Section 84 of the Indian Penal Code (IPC), which exempts a person of unsound mind -- incapable of knowing the nature of the act or that it was wrong -- from criminal responsibility. This is why C (IPC 84) is correct.",
     "subject": "Forensic Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -169319,7 +169319,7 @@
       "D": "Arsenic"
     },
     "correctAnswer": "C",
-    "explanation": "S. No. Poison Color 1. Copper sulfate, amytal capsule Blue 2. Ferrous sulfate 3. Sulphuric hydrochloric/acetic acid Black/charred 4. Nitric acid Yellow 5. Carbolic acid Buff/white 6. Arsenic White particles 7. Mercury Slate 8. Cresols Brown",
+    "explanation": "Certain heavy metal and drug poisonings produce characteristic gastric mucosal staining at autopsy, used as an early diagnostic clue. A bluish-grey discoloration of the gastric mucosa is described in the forensic literature in the context of amytal sodium (a barbiturate) ingestion, distinguishing it from the more classic corrosive/discoloration patterns of mercury (grey-white, corrosive), arsenic (no specific colour change, more haemorrhagic gastritis), and cadmium poisoning.",
     "subject": "Forensic Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -169357,7 +169357,7 @@
       "D": "Kidney"
     },
     "correctAnswer": "A",
-    "explanation": "The order of putrefaction is - earliest to last → larynx, trachea → Stomach, intesWne → liver, spleen → Brain, Lungs →Heart, Kidney →Bladder, Uterus/Prostrate → Skin, muscles, tendon → lastly, bones.)",
+    "explanation": "Putrefaction proceeds at different rates in different organs depending on their water content, vascularity, and bacterial load. In infants and young children, the brain -- being relatively larger, softer, and more water-rich than in adults -- putrefies unusually quickly, in contrast to adults, where the brain (protected within the skull, with comparatively lower water content) is typically among the slower organs to break down. This age-dependent pattern is the basis for A being the expected answer here.",
     "subject": "Forensic Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -169376,7 +169376,7 @@
       "D": "System of personal identification using the body measurement"
     },
     "correctAnswer": "A",
-    "explanation": "Edmund locard is famous for theory of exchange.",
+    "explanation": "Edmond Locard, a pioneering French forensic scientist, is best known for formulating \"Locard's exchange principle\" -- the idea that every contact leaves a trace, meaning a perpetrator will both bring something into a crime scene and leave with something from it. This foundational concept of trace evidence is why A is correct.",
     "subject": "Forensic Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -169395,7 +169395,7 @@
       "D": "12-14"
     },
     "correctAnswer": "A",
-    "explanation": "The basioccipital fuses with the basisphenoid at about 18 to 21 years.",
+    "explanation": "The basiocciput (basilar part of the occipital bone) fuses with the basisphenoid at the spheno-occipital synchondrosis, a growth plate that closes at around 18 to 22 years of age -- making this fusion medico-legally useful for age estimation in that range, which is why A is correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -169414,7 +169414,7 @@
       "D": "Offensive"
     },
     "correctAnswer": "A",
-    "explanation": "A mummy will smell odourless, this is because the internal organs are removed (which are the biggest factors in the decay process) Rand replaced with natron (which dries them out, preventing 'proper' decay). The rest of the body is alsso dried using natron.",
+    "explanation": "Mummification is a form of body preservation (rather than decomposition) that occurs in hot, dry, well-ventilated conditions, where the body dehydrates faster than bacteria can putrefy it. Because the process arrests bacterial decay rather than driving it, a mummified body is characteristically odourless, unlike the putrid, offensive smell of ordinary putrefaction -- making A correct.",
     "subject": "Forensic Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -169433,7 +169433,7 @@
       "D": "Lead"
     },
     "correctAnswer": "A",
-    "explanation": "Early kidney damage and proteinuria seen in people, occupationally or environmentally exposed to cadmium.",
+    "explanation": "Cadmium is the classic heavy metal associated with proximal renal tubular dysfunction: chronic exposure damages the proximal tubule, producing a Fanconi-like picture with low-molecular-weight (tubular) proteinuria, glucosuria, and aminoaciduria -- best known from Itai-itai disease, where cadmium toxicity also causes severe bone and muscle pain from associated osteomalacia. This is why A (Cadmium) is correct.",
     "subject": "Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -169452,7 +169452,7 @@
       "D": "24"
     },
     "correctAnswer": "C",
-    "explanation": "Constitutional Guarantees that are meant specifically for children include: • Right to free and compulsory elementary education for all children in the 6-14 year age group (Article 21 A) • Right to be protected from any hazardous employment till the age of 14 years (Article 24) • Right to be protected from being abused and forced by economic necessity to enter occupations unsuited to their age or strength (Article 39(e)) • Right to equal opportunities and facilities to develop in healthy manner and in conditions of freedom and dignity and guaranteed protection of childhood and youth against exploitation and against moral and material abandonment (Article 39 (f)) • Right to early childhood care and education to all children until they complete the age of six years (Article 45) Besides, Children also have rights as equal citizens of India, just as any other adult male or female: • Right to equality (Article 14) • Right against discrimination (Article 15) • Right to personal liberty and d",
+    "explanation": "Article 42 of the Indian Constitution, a Directive Principle, deals with securing just and humane conditions of work and maternity relief -- it is primarily about working mothers and labour conditions generally, not children specifically. In contrast, Article 23 (prohibition of traffic in human beings and forced labour), Article 21-A (Right to Education), and Article 24 (prohibition of employing children in hazardous work) are all directly tied to children's rights, which is why C (Article 42) is the one not related to children.",
     "subject": "Community Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -169490,7 +169490,7 @@
       "D": "Sphenoid sinus"
     },
     "correctAnswer": "A",
-    "explanation": "● Waters' view (also known as the Occipitomental view) is radiographic view, where an X-ray beam is angled at 45° to the orbitomeatal line. ● The rays pass from behind the head and are perpendicular to the radiographic plate. ● It is commonly used to get better view of the maxillary sinuses.",
+    "explanation": "Water's view (the occipitomental radiographic projection) is specifically angled to project the petrous ridges below the maxillary sinuses, giving an unobstructed view of the maxillary sinus floor and walls -- making it the standard projection for maxillary sinus pathology, as well as orbital floor and zygomatic arch assessment. This is why A (Maxillary sinus) is correct.",
     "subject": "Radiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169509,7 +169509,7 @@
       "D": "Foreign body obstructing airway"
     },
     "correctAnswer": "D",
-    "explanation": "Indications of tracheostomy: 1- Upper respiratory tract obstruction; Laryngeal, supralaryngeal ,and tracheal causes.( Causes of stridor ) 2- Lower respiratory tract obstruction: (Secretory obstruction, Wet lung syndrome).",
+    "explanation": "Tracheostomy is indicated whenever the upper airway is obstructed at or above the larynx and cannot be secured by less invasive means -- a foreign body obstructing the airway is a classic emergency indication, since tracheostomy bypasses the obstruction entirely by creating a direct airway below it. The other options describe procedures or conditions (vocal cord or pharynx \"replacement,\" tracheomalacia managed by other means) that are not standard tracheostomy indications in this way, making D correct.",
     "subject": "ENT",
     "topic": "",
     "difficulty": "Easy",
@@ -169528,7 +169528,7 @@
       "D": "Glossopharyngeal Nerve"
     },
     "correctAnswer": "B",
-    "explanation": "The greater auricular nerve is cutaneous branch of the cervical plexus that innervates the skin of the auricle as well as skin over the parotid gland and mastoid promcess. The greater auricular nerve also supplies branches that innervate the deep layer of the parotid fascia. Origin The greater auricular nerve arises from the ventnral rami of C2 and C3 spinal nerves , although it receives considerably more fibres from C2. Course The greater auricular nerve emerges along the posterior aspect of the sternocleidomastoid muscle at the punctum nervosum (Erb point) and ascends vertically across the oblique sternocleidomastoid muscle. When the greater auricular wnerve approaches the inferior pole of the parotid gland it divides into anterior and posterior terminal branches.",
+    "explanation": "The greater auricular nerve is a superficial cutaneous branch of the cervical plexus that crosses the sternocleidomastoid muscle just under the skin, making it one of the classic sites where peripheral nerve thickening is looked for and palpated in leprosy (alongside the ulnar and common peroneal nerves). Its superficial, easily palpable course is why it -- rather than the deeper facial, vagus, or glossopharyngeal nerves -- is the nerve most often shown thickened on clinical examination, making B correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -169547,7 +169547,7 @@
       "D": "All of the above"
     },
     "correctAnswer": "B",
-    "explanation": "● Caldwell's view (or Occipitofrontal view) is radiographic view of skull, where X-ray plate is angled at 20° to orbitomeatal line. ● The rays pass from behind the head and are perpendicular to radiographic plate. ● It is commonly used to get better view of frontal sinuses. Optha",
+    "explanation": "Caldwell's view (a posteroanterior skull radiograph angled to project the petrous bones into the lower third of the orbits) is the standard projection for evaluating the frontal sinuses, along with the ethmoid sinuses and orbits, though frontal sinus assessment is its primary classic use. This is why B (Frontal sinus) is correct.",
     "subject": "Radiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169566,7 +169566,7 @@
       "D": "+4d"
     },
     "correctAnswer": "C",
-    "explanation": "Laser vision enhancements ➢ When planning presbyopia-correcting IOL(Intra ocular lens) surgery in patient with high level of pre-existing astigmatism (ie, more than 3 D), bioptics approach (ie, IOL followed by laser vision enhancement) may be needed. ➢ LRIs alone are unlikely to correct the astigmatism completely.Limbal Relaxing Incisions (LRI) are refractive surgical procedure to correct minor astigmatism in the eye. ➢ There are several different strategies for these planned laser vision enhancements. The is to perform the presbyopia-correcting IOL surgery followed by LASIK or PRK.",
+    "explanation": "Presbyopic correction is prescribed as a reading addition that increases progressively with age -- roughly +1.00D around age 40, rising in +0.50D steps to a maximum addition of about +3.00D by the sixties, beyond which further increases give little additional benefit because near accommodation has been essentially lost. For an elderly patient, this maximal addition of +3D is the expected correction, making C correct.",
     "subject": "Ophthalmology",
     "topic": "",
     "difficulty": "Easy",
@@ -169585,7 +169585,7 @@
       "D": "Steroid induced Glaucoma"
     },
     "correctAnswer": "A",
-    "explanation": "1. 100 days glaucoma is neovascular glaucoma occurring in CRVO. 2. It consists of occlusion of central retinal vein without significant retinal ischemia. 3. This results in a venous stasis. 4. Recurrent hemorrhages are frequent and neovascularization of retina and optic disc develop. 5. Retina undergoes pigmentary and atrophic changes. 6. Serious complications are cystoid degeneration of macula, optic atrophy and hemorrhagic or neovascular glaucoma. 7. Hemorrhagic glaucoma is also known as 100 day glaucoma because it starts 3 months after the episode of central retinal vein occlusion.",
+    "explanation": "\"100-day glaucoma\" is the informal name for neovascular glaucoma that develops roughly 100 days (about 3 months) after an ischemic central retinal vein occlusion (CRVO), as retinal ischemia drives VEGF-mediated neovascularization of the iris and anterior chamber angle, obstructing aqueous outflow. Since CRVO is the underlying event that sets this timeline in motion, A is correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -169604,7 +169604,7 @@
       "D": "None of the above"
     },
     "correctAnswer": "B",
-    "explanation": "● Roth's spots are retinal hemorrhages with white or pale centers. ● Composed of coagulated fibrin including platelets, focal ischemia, inflammatory infiltrate, infectious organisms, or neoplastic cells. ● Roth's spots may be observed in leukemia, diabetes, subacute bacterial endocarditis, pernicious anemia, ischemic events, hypertensive retinopathy and rarely in HIV retinopathy. ● Roth's spots are named after Moritz Roth.",
+    "explanation": "Roth spots -- retinal haemorrhages with pale, white fibrin-platelet centres -- classically occur in infective endocarditis but are also well described in acute leukaemia, where thrombocytopenia and leukaemic infiltration predispose to retinal bleeding, and in severe anaemia and diabetic retinopathy. Uveal melanoma does not produce this haemorrhagic pattern, which is why B (Acute leukaemia) alone, rather than \"both,\" is correct.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -169623,7 +169623,7 @@
       "D": "Lt inferior oblique"
     },
     "correctAnswer": "A",
-    "explanation": "● Contralaterally paired extraocular muscles that work synergistically to direct the gaze in given direction. ● For example, in direwcting the gaze to the right, the right lateral rectus and left medial rectus operate together as yoke muscles.",
+    "explanation": "Yoke muscles are the paired extraocular muscles (one in each eye) that act together to produce conjugate movement of both eyes in a given direction of gaze. For rightward gaze, the right lateral rectus (abducting the right eye) is paired with the left medial rectus (adducting the left eye) -- together they are the yoke pair for dextroversion, making A correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -169642,7 +169642,7 @@
       "D": "Haemophilus"
     },
     "correctAnswer": "A",
-    "explanation": "● The most common causes of acute bacterial conjunctivitis are Staphylococcus aureus, Streptococcus pneumoniae, and Haemophilus influenzae. ● Hyperacute cases are usually caused by Neisseria gonorrhoeae or N. meningitidis. ● Chronic cases of bacterial conjunctivitis are those lasting longer than 3 weeks, and are typically caused by Staphylococcus aureus, Moraxella lacunata, or gram-negative enteric flora. ● Neisseria gonorrhoeae causes gonococcal conjunctivitis, which usually results from sexual contact with a person who has genital infection. ● The incidence rates of gonococcal conjunctivitis increase during spring and summer. ● This is a potentially devastating ocular infection, because N. gonorrhoeae can cause severe ulcerative keratitis, which may rapidly progress to corneal perforation.",
+    "explanation": "Neisseria gonorrhoeae causes hyperacute, severe purulent conjunctivitis capable of penetrating an intact corneal epithelium and progressing to corneal perforation within hours to days if untreated -- making it the most feared and clinically severe cause of bacterial conjunctivitis. Staphylococcus, Streptococcus, and Haemophilus typically cause milder, more indolent conjunctivitis, which is why A (Neisseria) is correct.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169661,7 +169661,7 @@
       "D": "(-)(+) (+)(-) on both 90 and 180 degrree axis"
     },
     "correctAnswer": "B",
-    "explanation": "● When eyewear prescriptions are written, they can be classified into different areas depending on the power or refractive error. ● There are seven categories to which prescriptions can fall: 1. Simple Hyperopia, the Rx will be (+) sphere 2. Simple Myopia, the Rx will be (-) sphere 3. Simple Myopic Astigmatism, the Rx will be plano (-) 4. Simple Hyperopic Astigmatism, the Rx will be (+) 5. Compound Hyperopic Astigmatism, major meridian power will be (+) (+) on both 90 and 180 degree axis 6. Compound Myopic Astigmatism, major meridian power will be (-) (-) on both 90 and 180 degree axis 7. Mixed Astigmatism, major meridian powers will be opposites (-)(+) (+)(-) on both 90 and 180 degree axis",
+    "explanation": "In simple myopic astigmatism, one principal meridian of the eye focuses light precisely on the retina (requiring no correction, i.e. plano) while the other meridian focuses light in front of the retina (myopic, requiring a minus lens). The resulting spectacle prescription is therefore a plano sphere combined with a minus cylinder -- \"plano/-cyl\" -- which is why B is the correct description, distinguishing it from compound myopic astigmatism (minus sphere plus minus cylinder, both meridians myopic).",
     "subject": "Ophthalmology",
     "topic": "",
     "difficulty": "Easy",
@@ -169680,7 +169680,7 @@
       "D": "Roof"
     },
     "correctAnswer": "A",
-    "explanation": "● Orbital floor fracture, also known as “blowout” fracture of the orbit. ● Blow out fracture of orbit involves: 1. Fractures of the orbital floor are common: it is estimated that about 10% of all facial fractures are isolated orbital wall fractures (the majority of these being the orbital floor), and that 30-40% of all facial fractures involve the orbit. 2. The anatomy of the orbital floor predisposes it to fracture. 3. The inferior orbital neurovascular bundle (comprising the infraorbital nerve and artery) courses within the bony floor of the orbit; the roof of this infraorbital canal is only 0.23mm thick, and the bone of the posterior medial orbital floor averages 0.37 mm thick. 4. By contrast, the bone of the lateral portion of the orbital floor averages 1.25 mm thick, over 5 times the thickness of the bone over the neurovascular bundle. As one might suspect, it is this very thin area of the orbital floor overlying the neurovascular bundle where isolated orbital floor fractures inva",
+    "explanation": "A blowout fracture occurs when a blunt object (e.g. a fist or ball) strikes the orbit, suddenly raising intraorbital pressure that the orbital walls cannot withstand -- and because the orbital floor (over the thin roof of the maxillary sinus) is the thinnest and weakest wall, it is the site that most commonly fractures, sometimes trapping orbital contents and causing diplopia on upward gaze. This is why A (Floor) is correct.",
     "subject": "Orthopaedics",
     "topic": "",
     "difficulty": "Easy",
@@ -169699,7 +169699,7 @@
       "D": "Lower lid retractor"
     },
     "correctAnswer": "A",
-    "explanation": "Used by surgeons and gynecologists so that they can work in the deep layers of the patient. The Morris retractors are particularly used when abdominal incisions are made as well closed. Making use of such a retractor is important for the surgeon as it allows them to work with clear vision and to be able to move inside the body cavity and repair whatever needs it.",
+    "explanation": "The Morris retractor is a large, blade-type self-retaining (or hand-held) abdominal wall retractor used to hold open the edges of a laparotomy incision, providing wide exposure of the abdominal cavity -- distinct from smaller instruments like the Czerny (skin hook) or Richardson (right-angled handheld) retractors used for more focused exposure, which is the basis for A being the intended identification here.",
     "subject": "Surgery",
     "topic": "",
     "difficulty": "Easy",
@@ -169718,7 +169718,7 @@
       "D": "Degraded by enzymatic dwegradation"
     },
     "correctAnswer": "D",
-    "explanation": "Sutures such as catgut are derived from sheep submucosa or beef serosa are digested by proteolytic enzymes in the wound.",
+    "explanation": "Catgut sutures are made from processed submucosa of sheep or bovine (cattle) intestine (despite the misleading name, not from cats) and are absorbed by proteolytic enzymatic digestion in host tissue -- unlike synthetic absorbable sutures (e.g. polyglactin, PDS), which are broken down instead by hydrolysis. This enzymatic mechanism of breakdown, unique among common suture materials, is why D is correct.",
     "subject": "Surgery",
     "topic": "",
     "difficulty": "Easy",
@@ -169737,7 +169737,7 @@
       "D": "ER status"
     },
     "correctAnswer": "D",
-    "explanation": "The Van Nuys Van Nuys Prognostic Index Parameter Score 1 Score 2 Score 3 Van Nuys Classification Group 1 Group 2 Group 3 Non high nuclear grade Non High nuclear grade High nuclear grade with or without necrosis with necrosis without necrosis Margins ≥10 mm 1–9 mm <1 mm Size <15 mm 16–40 mm >40 mm Age >60 40–60 <40",
+    "explanation": "The Van Nuys Prognostic Index, used to guide treatment of ductal carcinoma in situ (DCIS), scores patients on tumour size, margin width, and pathologic classification (nuclear grade and presence of necrosis), later revised to also include patient age -- but it does not incorporate hormone receptor (ER) status, which is why D is correct.",
     "subject": "Surgery",
     "topic": "",
     "difficulty": "Easy",
@@ -169756,7 +169756,7 @@
       "D": "Gall bladder stones"
     },
     "correctAnswer": "A",
-    "explanation": "\"Worldwide, alcohol coFnsiumption and abuse is associated with chronic pancreatitis in up to 70% of cases \"-",
+    "explanation": "Chronic alcohol use is globally the most common cause of chronic pancreatitis, producing recurrent bouts of pancreatic inflammation that progress to fibrosis, calcification, and loss of both exocrine and endocrine function over time. This is why A is correct, ahead of less common causes like pancreas divisum, ductal calculi, or gallstones (which are more classically linked to acute rather than chronic pancreatitis).",
     "subject": "Surgery",
     "topic": "",
     "difficulty": "Easy",
@@ -169775,7 +169775,7 @@
       "D": "None of the above"
     },
     "correctAnswer": "A",
-    "explanation": "Vaccinations, injections, insect bites, ear piercing, or may arise spontaneously. Keloids tend to occur 3 months to years after the initial insult, and even minor injuries can result in large lesions. They vary in size from a consistency. Although they project above surrounding skin, they rarely extend into underlying subcutaneous tissues. Certain body sites have a higher incidence of keloid formation, including the skin of the earlobe as well as the deltoid, presternal, and upper back regions. They rarely occur on eyelids, genitalia, palms, soles, or across joints. Keloids rarely involute spontaneously, whereas surgical intervention can lead to recurrence, often with worse result.",
+    "explanation": "Keloids result from an exaggerated fibroproliferative healing response with persistent overexpression of growth factors (notably TGF-beta), driving excess collagen deposition that -- unlike a hypertrophic scar -- extends beyond the original wound margins and tends to recur even after excision. This growth-factor-driven biology is why A is the correct true statement, while options describing excision as curative or confinement to the wound describe hypertrophic scars, not keloids.",
     "subject": "Surgery",
     "topic": "",
     "difficulty": "Easy",
@@ -169794,7 +169794,7 @@
       "D": "Skin+subcutaneous tissue+Superficial fascia+deep fascia"
     },
     "correctAnswer": "D",
-    "explanation": "Fasciotomy or fasciectomy is surgical procedure where complete opening of all fascial envelope is done to relieve tension or pressure commonly to treat the resulting loss of circulation to an area of tissue or muscle. Fasciotomy is limb-saving procedure when used to treat acute compartment syndrome.",
+    "explanation": "A fasciotomy is performed to relieve compartment syndrome by releasing the deep fascia that encloses the affected muscle compartment, and reaching it requires incising through skin, subcutaneous tissue, and superficial fascia first, then finally opening the deep fascia itself -- all four layers, making D correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -169813,7 +169813,7 @@
       "D": "Cobblestone appearance"
     },
     "correctAnswer": "B",
-    "explanation": "Crohn's disease is frequently associated with \"skip lesions,\" discontinuous areas of active disease in the colon and small intestine with intervening segments that appear normal.",
+    "explanation": "Crohn's disease is characterised by discontinuous \"skip lesions\" with intervening normal mucosa, transmural non-caseating granulomas, and a cobblestone appearance from alternating ulceration and mucosal oedema, and it can involve any part of the GI tract (though it classically spares the rectum). Continuous mucosal involvement without skip areas is instead the hallmark of ulcerative colitis, which is why B is the false statement about Crohn's disease being tested here.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -169832,7 +169832,7 @@
       "D": "EUS"
     },
     "correctAnswer": "A",
-    "explanation": "Percutaneous liver biopsy under USG or CT guidance can be diagnostic, but there is risk of hemorrhage as these tumors are highly vascular.",
+    "explanation": "While imaging (EUS, ERCP, CT) is used to detect and stage a pancreatic head mass, a definitive diagnosis of carcinoma requires histological or cytological confirmation, obtained via image-guided (typically EUS-guided) biopsy or fine-needle aspiration of the lesion. This is why guided biopsy, not the imaging modalities themselves, is considered the best investigation for confirming the diagnosis, making A correct.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -169870,7 +169870,7 @@
       "D": "7"
     },
     "correctAnswer": "B",
-    "explanation": "Glasgow coma scale: Eye opening Best verbal response Best motor response Response Score Response Score Response Score Spontaneously 4 Oriented and Converses 5 Obeys commands 6 To 3 Disoriented and 4 Localises pain 5 verbal stimuli converses To pain 2 Inappropriate words 3 Flexion- withdrawal to 4 pain Never 1 Incomprehensible 2 Abnormal flexion 3 words (decorticate rigidity) No response I Abnormal extensive 2 obsturing No response 1 Maximum score is Y : 15 Minimum score is :03",
+    "explanation": "Using the Glasgow Coma Scale: \"confused\" speech scores 4 on the verbal component, \"eye opening to pain\" scores 2 on the eye component, and \"localising to pain\" scores 5 on the motor component. Adding these (E2 + V4 + M5) gives a total GCS of 11, which is why B is correct.",
     "subject": "Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -169889,7 +169889,7 @@
       "D": "Hurthle cell tumor thyroid"
     },
     "correctAnswer": "A",
-    "explanation": "RET proto oncogene is growth factor receptor (receptor tyrosine kinase) • The RET protein is a receptor for the glial cell line derived neurotrophic factor and structurally related proteins that promote cell survival during neural development. • RET is normally expressed in the following cells 1. Parafollicular C cells of the thyroid 2. Adrenal medulla 3. Parathyroid cell precursors. • Point mutation in RET extracellular domain which causes constitutive dimerization and activation leading to:- 1. Medullary thyroid carcinoma 2. Adrenal and parathyroid tumours",
+    "explanation": "RET is a proto-oncogene encoding a receptor tyrosine kinase, and gain-of-function germline mutations in it cause the multiple endocrine neoplasia type 2 (MEN2) syndromes, whose defining feature is medullary carcinoma of the thyroid (arising from the calcitonin-secreting parafollicular C cells). This strong, well-established association is why A is correct, distinguishing it from astrocytoma and Hurthle cell tumours, which are not RET-driven.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -169908,7 +169908,7 @@
       "D": "8.5cm"
     },
     "correctAnswer": "A",
-    "explanation": "Operative repair of the aneurysm with insertion of prosthetic graft or endovascular placement of an aortic stent graft is indicated for: - abdominal aortic aneurysms of any size that are expanding rapidly or are associated with symptoms. - for asymptomatic aneurysms, abdominal aortic aneurysm repair is indicated if the diameter is >5.5 cm. Ortho",
+    "explanation": "Elective surgical repair of an asymptomatic abdominal aortic aneurysm is generally recommended once the diameter reaches 5.5 cm in men, the point at which the risk of rupture is judged to outweigh the risks of surgery, based on landmark trials (UK Small Aneurysm Trial, ADAM). This is why A (5.5 cm) is the standard cutoff and the correct answer.",
     "subject": "Surgery",
     "topic": "",
     "difficulty": "Easy",
@@ -169965,7 +169965,7 @@
       "D": "Electron"
     },
     "correctAnswer": "B",
-    "explanation": "Bragg peak ● Pronounced peak on the Bragg curve which plots the energy loss ofionizing radiation during its travel through matter. ● Forprotons,α-rays, and otherion rays, the peak occurs immediately before the particles come to rest. This is called Bragg peak, afterWilliam Henry Bragg who discovered it in 1903. Bragg curve ● Typical for heavy charged particles and describes energy loss of ionizing radiation during travel through matter. ● For this curve is typical the Bragg peak, which is the result of 1/v 2 dependency ofthe stopping power. This peak occurs because thecross section of interaction increases immediately before the particle come to rest. For most of the track, the charge remains unchanged and the specific energy loss increases according to the 1/v 2 Bragg Curve is typical for heavy charged particles and plots the energy loss during its travel through matter.",
+    "explanation": "The Bragg peak -- a sharp rise in energy deposition at a specific tissue depth followed by an abrupt fall-off -- is a defining physical property of charged particles like protons, which lose most of their energy near the end of their range rather than depositing it progressively along their whole path as X-rays (photons) do. This precise, localized dose deposition is why proton therapy is prized for sparing tissue beyond the tumour, making B correct.",
     "subject": "Radiology",
     "topic": "",
     "difficulty": "Easy",
@@ -169984,7 +169984,7 @@
       "D": "Pseudo hyperparathyroidism"
     },
     "correctAnswer": "A",
-    "explanation": "● Pepperpot skull is occasionally used in place of salt and pepper skull to describe the typical radiographic appearance of multiple small radiolucent lesions of the skull vault. ● In primary hyperparathyroidism, extensive resorption bone in the skull in combination with cystic areas of osteopenia are termed pepper pot skull. ● Classically seen in hyperparathyroidism, and is occasionally used (inaccurately) to describe the raindrop skull of multiple myeloma.",
+    "explanation": "A \"salt and pepper\" skull -- a mottled, granular pattern of alternating lucent and sclerotic areas -- results from subperiosteal bone resorption driven by excess parathyroid hormone, making it a classic radiographic sign of primary hyperparathyroidism. Multiple myeloma instead produces sharply defined \"punched-out\" lytic lesions, a visually distinct pattern, which is why A is correct.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -170003,7 +170003,7 @@
       "D": "USG"
     },
     "correctAnswer": "C",
-    "explanation": "● Imaging studies, such as hysterosaRlpingogram (HSG) and ultrasound, or an MRI are required to visualise the uterus and confirm thsat congenital uterine anomaly is present. ● A hysterosalpingogram is not coinsidered as useful due to the inability of the technique to evaluate the exterior contour of the uterus and distinguish between bicornuate and septate uterus. ● In addition,laparoscopyw and/orhysteroscopy may be indicated.",
+    "explanation": "Evaluation of uterine (Mullerian) anomalies relies on hysterosalpingography (HSG), ultrasound (especially 3D USG), and MRI, each offering a different combination of functional and anatomical detail -- MRI in particular is considered the gold standard for characterising complex anomalies. \"CT guided HSG\" is not an established or standard combined technique for this purpose, which is why C is correctly the exception.",
     "subject": "Radiology",
     "topic": "",
     "difficulty": "Easy",
@@ -170022,7 +170022,7 @@
       "D": "Tracheoesophageal fistula"
     },
     "correctAnswer": "C",
-    "explanation": "In given image, there are numerous 1-2 mm radiolucent cfolds across the oesophagus. The folds are angled with respect to the center of the oesophagus in \"heerringbone\" pattern. The folds occur transiently. Feline oesophagus also known as oesophageal shiver, refers to the transient transverse bands seen in the mid and lower oesophagus on double rcontrast barium swallow. The appearance is almost always associated with active gastro-oesophageal refluxand is thought to be due to contraction of the muscularis mucosae with resultant shortening of the oesophagus and 'bunching up' of the mucosa in the lumen. Radiographic features The folds are 1-2 mm thick and run horizontally around the entire circumference of the oseophageal lumen. The findings are transient, seen following reflux and not during swallowing. The appearance is confined to the distal two-thirds of the thoracic oesophagus.",
+    "explanation": "\"Feline oesophagus\" describes the transient appearance of fine, transverse folds crossing the entire width of the oesophagus on a barium study, resembling a cat's oesophagus -- a finding associated with oesophageal spasm or reflux oesophagitis rather than a fixed structural lesion. This distinguishes it radiographically from esophageal atresia, stenosis, or tracheoesophageal fistula, making C correct.",
     "subject": "Surgery",
     "topic": "",
     "difficulty": "Easy",
@@ -170041,7 +170041,7 @@
       "D": "Crouzon syndrome"
     },
     "correctAnswer": "A",
-    "explanation": "The vein of Galen is located under the cerebral hemispheres and drains the anterior and central regions of the brain into the sinuses of the posterior cerebral fossa. The vein of Galen, also known as the great cerebral vein cor great vein of Galen, is short trunk formed by the union of the two internal cerebral veins and basral veins of Rosenthal. It lies in the quadrigeminal cistern. It curves backward and upward around the posterior border of the splenium of the corpus callosum to drain into the confluence of the infaerior sagittal sinus and the anterior extremity of the straight sinus.",
+    "explanation": "Vein of Galen malformation is a congenital arteriovenous malformation involving the deep venous system of the brain, and it is one of the more common vascular anomalies identified on paediatric brain MRI, often presenting with high-output cardiac failure in neonates or hydrocephalus and developmental issues later. This is the basis for A being the expected identification here.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -170060,7 +170060,7 @@
       "D": "Septate uterus"
     },
     "correctAnswer": "C",
-    "explanation": "● A unicornuate uterus or unicornis unicollis is type of Mullerian duct anomaly (class II) that is the second most commonly associated with miscarriages. ● This type can account for ~10% (range 6-13%) of uterine anomalies and infertility is seen in ~12.5% (range 5-20%) of cases. Above image unicornuate uterus as seen on hystkerosalpingogram represents: The endometrial cavity usually assumes fusifoarm (banana type) shape (except for type where there may a small cavitation filling defect), tapering at the apex and draining into single fallopian tube. The uterus is generally shifted off the midline.",
+    "explanation": "A unicornuate uterus results from failure of one Mullerian duct to develop (or its arrest at a rudimentary stage) while the other develops normally, producing a single, elongated, banana-shaped uterine cavity rather than the paired cavities seen in didelphys, bicornuate, or septate anomalies. This distinctive single-horn morphology is why C is correct.",
     "subject": "Obstetrics & Gynaecology",
     "topic": "",
     "difficulty": "Easy",
@@ -170079,7 +170079,7 @@
       "D": "Osteomyelitis"
     },
     "correctAnswer": "A",
-    "explanation": "Paget diseaseof the bone is common, chronic bone disorder characterised by excessive abnormal bone remodelling. It frequently affects the pelvis, spine, skull and proximal long bones and has characteristic radiographic features. Radiographic features The early phase features osteolytic (lucent) region which is later followed by coarsened trabeculae and bony enlargement. Sclerotic changes occur much later in the disease process. ● osteoporosis circumscripta: large, well-defined lytic lesion ● cotton wool appearance: mixed lytic and sclerotic lesions of the skull ● diploic widening: both inner and outer calvarial tables are involved, with the former usually more extensively affected ● Tam o'Shanter sign: frontal bone enlargement, with the appearance of the skull falling over the facial bones, like a Tam o' Shanter hat. ( Thickened diploe of the skull anwd ill-defined 'fluffy' sclerotic areas most pronounced in the frontal bone.)",
+    "explanation": "Paget's disease of bone produces a mixed lytic-and-sclerotic pattern in the skull, often described as a \"cotton wool\" appearance from poorly organised, thickened trabecular bone -- a distinct radiographic pattern from the punched-out lesions of multiple myeloma or the destructive patterns of osteosarcoma and osteomyelitis, which is why A is correct.",
     "subject": "Orthopaedics",
     "topic": "",
     "difficulty": "Easy",
@@ -170098,7 +170098,7 @@
       "D": "Cystic fibrosis"
     },
     "correctAnswer": "B",
-    "explanation": "Aortic dissection (AD) occurs when an injury to the innermmost layer of the aorta allows blood to flow between the layers of the aortic wall, forcing the layers apart. The diagnosis of aortic dissection is based on clinical suspicion combined with imaging studies. Chest x-ray will sometimes show a \"widened mediastinum\". This occurs because the enlarged aorta casts larger shadow on the x-ray detector. If this is seenR, and there is high clinical suspicion of dissection, CT scan of the chest with intravenous contrast is osrdered (see image). The CT scan will show the true and false lumens associated with dissection.",
+    "explanation": "Aortic dissections are classified by the Stanford system based on which segment is involved: Stanford type A involves the ascending aorta (a surgical emergency), while Stanford type B is confined to the descending aorta (often managed medically unless complicated). A dissection limited to the descending aorta on CT corresponds to type B, making B correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -170117,7 +170117,7 @@
       "D": "Splenic vein"
     },
     "correctAnswer": "C",
-    "explanation": "● The portal vein or hepatic portal vein is blood vessel that carries blood from the gastrointestinal tract, gallbladder, pancreas and spleen to the liver. ● This blood contains nutrients and toxins extracted from digested contents. Approximately 75% of total liver blood flow is through the portal vein, with the remainder coming from the hepatic artery proper. The blood leaves the liver to the heart in the hepatic veins.",
+    "explanation": "The portal vein is unique among the abdominal great vessels in that it branches extensively within the liver parenchyma itself, delivering nutrient-rich blood from the gut to hepatocytes -- a pattern clearly distinguishable on CT from the SVC, IVC, or splenic vein, none of which arborize into the liver in this way, making C correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -170155,7 +170155,7 @@
       "D": "Discontinuation syndrome"
     },
     "correctAnswer": "A",
-    "explanation": "The description of symptoms is related to the condition “Delirium Tremens” ● Delirium Tremens / Alcohol Withdrawal Delirium (AWD): ○ Most severe form of ethanol withdrawal manifested by, ■ Altered mental status (Global confusion) ■ Autonomic hyperactivity (Sympathetic overdrive) ● Mechanism: ○ Alcohol abuse affects neurotransmitter systems in brain mainly by, ■ Loss of GABA inhibitory mechanism - Reduces chloride ion influx. ■ Alcohol acts as NMDA receptor antagonist - Withdrawal increases the excitatory neurotransmitter. ● The clinical manifestations of ethanol withdrawal are combination effects of GABA & NMDA receptor activity. ● Thus causing tremors, diaphoresis, tachycardia, anxiety & in severe cases Seizure.",
+    "explanation": "Delirium tremens is a severe alcohol withdrawal syndrome that classically appears 48 to 96 hours (2-4 days) after the last drink, presenting with confusion/disorientation (\"irrelevant talk\"), coarse tremor, autonomic hyperactivity (sweating, tachycardia), and often hallucinations -- matching this patient's presentation 3 days after his last drink. Korsakoff psychosis (a chronic thiamine-deficiency amnestic syndrome) and the other options do not fit this acute, autonomically hyperactive picture, making A correct.",
     "subject": "Psychiatry",
     "topic": "",
     "difficulty": "Medium",
@@ -170174,7 +170174,7 @@
       "D": "Rat flea"
     },
     "correctAnswer": "B",
-    "explanation": "● Babesiosis infects the RBCs and resides inside the RBCs ( intraerythrocytic). ● Intraerythrocytic infection of Babesiosis is characterised by maltese cross. ● Maltese cross is a characteristic arrangement of parasites within the erythrocytes --->Parasites within erythrocytes are arranged such that pointed ends of four parasites come in contact thereby giving a tetrad configuration resembling maltese cross. ● Tetrad forms or 'Maltese cross' appearance is considered pathognomic of Babesiosis. ● Babesiosis can easily be confused with P. falciparum malaria.Following two features distinguish Babesiosis from malaria 1. Presence of maltese cross in Babesiosis ( absent in malaria) 2. Absence of pigment Note - Maltese cross is also seen in cryptococcus and aspergillus.",
+    "explanation": "Ixodes scapularis (the deer tick) is the vector for several tick-borne infections, most notably Lyme disease (Borrelia burgdorferi), and is associated with distinctive laboratory findings used in their diagnosis. This vector association, distinct from Anopheles (malaria), lice (typhus/relapsing fever), and rat fleas (plague), is why B is correct.",
     "subject": "Microbiology",
     "topic": "",
     "difficulty": "Easy",
@@ -170212,7 +170212,7 @@
       "D": "None"
     },
     "correctAnswer": "A",
-    "explanation": "● Trilene or trichloroethylenwe is good analgesic, less depressant, and non-flammable. ● Cardiac dysrhythmia, orw tachypnoea may occur during administration. ● It should not be used in the closed circuit as it reacts with soda-lime to produce toxic gas(phosgene). ● Recovery is slow and nausea as well as vomiting may be present. ● It should not be used with adrenaline infiltration lest dysrhythmia be converted to ventricular fibrillation. Degradation: ● Brought about by enzymatic degradation ● The enzyme that starts one branch of this pathway, toluene 1,2-dioxygenase, has many other catalytic abilities, which are documented in table of the Reactions of Toluene 1,2-Dioxygenase. ● The spontaneous degradation of trichloroethylene epoxide can produce as many as four products: dichloroacetate, carbon monoxide, glyoxylate, and formate. The number, type, and proportion of products seen depends on the local environment.",
+    "explanation": "Trilene (trichloroethylene), an older inhalational anaesthetic agent, undergoes hepatic metabolism through enzymatic (cytochrome P450-mediated) oxidative pathways rather than being broken down by simple non-enzymatic chemical reactions -- this biotransformation is also relevant to its now-recognised toxicity profile, which is why A is correct.",
     "subject": "Surgery",
     "topic": "",
     "difficulty": "Easy",
@@ -170269,7 +170269,7 @@
       "D": "trigeminal nerve"
     },
     "correctAnswer": "B",
-    "explanation": "Special visceral efferent fibers (SVE) are the efferent nerve fibers that provide motor innervation to the muscles of the pharyngeal arches in humans,The only nerves containing SVE fibers are cranial nerves: the trigeminal nerve (V), the facial nerve (VII), the glossopharyngeal nerve (IX), the vagus nerve (X) and the accessory nerve",
+    "explanation": "The special visceral efferent (branchiomotor) column supplies muscles derived from the pharyngeal arches, and its fibres travel in the trigeminal, facial, glossopharyngeal, and vagus nerves. Nucleus ambiguus is itself the brainstem nucleus of origin for these SVE fibres in the glossopharyngeal, vagus, and cranial accessory nerves -- it is the source nucleus rather than one of the peripheral cranial nerves being classified, which is why it is the exception here (B), distinguishing the nucleus of origin from the nerves that carry its fibres.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -170288,7 +170288,7 @@
       "D": "Erythema infectiosum"
     },
     "correctAnswer": "A",
-    "explanation": "Primary infection by parvovirus B19 ofteRn produces an acute, severe, and sometimes fatal anemia manifested as a rapid fall in red blood celsl count and hemoglobin. These patients may present initially with no clinical symptoms other than fever; this is commonly referred to as aplastic crisis. Erythema infectiosum (also referred to as fifth disease or academy rash) is more common disease that is clearly attributable to parvovirus B19. Active transplacental transmission of parvovirus B19 can occur during primary infections in the 20 weeks of pregnancy, sometimes resulting in stillbirth of fetuses that are profoundly anemic. The progress can be so severe that hypoxic damage to the heart, liver, and other tissues leads to extensive edema (hydrops fetalis).",
+    "explanation": "Roseola infantum (exanthem subitum), with its classic high fever followed by a truncal rash in infants, is caused by human herpesvirus 6 (HHV-6), not parvovirus B19. Parvovirus B19, in contrast, causes erythema infectiosum (fifth disease), aplastic crises in patients with chronic haemolytic conditions like sickle cell disease, and fetal hydrops when infection occurs in pregnancy -- which is why A (Roseola infantum) is correctly identified as the condition not caused by parvovirus B19.",
     "subject": "Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -170307,7 +170307,7 @@
       "D": "Upper attachment to transverse process of T12"
     },
     "correctAnswer": "D",
-    "explanation": "The ligament attaches to T5 Iliolumbar ligament: ● Strong ligament passing from the tip of transverse process of fifth lumbar vertebra to posterior part of inner lip of iliac crest ● Upper bands gets attached to the iliac crest. ● Lower bands gets attached to base of sacrum. ● Major function is to strengthen the lumbosacral joint.",
+    "explanation": "The iliolumbar ligament runs from the transverse process of L5 (and sometimes L4) to the iliac crest, helping stabilise the lumbosacral junction -- its upper attachment is to the lumbar transverse process, not the transverse process of T12, which lies far too high, at the thoracolumbar junction. This is why D is the false statement being tested.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Medium",
@@ -170326,7 +170326,7 @@
       "D": "back of ear"
     },
     "correctAnswer": "B",
-    "explanation": "The implant is usually placed in the lateral recess of the fourth ventricle at the time of tumor resection to stimulate the cochlear nucleus Auditory Brainstem Implant (ABI): ● Tumor resection surgery in NF patients rensult in cochlear nerve damage or loss of function of nerve resulting in deafness. ● ABI are useful in restoring auditory pterception to deaf patients with neurofibromatosis type 2 (NF2) ● Also used in treatment of congenritally deaf children with cochlear malformations or cochlear nerve deficiencies. ● Placement location: Lateral recess of 4th ventricle",
+    "explanation": "An auditory brainstem implant (ABI) is used when the cochlea or auditory nerve cannot be used (e.g. after neurofibromatosis type 2 surgery), so its electrode array is placed directly on the cochlear nucleus complex, located in the lateral recess of the fourth ventricle at the cerebellopontine angle -- bypassing the cochlea and auditory nerve entirely, unlike a standard cochlear implant. This is why B is correct.",
     "subject": "ENT",
     "topic": "",
     "difficulty": "Easy",
@@ -170345,7 +170345,7 @@
       "D": "None of above"
     },
     "correctAnswer": "A",
-    "explanation": "Increase in alpha-fetoprotein is observed in Ataxia telangiectasia ● Ataxia-telangiectasia / Ataxia-telangiectasia syndrome / Louis-Bar syndrome ○ Rare, neurodegenerative, autosomal recessive disorder causing severe disability. ○ Ataxia refers to poor coordination; Telangiectasia refers to small dilated blood vessels. ● Parts affected: ○ Cerebellum - movement & coordination difficulties ○ Immune system - Predisposing to infections. ○ Genetic repair system - Preventing process for repairing DNA - Cancer risk ● Features: ○ Increased incidence of lymphoman & Leukemia ○ Increased alpha-Fetoprotein levels ○ Oculomotor apraxia (difficultty in coordination between head & eye movements) ○ Dysarthria",
+    "explanation": "Ataxia-telangiectasia is an autosomal recessive DNA-repair disorder (due to ATM gene mutations) classically associated with a markedly elevated serum alpha-fetoprotein, alongside progressive cerebellar ataxia, oculocutaneous telangiectasias, immunodeficiency (especially IgA deficiency), and increased cancer risk (notably lymphoma/leukaemia rather than squamous cell carcinoma specifically). The elevated AFP is a useful diagnostic clue, which is why A is correct.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -170383,7 +170383,7 @@
       "D": "Citrate"
     },
     "correctAnswer": "B",
-    "explanation": "Negative allosteric modulation (also known as allosteric inhibition) occurs when the binding of one ligand decreases the affinity for substrate at other active sites. For example, when 2,3-BPG binds to an allosteric site on hemoglobin, the affinity for oxygen of all subunits decreases.",
+    "explanation": "2,3-Bisphosphoglycerate (2,3-BPG) is a classic allosteric regulator: it binds within the central cavity of deoxyhemoglobin's tetramer, stabilising the low-oxygen-affinity T-state and shifting the oxygen dissociation curve to the right, without binding at hemoglobin's oxygen-binding (active) site itself. This binding at a site distinct from the functional binding site, altering activity through a conformational change, is the hallmark of allosteric regulation, which is why B is correct here.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -170402,7 +170402,7 @@
       "D": "All"
     },
     "correctAnswer": "D",
-    "explanation": "● Positive for Rheumatoid factor in blood is seropositivity. ● Patients with positive rheumatoid factor usually present with symptoms like ● Joint deformities & disability ● Symmetrical involvement of joints ● Inflammation ● Swelling and painful in multiple joints, especially of hands and feet. ● Morning stiffness (short term) ● Development of firm lumps near joints - “Rheumatoid nodules” ● Deterioration of bone & cartilage (X- ray findings)",
+    "explanation": "Seropositive rheumatoid arthritis (RA with positive rheumatoid factor/anti-CCP) classically presents with polyarticular, symmetrical joint involvement accompanied by pain and swelling -- all three features listed are core parts of the standard clinical picture, which is why D (\"All\") is correct.",
     "subject": "Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -170421,7 +170421,7 @@
       "D": "Neurogenic tumor"
     },
     "correctAnswer": "D",
-    "explanation": "● The anterior mediastinum the thoracic plane. ● It forms the anterior part of the inferior mediastinum ● contains the thymus, lymph nodes, and may contain the portions of retrosternal thyroid. Mediastinal Tumors and Other Masses Superior Mediastinum Anterior Mediastinum Posterior Mediastinum Middle Mediastinum Lymphoma Thymoma Neurogenic tumors Bronchogenic cyst Thymoma Teratoma Lymphoma Pericardial cyst Thyroid lesions Lymphoma Gastroenteric hernia Lymphoma Metastatic carcinoma Thyroid lesions Parathyroid tumors Parathyroid tumors",
+    "explanation": "The anterior mediastinum classically contains the \"4 Ts\": thymoma, teratoma (and other germ cell tumours), thyroid (retrosternal extension), and \"terrible\" lymphoma. Neurogenic tumours instead arise from the sympathetic chain and nerve roots found in the posterior mediastinum, not the anterior compartment, which is why D is correctly identified as not seen anteriorly.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -170440,7 +170440,7 @@
       "D": "All"
     },
     "correctAnswer": "D",
-    "explanation": "Risk Factors for Lymphoma of the Skin Age Age is an important risk factor for this disease, with most cases occurring in people in their 50s and 60s. But some types of skin lymphoma can appear in younger people, even in children. Gender and race Most (but not all) types of skin lymphoma are more common in men than in women. Most also tend to be more common in African-Americans than in whites. The reasons for this are not known. Weakened immune systemSkin lymphomas may be more common in people with acquired immunodeficiency syndrome (AIDS), who have weakened immune system. They may also be more common in people who have had an organ transplant such as heart, kidney or liver transplant. These people must take drugs that suppress their immune system, which may raise the risk of skin lymphoma (or lymphomas in other parts of the body). Infections Infection with the human immunodeficiency virus (HIV), the virus that causes AIDS, may increase a person’s risk of skin lymphoma.",
+    "explanation": "Risk factors cited for cutaneous T-cell lymphoma include increasing age, male gender (a slight male predominance is reported), and immunosuppression (e.g. from HIV infection or organ transplantation) -- since all three are recognised contributing factors, D (\"All\") is correct.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -170459,7 +170459,7 @@
       "D": "Chronic diarrhea"
     },
     "correctAnswer": "A",
-    "explanation": "HIV symptoms: AIDS related complex (ARC) It belongs to class B of HIV symptoms. The patients at this stage have various diseases that occur because the HI virus has weakened the immune system. The following HIV signs may have patients with ARC: ● Long-lasting diarrhea (over four weeks) ● Unintended heavy weight loss ● Long lasting fever ● Night sweats ● Bacterial infections caused by bacteria ● Bacterial blood poisoning (sepsis) ● Phthisis ● Herpes zoster ● Oral hairy leukoplakia (whitish changes on the lateral tongue border) ● Fungi caused by fungi ● HIV symptoms – Women: vaginal inflammation caused by fungi, malignant changes in the cervix",
+    "explanation": "The older \"AIDS-related complex\" terminology described a constellation of symptomatic but not yet AIDS-defining HIV manifestations -- persistent generalised lymphadenopathy, recurrent candidiasis, and chronic diarrhoea among them. Ectopic pregnancy is an unrelated obstetric/gynaecologic condition with no place in this symptom complex, which is why A is correctly excluded.",
     "subject": "Medicine",
     "topic": "",
     "difficulty": "Easy",
@@ -170478,7 +170478,7 @@
       "D": "3D - CRT"
     },
     "correctAnswer": "A",
-    "explanation": "● Chordoma: ○ Slow-growing neoplasm ○ Arising from cellular remnants of notochord. ○ Arise from bone in skull base and along sp.inal cord. ○ Most common locations - ■ Cranially at clivus ■ In sacrum at bottom oRf spine ● Radiation therapy: ○ Are relatively radioresFistant ○ High doses of radiwation required to control. ○ Hence, high focus radiation like proton therapy and carbon ion therapy are preferred than conventional radiation methods. ○ Close proximity to vital structures like brain stem, requires high precision and accuracy for any planned surgical resection. ○ Radiation with high accuracy and minimal damage with maximal safety is delivered.",
+    "explanation": "Chordomas typically arise near the skull base and spine, close to critical neural structures like the brainstem and spinal cord, which makes the sharp, precisely localized dose deposition of proton beam therapy (via the Bragg peak) especially valuable for treating them while sparing surrounding tissue -- making protons the preferred radiation modality, and A correct.",
     "subject": "Radiology",
     "topic": "",
     "difficulty": "Easy",
@@ -170497,7 +170497,7 @@
       "D": "Locally invaded hepatocellular carcinoma"
     },
     "correctAnswer": "C",
-    "explanation": "The figure shows appearance of metastatic lesions from malignant neoplasm with multiple tumor masses The liver is the most common site of metastases for tumor sites that drain initially via the portal circulation. Metastatic liver disease is found in 10% to 25% of patients having surgery for primary colorectal cancer Surgical resection is the most effective therapy for metastatic colorectal cancer isolated to the liver.",
+    "explanation": "A massive pulmonary thromboembolism in this setting points to an underlying hypercoagulable state, and malignancy -- especially mucin-producing adenocarcinomas such as colonic adenocarcinoma -- is a classic cause of paraneoplastic hypercoagulability (Trousseau syndrome) that can present with both venous thromboembolism and hepatic metastases seen at autopsy. This combination is why C is correct.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Medium",
@@ -170573,7 +170573,7 @@
       "D": "CML"
     },
     "correctAnswer": "A",
-    "explanation": "● Reed-Sternberg cells ● They are usually derived from B lymphocytes, classically considered crippled germinal center B cells. ● Seen against a sea of B cells, they give the tissue moth-eaten appearance. ● They are named after Dorothy Reed Mendenhall and Carl Sternberg, who provided the definitive microscopic descriptions of Hodgkin's disease. ● Reed-Sternberg cells are large and are either multinucleated or have bibbed nucleus (thus resembling an \"owl's eye\" appearance) with prominent eosinophilic inclusion-like nucleoli. ● Reed-Sternberg cells are CD30 and CD15 positive, usumally negative for CD20 and CD45. ● The presence of these cells is necessary in the diagnosis of Hodgkin's lymphoma - the absence of Reed-Sternberg cells has very high negative pred.ictive value. ● They can also be found in reactive lymphadenopathy (such as infectious mononucleosis, carbamazepine associated lymphadenopathy) and very often in other types of non-Hodgkin lymphomas. ● A special type of Reed-Sternberg ",
+    "explanation": "Reed-Sternberg cells -- large, binucleate (\"owl-eye\") cells -- are the defining diagnostic hallmark of classic Hodgkin's lymphoma, distinguishing it from non-Hodgkin lymphomas and other haematologic conditions like sickle cell anaemia, thalassaemia, or CML, none of which feature this cell type. This is why A is correct.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
@@ -170592,7 +170592,7 @@
       "D": "Luschka's bursa"
     },
     "correctAnswer": "B",
-    "explanation": "Chordoma is a rare slow-growing neoplasm thought to arise from cellular remnants of the notochord. Chordomas can arise from bone in the skull base aned anywhere along the spine. The two most common locations are cranially at the clivus and in the sacrum at the bottom of the spine. There are three histological variants of chorRdoma: classical (or \"conventional\"), chondroid and dedifferentiated.",
+    "explanation": "Chordomas are rare tumours that arise from remnants of the notochord, the embryonic midline structure that induces the vertebral column, which is why they occur along the axial skeleton (skull base, spine, sacrum) where notochordal remnants persist. This developmental origin is why B is correct.",
     "subject": "Anatomy",
     "topic": "",
     "difficulty": "Easy",
@@ -170611,7 +170611,7 @@
       "D": "All of the above"
     },
     "correctAnswer": "D",
-    "explanation": "● Progestogen-only pills / Progestin-only Pills (POP) / Morning after pills - ○ Contraceptive pills ○ Contain only synthetic progestins & doesnt contain estrogen. ● Mechanism: ○ Mucus thickening in neck of womb: ■ Penetration of sperm to reach egg and womb becomes difficult. ○ Prevents ovulation: ○ Lining of the uterus becomes thin ■ Fertilized egg implantation is prevented ● Advantages: ○ Doesn’t interfere with breastfeeding ○ Also helps in premenstrual symptoms and painful periods",
+    "explanation": "Progesterone-only pills act through several complementary mechanisms: thickening cervical mucus to block sperm penetration, thinning the endometrial lining to impair implantation, and -- particularly at higher/desogestrel-based doses -- suppressing ovulation as well. Since all three mechanisms contribute depending on the formulation, D (\"All of the above\") is correct.",
     "subject": "Obstetrics & Gynaecology",
     "topic": "",
     "difficulty": "Easy",
@@ -170630,7 +170630,7 @@
       "D": "Mercury"
     },
     "correctAnswer": "B",
-    "explanation": "● One manifestation of chronic lead ttoxicity is the rheumatologic entity known as saturnine gout. ● Illicitly distilled beverages may inadvertently contain harmful toxins, like metallic lead. ● Lead has been known to play. role in purine metabolism & renal insufficiency",
+    "explanation": "\"Saturnine gout\" refers to gout secondary to chronic lead poisoning (\"saturnine\" from Saturn, the alchemical name for lead) -- lead impairs renal urate excretion, causing hyperuricemia and gouty arthritis. This is why B (Lead) is correct.",
     "subject": "Orthopaedics",
     "topic": "",
     "difficulty": "Easy",
@@ -170649,7 +170649,7 @@
       "D": "Cimetidine"
     },
     "correctAnswer": "B",
-    "explanation": "Risedronate bisphosphonates inhibits bone resorption by actions on osteoclast precursors in osteoporosis patients ● Risedronate: ○ Aminobisphosphonate ● Indications: ○ Prevention ● Mechanism of action: ○ Inhibits bone resorption by action on osteoclasts ○ Reduce bone remodelling ○ More potent in blocking the bone dissolution process. ● Teriparatide, an PTH analog, recombinant human PTH is also used, yet in severe cases of osteoporosis, improving the skeletal microarchitecture",
+    "explanation": "Risedronate, a bisphosphonate, works by binding to bone mineral and inhibiting osteoclast-mediated bone resorption, making it an antiresorptive agent for osteoporosis. Teriparatide, by contrast, is an anabolic (bone-forming) PTH analogue rather than an antiresorptive drug, which is why B (Risedronate) rather than A is correct for decreasing bone resorption specifically.",
     "subject": "Orthopaedics",
     "topic": "",
     "difficulty": "Easy",
@@ -170668,7 +170668,7 @@
       "D": "All of these"
     },
     "correctAnswer": "B",
-    "explanation": "A birth defect that causes an amino acid called phenylalanine to build up in the body. PKU is an autosomal recessive metabolic genetic disorder. PKU is characterized by homozygous or compound he.terozygousmutations in the gene for the hepatic enzyme phenylalanine hydroxylase (PAH), rendering it nonfunctional. This enzyme is necessary to metabolize thRe amino acid phenylalanine (Phe) to the amino acid tyrosine (Tyr). When PAH activity is reduced, phensylalanine accumulates and is converted into phenylpyruvate (also known as phenylketone), which can be idetected in the urine. The PAH gene is located on cwhromosome 12 in the bands 12q22-q24.1. More than 400 disease-causing mutations have been found in the PAH gene.",
+    "explanation": "Phenylketonuria results from deficiency of phenylalanine hydroxylase, the enzyme that normally converts phenylalanine to tyrosine; without it, phenylalanine and its metabolites (phenylketones) accumulate to toxic levels, causing intellectual disability if untreated. This is why B is correct.",
     "subject": "Biochemistry",
     "topic": "",
     "difficulty": "Easy",
@@ -170687,7 +170687,7 @@
       "D": "all of the above"
     },
     "correctAnswer": "C",
-    "explanation": "Treatment of hematoma depends on the location, symptoms, and the clinical situation. Some may require no treatment at all while others may be deemed medical emergency. Simple therapies at home may be utilized in treating superficial (under the skin) hematomas. Most injuries and bruises can be treated the acronym RICE. These measures usually help to reduce inflammation and diminish its symptoms. ● Rest ● Ice (Apply the ice or cold pack for 20 minutes at time, 4 to 8 times day.) ● Compress (Compression can be achieved by using elastic bandages.) ● Elevate (Elevation of the injured area above the level of the heart is recommended.) Medical treatment for a hematoma For certain small and symptom-free hematomas no medical treatment may be necessary. On the other hand, symptomatic hematomas or those located in certain locations sometimes require medical or surgical treatment. Even though no specific mediation is available for the treatment of hematomas, management of any related symptoms can ",
+    "explanation": "Not every intracranial haematoma requires surgical evacuation -- small, stable haematomas without significant mass effect or neurological deterioration are often managed conservatively with close monitoring, while MRI/CT imaging and serial GCS assessment guide management and prognosis. The statement that haematoma \"must be operated\" is therefore the incorrect absolute claim, making C the answer.",
     "subject": "Radiology",
     "topic": "",
     "difficulty": "Easy",
@@ -170725,7 +170725,7 @@
       "D": "all of the above"
     },
     "correctAnswer": "D",
-    "explanation": "● Left ventricular dysfunction (LVD) - Most frequent cause of cardiogenic shock Followed by, ● Acute mitral valve regurgitation ● Ventricular septal defect ● Isolated right ventricular shock ● Tamponade/ cardiac rupture",
+    "explanation": "Cardiogenic shock is not always due to primary pump failure from myocardial infarction -- mechanical complications such as acute mitral regurgitation (papillary muscle rupture), ventricular septal rupture, and isolated right ventricular shock can each independently cause the shock state. Since all three are recognised non-primary-pump-failure causes, D (\"All of the above\") is correct.",
     "subject": "Paediatrics",
     "topic": "",
     "difficulty": "Easy",
@@ -170744,7 +170744,7 @@
       "D": "cGMP"
     },
     "correctAnswer": "D",
-    "explanation": "● Nitric oxide diffuses to the surrounding smooth muscle cells, increasing cGMP ● Cyclic guanosine monophosphate (cGMP) ○ Cyclic nucleotide derived from guanosine triphosphate (GTP). ● Function: ○ cGMP acts as second messenger much like cyclic AMP. ● Mechanism of action: ○ Activation of intracellular protein kinases in remsponse to the binding of membrane- impermeable peptide hormones.",
+    "explanation": "Nitric oxide activates soluble guanylate cyclase in smooth muscle cells, raising intracellular cyclic GMP (cGMP), which triggers smooth muscle relaxation and vasodilation -- this is the core mechanism underlying NO's role in vascular tone regulation (and the basis for drugs like sildenafil, which prolong cGMP action). This is why D is correct.",
     "subject": "Physiology",
     "topic": "",
     "difficulty": "Easy",
@@ -170763,7 +170763,7 @@
       "D": "None of the above"
     },
     "correctAnswer": "A",
-    "explanation": "The traditional laboratory diagnosis is based on light microscopy, which shows diastase- resistant, periodic acid-Schiff (PAS)-positive, non-acid-fast granules in ..... The distinction could be made by acid-fast staining, which is positive for patients infected with M. avium and negative for those with Whipple's disease.",
+    "explanation": "Whipple's disease is caused by infection with Tropheryma whipplei, and its hallmark histological finding is periodic acid-Schiff (PAS)-positive foamy macrophages infiltrating the lamina propria of the small intestine, containing the bacillus and its debris. This distinctive PAS-positive macrophage pattern is why A is correct.",
     "subject": "Pathology",
     "topic": "",
     "difficulty": "Easy",
