@@ -9,6 +9,7 @@ import { Settings } from './pages/Settings';
 import { Flashcard } from './pages/Flashcard';
 import { Notes } from './pages/Notes';
 import { Revision } from './pages/Revision';
+import { Search } from './pages/Search';
 import { QuestionDetail } from './pages/QuestionDetail';
 import { useTheme } from './hooks/useTheme';
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/flashcard" element={<Flashcard />} />
           <Route path="/notes" element={<Notes />} />
           <Route path="/revision" element={<Revision />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/question/:id" element={<QuestionDetail />} />
         </Routes>
       </Layout>

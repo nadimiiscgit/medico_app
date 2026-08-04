@@ -77,6 +77,33 @@ export function Quiz() {
     return Object.entries(map).sort((a, b) => b[1].length - a[1].length);
   }, [pyqWrongIds, pyqQuestions]);
 
+  // Wrong practice answers, grouped by subject. Counts come straight from the
+  // stored subject map so this needs no fetch — the (multi-MB) practice files
+  // are only loaded when the user actually taps Practice on a subject.
+  const practiceWrongBySubject = useMemo(() => {
+    const subjectMap = progress.practiceIncorrectSubjects ?? {};
+    const counts: Record<string, number> = {};
+    Object.values(subjectMap).forEach((subject) => {
+      counts[subject] = (counts[subject] ?? 0) + 1;
+    });
+    return Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  }, [progress.practiceIncorrectSubjects]);
+
+  const practiceWrongTotal = useMemo(
+    () => practiceWrongBySubject.reduce((sum, [, n]) => sum + n, 0),
+    [practiceWrongBySubject]
+  );
+
+  // Subject the user asked to re-drill; its file loads on demand, then the
+  // effect below launches the quiz once the questions arrive.
+  const [pendingWrongSubject, setPendingWrongSubject] = useState<string | null>(null);
+
+  const {
+    questions: pendingWrongQuestions,
+    loading: pendingWrongLoading,
+    error: pendingWrongError,
+  } = usePracticeQuestions(pendingWrongSubject ? [pendingWrongSubject] : []);
+
   // Lazy-load practice questions only when a specific subject is selected
   const practiceSubjectsToLoad = useMemo(() => {
     if (selectedSource === 'pyq') return [];
@@ -113,6 +140,33 @@ export function Quiz() {
     setSession(newSession);
     setStep('quiz');
   }, [questionCount, selectedSource]);
+
+  // Once the pending subject's practice file has loaded, drill its wrong answers.
+  // Note the empty-array guard: on the render right after the subject is set,
+  // the loader hasn't flipped `loading` yet, so without it we'd see an empty
+  // pool and cancel the drill before the fetch ever started.
+  useEffect(() => {
+    if (!pendingWrongSubject) return;
+    if (pendingWrongError) {
+      setPendingWrongSubject(null);
+      return;
+    }
+    if (pendingWrongLoading || pendingWrongQuestions.length === 0) return;
+
+    const wrongSet = new Set(
+      Object.entries(progress.practiceIncorrectSubjects ?? {})
+        .filter(([, subject]) => subject === pendingWrongSubject)
+        .map(([id]) => id)
+    );
+    const pool = pendingWrongQuestions.filter((q) => wrongSet.has(q.id));
+
+    setPendingWrongSubject(null);
+    if (pool.length > 0) {
+      launchQuiz(pool, { subject: pendingWrongSubject, source: 'practice' });
+    }
+  // launchQuiz is stable for the inputs that matter here; progress map is read fresh
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pendingWrongSubject, pendingWrongLoading, pendingWrongError, pendingWrongQuestions]);
 
   const startQuiz = useCallback(() => {
     let pool = allQuestions;
@@ -196,7 +250,7 @@ export function Quiz() {
         </div>
 
         {/* ── Revise Wrong Answers section ─────────────────────── */}
-        {wrongBySubject.length > 0 && (
+        {(wrongBySubject.length > 0 || practiceWrongBySubject.length > 0) && (
           <div ref={reviseRef} className="space-y-3">
             <div className="flex items-center justify-between">
               <div>
@@ -205,26 +259,36 @@ export function Quiz() {
                   Revise Wrong Answers
                 </h2>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-                  {pyqWrongIds.length} question{pyqWrongIds.length !== 1 ? 's' : ''} across {wrongBySubject.length} subject{wrongBySubject.length !== 1 ? 's' : ''}
+                  {pyqWrongIds.length + practiceWrongTotal} question
+                  {pyqWrongIds.length + practiceWrongTotal !== 1 ? 's' : ''} across{' '}
+                  {wrongBySubject.length + practiceWrongBySubject.length} subject
+                  {wrongBySubject.length + practiceWrongBySubject.length !== 1 ? 's' : ''}
                 </p>
               </div>
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={() => launchQuiz(pyqQuestions.filter((q) => new Set(pyqWrongIds).has(q.id)))}
-              >
-                Practice All
-              </Button>
+              {wrongBySubject.length > 0 && (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => launchQuiz(pyqQuestions.filter((q) => new Set(pyqWrongIds).has(q.id)))}
+                >
+                  Practice All PYQ
+                </Button>
+              )}
             </div>
 
             <div className="space-y-2">
               {wrongBySubject.map(([subject, qs]) => (
                 <div
-                  key={subject}
+                  key={`pyq-${subject}`}
                   className="flex items-center justify-between px-4 py-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800"
                 >
                   <div>
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">{subject}</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                      {subject}
+                      <span className="ml-2 text-[10px] font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+                        PYQ
+                      </span>
+                    </p>
                     <p className="text-xs text-orange-500 dark:text-orange-400 mt-0.5">
                       {qs.length} wrong answer{qs.length !== 1 ? 's' : ''}
                     </p>
@@ -238,6 +302,43 @@ export function Quiz() {
                   </Button>
                 </div>
               ))}
+
+              {practiceWrongBySubject.map(([subject, count]) => {
+                const isLoadingThis = pendingWrongSubject === subject;
+                return (
+                  <div
+                    key={`practice-${subject}`}
+                    className="flex items-center justify-between px-4 py-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800"
+                  >
+                    <div>
+                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                        {subject}
+                        <span className="ml-2 text-[10px] font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400">
+                          Practice
+                        </span>
+                      </p>
+                      <p className="text-xs text-orange-500 dark:text-orange-400 mt-0.5">
+                        {count} wrong answer{count !== 1 ? 's' : ''}
+                      </p>
+                    </div>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      disabled={pendingWrongSubject !== null}
+                      onClick={() => setPendingWrongSubject(subject)}
+                    >
+                      {isLoadingThis ? (
+                        <>
+                          <div className="w-3.5 h-3.5 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                          Loading…
+                        </>
+                      ) : (
+                        'Practice'
+                      )}
+                    </Button>
+                  </div>
+                );
+              })}
             </div>
 
             <div className="border-t border-gray-200 dark:border-gray-800 pt-2" />

@@ -25,6 +25,7 @@ const NAV_ITEMS = [
   { to: '/quiz', icon: BookOpenIcon, label: 'Quiz Mode' },
   { to: '/flashcard', icon: LayersIcon, label: 'Flashcards' },
   { to: '/revision', icon: FileTextIcon, label: 'Revision' },
+  { to: '/search', icon: SearchIcon, label: 'Search' },
   { to: '/bookmarks', icon: BookmarkIcon, label: 'Bookmarks' },
   { to: '/notes', icon: PencilIcon, label: 'My Notes' },
   { to: '/analytics', icon: BarChart3Icon, label: 'Analytics' },
