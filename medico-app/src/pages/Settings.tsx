@@ -252,8 +252,13 @@ export function Settings() {
           <p><strong className="text-gray-900 dark:text-gray-100">NEET PG Question Bank</strong></p>
           <p>{questions.length.toLocaleString()} questions from NEET PG papers (2012–2024)</p>
           <p>Includes detailed explanations for 2012–2021 papers</p>
+          <p>117,003 practice questions across 20 subjects</p>
           <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
             Note: 2024 papers are recall-based (partial).
+          </p>
+          <p className="text-xs text-gray-400 dark:text-gray-500">
+            Practice questions are adapted from the MedMCQA dataset (Pal et al., 2022),
+            used under its open-source license.
           </p>
         </CardContent>
       </Card>
