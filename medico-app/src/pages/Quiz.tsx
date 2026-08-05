@@ -374,7 +374,7 @@ export function Quiz() {
               )}
               {selectedSource === 'practice' && (
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1.5">
-                  117,003 practice questions from MedMCQA — select a subject below
+                  Select a subject below
                 </p>
               )}
               {selectedSource === 'both' && (
@@ -388,7 +388,7 @@ export function Quiz() {
             {needsSubjectForPractice && (
               <div className="flex items-start gap-2.5 px-3 py-2.5 rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300">
                 <InfoIcon className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
-                <span>Select a specific <strong>Subject</strong> to load practice questions. "All Subjects" would load too much data.</span>
+                <span>Select a specific <strong>Subject</strong> to load practice questions. Each subject loads once, then stays available offline.</span>
               </div>
             )}
 

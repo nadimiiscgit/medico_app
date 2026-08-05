@@ -17,13 +17,15 @@ import {
   GridIcon,
   XIcon,
   SearchIcon,
+  LibraryIcon,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
   { to: '/', icon: HomeIcon, label: 'Home' },
-  { to: '/practice', icon: ClockIcon, label: 'Practice Test' },
+  { to: '/question-bank', icon: LibraryIcon, label: 'Question Bank', short: 'Q Bank' },
   { to: '/quiz', icon: BookOpenIcon, label: 'Quiz Mode' },
   { to: '/flashcard', icon: LayersIcon, label: 'Flashcards' },
+  { to: '/practice', icon: ClockIcon, label: 'Practice Test' },
   { to: '/revision', icon: FileTextIcon, label: 'Revision' },
   { to: '/search', icon: SearchIcon, label: 'Search' },
   { to: '/bookmarks', icon: BookmarkIcon, label: 'Bookmarks' },
@@ -32,9 +34,11 @@ const NAV_ITEMS = [
   { to: '/settings', icon: SettingsIcon, label: 'Settings' },
 ];
 
-// First 4 always visible in bottom bar; rest go into the "More" drawer
-const BOTTOM_NAV = NAV_ITEMS.slice(0, 4);
-const MORE_NAV = NAV_ITEMS.slice(4);
+// Bottom-bar membership is deliberate, not "the first N" — the Question Bank
+// is the main way to discover the practice questions, so it earns a slot.
+const BOTTOM_NAV_ROUTES = ['/', '/question-bank', '/quiz', '/flashcard'];
+const BOTTOM_NAV = BOTTOM_NAV_ROUTES.map((to) => NAV_ITEMS.find((i) => i.to === to)!);
+const MORE_NAV = NAV_ITEMS.filter((i) => !BOTTOM_NAV_ROUTES.includes(i.to));
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -134,7 +138,7 @@ export function Layout({ children }: LayoutProps) {
 
       {/* ── Mobile bottom nav (4 items + More) ──────────────────── */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-20 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 flex">
-        {BOTTOM_NAV.map(({ to, icon: Icon, label }) => (
+        {BOTTOM_NAV.map(({ to, icon: Icon, label, short }) => (
           <NavLink
             key={to}
             to={to}
@@ -149,7 +153,7 @@ export function Layout({ children }: LayoutProps) {
             {({ isActive }) => (
               <>
                 <Icon className={cn('w-5 h-5', isActive ? 'text-blue-600' : 'text-gray-400 dark:text-gray-500')} />
-                <span className="text-[10px]">{label.split(' ')[0]}</span>
+                <span className="text-[10px] whitespace-nowrap">{short ?? label.split(' ')[0]}</span>
               </>
             )}
           </NavLink>

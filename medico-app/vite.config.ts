@@ -57,6 +57,37 @@ export default defineConfig({
               },
             },
           },
+          // Practice question banks and explanation shards. These are large and
+          // immutable between deploys, so cache on first use — without this the
+          // in-memory cache dies on reload and every session re-downloads them.
+          {
+            urlPattern: /\/practice_[^/]+\.json$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'practice-cache-v1',
+              expiration: {
+                maxEntries: 64,
+                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+          {
+            urlPattern: /\/explanations\.json$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'explanations-cache-v1',
+              expiration: {
+                maxEntries: 1,
+                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
         ],
       },
     }),

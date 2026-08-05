@@ -71,7 +71,7 @@ export async function fetchPyqQuestions(): Promise<Question[]> {
 // ---------------------------------------------------------------------------
 
 /** Convert a subject name to the filename slug (must match split_practice_by_subject.py) */
-function subjectSlug(subject: string): string {
+export function subjectSlug(subject: string): string {
   return subject.replace(/[^A-Za-z0-9]+/g, '_').replace(/^_|_$/, '');
 }
 

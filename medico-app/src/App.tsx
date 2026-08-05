@@ -10,6 +10,7 @@ import { Flashcard } from './pages/Flashcard';
 import { Notes } from './pages/Notes';
 import { Revision } from './pages/Revision';
 import { Search } from './pages/Search';
+import { QuestionBank } from './pages/QuestionBank';
 import { QuestionDetail } from './pages/QuestionDetail';
 import { useTheme } from './hooks/useTheme';
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/notes" element={<Notes />} />
           <Route path="/revision" element={<Revision />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/question-bank" element={<QuestionBank />} />
           <Route path="/question/:id" element={<QuestionDetail />} />
         </Routes>
       </Layout>
