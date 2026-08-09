@@ -7,6 +7,7 @@ import { Button } from '../components/ui/Button';
 import { Card, CardContent } from '../components/ui/Card';
 import { Progress } from '../components/ui/Progress';
 import type { Question, OptionKey, TestSession } from '../types';
+import { isAcceptableAnswer } from '../lib/answers';
 import { shuffleArray, percentage } from '../lib/utils';
 import {
   PlayIcon,
@@ -146,7 +147,7 @@ export function Quiz() {
     quizQuestions.forEach((q) => {
       const sel = answers[q.id]?.selectedOption;
       if (sel) {
-        const isCorrect = sel === q.correctAnswer;
+        const isCorrect = isAcceptableAnswer(q, sel);
         const timeTaken = Math.round((Date.now() - startTimeRef.current) / 1000);
         recordQuestionAnswer(q.id, q.subject, q.year, isCorrect, timeTaken, q.source ?? 'pyq');
       }
@@ -163,7 +164,7 @@ export function Quiz() {
             {
               questionId: q.id,
               selectedOption: answers[q.id].selectedOption,
-              isCorrect: answers[q.id].selectedOption === q.correctAnswer,
+              isCorrect: isAcceptableAnswer(q, answers[q.id].selectedOption),
               timeTaken: 0,
               answeredAt: new Date().toISOString(),
             },
@@ -177,7 +178,7 @@ export function Quiz() {
   const currentQ = quizQuestions[currentIdx];
   const currentAnswer = currentQ ? answers[currentQ.id] : null;
   const answeredCount = Object.values(answers).filter((a) => a.selectedOption).length;
-  const correctCount = quizQuestions.filter((q) => answers[q.id]?.selectedOption === q.correctAnswer).length;
+  const correctCount = quizQuestions.filter((q) => isAcceptableAnswer(q, answers[q.id]?.selectedOption ?? null)).length;
 
   if (pyqLoading) {
     return (
@@ -404,7 +405,7 @@ export function Quiz() {
         <div className="space-y-3">
           {quizQuestions.map((q, idx) => {
             const sel = answers[q.id]?.selectedOption;
-            const isCorrect = sel === q.correctAnswer;
+            const isCorrect = isAcceptableAnswer(q, sel);
             const unattempted = !sel;
             return (
               <div

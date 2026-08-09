@@ -109,6 +109,12 @@ def styles() -> dict:
                                textColor=colors.HexColor("#1a6b3c")),
         "qexpl": ParagraphStyle("qexpl", parent=base["Normal"], fontName=BODY,
                                 fontSize=8.3, leading=11.5, textColor=colors.HexColor("#2f3a47")),
+        "flaw": ParagraphStyle("flaw", parent=base["Normal"], fontName=BODY,
+                               fontSize=8.2, leading=11.2,
+                               textColor=colors.HexColor("#7a4a00"),
+                               backColor=colors.HexColor("#fff4e0"),
+                               borderColor=colors.HexColor("#e0a44a"), borderWidth=0.6,
+                               borderPadding=5, spaceBefore=4, spaceAfter=4),
     }
     s["toc1"] = ParagraphStyle("toc1", fontName=f"{BODY}-Bold", fontSize=10.5,
                                leading=15, spaceBefore=7, textColor=ACCENT)
@@ -205,16 +211,28 @@ def _frame_template(name: str) -> PageTemplate:
 def question_box(rec: dict, expl: str, st: dict) -> KeepTogether:
     bits = [Paragraph(rich(rec["question"]), st["qstem"])]
 
+    # Twelve questions are defective as printed. Say so on the page, so a reader who
+    # picks a genuinely correct option does not conclude they got it wrong.
+    dq = rec.get("dataQuality")
+    if dq:
+        accept = dq.get("acceptableAnswers") or []
+        headline = (f"More than one answer is correct: {', '.join(accept)} all count"
+                    if len(accept) > 1 else "This question is flawed as printed")
+        bits.append(Paragraph(f"<b>{rich(headline)}</b><br/>{rich(dq.get('note', ''))}",
+                              st["flaw"]))
+
     for img in _images(rec):
         bits.append(Spacer(1, 3))
         bits.append(img)
 
+    accepted = {rec.get("correctAnswer")} | set((dq or {}).get("acceptableAnswers") or [])
     for key in ("A", "B", "C", "D"):
         if key in rec.get("options", {}):
-            mark = "&#9679;" if key == rec.get("correctAnswer") else "&#9675;"
+            mark = "&#9679;" if key in accepted else "&#9675;"
             bits.append(Paragraph(f"{mark} <b>{key}.</b> {rich(rec['options'][key])}",
                                   st["qopt"]))
-    bits.append(Paragraph(f"Answer: {rec.get('correctAnswer','?')}", st["qans"]))
+    answer_line = " or ".join(sorted(accepted - {None})) or "?"
+    bits.append(Paragraph(f"Answer: {answer_line}", st["qans"]))
     if expl:
         bits.append(Paragraph(rich(expl[:1600]), st["qexpl"]))
 

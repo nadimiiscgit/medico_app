@@ -70,7 +70,7 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
 ### Thiamine, Riboflavin & Niacin
 
 - **`neetpg-2015-s1-q0341`** (AIPGMEE 2015) — *Vitamin formed in the body -*  
-  Stored key: **A. B 1**
+  Stored key: **B. B 3**
   
   **Disagreement with the supplied key, neetpg-2015-s1-q0341.** The stem asks which vitamin is 'formed in the body'; the answer key marks B1, but the explanation attached to it argues that the best answer is B3 (niacin), because niacin alone is made by a true anabolic pathway from tryptophan, while thiamine, riboflavin, B12, biotin and vitamin K are merely synthesised by colonic bacteria. Niacin is the defensible answer. Read the stem for the words 'synthesised in the body' (niacin) versus 'synthesised by gut flora' (K, biotin, B12, B2, B1).
 
@@ -99,7 +99,7 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
 ### Vaccines, Cold Chain & Vaccine-Preventable Diseases
 
 - **`neetpg-2021-s1-q0075`** (NEET PG 2021) — *A pregnant woman whose niece contracted varicella in same house was negative for serum antibodies of varicella. What would this mean?*  
-  Stored key: **A. She is susceptible to zoster**
+  Stored key: **B. She is susceptible to chicken pox**
   
   **Disagreement with the supplied key.** neetpg-2021-s1-q0075 keys 'susceptible to zoster'. That is impossible: zoster is reactivation and requires prior primary infection. A seronegative exposed pregnant woman is **susceptible to chickenpox** and needs VZIG. Choose that if the stem reappears.
 
@@ -171,7 +171,7 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
 ### Rape, Sexual Perversions & Offences Against Women
 
 - **`neetpg-2013-s1-q0647`** (AIPGMEE 2013) — *Quantum of punishment in dowry death is ?*  
-  Stored key: **D. 10 years**
+  Stored key: **A. 7years**
 - **`neetpg-2013-s1-q0984`** (AIPGMEE 2013) — *Dowry prohibition act 1986, punishment is ?*  
   Stored key: **D. 5yr Rs 15000**
   
@@ -218,12 +218,12 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
 ### Electrolyte, Acid–Base & Renal Tubular Disorders
 
 - **`neetpg-2014-s1-q1266`** (AIPGMEE 2014) — *1 year old male child is having Heart Rate 40/min, BP 90/60. His serum Potassium = 6.5 what is the next best management?*  
-  Stored key: **C. Sodium bicarbonate**
+  Stored key: **D. Calcium chloride**
   
   **Disagreement with the supplied key (neetpg-2014-s1-q1266):** a child with potassium 6.5 mEq/L and a heart rate of 40/min has cardiotoxic hyperkalemia, and the correct first drug is **IV calcium (chloride or gluconate)** to stabilise the myocardial membrane. The paper keys sodium bicarbonate. Bicarbonate does shift potassium intracellularly and is a legitimate second step, but with bradycardia already present, calcium comes first in every current protocol including PALS. Write calcium in a clinical answer; be aware the answer key here says bicarbonate.
 
 - **`neetpg-2013-s1-q1276`** (AIPGMEE 2013) — *Which of the following is not feature of distal renal tubular acidosis*  
-  Stored key: **A. Normal anion gap**
+  Stored key: **D. Hyperkalemia**
   
   **Internal contradiction in a supplied key (neetpg-2013-s1-q1276):** the question asks what is NOT a feature of distal RTA and keys 'normal anion gap'. A normal anion gap IS a defining feature of distal RTA. The genuine odd one out among those options is hyperkalemia, since type 1 RTA causes hypokalemia. The supplied explanation itself concedes this. Learn the physiology, not the key.
 
@@ -237,19 +237,19 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
 ### Opportunistic Mycoses: Candida, Cryptococcus, Aspergillus and Mucormycosis
 
 - **`neetpg-2017-s1-q0068`** (AIPGMEE 2017) — *Which fungus is most commonly associated with orbital cellulitis in patients with diabetic ketoacidosis.*  
-  Stored key: **C. Aspergillus**
+  Stored key: **B. Mucor**
 - **`neetpg-2018-s1-q0093`** (AIPGMEE 2018) — *Which fungus is most commonly associated with orbital cellulitis in patients with diabetic ketoacidosis.*  
-  Stored key: **C. Aspergillus**
+  Stored key: **B. Mucor**
   
   **Disagreement with the supplied key (neetpg-2017-s1-q0068 and neetpg-2018-s1-q0093):** both papers key *Aspergillus* as the fungus most commonly associated with orbital cellulitis in diabetic ketoacidosis. Standard teaching (Harrison, Ananthanarayan, Khurana) makes **Mucorales - Rhizopus - the classic organism in ketoacidosis**, because acidosis liberates transferrin-bound iron that Mucorales require; *Aspergillus* is the mould of neutropenia and steroid use. Learn the correct physiology, but be aware that when both 'Mucor' and 'Rhizopus' appear as separate options alongside *Aspergillus*, the paper-setters have keyed *Aspergillus*, apparently to avoid splitting the Mucorales answer between two options.
 
 - **`neetpg-2022-s1-q0123`** (NEET PG 2022) — *A diabetic truck driver presents to you with cough and breathlessness. A diagnosis of pneumonia was confirmed, and histopathological examination revea*  
-  Stored key: **B. Mucor**
+  Stored key: **D. Aspergillus**
   
   **Disagreement with the supplied key (neetpg-2022-s1-q0123):** the stem says 'dichotomous branching' and the key says *Mucor*. **Dichotomous acute-angle branching of septate hyphae is Aspergillus.** Mucorales show broad aseptate ribbon-like hyphae with irregular wide-angle branching. The image, not the word, presumably carried the answer; if a written stem says dichotomous, answer *Aspergillus*.
 
 - **`neetpg-2013-s1-q1641`** (AIPGMEE 2013) — *History of yellow green watery discharge and pruritus?*  
-  Stored key: **B. Candida**
+  Stored key: **A. Trichomonas vaginalis**
   
   **Disagreement with the supplied key (neetpg-2013-s1-q1641):** yellow-green frothy watery discharge with pruritus is *Trichomonas vaginalis*, not *Candida*. Candidal discharge is thick, white and curdy with a normal vaginal pH below 4.5. The supplied explanation for that question is also unrelated text about Rh isoimmunisation, so treat the key as unreliable.
 
@@ -259,7 +259,7 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
   **Disagreement with a supplied explanation (neetpg-2013-s1-q0786):** the explanation claims *Penicillium* 'has no hyphae (it is a yeast-like fungus)'. This is wrong. *Penicillium* is a septate mould with a brush-like (penicillus) conidiophore; only *Talaromyces (Penicillium) marneffei* is thermally dimorphic and yeast-like at 37 degrees C. *Aspergillus* remains the answer because its branching is dichotomous at 45 degrees, not because *Penicillium* lacks hyphae.
 
 - **`neetpg-2016-s1-q1750`** (AIPGMEE 2016) — *A Bone marrow transplant recipient patientdeveloped chest infection. On HRCT 'Tree in bud appearance' is seen. Most likely causative agent is:*  
-  Stored key: **B. Pneumocystis**
+  Stored key: **C. TB**
   
   **Disagreement with the supplied key (neetpg-2016-s1-q1750):** tree-in-bud on HRCT reflects endobronchial spread and is classically tuberculosis, even in a transplant recipient; *Pneumocystis* typically gives ground-glass opacity rather than tree-in-bud. The key chose Pneumocystis on the basis of the immunocompromised setting. Know both associations and read the stem's emphasis.
 
@@ -268,7 +268,7 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
 ### Abortion, Recurrent Pregnancy Loss & MTP
 
 - **`neetpg-2021-s1-q0139`** (NEET PG 2021) — *H/o recurrent abortions at 8,11& 22 weeks. Cardiac activity is normal in all the three. H/o of preeclampsia in last pregnancy. What is the most probab*  
-  Stored key: **A. Syphilis**
+  Stored key: **B. APLA**
   
   **A wrong key on recurrent loss.** neetpg-2021-s1-q0139 - losses at 8, 11 and 22 weeks with cardiac activity documented in all three, plus pre-eclampsia in the last pregnancy - is keyed as **syphilis**, and the supplied explanation asserts that infection never causes recurrent loss except syphilis. The pattern described is **textbook obstetric antiphospholipid syndrome**: fetal death at or beyond 10 weeks after cardiac activity was seen, together with severe pre-eclampsia and placental insufficiency, are two of the three Sydney obstetric criteria. **APLA (option B) is the correct answer.** Syphilis causes stillbirth and mid-trimester loss but is screened for routinely and does not explain the pre-eclampsia.
 
@@ -372,7 +372,7 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
 ### Inherited Genetic & Chromosomal Disorders
 
 - **`neetpg-2016-s1-q0473`** (AIPGMEE 2016) — *Vitamin deficiency associated with cystic fibrosis is*  
-  Stored key: **D. B12**
+  Stored key: **A. K**
   
   **A wrong key on vitamin deficiency in cystic fibrosis.** neetpg-2016-s1-q0473 marks vitamin B12. Cystic fibrosis classically causes deficiency of the **fat-soluble vitamins A, D, E and K** through exocrine pancreatic insufficiency, so **vitamin K (option A) is the correct answer** and the supplied explanation itself concedes this. B12 malabsorption can occur through failure of R-protein cleavage but is not the classical association. Answer vitamin K.
 
@@ -401,7 +401,7 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
   
   **Male pseudohermaphroditism.** neetpg-2012-s1-q1156 keys 'cytogenetic abnormalities'. The real commonest cause of 46,XY DSD is **androgen insensitivity syndrome**, a single-gene androgen receptor defect, not a cytogenetic abnormality, and the karyotype is a normal 46,XY. The term itself is obsolete; use 46,XY DSD.
 
-- **`neetpg-2025-s1-q0132`** (NEET PG 2025) — *Q. Which of the following conditions is most likely to follow this pattern of inheritance?*  
-  Stored key: **B. Marfan syndrome**
+- **`neetpg-2025-s1-q0132`** (NEET PG 2025) — *Which of the following conditions is most likely to follow this pattern of inheritance? [Pedigree, reconstructed from an independent recall of the sam*  
+  Stored key: **C. Kearns-Sayre syndrome**
   
   **An incompletely recalled 2025 stem.** neetpg-2025-s1-q0132 asks which condition follows 'this pattern of inheritance' but the pedigree image is lost. The key, Marfan syndrome, is the only autosomal dominant option among Prader-Willi (imprinting), Kearns-Sayre (mitochondrial) and Duchenne (X-linked recessive) - use that reasoning, not the missing picture.

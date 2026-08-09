@@ -1,9 +1,34 @@
 import type { SRCard } from '../lib/spacedRepetition';
 export type { SRCard };
 
+export type OptionKey = 'A' | 'B' | 'C' | 'D';
+
+/**
+ * Set on the twelve questions that are defective as printed — two options equally
+ * correct, no correct option offered, a self-contradictory stem, or evidence lost
+ * from a memory-based recall. Absent on every other question.
+ */
+export interface DataQuality {
+  status: 'defective';
+  defect:
+    | 'multiple_correct_options'
+    | 'no_correct_option'
+    | 'contradictory_stem'
+    | 'evidence_lost'
+    | 'contested_answer';
+  /** Every option that counts as correct. Omitted when none can be defended. */
+  acceptableAnswers?: OptionKey[];
+  note: string;
+  reviewedOn: string;
+}
+
 export interface Question {
   id: string;
   source?: 'pyq' | 'practice'; // optional — existing questions.json has no field, defaults to 'pyq'
+  exam?: string;               // 'NEET PG' | 'INI CET' | 'AIPGMEE'
+  section?: string;
+  topicId?: string;
+  dataQuality?: DataQuality;
   year: number;
   shift: number;
   questionNumber: number;
@@ -22,8 +47,6 @@ export interface Question {
   imageUrl?: string;    // primary question image (2022–2024 papers)
   imageUrls?: string[]; // additional images if more than one
 }
-
-export type OptionKey = 'A' | 'B' | 'C' | 'D';
 
 export interface UserAnswer {
   questionId: string;

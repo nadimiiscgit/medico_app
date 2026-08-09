@@ -16948,7 +16948,19 @@
       "AIPGMEE",
       "Forensic Pathology",
       "Identification & Forensic Anthropology"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "multiple_correct_options",
+      "acceptableAnswers": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "note": "Every option is a valid source of nuclear DNA. Dental pulp is one of the most reliable sources in charred, buried or skeletonised remains and is standard in disaster victim identification, so the stored key of 'tooth' is the opposite of the truth.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "neetpg-2012-s1-q0661",
@@ -29768,7 +29780,17 @@
       "AIPGMEE",
       "General Pathology: Cell Injury & Genetic Disorders",
       "Inherited Genetic & Chromosomal Disorders"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "multiple_correct_options",
+      "acceptableAnswers": [
+        "C",
+        "D"
+      ],
+      "note": "Options C ('chromosomal abnormalities') and D ('cytogenetic abnormalities') are synonyms, so neither can be marked over the other. Substantively the commonest cause of male pseudohermaphroditism is androgen insensitivity, which is not offered at all.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "neetpg-2012-s1-q1157",
@@ -48736,7 +48758,13 @@
       "AIPGMEE",
       "General Pathology: Cell Injury & Genetic Disorders",
       "Inherited Genetic & Chromosomal Disorders"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "no_correct_option",
+      "note": "Read literally, an affected parent (aa) and a genotypically normal partner (AA) produce only obligate carriers, so the risk of disease is 0 per cent, which is not offered. The keyed 50 per cent would be right only if the 'normal' parent were a carrier, which the stem does not say. If a version of this reappears, read carefully whether the second parent is a carrier.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "neetpg-2013-s1-q0424",
@@ -86026,7 +86054,13 @@
       "AIPGMEE",
       "Cardiology",
       "Cardiac Arrhythmias & Conduction Disorders"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "evidence_lost",
+      "note": "The stem asks you to read an ECG that is absent from this recall, and no images exist for the 2013 paper in this corpus, so the tracing cannot be recovered. The stored explanation is incoherent besides: it describes an irregular rhythm with a fibrillatory baseline, which is atrial fibrillation, then keys ventricular fibrillation - which has no organised complexes and is a cardiac arrest, not a palpitations complaint.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "neetpg-2014-s1-q0001",
@@ -214621,7 +214655,17 @@
       "AIPGMEE",
       "General Pathology: Cell Injury & Genetic Disorders",
       "Inherited Genetic & Chromosomal Disorders"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "multiple_correct_options",
+      "acceptableAnswers": [
+        "A",
+        "B"
+      ],
+      "note": "Tuberous sclerosis is caused by loss-of-function mutations in TSC1 (hamartin) OR TSC2 (tuberin), and the stem asks for 'proteins' in the plural. TSC2 mutations are commoner and more severe. Both A and B are correct as printed.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "neetpg-2016-s1-q1170",
@@ -231094,7 +231138,7 @@
       "C": "Aspergillus",
       "D": "Rhizopus"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Fulminant, ischemia-associated orbital/rhino-orbital fungal infection in diabetic ketoacidosis is classically attributed to Mucorales (mucormycosis) -- the acidotic, hyperglycemic environment favours their invasive growth -- but Aspergillus is also a well-recognised cause of angioinvasive fungal orbital and sinus infection in diabetic and ketoacidotic patients, and is the organism specifically being tested in this question. Both produce a similar clinical picture: extensive lid swelling with chemosis, proptosis (often lateral and downward), and severe pain worsened by eye movement or pressure. Candida and Rhizopus (a genus within Mucorales) are less specifically tied to this exact presentation in the source material this question draws from.",
     "subject": "Microbiology",
     "section": "Mycology",
@@ -231105,7 +231149,17 @@
       "AIPGMEE",
       "Mycology",
       "Opportunistic Mycoses: Candida, Cryptococcus, Aspergillus and Mucormycosis"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "multiple_correct_options",
+      "acceptableAnswers": [
+        "B",
+        "D"
+      ],
+      "note": "Rhino-orbital infection in diabetic ketoacidosis is caused by the Mucorales, and the paper offers Mucor (B) and Rhizopus (D) as separate options, so neither can be the single answer. Rhizopus arrhizus is the commonest species. The stored key, Aspergillus, is wrong for this presentation.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "neetpg-2017-s1-q0069",
@@ -235878,7 +235932,7 @@
       "C": "Aspergillus",
       "D": "Rhizopus"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "B",
     "explanation": "Aspergillus\nOrbital cellulitis term is reserved for infections behind the orbital\nseptum which may or may not spill over to lids. Bacterial OC is more\ncommon in children and fulminant infection (& ischemic infarction)\nwith Mucor or Aspergillus typically affectspatients with diabetes (esp\nketoacidosis) and immunosuppression. Presentation is Extensive\nswelling of lids with chemosis often obscure proptosis (i.e. most\ncommonly lateral & downwards). Proptosis with impaired mobility\nresulting in diplopia Pain is severe, increased by movement of eye\nor pressure Unilateral, tender, warm & red periorbital edema,painful\nophthalmoplegia.",
     "subject": "Microbiology",
     "section": "Mycology",
@@ -235889,7 +235943,17 @@
       "AIPGMEE",
       "Mycology",
       "Opportunistic Mycoses: Candida, Cryptococcus, Aspergillus and Mucormycosis"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "multiple_correct_options",
+      "acceptableAnswers": [
+        "B",
+        "D"
+      ],
+      "note": "Identical item to the 2017 paper, with the same split: Mucor (B) and Rhizopus (D) are both Mucorales, and the stored key of Aspergillus is wrong for rhino-orbital disease in ketoacidosis.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "neetpg-2018-s1-q0094",
@@ -241259,7 +241323,19 @@
       "NEET PG",
       "Head & Neck",
       "Oral Cavity, Tongue, Palate & Temporomandibular Joint"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "multiple_correct_options",
+      "acceptableAnswers": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "note": "All four options are pharyngeal arch derivatives: anterior belly of digastric from the first arch, buccinator and stylohyoid from the second, levator veli palatini from the fourth. The stem has almost certainly lost the word 'first', for which the stored key would be right. Learn the arch of all four.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "neetpg-2019-s1-q0011",
@@ -257243,7 +257319,17 @@
       "NEET PG",
       "Medical & Surgical Disorders in Pregnancy",
       "Abortion, Recurrent Pregnancy Loss & MTP"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "multiple_correct_options",
+      "acceptableAnswers": [
+        "A",
+        "B"
+      ],
+      "note": "Ruptured membranes (A) and membranes prolapsed into the vagina (B) are both absolute contraindications to cervical cerclage, alongside chorioamnionitis, active labour, bleeding and lethal fetal anomaly.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "neetpg-2022-s1-q0040",
@@ -259416,7 +259502,7 @@
       "C": "Candida",
       "D": "Aspergillus"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "D",
     "explanation": "**Important note:** The classic histopathological description of **dichotomous branching at 45° angles with septate hyphae** is actually characteristic of *Aspergillus*, not Mucor. However, if the marked answer is Mucor, the intended description is likely **broad, aseptate (or sparsely septate) hyphae with wide-angle (90°) irregular branching**, which is the hallmark of Mucorales.\n\n**Mucor (option B)** is favored in a diabetic patient because uncontrolled diabetes—especially with ketoacidosis—creates an acidic, iron-rich, glucose-laden environment that impairs neutrophil function and promotes fungal growth, making mucormycosis the classic opportunistic infection in this population. Mucor characteristically produces **broad, ribbon-like, aseptate hyphae that branch at wide (right) angles** and shows a strong predilection for angioinvasion, causing tissue necrosis and infarction. The combination of diabetes plus invasive fungal disease strongly points toward Mucormycosis in NEET PG questions.\n\n**Why the others are incorrect:**\n- **A. Rhizopus** — Although Rhizopus is itself a major cause of mucormycosis and belongs to the same order, in this single-best-answer format \"Mucor\" is taken as the representative genus.\n- **C. Candida** — Produces budding yeasts with pseudohyphae, not branching hyphae, and typically causes mucocutaneous or systemic candidiasis rather than this picture.\n- **D. Aspergillus** — Shows septate hyphae with acute-angle (45°) dichotomous branching; while a strong consideration in diabetics, the answer key here points to Mucor, implying the intended morphology is the aseptate, wide-angle pattern.\n\n**Exam tip:** Remember the",
     "subject": "Microbiology",
     "section": "Mycology",
@@ -268411,7 +268497,13 @@
       "NEET PG",
       "Puerperium & Newborn",
       "Postpartum Haemorrhage"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "evidence_lost",
+      "note": "The four options survive only as the bare letters C, P, T, T, with T duplicated. The truncation is present in the source paper itself, not introduced by extraction, so it cannot be repaired from that source. The clinical scenario - term pregnancy, arrest at 8 cm, emergency caesarean, intractable postpartum haemorrhage, emergency hysterectomy - is worth knowing on its own.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "neetpg-2024-s1-q0080",
@@ -275231,7 +275323,13 @@
       "INI CET",
       "General Pathology: Cell Injury & Genetic Disorders",
       "Inherited Genetic & Chromosomal Disorders"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "contradictory_stem",
+      "note": "The stem says 'autosomal recessive mitochondrial disorder'. Primary mitochondrial DNA disease is maternally inherited and never autosomal recessive, though nuclear-encoded respiratory-chain defects can be. The systems classically affected are the ones with the highest energy demand: brain, skeletal muscle, heart, eye. Memory-based recall, so the stem is probably garbled.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "inicet-2025-s1-q0059",
@@ -282355,7 +282453,17 @@
       "NEET PG",
       "Cardiology",
       "Cardiac Arrhythmias & Conduction Disorders"
-    ]
+    ],
+    "dataQuality": {
+      "status": "defective",
+      "defect": "contested_answer",
+      "acceptableAnswers": [
+        "B",
+        "C"
+      ],
+      "note": "In NON-valvular atrial fibrillation under 48 hours, early cardioversion is acceptable, which is what the recalled key (B) reflects. But this patient has mitral stenosis, so the atrium may already hold thrombus that pre-dates the arrhythmia; in valvular AF the under-48-hour rule does not transfer, and anticoagulation with rate control, or transoesophageal echo before cardioversion, is the safer answer. Memory-based recall, so the key itself is uncertain. Know both positions.",
+      "reviewedOn": "2026-08-09"
+    }
   },
   {
     "id": "neetpg-2025-s1-q0066",
@@ -284080,14 +284188,14 @@
     "year": 2025,
     "shift": 1,
     "questionNumber": 132,
-    "question": "Q. Which of the following conditions is most likely to follow this pattern of inheritance?",
+    "question": "Which of the following conditions is most likely to follow this pattern of inheritance? [Pedigree, reconstructed from an independent recall of the same paper: the affected mother transmits the disease to all of her children, while affected fathers transmit it to none.]",
     "options": {
       "A": "Prader-Willi syndrome",
       "B": "Marfan syndrome",
       "C": "Kearns-Sayre syndrome",
       "D": "Duchenne muscular dystrophy"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "subject": "Pathology",
     "section": "General Pathology: Cell Injury & Genetic Disorders",
     "topic": "Inherited Genetic & Chromosomal Disorders",
