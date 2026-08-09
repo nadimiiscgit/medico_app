@@ -169,11 +169,21 @@ def run_rules() -> None:
         print(f"  {subject:26s} {m:5d}/{n:5d}  {m / max(1, n) * 100:5.1f}%")
 
 
-def emit_packets() -> None:
+def emit_packets(sweep: bool = False) -> None:
+    """Write packets for everything still untagged.
+
+    `sweep` is the second pass over what the first one returned UNSURE or
+    could not place. It uses smaller batches and hands over the full
+    explanation and the section each topic sits under, because the questions
+    that survive the first pass are the genuinely ambiguous ones and need the
+    extra context to be placed at all.
+    """
     tax = load_taxonomy()
     records = dataio.load_master()
     expl = dataio.load_explanations()
     sidecar = load_sidecar()
+    prefix = "sweep-" if sweep else ""
+    size = 40 if sweep else PACKET_SIZE
 
     PACKET_DIR.mkdir(parents=True, exist_ok=True)
     RETURN_DIR.mkdir(parents=True, exist_ok=True)
@@ -182,7 +192,8 @@ def emit_packets() -> None:
     # Packet numbering runs over the currently-untagged set, so re-emitting a
     # subject would rewrite the same filenames with different questions and
     # corrupt any work in flight against them.
-    have_packets = {p.name.rsplit("-", 1)[0] for p in PACKET_DIR.glob("*.json")}
+    have_packets = {p.name.rsplit("-", 1)[0] for p in PACKET_DIR.glob(f"{prefix}*.json")
+                    if p.name.startswith(prefix) == bool(prefix)}
 
     todo: dict[str, list[dict]] = collections.defaultdict(list)
     for rec in records:
@@ -196,16 +207,16 @@ def emit_packets() -> None:
     written = skipped_subjects = 0
     for subject, recs in sorted(todo.items()):
         slug = re.sub(r"[^a-z0-9]+", "-", subject.lower()).strip("-")
-        if slug in have_packets:
+        if f"{prefix}{slug}" in have_packets:
             skipped_subjects += 1
             continue
         topics = [
             {"id": t["id"], "section": t["section"], "topic": t["topic"]}
             for t in topics_for_subject(tax, subject)
         ]
-        chunks = [recs[i:i + PACKET_SIZE] for i in range(0, len(recs), PACKET_SIZE)]
+        chunks = [recs[i:i + size] for i in range(0, len(recs), size)]
         for n, chunk in enumerate(chunks, start=1):
-            name = f"{slug}-{n:02d}.json"
+            name = f"{prefix}{slug}-{n:02d}.json"
             packet = {
                 "subject": subject,
                 "topics": topics,
@@ -216,7 +227,7 @@ def emit_packets() -> None:
                         "q": r["question"][:400],
                         "opts": " | ".join(f"{k}: {v}" for k, v in r["options"].items())[:260],
                         "expl": (expl.get(r["id"], {}).get("text")
-                                 or r.get("explanation") or "")[:600],
+                                 or r.get("explanation") or "")[:1400 if sweep else 600],
                     }
                     for r in chunk
                 ],
@@ -308,13 +319,15 @@ def main() -> None:
     g = ap.add_mutually_exclusive_group(required=True)
     g.add_argument("--rules", action="store_true")
     g.add_argument("--emit-packets", action="store_true")
+    g.add_argument("--sweep", action="store_true",
+                   help="second pass over whatever the first pass left untagged")
     g.add_argument("--ingest", action="store_true")
     g.add_argument("--status", action="store_true")
     args = ap.parse_args()
     if args.rules:
         run_rules()
-    elif args.emit_packets:
-        emit_packets()
+    elif args.emit_packets or args.sweep:
+        emit_packets(sweep=args.sweep)
     elif args.ingest:
         ingest()
     else:
