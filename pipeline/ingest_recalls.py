@@ -40,14 +40,38 @@ SOURCES = {
         "shift": 1,
         "prefix": "inicet-2025-s1",
     },
+    "inicet2026": {
+        "kind": "blog",
+        "url": "https://www.diginerve.com/blogs/inicet-may-2026-recall-questions-with-answers-pdf/",
+        "cache": "inicet_2026.html",
+        "header": r"INI-?CET .*2026 Recall Questions",
+        "exam": "INI CET",
+        "year": 2026,
+        "shift": 1,
+        "prefix": "inicet-2026-s1",
+    },
     "neetpg2025": {
+        "kind": "blog",
+        "url": "https://www.diginerve.com/blogs/neet-pg-2025-recall-questions-with-answers-free-pdf-download-all-200-qs/",
+        "cache": "neetpg_2025.html",
+        "header": r"NEET PG 2025 Recall Questions",
+        "exam": "NEET PG",
+        "year": 2025,
+        "shift": 1,
+        "prefix": "neetpg-2025-s1",
+    },
+    # The same paper as neetpg2025, recalled as a topic table with no options.
+    # Kept because its topic column is an independent read on what was asked,
+    # and it covers questions the MCQ recall missed. Distinct id prefix so the
+    # two versions of the 2025 paper can never collide.
+    "neetpg2025_table": {
         "kind": "pgmasters_pdf",
         "url": "https://www.nishantbhushan.in/_files/ugd/37999e_691fe27041df45f58ab17898d4fd2c58.pdf?index=true",
         "cache": "neetpg_2025.pdf",
         "exam": "NEET PG",
         "year": 2025,
         "shift": 1,
-        "prefix": "neetpg-2025-s1",
+        "prefix": "neetpg-2025-recall",
     },
 }
 

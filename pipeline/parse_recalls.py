@@ -75,6 +75,26 @@ def normalise_subject(raw: str) -> str | None:
     return SUBJECT_ALIASES.get(key)
 
 
+# Longest first so "Community Medicine" is not shadowed by "Medicine".
+_ALIAS_BY_LENGTH = sorted(SUBJECT_ALIASES, key=len, reverse=True)
+
+
+def subject_in(line: str) -> str | None:
+    """Find a subject named anywhere in a heading.
+
+    Recall blogs are inconsistent about where the subject sits: one year writes
+    'Anatomy NEET PG 2025 Recall Questions', the next writes
+    'INI-CET Anatomy 2026 Recall Questions'. Position is not dependable, so the
+    heading is scanned for any known subject name instead.
+    """
+    key = re.sub(r"[^a-z& ]+", " ", line.lower())
+    key = " " + re.sub(r"\s+", " ", key).strip() + " "
+    for alias in _ALIAS_BY_LENGTH:
+        if f" {alias} " in key:
+            return SUBJECT_ALIASES[alias]
+    return None
+
+
 def clean_text(s: str) -> str:
     """Collapse whitespace and normalise the punctuation reportlab can't render."""
     s = unicodedata.normalize("NFKC", s)
@@ -116,7 +136,13 @@ def parse_subject_blog(raw_html: str, header_pattern: str) -> list[dict]:
     for i, line in enumerate(lines):
         if not hdr.search(line):
             continue
-        subject = normalise_subject(hdr.split(line)[0])
+        # Some years put the subject in the heading ('Anatomy NEET PG 2025
+        # Recall Questions'), others put it on its own line just above it. The
+        # length guard keeps option text that merely mentions a subject from
+        # being mistaken for a heading.
+        subject = subject_in(line)
+        if not subject and i and len(lines[i - 1]) <= 40:
+            subject = subject_in(lines[i - 1])
         if subject:
             sections.append((i, subject))
     if not sections:
