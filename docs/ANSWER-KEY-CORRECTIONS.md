@@ -14,7 +14,7 @@ silently resolved.
 against your own textbook before you rely on it — particularly doses,
 numerical cut-offs and national programme figures.
 
-**60 disagreements flagged so far.** The list grows as more
+**65 disagreements flagged so far.** The list grows as more
 chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
 
 ## Anatomy
@@ -264,6 +264,33 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
   **Disagreement with the supplied key (neetpg-2016-s1-q1750):** tree-in-bud on HRCT reflects endobronchial spread and is classically tuberculosis, even in a transplant recipient; *Pneumocystis* typically gives ground-glass opacity rather than tree-in-bud. The key chose Pneumocystis on the basis of the immunocompromised setting. Know both associations and read the stem's emphasis.
 
 ## Obstetrics & Gynaecology
+
+### Abortion, Recurrent Pregnancy Loss & MTP
+
+- **`neetpg-2021-s1-q0139`** (NEET PG 2021) — *H/o recurrent abortions at 8,11& 22 weeks. Cardiac activity is normal in all the three. H/o of preeclampsia in last pregnancy. What is the most probab*  
+  Stored key: **A. Syphilis**
+  
+  **A wrong key on recurrent loss.** neetpg-2021-s1-q0139 - losses at 8, 11 and 22 weeks with cardiac activity documented in all three, plus pre-eclampsia in the last pregnancy - is keyed as **syphilis**, and the supplied explanation asserts that infection never causes recurrent loss except syphilis. The pattern described is **textbook obstetric antiphospholipid syndrome**: fetal death at or beyond 10 weeks after cardiac activity was seen, together with severe pre-eclampsia and placental insufficiency, are two of the three Sydney obstetric criteria. **APLA (option B) is the correct answer.** Syphilis causes stillbirth and mid-trimester loss but is screened for routinely and does not explain the pre-eclampsia.
+
+- **`neetpg-2015-s1-q0678`** (AIPGMEE 2015) — *MTP can be done by single doctor till ?*  
+  Stored key: **B. 12 weeks**
+  
+  **The single-doctor limit has changed.** neetpg-2015-s1-q0678 keys 12 weeks, which was correct under the **original 1971 Act**. Under the **MTP (Amendment) Act 2021** a **single** registered medical practitioner's opinion suffices up to **20 weeks**, and two are needed only from 20 to 24 weeks. Answer 20 weeks for any current-law question; only answer 12 weeks if the stem explicitly invokes the 1971 Act.
+
+- **`neetpg-2022-s1-q0039`** (NEET PG 2022) — *A 40 year old G2P1 woman with 18 weeks of amenoorrhea comes with dilated cervix. The cervical length is 15 mm. In spite of explaining the risks, she i*  
+  Stored key: **B. Prolapse of membranes into the vasgina**
+  
+  **Two answers to the cerclage question.** neetpg-2022-s1-q0039 keys prolapse of membranes into the vagina, which is a genuine absolute contraindication, but **ruptured membranes (option A) is equally an absolute contraindication**. The question is flawed. If both appear, choose prolapsed membranes as the examiner's intent; know that both preclude cerclage.
+
+- **`neetpg-2015-s1-q1556`** (AIPGMEE 2015) — *In cervical incompetence diameter of internal os of cervix is -*  
+  Stored key: **A. 1 cm**
+  
+  **The internal os diameter in cervical incompetence.** neetpg-2015-s1-q1556 keys 1 cm. Standard Indian texts more often quote internal os dilatation of **1.5 to 2 cm** with a cervical length under 2.5 cm as the sonographic criterion, so the figure is not settled. What is settled and reliable is the **No. 8 Hegar dilator** test outside pregnancy and **funnelling** on transvaginal scan in pregnancy.
+
+- **`neetpg-2024-s1-q0081`** (NEET PG 2024) — *MTP in 21-year-old, 10-week pregnancy is to be done by medical methods by using A Intra uterine hyperosmotics B Dinoprostone*  
+  Stored key: **D. M +M**
+  
+  **Approved gestation for medical abortion.** neetpg-2024-s1-q0081 applies mifepristone and misoprostol at 10 weeks. The combination is the right answer against the alternatives offered, but in India the approved limit for the standard M plus M regimen is **9 weeks (63 days)**; beyond that, higher and repeated doses of misoprostol and inpatient supervision are required.
 
 ### Postpartum Haemorrhage
 
