@@ -93,13 +93,21 @@ topic is worth about 1.8 questions on your 200-question paper.* Across all topic
 these sum to roughly 200. So a topic marked `~0.2` is worth about a fifth of one
 question — read it if you have time, skip it without guilt if you don't.
 
-**Tier** is just that number bucketed, and it controls how much was written:
+**Tier** is your priority band. It is a *ranking* across all 573 topics, not a fixed
+score cut-off — with 573 topics sharing 200 expected questions the average topic is
+worth about 0.35, so an absolute rule would put almost everything in the bottom band
+and defeat the purpose. Tier controls how much was written and when it is scheduled:
 
-| Tier | Expected questions | Chapter | Read it when |
+| Tier | Where it ranks | Chapter | Read it when |
 |---|---|---|---|
-| **A** | ≥ 1.0 | Full teaching chapter, ~2,000 words | Always. This is the exam. |
-| **B** | 0.4 – 1.0 | Standard chapter, ~1,200 words | Always, if you are on schedule |
-| **C** | < 0.4 | Compact fact sheet, ~500 words | If time allows. **This is what you cut.** |
+| **A** | Top 20% (~115 topics) | Full teaching chapter, ~2,000 words | Always. This is the exam. |
+| **B** | Next 35% (~200 topics) | Standard chapter, ~1,200 words | Always, if you are on schedule |
+| **C** | Bottom 45% (~256 topics) | Compact fact sheet, ~500 words | If time allows. **This is what you cut.** |
+
+The two numbers answer different questions. `Tier` tells you *what to read first*;
+`expected questions` tells you *how much that topic is actually worth*. A tier-A topic
+at 0.9 and a tier-B topic at 0.85 are nearly equivalent in value — the band is a
+scheduling convenience, not a cliff.
 
 **`trend`** tells you whether a topic is *rising* (recent papers ask it more than the
 old ones did) or *falling*. A rising tier-B topic deserves more of your attention than

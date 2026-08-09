@@ -41,7 +41,13 @@ PAPER_LENGTH = 200
 
 EXAM_WEIGHT = {"NEET PG": 1.0, "INI CET": 0.6, "AIPGMEE": 0.45}
 
-TIER_A, TIER_B = 1.0, 0.4
+# Tiers are percentile bands, not absolute cut-offs. With ~570 topics sharing
+# 200 expected questions the average topic is worth ~0.35, so a fixed ">= 1.0
+# is tier A" rule leaves only a couple of dozen topics in the band that gets the
+# deepest chapters and drives the revision PDF. The bands below allocate chapter
+# depth and study order; `highYield` remains the literal expected-question count.
+TIER_A_PERCENTILE = 0.20
+TIER_B_PERCENTILE = 0.55
 
 # The PG Masters table is a second recall of NEET PG 2025, which is already
 # represented by its full-MCQ recall. Counting both would double-weight the
@@ -174,6 +180,24 @@ def build() -> dict:
             acc += weights[paper] * share
         return PAPER_LENGTH * acc / weight_sum
 
+    # Tier boundaries are set once, across every subject, so a tier means the
+    # same thing everywhere rather than being relative to its own subject.
+    all_scores = sorted(
+        (high_yield(t["id"])
+         for payload in tax["subjects"].values()
+         for sec in payload["sections"] for t in sec["topics"]),
+        reverse=True,
+    )
+    def _at(fraction: float) -> float:
+        if not all_scores:
+            return 0.0
+        return all_scores[min(len(all_scores) - 1, int(len(all_scores) * fraction))]
+
+    cut_a, cut_b = _at(TIER_A_PERCENTILE), _at(TIER_B_PERCENTILE)
+
+    def tier_of(score: float) -> str:
+        return "A" if score >= cut_a else ("B" if score >= cut_b else "C")
+
     subjects: dict[str, dict] = {}
     for subject, payload in tax["subjects"].items():
         sections = []
@@ -193,7 +217,7 @@ def build() -> dict:
                     "byYear": _by_year(counts),
                     "questionIds": sorted(ids),
                     "highYield": hy,
-                    "tier": "A" if hy >= TIER_A else ("B" if hy >= TIER_B else "C"),
+                    "tier": tier_of(hy),
                     "trend": trend(counts),
                     "estMinutes": est_minutes(hy),
                     "repeatClusters": repeat_clusters([by_id[i] for i in ids]),
@@ -215,6 +239,7 @@ def build() -> dict:
         "referenceYear": REF_YEAR,
         "examWeights": EXAM_WEIGHT,
         "recencyHalfLifeYears": round(RECENCY_TAU * math.log(2), 2),
+        "tierCutoffs": {"A": round(cut_a, 3), "B": round(cut_b, 3)},
         "papers": [
             {"exam": e, "year": y, "questions": n, "weight": round(weights[(e, y)], 3)}
             for (e, y), n in sorted(paper_total.items())
