@@ -54491,7 +54491,7 @@
       "C": "Death",
       "D": "10 years"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "10 years\n304-B IPC: Dowry death : 10 years of imprisonment which can\nextend to life.\n498-A IPC : Punishment for cruelty by husband or his relatives.\nDowry death\nIn some cases newly married girls are abused, harassed, cruelly\ntreated and tortured by the husband, in-laws and their relatives for or\nin connection with any demand for dowry. In extreme cases, the\nwoman is killed by burning or some other method. Law in relation to\ndowry death are :\nLow prescribing punishment and definition (section 304 B IPC)\nHusband or (his any) relative will be tried under section 304B, IPC\nand shall he deemed to have caused her death, if a woman dies due\nto bodily injury or burns or otherwise in suspicious circumstances\nwith in 7 years of marriage and it is shown that soon before her\ndeath she was subjected to harassment or cruelty by them, in\nconnection with, any demand for dowry. Such death shall be called\ndowry death. Punishment includes imprisonment of not less than 10\nyears, but which may extend to life imprisonment'.\nLow prescribing punishment for causing cruelty to a married\nwomen (Sec. 498A, IPC)\nHusband or (his any) relative will be tried under section 498A, IPC\nHusband or (his any) relative will be tried under section 498A, IPC\nfor causing cruelty to a married woman. Cruelty is defined as any\nwillful conduct which drives the woman to commit suicide or grave\nphysical or mental injury to her or harassment of the women with a\nview to coerce (intimidate) her for dowry. Punishment includes\nimprisonment which may extend upto 3 years and fine.",
     "subject": "Forensic Medicine",
     "section": "Sexual Offences & Infanticide",
@@ -70615,7 +70615,7 @@
       "C": "Alkaline urine",
       "D": "Hyperkalemia"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "D",
     "explanation": "I need to address an important discrepancy here. Distal (Type 1) renal tubular acidosis is characterized by **hyperchloremic metabolic acidosis with a *normal* anion gap**, because the kidney fails to excrete hydrogen ions while chloride is retained to maintain electroneutrality. Therefore, a normal anion gap is actually a defining *feature* of distal RTA, not an exception—making option A the answer the question intends as \"not a feature\" only if interpreted incorrectly; in reality, normal anion gap IS a hallmark of distal RTA.\n\nThe genuine outlier among these options is **hyperkalemia (option D)**, since classic distal (Type 1) RTA typically presents with **hypokalemia** due to increased renal potassium wasting from impaired hydrogen ion secretion and secondary hyperaldosteronism.\n\nRegarding the other choices: **Alkaline urine (option C)** is a true feature because the failure of distal H⁺ secretion prevents urinary acidification, keeping urine pH inappropriately high (>5.5). **Renal hypercalciuria (option B)** is also characteristic, as chronic acidosis mobilizes calcium from bone and impairs tubular calcium reabsorption, predisposing to nephrocalcinosis and kidney stones.\n\n**Clinical clarification for exam purposes:** Students should remember that *classic distal RTA = normal anion gap + alkaline urine + hypokalemia + hypercalciuria*. If the intended answer key lists \"Normal anion gap\" as correct, it likely reflects an error, as the true non-feature here is hyperkalemia—a finding seen instead in Type 4 (hyperkalemic distal) RTA associated with aldosterone deficiency or resistance.",
     "subject": "Medicine",
     "section": "Nephrology",
@@ -80067,7 +80067,7 @@
       "C": "Bacterial vaginosis",
       "D": "Clamydia tracomatis"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "A",
     "explanation": "Candida\nDuring Rh PregnancfstePs should be taken to prevent feto\nmaternal bleeding; -\nPrecautions during caesariansection to prevent blood spilling into\nperitoneal cavity\nProphylactic ergometine with delivery of ant shoulder to be withheld.\nAmniocentesis should be done after sonographic. Localization of\nplacenta to prevent placental injury.\nForcible attempt for external version should not be done.\nManual removal of placenta should be done gently.\nTo refrainfrom abdominal palpation in abruption placenta.",
     "subject": "Microbiology",
     "section": "Mycology",
@@ -118490,7 +118490,7 @@
       "C": "Sodium bicarbonate",
       "D": "Calcium chloride"
     },
-    "correctAnswer": "C",
+    "correctAnswer": "D",
     "explanation": "This child presents with severe hyperkalemia (K⁺ = 6.5 mEq/L) accompanied by significant bradycardia (HR 40/min), indicating the high potassium is exerting dangerous cardiac membrane effects. In a pediatric patient with symptomatic hyperkalemia, the immediate goal is to stabilize the cardiac membrane and shift potassium intracellularly. Sodium bicarbonate raises blood pH, and the resulting alkalosis drives potassium into cells in exchange for hydrogen ions, thereby lowering serum potassium and reversing the cardiotoxic effects—making it an appropriate next step in management.\n\nCalcium chloride (option D) antagonizes the membrane effects of hyperkalemia and is often a first-line agent for cardiac protection; however, in this scenario sodium bicarbonate is favored because it actively shifts potassium intracellularly and is the intended answer, particularly in pediatric protocols where calcium chloride carries risks of tissue necrosis and is generally reserved/calcium gluconate preferred. Adrenaline (option B) is used for cardiac arrest or anaphylaxis and would worsen the situation without addressing potassium, though β-agonists do have a minor potassium-shifting role. Ipratropium (option A) is an anticholinergic bronchodilator with no role in treating hyperkalemia or bradycardia from this cause. Thus, sodium bicarbonate is the best choice to reduce potassium and counter the bradycardia.",
     "subject": "Medicine",
     "section": "Nephrology",
@@ -149276,7 +149276,7 @@
       "C": "B 6",
       "D": "B 12"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": ":B:D\nAns. is 'b > a & d' i.e., B3 > B1 & B12\nThis question is confusing one (Read text below).\nNiacin (Vitamin B3) is synthesized from tryptophan inside the\nbody(endogenous).\nSome vitamins are also formed by bacterial activity in colon :-\n1. Vitamin K \n2. Riboflavin (Vitamin B2)\n3. Vitamin B12 \n4. Biotin (Vitamin B7)\n5. Thiamin (Vitamin B1)\nThus, options a, b & d all are correct here. But the best answer\namong these is niacin as it is the only vitamin which is synthesized\nby proper anabolic metabolism.",
     "subject": "Biochemistry",
     "section": "Vitamins",
@@ -196852,7 +196852,7 @@
       "C": "C",
       "D": "B12"
     },
-    "correctAnswer": "D",
+    "correctAnswer": "A",
     "explanation": "I must note an important caveat: in standard medical teaching, cystic fibrosis is classically associated with deficiency of **fat-soluble vitamins (A, D, E, and K)**, making vitamin K (option A) the most defensible answer based on established pathophysiology. However, since the designated answer is B12, the reasoning offered is that pancreatic insufficiency in CF impairs proteolytic cleavage of the R-protein–B12 complex in the duodenum, preventing B12 from binding intrinsic factor and reducing its absorption in the terminal ileum.\n\nThe underlying mechanism in CF is exocrine pancreatic insufficiency: thick secretions block pancreatic ducts, reducing delivery of lipase and proteases. Lack of proteases means R-binder is not degraded, so vitamin B12 cannot transfer to intrinsic factor for ileal uptake, and lack of lipase causes fat malabsorption affecting fat-soluble vitamins.\n\nRegarding the other options: vitamin K deficiency (A) genuinely occurs in CF due to fat malabsorption and is arguably the more textbook answer, causing coagulopathy. Vitamin C (C) is water-soluble and readily absorbed, so it is not characteristically deficient in CF. Vitamin B6 (B) deficiency is not a recognized feature of cystic fibrosis. Students should be aware that exam keys vary—remember both the fat-soluble vitamin association (A, D, E, K) and the pancreatic-insufficiency basis for B12 malabsorption.",
     "subject": "Pathology",
     "section": "General Pathology: Cell Injury & Genetic Disorders",
@@ -229534,7 +229534,7 @@
       "C": "TB",
       "D": "RSV"
     },
-    "correctAnswer": "B",
+    "correctAnswer": "C",
     "explanation": "In an immunocompromised host such as a bone marrow transplant recipient, opportunistic infections are the primary concern, and *Pneumocystis jirovecii* (PCP) is a classic pathogen in this setting due to profound T-cell/immune suppression. The \"tree-in-bud\" appearance on HRCT represents dilated, impacted centrilobular bronchioles with surrounding inflammation, reflecting endobronchial and peribronchiolar spread of infection. In a severely immunosuppressed patient with this radiological pattern, Pneumocystis is the most likely causative organism, often accompanied by diffuse ground-glass opacities.\n\nWhile tuberculosis is the most classic and common cause of tree-in-bud appearance in the general/immunocompetent population, in the specific context of a bone marrow transplant recipient with opportunistic risk, Pneumocystis is favored as the answer. Klebsiella typically causes lobar consolidation (\"bulging fissure\" sign) rather than a tree-in-bud pattern. RSV usually presents with bronchiolitis and ground-glass changes but is less characteristically associated with the tree-in-bud pattern in this exam context, making Pneumocystis the best single answer.",
     "subject": "Microbiology",
     "section": "Mycology",
@@ -271280,7 +271280,7 @@
       "C": "She is immune to chicken pox",
       "D": "She is immune to zoster"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": "A negative result indicates no detectable VZV antibody, but does not rule out acute infection. It \nshould be noted that the test usually scores negative in infected patients during the incubation \nperiod and the early stages of infection.",
     "subject": "Community Medicine",
     "section": "Communicable Diseases",
@@ -272944,7 +272944,7 @@
       "C": "TORCH",
       "D": "GDM"
     },
-    "correctAnswer": "A",
+    "correctAnswer": "B",
     "explanation": " Syphilis may seriously complicate pregnancy and result in miscarriage, stillbirth, nonimmune \nhydrops, intrauterine growth restriction and perinatal death, and serious sequelae in \nsurviving infected children. \n Kassowitz Law:-As the no. of Pregnancy loss ↑ the period at which pregnancy ends also ↑. \n Infections never leads to RPL Except Syphilis ( Perform VDRL Test). \n TORCH Test have no role in RPL.",
     "subject": "Obstetrics & Gynaecology",
     "section": "Medical & Surgical Disorders in Pregnancy",
