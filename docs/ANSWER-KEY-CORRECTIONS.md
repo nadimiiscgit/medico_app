@@ -14,7 +14,7 @@ silently resolved.
 against your own textbook before you rely on it — particularly doses,
 numerical cut-offs and national programme figures.
 
-**38 disagreements flagged so far.** The list grows as more
+**60 disagreements flagged so far.** The list grows as more
 chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
 
 ## Anatomy
@@ -30,6 +30,69 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
   Stored key: **C. Levator veli palatini**
   
   **Nuance in the supplied key, inicet-2026-s1-q0003.** Levator veli palatini is the right answer for a muscle descending from the medial lamina into the palate, but BOTH tensor and levator arise from the tube cartilage (tensor from the lateral lamina), and it is the tensor, not the levator, that actually dilates the tube on swallowing. Do not carry away the idea that levator is the tubal dilator.
+
+## Biochemistry
+
+### Lipoproteins & Dyslipidaemias
+
+- **`neetpg-2012-s1-q0300`** (AIPGMEE 2012) — *LCAT deficiency increases the following*  
+  Stored key: **A. HDL**
+- **`neetpg-2019-s1-q0040`** (NEET PG 2019) — *LCAT deficiency increases the following*  
+  Stored key: **A. HDL**
+  
+  **Disagreement with the supplied key, neetpg-2012-s1-q0300 and neetpg-2019-s1-q0040.** Both key 'LCAT deficiency increases HDL'. The correct biochemistry is the opposite: without LCAT, HDL cannot mature, apo A-I and apo A-II are catabolised rapidly, and **plasma HDL cholesterol is markedly LOW** in familial LCAT deficiency - a fact the explanation attached to the question itself states. What actually accumulates is unesterified (free) cholesterol and lecithin, together with the abnormal particle Lp-X, and what increases within the HDL fraction is only the proportion of immature discoidal pre-beta HDL. If this exact stem reappears the intended key is HDL, but do not carry away the idea that LCAT deficiency raises HDL cholesterol.
+
+- **`neetpg-2012-s1-q0299`** (AIPGMEE 2012) — *Oxidised LDL is more athreogenic because ?*  
+  Stored key: **D. Accumulates in macrophages**
+  
+  **Ambiguity in neetpg-2012-s1-q0299.** The key says oxidised LDL is more atherogenic because it 'accumulates in macrophages'. The mechanism by which it accumulates is that it binds macrophage SCAVENGER receptors, which are not downregulated by cell cholesterol - the option offered as 'binds to scavenger'. The two options describe the same fact at different levels; the accumulation and the foam cell are the atherogenic event, so the key is defensible, but if only one of the two appears choose it.
+
+- **`neetpg-2013-s1-q0300`** (AIPGMEE 2013) — *Lipid with highest mobility is ?*  
+  Stored key: **A. HDL**
+  
+  **Contradiction inside neetpg-2013-s1-q0300.** The explanation supplied there states that VLDL migrates more slowly than LDL. That is wrong: pre-beta (VLDL) is anodal to beta (LDL). The 2014 version of the same question and the 2016 question on VLDL and LDL properties both give the correct order, HDL > VLDL > LDL > chylomicrons.
+
+- **`neetpg-2015-s1-q0318`** (AIPGMEE 2015) — *Chylomicrons core is formed by ?*  
+  Stored key: **B. Triglyceride and Cholesterol**
+  
+  **Wording of neetpg-2015-s1-q0318.** The chylomicron core is triacylglycerol plus CHOLESTERYL ESTER. Free cholesterol sits on the surface with the phospholipid and apoproteins. The key's 'triglyceride and cholesterol' is loose shorthand.
+
+- **`neetpg-2013-s1-q0629`** (AIPGMEE 2013) — *Alcohol mainly increases -*  
+  Stored key: **D. HDL**
+  
+  **Nuance in neetpg-2013-s1-q0629.** Alcohol raises BOTH HDL and triglyceride. The keyed answer is HDL, but hypertriglyceridaemia is the clinically important effect and the reason alcohol appears in every list of causes of a raised triglyceride.
+
+- **`neetpg-2012-s1-q0308`** (AIPGMEE 2012) — *Adipose tissue fat metabolism is done by ?*  
+  Stored key: **B. Hormone sensitive lipase**
+  
+  **Nuance in neetpg-2012-s1-q0308.** Adipose triglyceride lipase (ATGL) catalyses the first step of intracellular lipolysis and hormone-sensitive lipase the second; hormone-sensitive lipase remains the expected answer for 'adipose tissue fat metabolism'.
+
+### Thiamine, Riboflavin & Niacin
+
+- **`neetpg-2015-s1-q0341`** (AIPGMEE 2015) — *Vitamin formed in the body -*  
+  Stored key: **A. B 1**
+  
+  **Disagreement with the supplied key, neetpg-2015-s1-q0341.** The stem asks which vitamin is 'formed in the body'; the answer key marks B1, but the explanation attached to it argues that the best answer is B3 (niacin), because niacin alone is made by a true anabolic pathway from tryptophan, while thiamine, riboflavin, B12, biotin and vitamin K are merely synthesised by colonic bacteria. Niacin is the defensible answer. Read the stem for the words 'synthesised in the body' (niacin) versus 'synthesised by gut flora' (K, biotin, B12, B2, B1).
+
+- **`neetpg-2012-s1-q0287`** (AIPGMEE 2012) — *Only vitamin that help in carbon fixation ?*  
+  Stored key: **A. Folic acid**
+  
+  **Wording problem in neetpg-2012-s1-q0287.** 'Carbon fixation' properly means fixation of carbon dioxide by a carboxylase, and that is the job of BIOTIN, not folate. Folate transfers one-carbon units (methyl, methylene, formyl) between organic molecules. Biotin was not offered as an option, which is the only reason folic acid is the key. If biotin appears in the options, choose biotin for a carboxylation reaction.
+
+- **`neetpg-2013-s1-q0348`** (AIPGMEE 2013) — *Glutathione requires which vitamin to act as antioxidant ?*  
+  Stored key: **B. Niacin**
+  
+  **Nuance in neetpg-2013-s1-q0348.** Glutathione is regenerated by glutathione reductase, which needs NADPH (from niacin) as the reductant AND FAD (from riboflavin) as its prosthetic group. Niacin is correct only because riboflavin was not among the options - and note that the very next question in this same topic asks which enzyme assay diagnoses riboflavin deficiency, and the answer is that same glutathione reductase.
+
+- **`neetpg-2012-s1-q1448`** (AIPGMEE 2012) — *Hangover following alcohol consumption can be treated with ?*  
+  Stored key: **B. Thiamine**
+  
+  **Weak evidence in neetpg-2012-s1-q1448.** Thiamine is not an established treatment for an alcoholic hangover, and the 'glutarate' mechanism quoted in the explanation is not real biochemistry. Thiamine is given to alcoholics to prevent and treat Wernicke encephalopathy. Answer thiamine if this stem reappears, but do not carry the pharmacology forward.
+
+- **`neetpg-2016-s1-q1114`** (AIPGMEE 2016) — *Wernickes encephalopathy develops secondary to accumulation of which substrate?*  
+  Stored key: **A. Glutamate**
+  
+  **Nuance in neetpg-2016-s1-q1114.** Blocking alpha-ketoglutarate dehydrogenase causes alpha-ketoglutarate, and hence glutamate, to accumulate and produce excitotoxicity - but the earliest and most measurable change in thiamine deficiency is accumulation of pyruvate and LACTATE from failure of pyruvate dehydrogenase. The explanation supplied reverses the direction of the alpha-ketoglutarate step; the answer 'glutamate' is right, the reasoning printed with it is not.
 
 ## Community Medicine
 
@@ -70,6 +133,28 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
   **Live vaccines in HIV.** neetpg-2021-s1-q0071 keys MMR at a CD4 of 50, correctly. But BCG is also live and WHO contraindicates it in HIV-infected infants; it is not the answer only because the child is long past the birth dose.
 
 ## Forensic Medicine
+
+### Death, Postmortem Changes & Time Since Death
+
+- **`neetpg-2013-s1-q0668`** (AIPGMEE 2013) — *Elderly individual living alone in temperate zone is found dead one morning. The electric heater is found to be damaged. The rigor mortis will set in:*  
+  Stored key: **A. Earlier than expected**
+  
+  **Disagreement with the supplied key (neetpg-2013-s1-q0668):** the standard rule in Reddy and Modi is that **cold delays the onset of rigor mortis and prolongs its duration**, while heat hastens onset and shortens it. The keyed answer for the elderly person found dead in a cold room with a broken heater is 'earlier than expected', reasoning that prolonged shivering and pre-terminal muscular activity in hypothermia exhaust muscle ATP before death and so accelerate rigor. Both statements are defensible in their own frame: learn 'cold delays rigor' as the general rule, and 'antemortem muscular exhaustion hastens rigor' as the exception the examiner was testing.
+
+- **`neetpg-2015-s1-q0629`** (AIPGMEE 2015) — *Time interval between somatic and molecular death is -*  
+  Stored key: **D. 1 - 2 hrs**
+  
+  **Disagreement with the supplied key (neetpg-2015-s1-q0629):** the interval between somatic and molecular death is keyed at 1-2 hours, which is the standard textbook figure, yet the same explanation lists nervous tissue dying at 5 minutes and muscle at 3 hours. Treat 1-2 hours as the answer for the *body as a whole*, and remember the organ-wise ladder separately.
+
+- **`neetpg-2018-s1-q0084`** (AIPGMEE 2018) — *What is the smell of mummified body?*  
+  Stored key: **A. Odourless**
+  
+  **Disagreement with a supplied explanation (neetpg-2018-s1-q0084):** the explanation attributes the odourlessness of a mummy to the surgical removal of the viscera and packing with natron. That describes Egyptian *artificial* mummification, not the natural mummification of forensic interest, which is odourless simply because desiccation arrests bacterial decay.
+
+- **`neetpg-2016-s1-q0639`** (AIPGMEE 2016) — *Post mortem staining gets fixed after :*  
+  Stored key: **D. 7-8 hours**
+  
+  **Disagreement with a supplied explanation (neetpg-2016-s1-q0639):** it states that fixation of lividity is due to haemolysis staining the tissues. Reddy specifically states that fixation is due to **stagnation of blood in distended capillaries and venules, not coagulation or haemolysis**. The timing, 6-8 hours, is the fact being tested.
 
 ### Identification & Forensic Anthropology
 
@@ -254,3 +339,42 @@ chapters are written; regenerate with `python3 -m pipeline.extract_corrections`.
   Stored key: **D. All of above**
   
   **Guillain-Barre treatment.** neetpg-2012-s1-q1167 keys 'all of the above' because ventilation is supportive care, not because every listed modality is disease-modifying. IVIg and plasmapheresis are equally effective and are **not** combined, and **corticosteroids do not work** in Guillain-Barre syndrome, unlike in CIDP.
+
+## Pathology
+
+### Inherited Genetic & Chromosomal Disorders
+
+- **`neetpg-2016-s1-q0473`** (AIPGMEE 2016) — *Vitamin deficiency associated with cystic fibrosis is*  
+  Stored key: **D. B12**
+  
+  **A wrong key on vitamin deficiency in cystic fibrosis.** neetpg-2016-s1-q0473 marks vitamin B12. Cystic fibrosis classically causes deficiency of the **fat-soluble vitamins A, D, E and K** through exocrine pancreatic insufficiency, so **vitamin K (option A) is the correct answer** and the supplied explanation itself concedes this. B12 malabsorption can occur through failure of R-protein cleavage but is not the classical association. Answer vitamin K.
+
+- **`neetpg-2013-s1-q0423`** (AIPGMEE 2013) — *Chance of having cystic fibrosis if only one parent is affected and other is normal -*  
+  Stored key: **B. 50%**
+  
+  **A wrong key on recurrence risk.** neetpg-2013-s1-q0423 asks the chance of cystic fibrosis when one parent is affected and the other is **normal**, and keys 50 per cent. If the second parent is genotypically normal (AA), **no child is affected** - all are carriers; the 50 per cent figure requires a carrier partner, as the explanation admits. If this stem reappears with 0 per cent among the options, choose 0 per cent.
+
+- **`neetpg-2016-s1-q1169`** (AIPGMEE 2016) — *Tuberous sclerosis is caused by mutations in the following proteins*  
+  Stored key: **A. Hamartin**
+  
+  **Tuberous sclerosis has two genes.** neetpg-2016-s1-q1169 keys hamartin (TSC1), but **tuberin (TSC2) mutations are commoner and more severe**, so options A and B are both defensible. If both appear, prefer the one the examiner is pointing at; if only one appears, either is correct. Merlin is NF2 and ankyrin is hereditary spherocytosis.
+
+- **`neetpg-2013-s1-q0424`** (AIPGMEE 2013) — *Angelman syndrome is due to -*  
+  Stored key: **C. Uniparental disomy**
+  
+  **Angelman syndrome and uniparental disomy.** neetpg-2013-s1-q0424 keys uniparental disomy. Paternal UPD is a genuine mechanism but accounts for only a small minority; the **commonest mechanism is maternal deletion of 15q11-q13**. The option list forced the UPD answer - do not carry away the idea that UPD is the usual cause.
+
+- **`inicet-2025-s1-q0058`** (INI CET 2025) — *A female carries an autosomal recessive mitochondrial disorder. Which of the following systems are most likely affected?*  
+  Stored key: **B. Cardiac and skeletal**
+  
+  **A self-contradictory stem on mitochondria.** inicet-2025-s1-q0058 speaks of an 'autosomal recessive mitochondrial disorder'. Mitochondrial DNA disease is **maternally inherited**, never autosomal; nuclear-encoded respiratory chain disease can be autosomal recessive. The keyed answer, cardiac and skeletal muscle, is right on tissue energetics, but **neurological involvement is equally characteristic**, so option C is defensible too.
+
+- **`neetpg-2012-s1-q1156`** (AIPGMEE 2012) — *Male pseudohermaphrodism most common cause -*  
+  Stored key: **D. Cytogenetic abnormalities**
+  
+  **Male pseudohermaphroditism.** neetpg-2012-s1-q1156 keys 'cytogenetic abnormalities'. The real commonest cause of 46,XY DSD is **androgen insensitivity syndrome**, a single-gene androgen receptor defect, not a cytogenetic abnormality, and the karyotype is a normal 46,XY. The term itself is obsolete; use 46,XY DSD.
+
+- **`neetpg-2025-s1-q0132`** (NEET PG 2025) — *Q. Which of the following conditions is most likely to follow this pattern of inheritance?*  
+  Stored key: **B. Marfan syndrome**
+  
+  **An incompletely recalled 2025 stem.** neetpg-2025-s1-q0132 asks which condition follows 'this pattern of inheritance' but the pedigree image is lost. The key, Marfan syndrome, is the only autosomal dominant option among Prader-Willi (imprinting), Kearns-Sayre (mitochondrial) and Duchenne (X-linked recessive) - use that reasoning, not the missing picture.
