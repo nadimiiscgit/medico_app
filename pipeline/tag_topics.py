@@ -177,8 +177,12 @@ def emit_packets() -> None:
 
     PACKET_DIR.mkdir(parents=True, exist_ok=True)
     RETURN_DIR.mkdir(parents=True, exist_ok=True)
-    for stale in PACKET_DIR.glob("*.json"):
-        stale.unlink()
+
+    # Emit is incremental: a subject that already has packets is left alone.
+    # Packet numbering runs over the currently-untagged set, so re-emitting a
+    # subject would rewrite the same filenames with different questions and
+    # corrupt any work in flight against them.
+    have_packets = {p.name.rsplit("-", 1)[0] for p in PACKET_DIR.glob("*.json")}
 
     todo: dict[str, list[dict]] = collections.defaultdict(list)
     for rec in records:
@@ -189,15 +193,19 @@ def emit_packets() -> None:
             continue
         todo[subject].append(rec)
 
-    written = 0
+    written = skipped_subjects = 0
     for subject, recs in sorted(todo.items()):
+        slug = re.sub(r"[^a-z0-9]+", "-", subject.lower()).strip("-")
+        if slug in have_packets:
+            skipped_subjects += 1
+            continue
         topics = [
             {"id": t["id"], "section": t["section"], "topic": t["topic"]}
             for t in topics_for_subject(tax, subject)
         ]
         chunks = [recs[i:i + PACKET_SIZE] for i in range(0, len(recs), PACKET_SIZE)]
         for n, chunk in enumerate(chunks, start=1):
-            name = f"{re.sub(r'[^a-z0-9]+', '-', subject.lower()).strip('-')}-{n:02d}.json"
+            name = f"{slug}-{n:02d}.json"
             packet = {
                 "subject": subject,
                 "topics": topics,
@@ -218,8 +226,9 @@ def emit_packets() -> None:
             written += 1
 
     remaining = sum(len(v) for v in todo.values())
-    print(f"{remaining} untagged questions -> {written} packets in "
-          f"{PACKET_DIR.relative_to(paths.REPO)}")
+    print(f"{remaining} untagged questions -> {written} new packets in "
+          f"{PACKET_DIR.relative_to(paths.REPO)}"
+          + (f" ({skipped_subjects} subject(s) already had packets)" if skipped_subjects else ""))
     for subject, recs in sorted(todo.items(), key=lambda kv: -len(kv[1])):
         print(f"  {subject:26s} {len(recs):5d}")
 
