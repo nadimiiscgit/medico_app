@@ -41,8 +41,23 @@ EXAM_SAMPLE_WEIGHT = {"NEET PG": 6.0, "INI CET": 6.0, "AIPGMEE": 1.0}
 RECENCY_HALFLIFE = 4.0
 REF_YEAR = 2026
 
+# Words that signal a dumping ground. They are only a problem when a topic name
+# consists of nothing else: "General and Local Anaesthetics" is a real drug
+# class and "General Toxicology" a real chapter, whereas "Others" and
+# "Miscellaneous Topics" name no content at all.
 BANNED_TOPIC_WORDS = {"others", "other", "miscellaneous", "misc", "general",
-                      "introduction", "basics", "overview"}
+                      "introduction", "basics", "overview", "assorted", "various"}
+FILLER_WORDS = {"and", "or", "of", "the", "in", "to", "with", "for", "a", "an",
+                "topics", "topic", "conditions", "disorders", "diseases",
+                "issues", "points", "facts", "concepts", "items", "aspects",
+                "related", "miscellany"}
+
+
+def is_catch_all(name: str) -> bool:
+    words = re.findall(r"[a-z]+", name.lower())
+    substantive = [w for w in words
+                   if w not in BANNED_TOPIC_WORDS and w not in FILLER_WORDS]
+    return not substantive
 
 PACKET_DIR = paths.PACKETS / "taxonomy"
 RETURN_DIR = paths.RETURNS / "taxonomy"
@@ -149,8 +164,8 @@ def validate(subject: str, payload: dict, target: int) -> list[str]:
                 problems.append(f"unnamed topic in {name!r}")
                 continue
             topic_names.append(tname)
-            if set(re.findall(r"[a-z]+", tname.lower())) & BANNED_TOPIC_WORDS:
-                problems.append(f"topic {tname!r} uses a banned catch-all word")
+            if is_catch_all(tname):
+                problems.append(f"topic {tname!r} names no actual content")
             for kw in t.get("keywords") or []:
                 keyword_owner[kw.strip().lower()].append(tname)
 
