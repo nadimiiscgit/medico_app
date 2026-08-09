@@ -5094,6 +5094,24 @@
                 "aortic aneurysm",
                 "marfan"
               ]
+            },
+            {
+              "id": "medicine.cardiology.peripheral-arterial-venous-disease",
+              "topic": "Peripheral Arterial & Venous Disease",
+              "aliases": [
+                "PAD",
+                "Deep vein thrombosis"
+              ],
+              "keywords": [
+                "ankle brachial",
+                "intermittent claudication",
+                "buerger",
+                "varicose vein",
+                "deep vein thrombosis",
+                "leriche",
+                "raynaud",
+                "thromboangiitis obliterans"
+              ]
             }
           ]
         },
@@ -5231,6 +5249,24 @@
                 "paraneoplastic syndrome",
                 "tropical pulmonary eosinophilia"
               ]
+            },
+            {
+              "id": "medicine.respiratory-medicine.sleep-disordered-breathing",
+              "topic": "Sleep-Disordered Breathing",
+              "aliases": [
+                "Obstructive sleep apnoea",
+                "OSA"
+              ],
+              "keywords": [
+                "obstructive sleep apnoea",
+                "sleep apnea",
+                "polysomnography",
+                "apnoea hypopnoea index",
+                "cpap",
+                "pickwickian",
+                "obesity hypoventilation",
+                "epworth"
+              ]
             }
           ]
         },
@@ -5330,6 +5366,25 @@
                 "liddle",
                 "osmotic demyelination",
                 "sodium deficit"
+              ]
+            },
+            {
+              "id": "medicine.nephrology.urinary-tract-infection-nephrolithiasis",
+              "topic": "Urinary Tract Infection & Nephrolithiasis",
+              "aliases": [
+                "Renal stones",
+                "Pyelonephritis"
+              ],
+              "keywords": [
+                "nephrolithiasis",
+                "renal calculus",
+                "staghorn",
+                "pyelonephritis",
+                "struvite",
+                "cystinuria",
+                "urinary tract infection",
+                "dysuria",
+                "vesicoureteric reflux"
               ]
             }
           ]
@@ -5454,6 +5509,22 @@
                 "hemochromatosis",
                 "obstructive jaundice",
                 "caroli"
+              ]
+            },
+            {
+              "id": "medicine.gastroenterology-hepatology.acute-chronic-pancreatitis",
+              "topic": "Acute & Chronic Pancreatitis",
+              "aliases": [
+                "Pancreatic disease"
+              ],
+              "keywords": [
+                "pancreatitis",
+                "ranson",
+                "balthazar",
+                "lipase",
+                "pseudocyst",
+                "pancreatic calcification",
+                "steatorrhoea"
               ]
             }
           ]
@@ -5724,6 +5795,25 @@
                 "demyelination",
                 "acetylcholine receptor antibody"
               ]
+            },
+            {
+              "id": "medicine.neurology.coma-raised-intracranial-pressure-brain-death",
+              "topic": "Coma, Raised Intracranial Pressure & Brain Death",
+              "aliases": [
+                "Head injury",
+                "Glasgow Coma Scale"
+              ],
+              "keywords": [
+                "glasgow coma",
+                "raised intracranial pressure",
+                "papilloedema",
+                "brain death",
+                "decerebrate",
+                "decorticate",
+                "cushing reflex",
+                "extradural haematoma",
+                "subdural haematoma"
+              ]
             }
           ]
         },
@@ -5822,6 +5912,40 @@
                 "vitamin k deficiency",
                 "petechiae"
               ]
+            },
+            {
+              "id": "medicine.haematology-oncology.principles-of-oncology-tumour-markers",
+              "topic": "Principles of Oncology & Tumour Markers",
+              "aliases": [
+                "Paraneoplastic syndromes",
+                "Cancer staging"
+              ],
+              "keywords": [
+                "tumour marker",
+                "tumor marker",
+                "paraneoplastic",
+                "tnm staging",
+                "ca 125",
+                "alpha fetoprotein",
+                "carcinoembryonic",
+                "performance status"
+              ]
+            },
+            {
+              "id": "medicine.haematology-oncology.bone-marrow-failure-aplastic-anaemia",
+              "topic": "Bone Marrow Failure & Aplastic Anaemia",
+              "aliases": [
+                "Pancytopenia"
+              ],
+              "keywords": [
+                "aplastic anaemia",
+                "aplastic anemia",
+                "fanconi anaemia",
+                "pancytopenia",
+                "pure red cell aplasia",
+                "myelodysplastic",
+                "antithymocyte globulin"
+              ]
             }
           ]
         },
@@ -5919,6 +6043,23 @@
                 "pegloticase",
                 "chondrocalcinosis",
                 "birefringent"
+              ]
+            },
+            {
+              "id": "medicine.rheumatology.osteoarthritis-soft-tissue-rheumatism",
+              "topic": "Osteoarthritis & Soft Tissue Rheumatism",
+              "aliases": [
+                "Degenerative joint disease"
+              ],
+              "keywords": [
+                "osteoarthritis",
+                "heberden",
+                "bouchard",
+                "osteophyte",
+                "joint space narrowing",
+                "fibromyalgia",
+                "bursitis",
+                "plantar fasciitis"
               ]
             }
           ]
@@ -6019,6 +6160,24 @@
                 "neck rigidity",
                 "basal exudates",
                 "csf glucose"
+              ]
+            },
+            {
+              "id": "medicine.infectious-diseases.sexually-transmitted-infections",
+              "topic": "Sexually Transmitted Infections",
+              "aliases": [
+                "STI",
+                "Venereal disease"
+              ],
+              "keywords": [
+                "syphilis",
+                "chancroid",
+                "lymphogranuloma venereum",
+                "gonorrhoea",
+                "donovanosis",
+                "vdrl",
+                "treponema pallidum",
+                "genital ulcer"
               ]
             }
           ]

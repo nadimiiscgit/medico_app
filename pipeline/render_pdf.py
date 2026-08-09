@@ -261,8 +261,12 @@ def data_table(section: dict, st: dict) -> KeepTogether:
     head = [Paragraph(rich(c), st["cellhead"]) for c in cols]
     body = [[Paragraph(rich(c), st["cell"]) for c in row] for row in rows]
     width = A4[0] - 36 * mm
-    table = Table([head] + body, colWidths=[width / max(1, len(cols))] * len(cols),
-                  repeatRows=1)
+    # Equal columns force long topic names to break mid-word ("Tem poromandibul
+    # ar Joint"), so callers can pass relative weights.
+    weights = section.get("widths") or [1] * len(cols)
+    total = sum(weights) or 1
+    col_widths = [width * w / total for w in weights]
+    table = Table([head] + body, colWidths=col_widths, repeatRows=1)
     table.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, 0), ACCENT),
         ("GRID", (0, 0), (-1, -1), 0.4, RULE),
@@ -443,14 +447,16 @@ def build_index_pdf(index: dict) -> Path:
     rows = [["Exam", "Year", "Questions", "Weight"]]
     for p in sorted(index["papers"], key=lambda p: -p["weight"]):
         rows.append([p["exam"], str(p["year"]), str(p["questions"]), f"{p['weight']:.2f}"])
-    flow.append(data_table({"columns": rows[0], "rows": rows[1:]}, st))
+    flow.append(data_table({"columns": rows[0], "rows": rows[1:],
+                            "widths": [12, 6, 8, 6]}, st))
 
     flow.append(Paragraph("Top 100 topics", st["h1"]))
     rows = [["#", "Topic", "Subject", "Expected", "Tier", "PYQs", "Trend"]]
     for i, t in enumerate(flat[:100], start=1):
         rows.append([str(i), t["topic"], t["subject"], f"{t['highYield']:.2f}",
                      t["tier"], str(t["questionCount"]), t["trend"]])
-    flow.append(data_table({"columns": rows[0], "rows": rows[1:]}, st))
+    flow.append(data_table({"columns": rows[0], "rows": rows[1:],
+                            "widths": [3, 29, 13, 8, 5, 5, 7]}, st))
 
     flow.append(PageBreak())
     flow.append(Paragraph("Every topic, by subject", st["h1"]))
@@ -464,7 +470,8 @@ def build_index_pdf(index: dict) -> Path:
             for t in sec["topics"]:
                 rows.append([sec["section"], t["topic"], f"{t['highYield']:.2f}",
                              t["tier"], str(t["questionCount"])])
-        flow.append(data_table({"columns": rows[0], "rows": rows[1:]}, st))
+        flow.append(data_table({"columns": rows[0], "rows": rows[1:],
+                                "widths": [22, 30, 8, 4, 5]}, st))
 
     doc.multiBuild(flow, canvasmaker=NumberedCanvas)
     return out
@@ -518,7 +525,8 @@ def build_calendar_pdf(chapter_pages: dict[str, int] | None = None) -> Path | No
                 page = chapter_pages.get(t["topicId"])
                 rows.append(["☐", t["topic"], t["section"], t["tier"],
                              str(t["minutes"]), str(page) if page else "—"])
-            flow.append(data_table({"columns": rows[0], "rows": rows[1:]}, st))
+            flow.append(data_table({"columns": rows[0], "rows": rows[1:],
+                                    "widths": [2, 31, 23, 5, 5, 5]}, st))
 
         if day["revisit"]:
             flow.append(Paragraph(

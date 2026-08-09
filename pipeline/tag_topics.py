@@ -141,7 +141,7 @@ def run_rules() -> None:
         if not entries:
             stats["no-taxonomy"] += 1
             continue
-        if sidecar.get(rec["id"], {}).get("source") == "llm":
+        if sidecar.get(rec["id"], {}).get("source") in ("llm", "sweep"):
             continue                      # never overwrite a classifier result
         topic_id, hits = rule_match(searchable(rec, expl), entries)
         if topic_id:
@@ -215,10 +215,23 @@ def emit_packets(sweep: bool = False) -> None:
         if f"{prefix}{slug}" in have_packets:
             skipped_subjects += 1
             continue
-        topics = [
-            {"id": t["id"], "section": t["section"], "topic": t["topic"]}
-            for t in topics_for_subject(tax, subject)
-        ]
+        if sweep:
+            # The sweep may move a question to a different subject, so it is
+            # offered every topic. A large share of what the first pass could
+            # not place is not ambiguous at all — it is filed under the wrong
+            # subject, because the original extraction inherited the section
+            # headings of the papers, and those file Ophthalmology, ENT and
+            # Orthopaedics under "Surgery".
+            topics = [
+                {"id": t["id"], "subject": s, "section": t["section"], "topic": t["topic"]}
+                for s in sorted(tax["subjects"])
+                for t in topics_for_subject(tax, s)
+            ]
+        else:
+            topics = [
+                {"id": t["id"], "section": t["section"], "topic": t["topic"]}
+                for t in topics_for_subject(tax, subject)
+            ]
         chunks = [recs[i:i + size] for i in range(0, len(recs), size)]
         for n, chunk in enumerate(chunks, start=1):
             name = f"{prefix}{slug}-{n:02d}.json"
@@ -258,7 +271,12 @@ def ingest() -> None:
     added = rejected = unsure = 0
     problems = collections.Counter()
 
+    reassigned = 0
     for ret in sorted(RETURN_DIR.glob("*.json")):
+        # Only the sweep is allowed to move a question to a different subject.
+        # On the first pass a foreign topic id means the model copied the wrong
+        # string, which is a hallucination rather than a judgement call.
+        from_sweep = ret.name.startswith("sweep-")
         with open(ret) as f:
             payload = json.load(f)
         rows = payload if isinstance(payload, list) else payload.get("assignments", [])
@@ -276,20 +294,25 @@ def ingest() -> None:
                 rejected += 1
                 continue
             subject, section, name = lookup[topic_id]
-            # A topic from another subject is a hallucination, not a judgement call.
-            if subject != records[qid].get("subject"):
+            moved = subject != records[qid].get("subject")
+            if moved and not from_sweep:
                 problems["cross-subject-topic"] += 1
                 rejected += 1
                 continue
+            if moved:
+                reassigned += 1
             sidecar[qid] = {
                 "subject": subject, "section": section, "topic": name,
                 "topicId": topic_id,
-                "confidence": row.get("confidence", "medium"), "source": "llm",
+                "confidence": row.get("confidence", "medium"),
+                "source": "sweep" if from_sweep else "llm",
+                **({"movedFrom": records[qid].get("subject")} if moved else {}),
             }
             added += 1
 
     save_sidecar(sidecar)
-    print(f"ingested {added}, rejected {rejected}, unsure {unsure}")
+    print(f"ingested {added}, rejected {rejected}, unsure {unsure}, "
+          f"moved to another subject {reassigned}")
     for k, v in problems.most_common():
         print(f"  {k}: {v}")
     status()

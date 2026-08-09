@@ -74,56 +74,88 @@ def subject_queues(index: dict) -> dict[str, list[dict]]:
 def build(daily_minutes: int) -> dict:
     index = load_index()
     queues = subject_queues(index)
-    new_budget = int(daily_minutes * (1 - REVISIT_SHARE))
-
     remaining = {s: sum(t["minutes"] for t in q) for s, q in queues.items()}
     scheduled: dict[int, list[dict]] = collections.defaultdict(list)
+    # Revisit load is decided by what was scheduled 3 and 9 days earlier, so it
+    # has to be booked as those days are filled and subtracted from the budget
+    # here. Adding it afterwards is what made days overrun by up to 2 hours.
+    revisit_owed: dict[int, int] = collections.defaultdict(int)
+    revisits: dict[int, list[dict]] = collections.defaultdict(list)
 
     for day in range(1, FIRST_PASS_DAYS + 1):
         used = 0
-        # Subjects with the most work left go first, so the heavy subjects are
-        # spread across the fortnight instead of piling up at the end.
-        order = sorted(queues, key=lambda s: -remaining[s])
-        picked_subjects = 0
-        for subject in order:
-            if used >= new_budget or picked_subjects >= SUBJECTS_PER_DAY:
+        new_budget = max(60, daily_minutes - revisit_owed[day])
+
+        def take(nxt: dict, subject: str) -> None:
+            nonlocal used
+            queues[subject].pop(0)
+            scheduled[day].append(nxt)
+            used += nxt["minutes"]
+            remaining[subject] -= nxt["minutes"]
+            for offset in REVISIT_OFFSETS:
+                target = day + offset
+                if target <= TOTAL_DAYS:
+                    minutes = max(3, round(nxt["minutes"] * 0.25))
+                    revisits[target].append({**nxt, "minutes": minutes})
+                    revisit_owed[target] += minutes
+
+        # Three passes, the first respecting each tier's window so tier A is
+        # genuinely front-loaded, the later ones relaxing constraints only if
+        # the day is still short — an empty afternoon in week one is a worse
+        # outcome than starting tier B three days early. Three passes, each relaxing one constraint only if the day is still
+        # short. Total first-pass reading is 113 h against 150 h of first-pass
+        # capacity, so the material does fit — leaving a day underfilled just
+        # pushes work into an impossible day 15.
+        for respect_window, cap_per_subject in ((True, True), (False, True), (False, False)):
+            if used >= new_budget * 0.95:
                 break
-            queue = queues[subject]
-            if not queue:
-                continue
-            share = max(1, new_budget // SUBJECTS_PER_DAY)
-            spent = 0
-            took = False
-            while queue and spent < share and used < new_budget:
-                nxt = queue[0]
-                lo, hi = TIER_WINDOW[nxt["tier"]]
-                # Let a tier slip late rather than leave the day underfilled.
-                if day < lo and any(
-                    TIER_WINDOW[t["tier"]][0] <= day for q in queues.values() for t in q[:1]
-                ):
+            # Subjects with the most work left go first, so heavy subjects are
+            # spread across the fortnight instead of piling up at the end.
+            order = sorted(queues, key=lambda s: -remaining[s])
+            picked_subjects = 0
+            for subject in order:
+                if used >= new_budget or (cap_per_subject and picked_subjects >= SUBJECTS_PER_DAY):
                     break
-                queue.pop(0)
-                scheduled[day].append(nxt)
-                spent += nxt["minutes"]
-                used += nxt["minutes"]
-                remaining[subject] -= nxt["minutes"]
-                took = True
-            if took:
-                picked_subjects += 1
+                queue = queues[subject]
+                if not queue:
+                    continue
+                share = max(1, new_budget // SUBJECTS_PER_DAY) if cap_per_subject else new_budget
+                spent = 0
+                took = False
+                while queue:
+                    nxt = queue[0]
+                    if respect_window and day < TIER_WINDOW[nxt["tier"]][0]:
+                        break
+                    # Stop before overshooting rather than after — but never
+                    # leave a day completely empty.
+                    if used + nxt["minutes"] > new_budget and used > 0:
+                        break
+                    if spent + nxt["minutes"] > share and spent > 0:
+                        break
+                    take(nxt, subject)
+                    spent += nxt["minutes"]
+                    took = True
+                if took:
+                    picked_subjects += 1
 
-    # Anything left over lands on the last first-pass day rather than vanishing.
+    # Whatever the per-day caps could not absorb is spread into the days with
+    # the most room left, rather than dumped on the last day — which produced a
+    # 14-hour day 15 while day 11 sat two hours under budget.
     leftovers = [t for q in queues.values() for t in q]
-    scheduled[FIRST_PASS_DAYS].extend(leftovers)
+    if leftovers:
+        def spare(day: int) -> int:
+            used_new = sum(t["minutes"] for t in scheduled[day])
+            return daily_minutes - used_new - revisit_owed[day]
 
-    revisits: dict[int, list[dict]] = collections.defaultdict(list)
-    for day, topics in scheduled.items():
-        for offset in REVISIT_OFFSETS:
-            target = day + offset
-            if target <= TOTAL_DAYS:
-                for t in topics:
-                    revisits[target].append({
-                        **t, "minutes": max(3, round(t["minutes"] * 0.25))
-                    })
+        for topic in sorted(leftovers, key=lambda t: {"A": 0, "B": 1, "C": 2}[t["tier"]]):
+            day = max(range(1, FIRST_PASS_DAYS + 1), key=spare)
+            scheduled[day].append(topic)
+            for offset in REVISIT_OFFSETS:
+                target = day + offset
+                if target <= TOTAL_DAYS:
+                    minutes = max(3, round(topic["minutes"] * 0.25))
+                    revisits[target].append({**topic, "minutes": minutes})
+                    revisit_owed[target] += minutes
 
     days = []
     for day in range(1, TOTAL_DAYS + 1):
@@ -185,7 +217,13 @@ def main() -> None:
     total_topics = sum(len(b["topics"]) for d in calendar["days"] for b in d["blocks"])
     print(f"{total_topics} topics across {FIRST_PASS_DAYS} first-pass days, "
           f"{args.hours:g} h/day -> {paths.STUDY_CALENDAR.relative_to(paths.REPO)}")
-    over = [d for d in calendar["days"] if d["totalMinutes"] > calendar["dailyMinutes"]]
+    # Topics are 8-40 minute blocks, so a day can rarely be packed to the exact
+    # minute. A few minutes over is granularity, not overload; flag only a real
+    # overrun.
+    tolerance = int(calendar["dailyMinutes"] * 1.05)
+    over = [d for d in calendar["days"] if d["totalMinutes"] > tolerance]
+    worst = max(d["totalMinutes"] for d in calendar["days"])
+    print(f"longest day {worst} min against a {calendar['dailyMinutes']} min target")
     if over:
         print(f"WARNING: {len(over)} day(s) exceed the budget: "
               + ", ".join(f"day {d['day']} ({d['totalMinutes']}m)" for d in over[:5]))

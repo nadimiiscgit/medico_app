@@ -22,7 +22,10 @@ import json
 
 from . import dataio, paths
 
-CHANGED_FIELDS = ["topic", "section", "topicId", "tags"]
+# `subject` is included because the sweep may move a question to a different
+# subject: the original extraction inherited the papers' section headings, and
+# those file Ophthalmology, ENT and Orthopaedics under "Surgery".
+CHANGED_FIELDS = ["subject", "topic", "section", "topicId", "tags"]
 
 
 def main() -> None:
@@ -45,19 +48,22 @@ def main() -> None:
     original = dataio.load_master()
     records = dataio.load_master()
 
-    applied = skipped = 0
+    applied = skipped = moved = 0
     for rec in records:
         tag = sidecar.get(rec["id"])
         if not tag or order.get(tag.get("confidence", "medium"), 1) < floor:
             skipped += 1
             continue
+        if tag.get("movedFrom"):
+            rec["subject"] = tag["subject"]
+            moved += 1
         rec["topic"] = tag["topic"]
         rec["section"] = tag["section"]
         rec["topicId"] = tag["topicId"]
         rec["tags"] = [rec["exam"], tag["section"], tag["topic"]]
         applied += 1
 
-    print(f"applied {applied}, skipped {skipped}, total {len(records)}")
+    print(f"applied {applied}, skipped {skipped}, moved subject {moved}, total {len(records)}")
     untagged = collections.Counter(
         r["subject"] for r in records if not r.get("topicId")
     )
