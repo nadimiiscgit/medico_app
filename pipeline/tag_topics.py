@@ -192,8 +192,13 @@ def emit_packets(sweep: bool = False) -> None:
     # Packet numbering runs over the currently-untagged set, so re-emitting a
     # subject would rewrite the same filenames with different questions and
     # corrupt any work in flight against them.
-    have_packets = {p.name.rsplit("-", 1)[0] for p in PACKET_DIR.glob(f"{prefix}*.json")
-                    if p.name.startswith(prefix) == bool(prefix)}
+    # Only the current pass's own packets count: a first-pass packet must not
+    # make the sweep think that subject is done, and vice versa.
+    have_packets = set()
+    for existing in PACKET_DIR.glob("*.json"):
+        is_sweep = existing.name.startswith("sweep-")
+        if is_sweep == sweep:
+            have_packets.add(existing.name.rsplit("-", 1)[0])
 
     todo: dict[str, list[dict]] = collections.defaultdict(list)
     for rec in records:
