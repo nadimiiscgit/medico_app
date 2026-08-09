@@ -210816,5 +210816,3845 @@
     "topic": "",
     "difficulty": "Easy",
     "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0001",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 1,
+    "question": "The highlighted structure in the provided image articulates with which bone?",
+    "options": {
+      "A": "Occipital bone",
+      "B": "Temporal bone",
+      "C": "Axis",
+      "D": "Sphenoid bone"
+    },
+    "correctAnswer": "A",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0003",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 3,
+    "question": "In the given image, which region is correctly paired with its corresponding brain structure? Middle cerebellar peduncle Fasciculus cuneatus Superior cerebellar peduncle Inferior colliculus",
+    "options": {
+      "A": "1-A, 2-B, 3-C, 4-D",
+      "B": "1-B, 2-C, 3-A, 4-D",
+      "C": "1-D, 2-C, 3-A, 4-B",
+      "D": "1-C, 2-D, 3-C, 4-A"
+    },
+    "correctAnswer": "C",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0004",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 4,
+    "question": "Which of the following muscles is NOT typically associated with dysphagia or dysarthria?",
+    "options": {
+      "A": "Stylopharyngeus",
+      "B": "Tensor veli palatini",
+      "C": "Palatopharyngeus",
+      "D": "Pharyngeal constrictor"
+    },
+    "correctAnswer": "B",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0005",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 5,
+    "question": "A muscle of mastication involved in opening the mouth exhibits the following characteristics. Identify the incorrect statement about it:",
+    "options": {
+      "A": "Attached to the medial surface of the mandible ramus",
+      "B": "Receives innervation from the mandibular nerve",
+      "C": "Attached close to the temporomandibular joint",
+      "D": "Aids in mandibular protrusion"
+    },
+    "correctAnswer": "A",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0006",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 6,
+    "question": "In the illustrated image, which of the following structures is NOT associated with the area marked by the arrow?",
+    "options": {
+      "A": "Internal pudendal vessels",
+      "B": "Tendon of the obturator externus",
+      "C": "Ischiococcygeus",
+      "D": "Pudendal nerve"
+    },
+    "correctAnswer": "B",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0007",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 7,
+    "question": "Match the following embryonic aortic arches with their respective adult derivatives: A. 1st Arch 1. Maxillary artery B. 2nd Arch 2. Common carotid artery C. 3rd Arch 3. Right subclavian artery (on the right side) D. 4th Arch 4. Hyoid and stapedial arteries",
+    "options": {
+      "A": "A-2, B-4, C-1, D-3",
+      "B": "A-1, B-4, C-2, D-3",
+      "C": "A-1, B-4, C-3, D-2",
+      "D": "A-1, B-3, C-2, D-4"
+    },
+    "correctAnswer": "B",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0009",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 9,
+    "question": "Marked structure separates which of the following:",
+    "options": {
+      "A": "Third ventricle",
+      "B": "Lateral ventricle",
+      "C": "Fourth ventricle",
+      "D": "Cisterna magna"
+    },
+    "correctAnswer": "B",
+    "subject": "Anatomy",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0012",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 12,
+    "question": "Which GI secretions have the lowest sodium concentration?",
+    "options": {
+      "A": "Stomach",
+      "B": "Ileac secretions",
+      "C": "Duodenum",
+      "D": "Saliva"
+    },
+    "correctAnswer": "D",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0013",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 13,
+    "question": "Which of the following neurotransmitters is correctly matched with its synthesis site?",
+    "options": {
+      "A": "Acetylcholine- substantia nigra",
+      "B": "Serotonin-Raphe nucleus",
+      "C": "Norepinephrine- Nucleus basalis of Meynert",
+      "D": "Dopamine - Locus ceruleus"
+    },
+    "correctAnswer": "B",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0014",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 14,
+    "question": "Which discovery was awarded the Nobel Prize in Physiology for 2025?",
+    "options": {
+      "A": "Peripheral Immune Tolerance",
+      "B": "mRNA's role in post-translational modifications",
+      "C": "RNA polymerization",
+      "D": "Cancer chemotherapy"
+    },
+    "correctAnswer": "A",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0015",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 15,
+    "question": "Which hypothalamic nuclei are involved in leptin resistance?",
+    "options": {
+      "A": "Ventromedial nucleus (Satiety centre, decreases hunger)",
+      "B": "Arcuate nucleus",
+      "C": "Paraventricular nucleus (PVN)",
+      "D": "Lateral hypothalamic nucleus"
+    },
+    "correctAnswer": "B",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0016",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 16,
+    "question": "In the cardiac cycle, when pressure increases while volume remains constant, which phase is this?",
+    "options": {
+      "A": "Isovolumetric contraction",
+      "B": "Isovolumetric relaxation",
+      "C": "Rapid ventricular filling",
+      "D": "Ventricular ejection"
+    },
+    "correctAnswer": "A",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0017",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 17,
+    "question": "Systolic blood pressure slightly falls during normal inspiration due to?",
+    "options": {
+      "A": "Decreased pulmonary compliance",
+      "B": "Increased left ventricular filling",
+      "C": "Increased venous return to the right heart causes a transient reduction in left ventricular filling",
+      "D": "Increased systemic vascular resistance"
+    },
+    "correctAnswer": "C",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0018",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 18,
+    "question": "In Myasthenia Gravis, why does repetitive nerve stimulation show a decremental response?",
+    "options": {
+      "A": "Decreased release of acetylcholine from the presynaptic terminal",
+      "B": "Increased degradation of acetylcholine by acetylcholinesterase",
+      "C": "Reduced number of functional acetylcholine receptors at the postsynaptic membrane",
+      "D": "Autoantibodies blocking presynaptic calcium channels"
+    },
+    "correctAnswer": "A",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0019",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 19,
+    "question": "In an oral glucose tolerance test (OGTT), blood glucose values are plotted over time. Which graph is most consistent with Diabetes Mellitus?",
+    "options": {
+      "A": "A, B, C, D",
+      "B": "B, C, D only",
+      "C": "B, D only",
+      "D": "C, D only"
+    },
+    "correctAnswer": "C",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0020",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 20,
+    "question": "The image below is an example of which of the transport systems?",
+    "options": {
+      "A": "Sodium-glucose co-transporter",
+      "B": "Organic anion transporter",
+      "C": "GLUT 4",
+      "D": "P glycoprotein"
+    },
+    "correctAnswer": "D",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0021",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 21,
+    "question": "Magnesium is primarily regulated by which of the following processes?",
+    "options": {
+      "A": "Urinary reabsorption",
+      "B": "Intestinal absorption",
+      "C": "Dietary intake",
+      "D": "Bone resorption"
+    },
+    "correctAnswer": "A",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0022",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 22,
+    "question": "Which of the following represents the most stable and long-term Homeostasis mechanism in humans?",
+    "options": {
+      "A": "Urine output",
+      "B": "Respiratory rate (RR)",
+      "C": "Oxygen saturation (SpO2)",
+      "D": "Heart rate"
+    },
+    "correctAnswer": "A",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0023",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 23,
+    "question": "The below shown left ventricular pressure-volume (PV) loop is seen in -",
+    "options": {
+      "A": "Increased ventricular contractility",
+      "B": "Increased venous return",
+      "C": "Increased peripheral vascular resistance",
+      "D": "Increased aortic compliance"
+    },
+    "correctAnswer": "C",
+    "subject": "Physiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0024",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 24,
+    "question": "Which of the following represents the correct sequence of steps in the polymerase chain reaction (PCR)?",
+    "options": {
+      "A": "Denaturation -> Annealing -> Extension",
+      "B": "Denaturation -> Annealing -> Extension -> Hybridization",
+      "C": "Annealing -> Extension -> Denaturation",
+      "D": "Extension -> Denaturation -> Annealing"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0025",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 25,
+    "question": "In rheumatoid arthritis, increased expression of TNF-alpha and IL-6 in synovial tissue is most likely due to which epigenetic mechanism?",
+    "options": {
+      "A": "Activation of DNA methylation",
+      "B": "Inhibition of DNA methylation",
+      "C": "Activation of histone deacetylation",
+      "D": "Inhibition of histone acetylation"
+    },
+    "correctAnswer": "B",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0026",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 26,
+    "question": "Cancer cells showing an increased RNA transcript length compared to normal cells is most likely due to:",
+    "options": {
+      "A": "Polyadenylation",
+      "B": "Alternative RNA splicing",
+      "C": "Gene amplification",
+      "D": "Gene silencing"
+    },
+    "correctAnswer": "B",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0027",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 27,
+    "question": "The M13 bacteriophage vector used to identify specific gene sequences (e.g., viral spike proteins) represents which type of expression system?",
+    "options": {
+      "A": "Phage expression",
+      "B": "Bacterial expression",
+      "C": "Yeast expression",
+      "D": "Mammalian expression"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0028",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 28,
+    "question": "During B-cell maturation, expression of a single immunoglobulin heavy-chain allele ensuring antigen specificity occurs by which process?",
+    "options": {
+      "A": "V(D)J rearrangement",
+      "B": "Alternate splicing of RNA transcripts",
+      "C": "Alternate polyadenylation sites",
+      "D": "Somatic hypermutation"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0029",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 29,
+    "question": "The 2025 Nobel Prize in Medicine was awarded for which discovery?",
+    "options": {
+      "A": "Peripheral immune tolerance",
+      "B": "Micro RNA",
+      "C": "mRNA vaccine technology",
+      "D": "Targeted immunotherapy"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0030",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 30,
+    "question": "Match the following amino acids with their respective derivatives: Substance Derivative A. Tyrosine 1. Thyroid hormone B. Tryptophan 2. Melatonin C. Glycine 3. Taurine D. Cysteine 4. Creatine Options:",
+    "options": {
+      "A": "A. A-1, B-2, C-3, D-4",
+      "B": "B. A-1, B-2, C-4, D-3",
+      "C": "C. A-2, B-1, C-4, D-3",
+      "D": "D. A-2, B-1, C-3, D-4"
+    },
+    "correctAnswer": "B",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0031",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 31,
+    "question": "Plasma magnesium levels are primarily maintained through:",
+    "options": {
+      "A": "Renal reabsorption",
+      "B": "Gastrointestinal absorption",
+      "C": "Bone resorption",
+      "D": "Dietary intake"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0032",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 32,
+    "question": "Deficiency of which enzyme results in increased 2,3-BPG levels and low glucose values in vitro?",
+    "options": {
+      "A": "Pyruvate kinase",
+      "B": "Phosphoglycerate kinase",
+      "C": "G6PD",
+      "D": "Hexokinase"
+    },
+    "correctAnswer": "B",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0033",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 33,
+    "question": "A 6-month-old infant presents with hepatomegaly, a doll-like face, lactic acidosis, and anaemia. Liver biopsy reveals hepatocytes packed with glycogen and lipids, suggesting glucose-6-phosphatase deficiency. Which laboratory finding is most characteristic of this disorder?",
+    "options": {
+      "A": "Fasting hypoglycemia",
+      "B": "Elevated cholesterol levels",
+      "C": "Low lactate concentration",
+      "D": "Reduced glutathione levels"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0034",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 34,
+    "question": "Which tricarboxylic acid (TCA) cycle intermediate acts as a precursor for fatty acid synthesis?",
+    "options": {
+      "A": "Succinate",
+      "B": "Citrate",
+      "C": "Malate",
+      "D": "Fumarate"
+    },
+    "correctAnswer": "B",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0035",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 35,
+    "question": "A patient with megaloblastic anaemia is treated with folate alone, after which neurological symptoms worsen instead of improving. Which mechanism best explains this phenomenon?",
+    "options": {
+      "A": "Folate trap",
+      "B": "Homocysteine accumulation",
+      "C": "Masking of vitamin B12 deficiency",
+      "D": "Pernicious anaemia due to intrinsic factor deficiency"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0036",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 36,
+    "question": "A 28-year-old man develops fatigue, jaundice, and dark urine two days after taking an antibiotic. Lab tests show anaemia, raised LDH, elevated indirect bilirubin, and a negative Coombs test. G6PD deficiency is suspected. Which statements correctly describe features of the HMP shunt pathway? A. Enzyme defect: Sphingomyelinase B. Enzyme defect: Beta-glucocerebrosidase C. Foamy macrophages are seen D. A crumpled tissue paper appearance is seen",
+    "options": {
+      "A": "1 and 2",
+      "B": "1 and 3",
+      "C": "2 and 4",
+      "D": "3 and 4"
+    },
+    "correctAnswer": "B",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0037",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 37,
+    "question": "Which of the following statements about β-oxidation of fatty acids is incorrect?",
+    "options": {
+      "A": "Both CAT I and CAT II transport fatty acids across the mitochondrial membrane",
+      "B": "ATP is required for fatty acid transport across the mitochondrial membrane",
+      "C": "CoA is released in the cytosol during acyl-carnitine formation",
+      "D": "Carnitine is released on the mitochondrial side"
+    },
+    "correctAnswer": "B",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0038",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 38,
+    "question": "Deficiency of which cofactor shunts 3-OH-Kynurenine to the xanthurenic acid pathway?",
+    "options": {
+      "A": "Thiamine",
+      "B": "Biotin",
+      "C": "Panthenic acid",
+      "D": "Pyridoxine"
+    },
+    "correctAnswer": "D",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0039",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 39,
+    "question": "Which of the following best describes/true regarding the RAS gene?",
+    "options": {
+      "A": "Constitutive activation of a GTP-binding protein leading to continuous MAP kinase signalling",
+      "B": "Enhanced DNA repair leading to genomic instability",
+      "C": "Inactivation of a tumour suppressor gene resulting in loss of cell cycle checkpoint control",
+      "D": "Increased activity of tyrosine kinase receptors through gene amplification"
+    },
+    "correctAnswer": "A",
+    "subject": "Biochemistry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0040",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 40,
+    "question": "What is the most frequent cause of viral diarrhoea in adults?",
+    "options": {
+      "A": "Rotavirus",
+      "B": "Adenovirus 40/41",
+      "C": "Norovirus",
+      "D": "Astrovirus"
+    },
+    "correctAnswer": "C",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0041",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 41,
+    "question": "Identify the species from the given phenomenon below",
+    "options": {
+      "A": "C albicans",
+      "B": "B parapsilosis",
+      "C": "C kruzei",
+      "D": "tropicalis"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0042",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 42,
+    "question": "Which of the following infections are NOT acquired through a thorn prick injury?",
+    "options": {
+      "A": "Dermatophytosis",
+      "B": "Chromoblastomycosis",
+      "C": "Mycetoma",
+      "D": "Sporotrichosis"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0043",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 43,
+    "question": "Identify the egg from the image below?",
+    "options": {
+      "A": "T solium",
+      "B": "Ascaris lumbricoides",
+      "C": "H nana",
+      "D": "Necator americanus"
+    },
+    "correctAnswer": "D",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0044",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 44,
+    "question": "A fungal infection of the mitral valve shows positivity on silver/Gomori stain. Which organism is most likely to cause the disease?",
+    "options": {
+      "A": "Mucor",
+      "B": "Histoplasma capsulatum",
+      "C": "Aspergillus fumigatus",
+      "D": "Candida albicans"
+    },
+    "correctAnswer": "C",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0045",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 45,
+    "question": "A culture of Streptococcus pneumoniae shows alpha-hemolysis and draughtsman colonies on blood agar. Which test is most useful for its identification?",
+    "options": {
+      "A": "No vaccine",
+      "B": "Catalase positive",
+      "C": "Vancomycin sensitivity test",
+      "D": "Bile solubility test"
+    },
+    "correctAnswer": "D",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0046",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 46,
+    "question": "Match the following parasites with the diseases they cause? Visceral larva migrans Cutaneous larva migrans Swimmer's itch Larva currens Strongyloides Schistosomiasis Toxocara canis Ancylostoma braziliense",
+    "options": {
+      "A": "1-c, 2-d, 3-b, 4-a",
+      "B": "1-a,2-b,3-c, 4-d",
+      "C": "1-d,2-c,3-b,4-a",
+      "D": "1-b,2-c,3-d, 4-a"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0047",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 47,
+    "question": "A patient presents multiple draining sinuses releasing black granules. Which of the following organisms is most likely responsible?",
+    "options": {
+      "A": "Staphylococcus aureus",
+      "B": "Nocardia asteroides",
+      "C": "Actinomyces israelii",
+      "D": "Madurella mycetomatis"
+    },
+    "correctAnswer": "D",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0048",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 48,
+    "question": "The viral life cycle that corresponds to the epidermal layers-replication occurring in the spinous layer, assembly in the granular layer, and release in the cornified layer-is characteristic of which of the following viruses?",
+    "options": {
+      "A": "Human papillomavirus (HPV)",
+      "B": "Molluscum contagiosum virus",
+      "C": "Varicella-zoster virus",
+      "D": "Herpes simplex virus"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0049",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 49,
+    "question": "Which of the following is not true about the given condition?",
+    "options": {
+      "A": "Oncogenic virus",
+      "B": "Painful lesions",
+      "C": "RNA virus",
+      "D": "No vaccine available"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0050",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 50,
+    "question": "Mycobacterium tuberculosis is handled in which biosafety level (BSL) laboratory?",
+    "options": {
+      "A": "BSL-1",
+      "B": "BSL-2",
+      "C": "BSL-3",
+      "D": "BSL-4"
+    },
+    "correctAnswer": "C",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0051",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 51,
+    "question": "What was incorrect about below image shown:",
+    "options": {
+      "A": "Phage coded",
+      "B": "Causes myocarditis",
+      "C": "It is an exotoxin",
+      "D": "It is the most potent toxin known to man"
+    },
+    "correctAnswer": "D",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0052",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 52,
+    "question": "An image depicting fruit bats (Pteropus species) along with the life cycle of the Nipah virus was shown. Which of the following statements regarding the Nipah virus is correct?",
+    "options": {
+      "A": "Cause encephalitis",
+      "B": "100% mortality once clinical symptoms appear",
+      "C": "DNA virus",
+      "D": "Humans are the most important reservoir"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0053",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 53,
+    "question": "Classical case explaining lung infection with hemoptysis.",
+    "options": {
+      "A": "Aspergillus with aseptate branching",
+      "B": "Aspergillus with septate branching",
+      "C": "Rhizopus with septate",
+      "D": "Mucormycosis with septate hyphae"
+    },
+    "correctAnswer": "B",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0054",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 54,
+    "question": "Which of the following is an obligate intracellular organism?",
+    "options": {
+      "A": "Ehrlichia chaffeensis",
+      "B": "Staphylococcus aureus",
+      "C": "Tropheryma whipplei",
+      "D": "Streptococcus pyogenes"
+    },
+    "correctAnswer": "A",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0055",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 55,
+    "question": "Where is Wuchereria present during daytime, when microfilaria are not seen in blood capillaries?",
+    "options": {
+      "A": "Spleen",
+      "B": "Liver",
+      "C": "Lungs",
+      "D": "Kidney"
+    },
+    "correctAnswer": "C",
+    "subject": "Microbiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0056",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 56,
+    "question": "Where is Onion skin fibrosis seen?",
+    "options": {
+      "A": "Primary biliary cholangitis",
+      "B": "Primary sclerosing cholangitis",
+      "C": "Biliary atresia",
+      "D": "Acute cholecystitis"
+    },
+    "correctAnswer": "B",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0057",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 57,
+    "question": "Choose the correct option: Perls stain, iron, red Alizarin, Ca, black Van Gieson, elastin, blue Giemsa, mast cells, purple",
+    "options": {
+      "A": "2 & 4",
+      "B": "1, 2, 3",
+      "C": "2, 3, 4",
+      "D": "Only 4"
+    },
+    "correctAnswer": "D",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0058",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 58,
+    "question": "A female carries an autosomal recessive mitochondrial disorder. Which of the following systems are most likely affected?",
+    "options": {
+      "A": "Immune and skeletal",
+      "B": "Cardiac and skeletal",
+      "C": "Skeletal and neurogenic",
+      "D": "Immune and cardiac"
+    },
+    "correctAnswer": "B",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0059",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 59,
+    "question": "What is included in the major and major criteria of Jones rheumatic fever? Carditis Polyarthralgia Chorea Shortened PR interval Erythema nodosum",
+    "options": {
+      "A": "1,2,3",
+      "B": "2,3,4",
+      "C": "1,2,3,5",
+      "D": "4,5"
+    },
+    "correctAnswer": "A",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0060",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 60,
+    "question": "What are the correct options regarding Peutz-Jeghers syndrome: STK 11 mutation Shows an arborising pattern Autosomal dominant Congenital hypertrophy of retinal pigment epithelium",
+    "options": {
+      "A": "1, 2, 3 are correct",
+      "B": "1, 2, 4 are correct",
+      "C": "3 & 4 are correct",
+      "D": "1, 2 are correct"
+    },
+    "correctAnswer": "A",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0062",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 62,
+    "question": "Lipid is best visualised on which technique in pathology?",
+    "options": {
+      "A": "Frozen Section",
+      "B": "Paraffin-embedded section",
+      "C": "Immunohistochemistry",
+      "D": "Electron microscopy"
+    },
+    "correctAnswer": "A",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0063",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 63,
+    "question": "Which of the following findings are associated with Mantle Cell Lymphoma? Cyclin D1 Sox 11 CD 200 CD 23",
+    "options": {
+      "A": "1, 2, 3",
+      "B": "1, 2, 4",
+      "C": "1 & 2",
+      "D": "1, 2, 5"
+    },
+    "correctAnswer": "C",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0064",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 64,
+    "question": "A patient's blood report showing MCV = 76 fL visits the OPD. Which of the following conditions is most likely responsible for this result? Iron deficiency anaemia Vitamin B12 deficiency Thalassemia Lead poisoning",
+    "options": {
+      "A": "A & B",
+      "B": "B & D",
+      "C": "A, C",
+      "D": "A, C, D"
+    },
+    "correctAnswer": "D",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0065",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 65,
+    "question": "A patient presents with microcytic anaemia, an elevated RBC count, and a Mentzer index of less than 13. What is the next appropriate investigation?",
+    "options": {
+      "A": "S. Ferritin",
+      "B": "Bone marrow biopsy",
+      "C": "S. Transferrin",
+      "D": "Hb electrophoresis"
+    },
+    "correctAnswer": "D",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0066",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 66,
+    "question": "Which of the following is false regarding Gaucher's disease?",
+    "options": {
+      "A": "Crumpled tissue paper appearance",
+      "B": "Beta-glucocerebrosidase enzyme deficiency",
+      "C": "Ceramidase deficiency",
+      "D": "Bone pain"
+    },
+    "correctAnswer": "C",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0067",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 67,
+    "question": "Which of the following statements about Rheumatic fever is false?",
+    "options": {
+      "A": "2 weeks post-sore throat",
+      "B": "Aschoff bodies seen",
+      "C": "Infection caused by group A, beta streptococcus",
+      "D": "Myocarditis, but no endocarditis"
+    },
+    "correctAnswer": "D",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0068",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 68,
+    "question": "A boy presents with developmental delay, obesity, hypotonia, normal neurological development, and hypogonadism. His karyotype shows 46 XY with a deletion of del(15)(q11-q13). What is the most likely diagnosis?",
+    "options": {
+      "A": "Prader-Willi syndrome",
+      "B": "Angelman syndrome",
+      "C": "Patau syndrome",
+      "D": "Cri du chat syndrome"
+    },
+    "correctAnswer": "A",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0069",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 69,
+    "question": "Which of the following are the definitive criteria for nephrotic syndrome? Hyperlipidemia Proteinuria >3.5 g/day Creatinine Hypoalbuminemia",
+    "options": {
+      "A": "1, 2, 3",
+      "B": "1, 2, 3, 4",
+      "C": "1 & 3",
+      "D": "2 & 4"
+    },
+    "correctAnswer": "D",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0070",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 70,
+    "question": "Which of the following statements are correct about Retinoblastoma? It is always unilateral It is associated with an increased risk of osteosarcoma The RB protein is inactive (hypophosphorylated) Oncogenesis occurs through a loss-of-function mutation The gene involved is called the 'guardian of the genome'",
+    "options": {
+      "A": "B, D",
+      "B": "A, B, C, D",
+      "C": "C, D, E",
+      "D": "D, E"
+    },
+    "correctAnswer": "A",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0071",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 71,
+    "question": "A patient with microcytic hypochromic anaemia, normal or elevated RBC count, and target cells on peripheral smear is suspected of having a hemoglobinopathy. Which test would be most appropriate to confirm the diagnosis?",
+    "options": {
+      "A": "Serum iron and TIBC",
+      "B": "Bone marrow biopsy",
+      "C": "Serum ferritin estimation",
+      "D": "Hb electrophoresis"
+    },
+    "correctAnswer": "D",
+    "subject": "Pathology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0072",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 72,
+    "question": "All of the following are advantages of ketamine except:",
+    "options": {
+      "A": "Dissociative anesthesia",
+      "B": "Relief from pain",
+      "C": "Sedation",
+      "D": "Relief from depression"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0073",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 73,
+    "question": "Which of the following drugs used in the treatment of pulmonary hypertension is a prostacyclin receptor agonist?",
+    "options": {
+      "A": "Selexipag",
+      "B": "Ambrisentan",
+      "C": "Epoprostenol",
+      "D": "Iloprost"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0074",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 74,
+    "question": "All of the following statements regarding Dronabinol are correct except?",
+    "options": {
+      "A": "It is used for pain relief",
+      "B": "It is excreted unchanged in the urine",
+      "C": "MOA: Cannabinoid receptor agonist",
+      "D": "It is approved for weight loss in AIDS-associated"
+    },
+    "correctAnswer": "B",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0075",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 75,
+    "question": "Which of the following statements about Rifampicin is incorrect?",
+    "options": {
+      "A": "Resistance occurs due to mutations in the rpoB gene.",
+      "B": "It undergoes enterohepatic recirculation.",
+      "C": "It should be administered along with fatty meals.",
+      "D": "Its CNS penetration is limited by P-glycoprotein."
+    },
+    "correctAnswer": "C",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0076",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 76,
+    "question": "Which of the following medications acts by inhibiting vascular endothelial growth factor (VEGF)?",
+    "options": {
+      "A": "Ranibizumab",
+      "B": "Pembrolizumab",
+      "C": "Ipilimumab",
+      "D": "Dostarlimab"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0077",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 77,
+    "question": "Which of the following statements regarding Rimegepant is correct? It is administered subcutaneously It is indicated for the acute management of migraine",
+    "options": {
+      "A": "It acts as a CGRP",
+      "B": "1",
+      "C": "receptor agonist",
+      "D": "It produces vasoconstriction"
+    },
+    "correctAnswer": "B",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0078",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 78,
+    "question": "Which regimen is considered the preferred treatment for cryptococcal meningitis?",
+    "options": {
+      "A": "Amphotericin B combined with Fluconazole",
+      "B": "Fluconazole monotherapy",
+      "C": "Liposomal Amphotericin B monotherapy",
+      "D": "Liposomal Amphotericin B in combination with Flucytosine"
+    },
+    "correctAnswer": "D",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0079",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 79,
+    "question": "Patient is on 2 nd line ATT, now complaining about numbness & acidosis then which drug should be withdrawn?",
+    "options": {
+      "A": "Linezolid",
+      "B": "Bedaquiline",
+      "C": "Delamanid",
+      "D": "Levofloxacin"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0080",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 80,
+    "question": "Which of the following adverse effects is not associated with the use of inhaled β-adrenergic agonists?",
+    "options": {
+      "A": "Pulmonary vasodilation",
+      "B": "Hyperkalemia",
+      "C": "Palpitations",
+      "D": "Tremors"
+    },
+    "correctAnswer": "B",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0081",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 81,
+    "question": "Which of the following medications exerts its effect by blocking the channel labelled \"C\" in the diagram?",
+    "options": {
+      "A": "Calcium channel blocker",
+      "B": "Ivabradine",
+      "C": "Nicorandil",
+      "D": "Digoxin"
+    },
+    "correctAnswer": "D",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0082",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 82,
+    "question": "A patient with HIV presents with a 3-month history of cough and fever, and Miliary tuberculosis is suspected. What should be the next step in management?",
+    "options": {
+      "A": "Start ATT, followed by initiation of ART after 2 weeks, with an increased dose of dolutegravir along with dexamethasone",
+      "B": "Start ART, followed by ATT after 2 weeks, with an increased dose of dolutegravir",
+      "C": "Administer an increased dose of dolutegravir immediately",
+      "D": "Initiate ART and ATT simultaneously with standard doses of dolutegravir"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0083",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 83,
+    "question": "Identify the parasite in the image and select the most appropriate drug for its treatment:",
+    "options": {
+      "A": "Praziquantel",
+      "B": "Albendazole",
+      "C": "Niclosamide",
+      "D": "Ivermectin"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0084",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 84,
+    "question": "The dose-response curve of acetylcholine (ACh) is shown in the graph. When an additional drug is introduced, the response to ACh increases (shifts upward). Which drug is most likely responsible for this effect?",
+    "options": {
+      "A": "Physostigmine",
+      "B": "Bethanechol",
+      "C": "Adrenaline",
+      "D": "Atropine"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0085",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 85,
+    "question": "Which DPP-4 inhibitor requires dosage modification when used with ketoconazole?",
+    "options": {
+      "A": "Saxagliptin",
+      "B": "Linagliptin",
+      "C": "Sitagliptin",
+      "D": "Vildagliptin"
+    },
+    "correctAnswer": "A",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0086",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 86,
+    "question": "Which of the following parasitic infections is most effectively treated with ivermectin?",
+    "options": {
+      "A": "Strongyloides stercoralis and Trichinella spiralis",
+      "B": "Loa loa and Brugia malayi",
+      "C": "Onchocerca volvulus and Loa loa",
+      "D": "Onchocerca volvulus and Wuchereria bancrofti"
+    },
+    "correctAnswer": "D",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0087",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 87,
+    "question": "Which of these drug combinations is recommended for HIV pre-exposure prophylaxis (PrEP) in individuals at high risk?",
+    "options": {
+      "A": "Tenofovir monotherapy",
+      "B": "Tenofovir + Lamivudine",
+      "C": "Zidovudine + Lamivudine",
+      "D": "Tenofovir + Emtricitabine"
+    },
+    "correctAnswer": "D",
+    "subject": "Pharmacology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0088",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 88,
+    "question": "Which of the following is not included in Bradford Hill's criteria for establishing causation?",
+    "options": {
+      "A": "Temporality",
+      "B": "Dose-response relationship",
+      "C": "Biological plausibility",
+      "D": "Sensitivity"
+    },
+    "correctAnswer": "D",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0089",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 89,
+    "question": "In an emergency triage scenario, which patient should be attended to first?",
+    "options": {
+      "A": "40-year-old unconscious patient with noisy breathing",
+      "B": "25-year-old woman is breathing rapidly and sweating",
+      "C": "60-year-old man is conscious with blood-soaked trousers",
+      "D": "Child crying loudly and inconsolably"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0090",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 90,
+    "question": "PM2.5 particles are considered particularly hazardous to human health because their small size allows them to penetrate deeply into which part of the respiratory tract?",
+    "options": {
+      "A": "Alveoli",
+      "B": "Bronchioles",
+      "C": "Nose",
+      "D": "Trachea"
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0091",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 91,
+    "question": "A previously vaccinated healthcare worker (HCW) sustains a needle-stick injury from a Hepatitis B surface antigen (HBsAg)-positive patient. The HCW is a known non-responder. What should be done next?",
+    "options": {
+      "A": "Give 1 dose of HBIG and start a complete Hepatitis B vaccination series",
+      "B": "No further action is required",
+      "C": "Give 2 doses of HBIG - one immediately and another after 4 weeks",
+      "D": "Give 2 doses of HBIG immediately, at separate sites"
+    },
+    "correctAnswer": "C",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0092",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 92,
+    "question": "As per the National Program for Prevention and Control of Non-Communicable Diseases (NP-NCD), which of the following screening activities are not done at the Sub-Centre (SC) or Primary Health Centre (PHC) level?",
+    "options": {
+      "A": "VIA for cervical cancer screening",
+      "B": "Visual inspection for oral cancer",
+      "C": "Mammography for screening at the primary level",
+      "D": "Screening starts beyond 30 years"
+    },
+    "correctAnswer": "C",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0093",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 93,
+    "question": "Which of the following statements about the roles of the family beyond reproduction are incorrect?",
+    "options": {
+      "A": "Providing support during illness",
+      "B": "Influencing cultural and health-related behaviour",
+      "C": "Providing emotional and financial security",
+      "D": "Regulating sexual behaviour and reproduction only"
+    },
+    "correctAnswer": "D",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0094",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 94,
+    "question": "Which of the following statements about the NITI Aayog Health Index are incorrect?",
+    "options": {
+      "A": "It is used to assess and compare the health performance of different states and UTs.",
+      "B": "It is meant only for evaluating government hospitals.",
+      "C": "It promotes healthy competition among states to improve health outcomes.",
+      "D": "It aids in policy planning to strengthen public health systems, especially primary healthcare."
+    },
+    "correctAnswer": "B",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0095",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 95,
+    "question": "A community consists of 500 individuals, and over a period of 2 years, 20 new cases of a certain disease were identified. The total observation time amounted to 950 person-years. What is the incidence rate of this disease in the population?",
+    "options": {
+      "A": "2.1 per 1000 person-years",
+      "B": "2.1 per 100 person-years",
+      "C": "4 per 1000 person-years",
+      "D": "2 per 100 person-years"
+    },
+    "correctAnswer": "B",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0096",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 96,
+    "question": "A research study observes that individuals who exercise regularly have a lower risk of developing heart disease. However, those who work out also tend to maintain a healthier diet, which itself lowers heart disease risk. In this scenario, diet serves as a-",
+    "options": {
+      "A": "Mediator",
+      "B": "Effect modifier",
+      "C": "Confounder",
+      "D": "Independent variable"
+    },
+    "correctAnswer": "C",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0097",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 97,
+    "question": "In a research study, a p-value of 0.03 was found. What does this indicate?",
+    "options": {
+      "A": "There is a 3% probability that the observed result occurred due to chance.",
+      "B": "There is 97% confidence that the null hypothesis is true.",
+      "C": "The difference observed is not statistically significant.",
+      "D": "The null hypothesis is rejected because the chance probability is below 2%."
+    },
+    "correctAnswer": "A",
+    "subject": "Community Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0098",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 98,
+    "question": "Crocodile-like skin is seen in which of the following?",
+    "options": {
+      "A": "Arsenic poisoning",
+      "B": "High voltage shock (10K - 12K)",
+      "C": "Moist burns",
+      "D": "Chemical burns"
+    },
+    "correctAnswer": "B",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0099",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 99,
+    "question": "A girl was brought to the emergency in an unconscious state with a history of faintness in the bathroom, showing cherry red discolouration. She was declared dead. The bathroom was a poorly ventilated room with a newly installed geyser. Blood toxicology reports show a high concentration of an irritant gas. What could this gas be?",
+    "options": {
+      "A": "CO",
+      "B": "CO2",
+      "C": "Hydrogen sulphide",
+      "D": "Methane"
+    },
+    "correctAnswer": "A",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0100",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 100,
+    "question": "A case of hanging has come to the forensic department for autopsy. The autopsy, Dr. notices a ligature mark covering about 1/3rd of the neck, protruding tongue, salivary stains, opened right eye, closed left eye, and both pupils dilated. What is the probable reason for the open right eye?",
+    "options": {
+      "A": "Compression of IJVs",
+      "B": "Compression of ICA",
+      "C": "Compression of the Cervical sympathetic chain",
+      "D": "Compression of Vagus"
+    },
+    "correctAnswer": "C",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0101",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 101,
+    "question": "A person killed his friend because of his belief that he would poison him & later he was diagnosed as a case of schizophrenia. He was taken to court. Based on McNaughten's rule, how is a person liable for a crime?",
+    "options": {
+      "A": "Partially guilty",
+      "B": "Guilty",
+      "C": "Not guilty",
+      "D": "Guilty, if the act was committed with knowing it is wrong"
+    },
+    "correctAnswer": "D",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0102",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 102,
+    "question": "Identify the grading burn Injuries:",
+    "options": {
+      "A": "Superficial burns",
+      "B": "Deep burns",
+      "C": "Full-thickness burns",
+      "D": "Partial thickness burns"
+    },
+    "correctAnswer": "D",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0103",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 103,
+    "question": "Sexual pleasures by non-living inanimate objects are called?",
+    "options": {
+      "A": "Fetischism",
+      "B": "Voyeurism",
+      "C": "Exhibitionism",
+      "D": "Froutterism"
+    },
+    "correctAnswer": "A",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0104",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 104,
+    "question": "Identify the condition shown in CT",
+    "options": {
+      "A": "EDH",
+      "B": "SDH",
+      "C": "SAH",
+      "D": "ICH"
+    },
+    "correctAnswer": "A",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0105",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 105,
+    "question": "Match the following poisoning with its treatment: 1. Arsenic A. Naloxone 2. Methanol B. Fomepizole 3. Benzodiazepine C. Flumnazenil 4. Opioid D. BAL",
+    "options": {
+      "A": "1-D, 2-C, 3-B, 4-A",
+      "B": "1-D, 2-B, 3-C, 4-A",
+      "C": "1-A,2-B, 3-C, 4-D",
+      "D": "1-B, 2-C, 3-A, 4-D"
+    },
+    "correctAnswer": "A",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0106",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 106,
+    "question": "Match the following poisoning with its agents: 1. Deliriant A. Alcohol 2. Inebriant B. LSD 3. Hallucinogenic C. Opium 4. Somniferous D. Datura",
+    "options": {
+      "A": "1-D, 2-A, 3-B, 4-C",
+      "B": "1-D, 2-B, 3-C, 4-A",
+      "C": "1-A,2-B, 3-C, 4-D",
+      "D": "1-B, 2-C, 3-A, 4-D"
+    },
+    "correctAnswer": "A",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0107",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 107,
+    "question": "A patient comes to OPD with soddened burn injury over his right thigh with erythema, blisters & line of demarcation. Which of the following is true of this case?",
+    "options": {
+      "A": "Moist burn",
+      "B": "Chemical burn",
+      "C": "Dry burn",
+      "D": "Electric burn"
+    },
+    "correctAnswer": "A",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0108",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 108,
+    "question": "A 17-year-old juvenile is brought by police, and as alleged by police, the school certificate shows the age as 17, but there is evidence of overwriting in the certificate. According to the police, the age is 19 years. Which X-rays will you recommend to prove the age is>18 years?",
+    "options": {
+      "A": "Pelvis, sternum",
+      "B": "Pelvis, skull",
+      "C": "Wrist, medial end of clavicle & pelvis",
+      "D": "Elbow, shoulder"
+    },
+    "correctAnswer": "C",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0109",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 109,
+    "question": "An 18-year-old girl was brought to the hospital by her mother with a history of sexual assault by her 24-year-old coworker in the factory. The mother doesn't want to inform the police. What will you do as the doctor in charge?",
+    "options": {
+      "A": "Ask the guardian for permission to do a medicolegal examination",
+      "B": "Do a medicolegal examination with the consent of the victim",
+      "C": "Do not collect materials required as forensic evidence",
+      "D": "Do not inform the police"
+    },
+    "correctAnswer": "B",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0110",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 110,
+    "question": "Which of the following is not a seminal test in a case of rape?",
+    "options": {
+      "A": "Barberio test",
+      "B": "Acid phosphate test",
+      "C": "Reineche test",
+      "D": "Florence test"
+    },
+    "correctAnswer": "C",
+    "subject": "Forensic Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0111",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 111,
+    "question": "A patient reports a sudden onset of intense eye pain, headache, blurred vision, and colored halos. Examination reveals a mid-dilated fixed pupil, hazy cornea, and markedly raised intraocular pressure. What is the most probable diagnosis?",
+    "options": {
+      "A": "Secondary angle closure due to anterior uveitis",
+      "B": "Acute endophthalmitis",
+      "C": "Orbital cellulitis",
+      "D": "Acute primary angle closure glaucoma"
+    },
+    "correctAnswer": "D",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0112",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 112,
+    "question": "A contact lens user presents with severe ocular pain, photophobia, and blurred vision. Corneal examination shows a ring-shaped infiltrate, as shown in the image. Which staining technique helps in identifying the causative organism?",
+    "options": {
+      "A": "Zinc stain",
+      "B": "Calcofluor white stain",
+      "C": "Gram stain",
+      "D": "GMS silver stain"
+    },
+    "correctAnswer": "B",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0113",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 113,
+    "question": "Krukenberg spindle formation on the corneal endothelium is a characteristic finding of which type of glaucoma?",
+    "options": {
+      "A": "Pigmentary glaucoma",
+      "B": "Malignant glaucoma",
+      "C": "Acute angle closure glaucoma",
+      "D": "Neovascular glaucoma"
+    },
+    "correctAnswer": "A",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0114",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 114,
+    "question": "All of the following are used to assess visual acuity in preverbal children, except:",
+    "options": {
+      "A": "Optokinetic nystagmus drum",
+      "B": "Teller acuity cards",
+      "C": "ETDRS chart",
+      "D": "Landolt C chart"
+    },
+    "correctAnswer": "C",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0115",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 115,
+    "question": "A young myopic patient with astigmatism presents with acute red eye, history of frequent spectacle change, and eye rubbing. On examination, corneal hydrops is seen, and an intracameral gas injection was performed. What is the likely diagnosis and management procedure shown?",
+    "options": {
+      "A": "Descemet's stripping endothelial keratoplasty (DSEK)",
+      "B": "Deep anterior lamellar keratoplasty (DALK)",
+      "C": "Intracameral gas injection with C3F8 for acute hydrops",
+      "D": "Collagen cross-linking"
+    },
+    "correctAnswer": "C",
+    "subject": "Ophthalmology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0117",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 117,
+    "question": "A 65-year-old male complains of difficulty hearing high-pitched sounds. Which region of the cochlea is primarily damaged?",
+    "options": {
+      "A": "Apex of the cochlea",
+      "B": "Base of the cochlea",
+      "C": "Stria vascularis",
+      "D": "Tectorial membrane"
+    },
+    "correctAnswer": "B",
+    "subject": "ENT",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0119",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 119,
+    "question": "Which of the following hearing tests is not performed in infants?",
+    "options": {
+      "A": "OAE (Otoacoustic Emissions)",
+      "B": "BERA (Brainstem Evoked Response Audiometry)",
+      "C": "PTA (Pure Tone Audiometry)",
+      "D": "Free-field audiometry"
+    },
+    "correctAnswer": "C",
+    "subject": "ENT",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0120",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 120,
+    "question": "Arrange the following steps of Functional Endoscopic Sinus Surgery (FESS) in the proper order: Uncinectomy Bullectomy Open the maxillary sinus Ethmoidectomy Options:",
+    "options": {
+      "A": "ABDC",
+      "B": "CABD",
+      "C": "ACBD",
+      "D": "CBAD"
+    },
+    "correctAnswer": "C",
+    "subject": "ENT",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0121",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 121,
+    "question": "A patient is diagnosed with recurrent peptic ulcers and a nodule in the first part of the duodenum. Which of the following tests should be done next to confirm the diagnosis?",
+    "options": {
+      "A": "Serum prolactin levels",
+      "B": "Serum gastrin levels",
+      "C": "24-hour urinary catecholamine levels",
+      "D": "Serum parathyroid hormone levels"
+    },
+    "correctAnswer": "B",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0122",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 122,
+    "question": "A patient presents with a rapidly growing breast lump (20x15 cm), erythema, and peau d'orange (PDO), with a family history of breast cancer. She is diagnosed with inflammatory breast cancer. What is the appropriate treatment?",
+    "options": {
+      "A": "Neoadjuvant chemotherapy followed by MRM",
+      "B": "MRM followed by chemotherapy",
+      "C": "Neoadjuvant therapy followed by BCT and SLNB",
+      "D": "Palliative care"
+    },
+    "correctAnswer": "C",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0123",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 123,
+    "question": "A patient presents with 24 hours of abdominal pain and is diagnosed as acute appendicitis. Which of the following statements are incorrect?",
+    "options": {
+      "A": "McBurney's point is the classical site of tenderness",
+      "B": "Oschner Sherren is used in the appendicular lump",
+      "C": "Immediate appendectomy is performed after conservative management in all cases",
+      "D": "Ultrasound is the investigation of choice in children"
+    },
+    "correctAnswer": "C",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0124",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 124,
+    "question": "Which of the following absorbable sutures causes the maximum tissue reaction?",
+    "options": {
+      "A": "Polygalactin",
+      "B": "Catgut",
+      "C": "Polypropylene",
+      "D": "Polydioxanone"
+    },
+    "correctAnswer": "B",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0125",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 125,
+    "question": "A patient presents for follow-up after obesity treatment, with a surgical image shown. Which procedure was performed?",
+    "options": {
+      "A": "Roux-en-Y gastric bypass",
+      "B": "Mini-gastric bypass",
+      "C": "Duodenal switch",
+      "D": "Biliopancreatic diversion"
+    },
+    "correctAnswer": "D",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0126",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 126,
+    "question": "TIGAR-O classification is used in which type of pancreatitis?",
+    "options": {
+      "A": "Acute pancreatitis",
+      "B": "Chronic pancreatitis",
+      "C": "Autoimmune pancreatitis",
+      "D": "Alcoholic pancreatitis"
+    },
+    "correctAnswer": "B",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0127",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 127,
+    "question": "An intraoperative image of an inguinal hernia is shown. Which type is depicted?",
+    "options": {
+      "A": "Littre",
+      "B": "Amyand",
+      "C": "Garengeot",
+      "D": "Grynfelt"
+    },
+    "correctAnswer": "B",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0128",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 128,
+    "question": "Arrange the following steps of surgery in order: Creating pneumoperitoneum Dissection of hepatocystic triangle Ligation of the cystic duct and artery Separation of the gallbladder from the liver bed",
+    "options": {
+      "A": "A-B-C-D",
+      "B": "A-C-B-D",
+      "C": "B-A-C-D",
+      "D": "D-A-B-C"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0129",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 129,
+    "question": "Arrange the steps of hernioplasty in the correct order: Skin incision Identify the sac and reduce its content Place the mesh Wound closure",
+    "options": {
+      "A": "a-b-c-d",
+      "B": "b-c-a-d",
+      "C": "a-d-c-b",
+      "D": "b-a-d-c"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0130",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 130,
+    "question": "The angle of laparoscopy between the left- and right-hand working ports is known as:",
+    "options": {
+      "A": "Manipulation angle",
+      "B": "Azimuth angle",
+      "C": "Elevation angle",
+      "D": "Extreme angle"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0131",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 131,
+    "question": "A 60-year-old female with a history of cholecystectomy and abdominal tube insertion 10 days ago presents with abdominal pain. What is the next step in management?",
+    "options": {
+      "A": "Immediate percutaneous drainage",
+      "B": "Exploratory laparotomy",
+      "C": "ERCP and stenting/sphincterotomy",
+      "D": "Conservative management"
+    },
+    "correctAnswer": "C",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0132",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 132,
+    "question": "A 17-year-old presents with recurrent abdominal pain for 3 months. Amylase and lipase are raised. What is the likely diagnosis based on USG and MRCP findings?",
+    "options": {
+      "A": "Choledochal Cyst",
+      "B": "Annular Pancreas",
+      "C": "Pancreas Divisum",
+      "D": "CBD stone"
+    },
+    "correctAnswer": "A",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0133",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 133,
+    "question": "Which of the following statements about intestinal stomas is incorrect?",
+    "options": {
+      "A": "The ileostomy loop is generally kept with pouting",
+      "B": "Maximum malabsorption of electrolytes and nutrients is seen with colostomy",
+      "C": "The stoma of a colostomy is everted above skin level",
+      "D": "Only the muscular layer is taken in sutures while creating an ileostomy"
+    },
+    "correctAnswer": "C",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0134",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 134,
+    "question": "During triage, who should receive the highest priority?",
+    "options": {
+      "A": "6-year-old child crying",
+      "B": "45-year-old unconscious with noisy breathing/grunting sounds",
+      "C": "23-year-old conscious with breathing difficulty",
+      "D": "60-year-old conscious patient with blood-soaked pants"
+    },
+    "correctAnswer": "B",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0135",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 135,
+    "question": "A patient presents with abdominal pain and has elevated mucin and CEA levels but normal amylase. What is the most likely diagnosis?",
+    "options": {
+      "A": "Intraductal Papillary Mucinous Neoplasm (IPMN)",
+      "B": "Pancreatic cystic neoplasm",
+      "C": "Mucinous adenoma",
+      "D": "Pancreatic pseudocyst"
+    },
+    "correctAnswer": "C",
+    "subject": "Surgery",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0136",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 136,
+    "question": "A patient with rheumatoid arthritis (RA) presents with the deformity shown. What is the correct name of the deformity?",
+    "options": {
+      "A": "Piano key sign",
+      "B": "Z deformity",
+      "C": "Boutonniere deformity",
+      "D": "Swan neck"
+    },
+    "correctAnswer": "C",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0137",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 137,
+    "question": "A patient presents with Horner's syndrome and absence of sweating on one side of the face. Which of the following structures is most likely compressed?",
+    "options": {
+      "A": "Sympathetic chain",
+      "B": "Internal carotid plexus",
+      "C": "Vagus nerve",
+      "D": "Common carotid artery"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0138",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 138,
+    "question": "A 22-year-old athlete collapses and dies suddenly during a game. Autopsy reveals ventricular hypertrophy. What is the most likely underlying cause?",
+    "options": {
+      "A": "He died of valvular disease",
+      "B": "The image shows features of chronic heart failure",
+      "C": "Coronary artery disease due to increased cholesterol",
+      "D": "HOCM needs to be screened in case of a family history"
+    },
+    "correctAnswer": "D",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0139",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 139,
+    "question": "A 45-year-old man with known alcoholic cirrhosis presents with confusion and 3 days of hematemesis. Examination reveals icterus, hepatosplenomegaly, tense ascites, and asterixis. Vitals: BP 100/60 mmHg, pulse 104/min. Which of the following is NOT appropriate in the initial management of this patient?",
+    "options": {
+      "A": "Start propranolol to stop variceal bleeding",
+      "B": "Perform a diagnostic ascitic tap to rule out spontaneous bacterial peritonitis (SBP)",
+      "C": "Start IV antibiotics and IV octreotide infusion",
+      "D": "Give IV albumin after large-volume paracentesis or if renal dysfunction develops"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0141",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 141,
+    "question": "According to the GOLD guidelines, which of the following is the most appropriate next step in the management of a patient who smokes and has a chronic COPD exacerbation with a respiratory rate of 30/min, pulse of 110/min, with increased sputum, resting SpO2 of 90% on room air, and pCO2 of 80 mm Hg? Antibiotics Systemic Corticosteroids Antiviral treatment Nebulized bronchodilators Choose the correct combination",
+    "options": {
+      "A": "A, B, D",
+      "B": "A, C, D",
+      "C": "B, C, D",
+      "D": "A, B, C, D"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0142",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 142,
+    "question": "A patient with chronic productive cough and progressive breathlessness is diagnosed with COPD. He develops type II respiratory failure. Which of the following statements regarding his condition is not true?",
+    "options": {
+      "A": "Bronchial wall inflammation is a characteristic finding",
+      "B": "Increased Reid index",
+      "C": "Lung compliance is decreased",
+      "D": "FEV1/FVC ratio is <70%"
+    },
+    "correctAnswer": "C",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0143",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 143,
+    "question": "Which of the following has the highest risk of causing invasive pulmonary aspergillosis?",
+    "options": {
+      "A": "A. Febrile neutropenia",
+      "B": "B. CD4 <50 cells/μL",
+      "C": "C. Severe protein-energy undernutrition",
+      "D": "D. Bronchial asthma\\"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0144",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 144,
+    "question": "A patient presents to the OPD with the complaint of back pain and weakness in both lower limbs. Which of the following findings would suggest compressive myelopathy?",
+    "options": {
+      "A": "Hypotonia",
+      "B": "Absent Babinski sign",
+      "C": "Normal cremasteric reflex",
+      "D": "Knee clonus"
+    },
+    "correctAnswer": "D",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0145",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 145,
+    "question": "A patient comes to the OPD with a history of fever for 4 days, no bleeding manifestations, and stable vitals. Blood work shows Hb = 9 g/dL, platelet count = 20,000/mL. What is the next step in management during the first hour? PCM Antibiotics Platelet transfusion Steroids",
+    "options": {
+      "A": "A, B, C, D",
+      "B": "A, B, C",
+      "C": "A, B",
+      "D": "A"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0146",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 146,
+    "question": "A patient presents with exertional dyspnea and pedal oedema. His echocardiogram shows a dilated left ventricle with reduced systolic function. Which of the following statements regarding this condition is false?",
+    "options": {
+      "A": "A. Pulmonary hypertension may develop in this patient",
+      "B": "B. Ejection fraction will be reduced in this condition",
+      "C": "C. Long-term anticoagulation is not needed for this patient",
+      "D": "D. Beta blockers are indicated in chronic management"
+    },
+    "correctAnswer": "C",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0147",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 147,
+    "question": "A 28-year-old male presents with involuntary jerky movements of the face and limbs, along with noticeable personality changes and increasing forgetfulness. An MRI of the brain is shown. What is the most likely diagnosis?",
+    "options": {
+      "A": "Wilson's disease",
+      "B": "Sydenham's chorea",
+      "C": "Prion disease",
+      "D": "Huntington's disease"
+    },
+    "correctAnswer": "D",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0148",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 148,
+    "question": "Which of the following conditions is associated with large P waves on an ECG?",
+    "options": {
+      "A": "Mitral stenosis",
+      "B": "Tricuspid stenosis",
+      "C": "Aortic regurgitation",
+      "D": "Systemic hypertension"
+    },
+    "correctAnswer": "B",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0149",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 149,
+    "question": "Which of the following conditions does NOT share the same underlying mechanism that contributes to the development of heart failure, as seen in the other conditions?",
+    "options": {
+      "A": "Anemia",
+      "B": "Fever",
+      "C": "High salt intake",
+      "D": "Thyrotoxicosis"
+    },
+    "correctAnswer": "C",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0150",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 150,
+    "question": "A 25-year-old female with systemic lupus erythematosus presents with weight gain, moon facies, buffalo hump, and hirsutism. Which of the following is the most appropriate investigation to confirm the diagnosis?",
+    "options": {
+      "A": "Serum ACTH and low-dose dexamethasone suppression test",
+      "B": "Low-dose dexamethasone suppression test",
+      "C": "High-dose dexamethasone suppression test",
+      "D": "Serum ACTH and cortisol levels"
+    },
+    "correctAnswer": "D",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0151",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 151,
+    "question": "Which of the following findings is NOT typically seen in Conn's syndrome?",
+    "options": {
+      "A": "Hypernatremia",
+      "B": "Hypokalemia",
+      "C": "Hypertension",
+      "D": "Metabolic alkalosis"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0152",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 152,
+    "question": "What is the most common site of a berry aneurysm in the Circle of Willis?",
+    "options": {
+      "A": "Basilar artery",
+      "B": "Vertebral artery",
+      "C": "Anterior cerebral artery (ACA)",
+      "D": "Middle cerebral artery (MCA)"
+    },
+    "correctAnswer": "C",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0153",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 153,
+    "question": "A patient with hypothyroidism recently completed a 13-14-hour flight. Which of the following factors contribute to the risk of developing pulmonary deep vein thrombosis (DVT)? Prolonged immobilisation due to long flights Smoking Hypothyroidism Oral contraceptive pills (OCP) Choose the correct combination:",
+    "options": {
+      "A": "C, D",
+      "B": "A, B",
+      "C": "A, B, D",
+      "D": "A, B, C, D"
+    },
+    "correctAnswer": "C",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0154",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 154,
+    "question": "Which of the following clinical conditions are correctly matched with their respective anion gap status? Starvation - Increased anion gap Diabetic ketoacidosis - Increased anion gap Severe vomiting - Increased anion gap",
+    "options": {
+      "A": "Only A is correct",
+      "B": "A and C are correct",
+      "C": "A and B are correct",
+      "D": "Only B is correct"
+    },
+    "correctAnswer": "C",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0155",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 155,
+    "question": "A woman with dry mouth, gritty eye sensations, and bilateral salivary gland enlargement presents for evaluation. Laboratory tests show hypokalemia and metabolic acidosis. What is the most appropriate diagnostic test to confirm the diagnosis?",
+    "options": {
+      "A": "Schirmer's test and autoantibody profile",
+      "B": "Serum acetylcholine receptor antibody",
+      "C": "Salivary gland scintigraphy",
+      "D": "Serum calcium and ACE levels"
+    },
+    "correctAnswer": "A",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0156",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 156,
+    "question": "A child develops signs of central obesity, moon face, and striae. What is the most likely underlying cause?",
+    "options": {
+      "A": "Progression of the disease",
+      "B": "Use of exogenous steroids",
+      "C": "Adrenal hyperplasia",
+      "D": "Pituitary adenoma"
+    },
+    "correctAnswer": "B",
+    "subject": "Medicine",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0157",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 157,
+    "question": "Which of the following instruments are commonly used during a cesarean section? Green amytage forceps Shirodkars clamp Doyens retractor Scalpel with BP holder Allis forceps Cusco and Karman",
+    "options": {
+      "A": "a, c, d, e",
+      "B": "b, c, d, f",
+      "C": "a, b, e, f",
+      "D": "a, c, e, f"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0158",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 158,
+    "question": "A 36-week pregnant woman is being evaluated for possible eclampsia. Which of the following symptoms are not indicative of imminent eclampsia?",
+    "options": {
+      "A": "Blurred vision",
+      "B": "Headache",
+      "C": "Pedal edema",
+      "D": "Epigastric pain"
+    },
+    "correctAnswer": "C",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0159",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 159,
+    "question": "A pregnant woman with placenta previa presents with mild bleeding. There are no uterine contractions, her blood pressure is 110/70 mm Hg, and the fetal heart rate is 140 bpm. What is the best next step in management?",
+    "options": {
+      "A": "Hospitalisation and expectant management",
+      "B": "Oxytocin induction of labour",
+      "C": "Immediate lower segment cesarean section (LSCS)",
+      "D": "ARM"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0160",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 160,
+    "question": "A primigravida with a normal vaginal delivery develops postpartum haemorrhage not controlled by uterine massage. What should be the next step in management?",
+    "options": {
+      "A": "Uterine artery embolisation",
+      "B": "Hysterectomy",
+      "C": "Balloon tamponade",
+      "D": "Pelvis-specific embolization"
+    },
+    "correctAnswer": "C",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0161",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 161,
+    "question": "Identify the condition based on the image provided",
+    "options": {
+      "A": "Trichomoniasis",
+      "B": "Candidiasis",
+      "C": "Bacterial vaginosis",
+      "D": "Chlamydial cervicitis"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0162",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 162,
+    "question": "A patient presents with intermenstrual bleeding, and the pap smear report shows atypical glandular cells. What is the most appropriate next step in management?",
+    "options": {
+      "A": "Conization of the cervix",
+      "B": "Repeat Pap smear after 6 months",
+      "C": "Colposcopy with endometrial sampling",
+      "D": "Hysterectomy"
+    },
+    "correctAnswer": "C",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0163",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 163,
+    "question": "A 45-year-old postmenopausal woman has an endometrial thickness of 15 mm on transvaginal ultrasound. What should be the next step in management?",
+    "options": {
+      "A": "Endometrial biopsy",
+      "B": "MRI Pelvis",
+      "C": "Hysterectomy",
+      "D": "Repeat transvaginal ultrasound after 6 weeks"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0164",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 164,
+    "question": "Postpartum intrauterine contraceptive device (IUCD) insertion should ideally be performed within which of the following time frames?",
+    "options": {
+      "A": "Within 24-48 hours",
+      "B": "Within 10 minutes of placental delivery",
+      "C": "At 4 weeks postpartum",
+      "D": "After 6 weeks postpartum"
+    },
+    "correctAnswer": "B",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0165",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 165,
+    "question": "Which of the following statements about shock is accurate?",
+    "options": {
+      "A": "Uterine inversion in the postpartum period causes neurogenic shock initially",
+      "B": "Gram-positive bacteria cause endotoxic shock",
+      "C": "Severe shock occurs with more than 20% blood loss",
+      "D": "Hypoperfusion with increased cardiac output"
+    },
+    "correctAnswer": "A",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0166",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 166,
+    "question": "Which of the following is NOT a test of ovarian reserve during the early follicular phase?",
+    "options": {
+      "A": "FSH",
+      "B": "E2",
+      "C": "AMH",
+      "D": "AFC"
+    },
+    "correctAnswer": "B",
+    "subject": "Obstetrics & Gynaecology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0167",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 167,
+    "question": "The term neonate presents with respiratory distress, chest X-ray showed hyperinflation with prominent fissure/bulging of the middle fissure. If the baby got well after 2 hours, what is the likely diagnosis?",
+    "options": {
+      "A": "Transient Tachypnea of Newborn",
+      "B": "Respiratory Distress Syndrome",
+      "C": "Congenital Pneumonia",
+      "D": "Meconium Aspiration Syndrome"
+    },
+    "correctAnswer": "A",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0168",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 168,
+    "question": "A 7-year-old child with stunting is brought for evaluation of short stature. His height is below -2 SD for age. Developmental milestones are normal. On examination, the upper-to-lower segment ratio is 1.4. Which of the following is the most likely diagnosis?",
+    "options": {
+      "A": "Achondroplasia",
+      "B": "Spondyloepiphyseal dysplasia",
+      "C": "Nutritional cause",
+      "D": "GH deficiency"
+    },
+    "correctAnswer": "A",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0169",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 169,
+    "question": "Which of the following features are characteristic of Hirschsprung's disease? Failure of migration of ganglia Causes intestinal obstruction postnatally Distal segment dilated Proximal segment constricted",
+    "options": {
+      "A": "1, 2, 3 are correct",
+      "B": "1, 2 are correct",
+      "C": "3, 4, 5 are correct",
+      "D": "3 & 4 are correct"
+    },
+    "correctAnswer": "B",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0170",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 170,
+    "question": "A boy is brought for evaluation; he has stunting with excessive weight gain. His height is below -2 SD for age, and his weight is above +2 SD. Developmental milestones are normal. He has a history of recurrent respiratory infections for which he frequently receives oral medications. What is the next best step to take?",
+    "options": {
+      "A": "Promote physical activity as the Child is overweight",
+      "B": "Screen children for Growth hormone deficiency",
+      "C": "Check TFT, as the child has congenital hypothyroidism",
+      "D": "Test for Cushing Syndrome secondary to steroid use"
+    },
+    "correctAnswer": "D",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0171",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 171,
+    "question": "An infant with 3 months of progressive jaundice, pale stools, high colored urine. The child was healthy, gaining weight and feeding well. HIDA scan showed no excretion. What is the next step?",
+    "options": {
+      "A": "Breast milk jaundice, stop for 2 weeks and give formula feed",
+      "B": "Galactosemia, do tests to confirm",
+      "C": "Metabolic condition requiring further testing",
+      "D": "Liver biopsy"
+    },
+    "correctAnswer": "D",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0172",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 172,
+    "question": "A child with fever and abdominal pain tested positive for Dengue on day 5 of fever. His BP was 110/70 mm Hg, platelet counts were 20,000/mm3, but there were no bleeding manifestations. What is the next step?",
+    "options": {
+      "A": "Platelet transfusion",
+      "B": "10 ml/kg/hr RL",
+      "C": "7 ml/kg/hr RL",
+      "D": "20 ml/kg RL"
+    },
+    "correctAnswer": "C",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0173",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 173,
+    "question": "A 10-year-old child presents with generalised oedema. Urinalysis shows +3 proteinuria, and 24-hour urine protein is more than 3.5 g/day. There is no hypertension or hematuria. Serum albumin is low. Kidney biopsy shows segmental fibrosis and hyalinosis. The child shows a poor response to steroids. What is the most likely diagnosis?",
+    "options": {
+      "A": "Minimal Change Disease",
+      "B": "Focal Segmental Glomerulosclerosis",
+      "C": "Membranous Glomerulopathy",
+      "D": "IgA Nephropathy"
+    },
+    "correctAnswer": "B",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0174",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 174,
+    "question": "A 10-year-old child presented with hyperglycemia. He was diagnosed with Severe DKA, HCO3 of 4, pH of 7.0, RBS of 450, And + 4.5. Management?",
+    "options": {
+      "A": "10 ml/kg NS over 30 min (10% deficit correction) followed by insulin infusion, with KCl 20 mmol/l & bicarbonate",
+      "B": "20 ml/kg NS (10% deficit correction) over 30 min followed by insulin infusion & fluid with KCl 40 mmol/l added",
+      "C": "10 ml/kg RL bolus (7% deficit correction) followed by insulin infusion and KCl",
+      "D": "20 ml/kg RL over 30 min (7% deficit correction) followed by insulin infusion, bicarbonate and KCl"
+    },
+    "correctAnswer": "B",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0175",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 175,
+    "question": "Identify the correct match of milestone & corresponding normal age of attainment?",
+    "options": {
+      "A": "Mature Pincer grasp - 9 months",
+      "B": "Making a tower of 2 blocks - 2 years",
+      "C": "Bidextrous approach - 6 months",
+      "D": "Transfers objects from one hand to another - 6 months"
+    },
+    "correctAnswer": "D",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0176",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 176,
+    "question": "A child presents with recurrent pneumonia and respiratory distress but no cyanosis. A continuous murmur is heard below the left clavicle. What is the most probable diagnosis?",
+    "options": {
+      "A": "Ventricular septal defect (VSD)",
+      "B": "Atrial septal defect (ASD)",
+      "C": "CoA",
+      "D": "Patent ductus arteriosus (PDA)"
+    },
+    "correctAnswer": "D",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0177",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 177,
+    "question": "Which is not used in status epilepticus?",
+    "options": {
+      "A": "Valproate",
+      "B": "Ethosuximide",
+      "C": "Fosphenytoin",
+      "D": "Levetiracetam"
+    },
+    "correctAnswer": "B",
+    "subject": "Paediatrics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0178",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 178,
+    "question": "A 7-year-old boy presents to the emergency department after falling on an outstretched hand. X-ray shows an extension-type supracondylar fracture of the humerus. On examination, he is unable to make an 'OK' sign with his thumb and index finger. Which structure is most likely injured?",
+    "options": {
+      "A": "Median nerve",
+      "B": "Ulnar nerve",
+      "C": "Radial nerve",
+      "D": "Brachial artery"
+    },
+    "correctAnswer": "A",
+    "subject": "Orthopaedics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0179",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 179,
+    "question": "A 60-year-old man presents with generalised bone pain and easy fatigability. X-rays show diffuse osteoporosis, and hypercalcemia is noted. Which of the following investigations is most appropriate to confirm the diagnosis?",
+    "options": {
+      "A": "CT scan",
+      "B": "Bone marrow biopsy",
+      "C": "MRI",
+      "D": "Sestamibi scan"
+    },
+    "correctAnswer": "D",
+    "subject": "Orthopaedics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0180",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 180,
+    "question": "A 13-year-old boy presents with waxing and waning pain and swelling over the mid-shaft of the humerus for 3 weeks-no trauma history. X-ray shows a periosteal reaction with a suggestion of medullary involvement. What is the next best diagnostic investigation?",
+    "options": {
+      "A": "MRI",
+      "B": "Biopsy",
+      "C": "Blood investigation",
+      "D": "CT"
+    },
+    "correctAnswer": "A",
+    "subject": "Orthopaedics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0181",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 181,
+    "question": "A 30-year-old man presents after a fall. He complains of severe shoulder pain and the inability to move his arm. On examination, the arm is slightly abducted and externally rotated. The X-ray is given. What is the most likely diagnosis?",
+    "options": {
+      "A": "Anterior dislocation",
+      "B": "Posterior dislocation",
+      "C": "Fracture clavicle",
+      "D": "Proximal humerus fracture"
+    },
+    "correctAnswer": "A",
+    "subject": "Orthopaedics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0182",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 182,
+    "question": "Match the following: A) Equinus 1. Longitudinal arch of foot extended dorsally B) Planus 2. Longitudinal arch of foot flattened C) Cavus 3. Foot in dorsiflexion D) Calcaneus 4. Foot in plantar flexion",
+    "options": {
+      "A": "A) 1, B) 2, C) 3, D) 4",
+      "B": "A) 1, B) 4, C) 3, D) 2",
+      "C": "A) 3, B) 1, C) 4, D) 2",
+      "D": "A) 4, B) 2, C) 1, D) 3"
+    },
+    "correctAnswer": "D",
+    "subject": "Orthopaedics",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0183",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 183,
+    "question": "A patient on Haloperidol develops Neuroleptic Malignant Syndrome (rigidity, fever). What is the most appropriate treatment?",
+    "options": {
+      "A": "Stop the antipsychotic and give dantrolene/bromocriptine",
+      "B": "Give Acetylcholine",
+      "C": "Atropine",
+      "D": "IV fluids and continue the antipsychotic"
+    },
+    "correctAnswer": "A",
+    "subject": "Psychiatry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0184",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 184,
+    "question": "A patient develops sudden vision loss after a traumatic event. Eye examination is normal, and the patient is unconcerned about blindness. What is the most likely diagnosis?",
+    "options": {
+      "A": "Somatoform Disorder",
+      "B": "Conversion Disorder",
+      "C": "Factitious Disorder",
+      "D": "Malingering"
+    },
+    "correctAnswer": "B",
+    "subject": "Psychiatry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0185",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 185,
+    "question": "A 7 ‐ year ‐ old child has had severe recurrent anger outbursts for 1 year, disproportionate to the situation, with persistent irritability between episodes. Most likely diagnosis?",
+    "options": {
+      "A": "Oppositional Defiant Disorder",
+      "B": "Conduct Disorder",
+      "C": "Disruptive Mood Dysregulation Disorder",
+      "D": "Intermittent Explosive Disorder"
+    },
+    "correctAnswer": "C",
+    "subject": "Psychiatry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0186",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 186,
+    "question": "Match the types of delusions with their descriptions: Persecution Grandiosity Nihilistic DInfluence Descriptions: False belief of being controlled by external forces False belief of having great powers or importance False belief that the body/world does not exist False belief of being harmed or conspired against",
+    "options": {
+      "A": "A-4, B-2, C-3, D-1",
+      "B": "B. A-3, B-1, C-4, D-2",
+      "C": "C. A-2, B-4, C-3, D-1",
+      "D": "D. A-1, B-2, C-3, D-4"
+    },
+    "correctAnswer": "A",
+    "subject": "Psychiatry",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0187",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 187,
+    "question": "Match the following: a. Auspitz sign 1. Psoriasis b. Darier's sign 2. Discoid lupus erythematosus c. Carpet tack sign 3. Cutaneous mastocytosis d. Flag sign 4. Kwashiorkor",
+    "options": {
+      "A": "A.a-3, b-2, c-1, d-4",
+      "B": "B.a-4, b-3, c-1, d-2",
+      "C": "C.a-1, b-3, c-2, d-4",
+      "D": "D.a-1, b-2, c-3, d-4"
+    },
+    "correctAnswer": "C",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0188",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 188,
+    "question": "The most common site of melanoma in Indians is:",
+    "options": {
+      "A": "Trunk",
+      "B": "Hands and feet",
+      "C": "Genitals",
+      "D": "Face"
+    },
+    "correctAnswer": "B",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0189",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 189,
+    "question": "Which of the following is NOT a part of syndromic management in males?",
+    "options": {
+      "A": "Urethral discharge",
+      "B": "Genital discharge",
+      "C": "Inguinal swelling",
+      "D": "Lower abdominal pain"
+    },
+    "correctAnswer": "D",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0190",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 190,
+    "question": "A farmer presents with a lesion that discharges black-colored granules. What is the causative agent?",
+    "options": {
+      "A": "Madurella mycetomatis",
+      "B": "Actinomadura Madurae",
+      "C": "Nocardia brazilensis",
+      "D": "Streptomyces somaliensis"
+    },
+    "correctAnswer": "A",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0191",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 191,
+    "question": "A lesion is observed at the same site on three separate occasions. What is the most likely diagnosis?",
+    "options": {
+      "A": "Cutaneous mastocytosis",
+      "B": "Fixed drug eruption",
+      "C": "HSV1",
+      "D": "Erythema multiforme"
+    },
+    "correctAnswer": "B",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0192",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 192,
+    "question": "A 70-year-old female presents with intense itching and a white plaque in the genital region. Histopathological examination shows loss of rete ridges, abundant collagen, and thinned epithelium. What is the most likely diagnosis?",
+    "options": {
+      "A": "Lichen planus",
+      "B": "Lichen sclerosis",
+      "C": "Candidiasis",
+      "D": "Vulvar leukoplakia"
+    },
+    "correctAnswer": "B",
+    "subject": "Dermatology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0193",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 193,
+    "question": "Identify the nerve block demonstrated in the given intraoral image?",
+    "options": {
+      "A": "Inferior alveolar nerve block",
+      "B": "Anterior ethmoidal nerve block",
+      "C": "Maxillary nerve block",
+      "D": "Greater palatine nerve block"
+    },
+    "correctAnswer": "D",
+    "subject": "Anaesthesia",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0194",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 194,
+    "question": "For benzodiazepines and barbiturates, which of the following statements are true? Both act on GABA Cause additive sedation with alcohol Thiopentone has a short duration of action due to metabolism Flumazenil is an antidote for barbiturates",
+    "options": {
+      "A": "Both A & B are correct",
+      "B": "Only A is correct",
+      "C": "Only C is correct",
+      "D": "All are correct"
+    },
+    "correctAnswer": "A",
+    "subject": "Anaesthesia",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0195",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 195,
+    "question": "A trauma patient presents with two episodes of vomiting and loss of consciousness. CT brain shows a biconvex hyperdense lesion. What is the next step in management?",
+    "options": {
+      "A": "Craniectomy",
+      "B": "ICU observation",
+      "C": "Conservative management",
+      "D": "Burr hole and evacuation"
+    },
+    "correctAnswer": "D",
+    "subject": "Radiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0196",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 196,
+    "question": "A patient with retroviral infection presents with low-grade fever, cough, and one episode of hemoptysis. What is the most probable diagnosis based on the chest X-ray findings?",
+    "options": {
+      "A": "Tuberculosis",
+      "B": "Pneumothorax",
+      "C": "Lung abscess",
+      "D": "Pulmonary metastasis"
+    },
+    "correctAnswer": "A",
+    "subject": "Radiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0197",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 197,
+    "question": "A 60-year-old male with tingling and numbness in the arm develops visual disturbances in one eye. Chest X-ray shows a suspicious lesion. What is the definitive diagnostic investigation?",
+    "options": {
+      "A": "Ultrasound",
+      "B": "Cardiovascular evaluation",
+      "C": "CT-guided biopsy",
+      "D": "Sputum microscopy"
+    },
+    "correctAnswer": "C",
+    "subject": "Radiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0198",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 198,
+    "question": "A 13-year-old presents with upper arm swelling and pain. X-ray reveals a diaphyseal lesion in the humerus with mild ESR elevation. What should be the next investigation?",
+    "options": {
+      "A": "PET scan",
+      "B": "MRI",
+      "C": "Humeral lesion biopsy",
+      "D": "Bone marrow biopsy"
+    },
+    "correctAnswer": "B",
+    "subject": "Radiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0199",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 199,
+    "question": "Identify the labelled structure in the given image?",
+    "options": {
+      "A": "Internal auditory canal",
+      "B": "Aqueduct",
+      "C": "External auditory canal",
+      "D": "Carotid canal"
+    },
+    "correctAnswer": "A",
+    "subject": "Radiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
+  },
+  {
+    "id": "inicet-2025-s1-q0200",
+    "exam": "INI CET",
+    "sourceConfidence": "memory_based",
+    "year": 2025,
+    "shift": 1,
+    "questionNumber": 200,
+    "question": "A 36-year-old man presents to the emergency department with sudden shortness of breath. The CT thorax shows evidence of air in the pleural cavity with partial lung collapse. What is the immediate next step in management?",
+    "options": {
+      "A": "Needle decompression",
+      "B": "Intercostal chest tube insertion",
+      "C": "Sputum microscopy and culture",
+      "D": "Thoracic ultrasound"
+    },
+    "correctAnswer": "A",
+    "subject": "Radiology",
+    "topic": "",
+    "difficulty": "Medium",
+    "tags": []
   }
 ]
