@@ -83,3 +83,20 @@ serviceAccountKey.json
 
 # Pro redeem codes (plaintext) — never commit, distribute manually to buyers
 PRO_REDEEM_CODES.SECRET.txt
+
+# --- study-material pipeline ---------------------------------------------
+# Timestamped corpus backups written before every guarded write
+data/backups/
+# LLM work packets and their returns — regenerable, and large
+data/topics/packets/
+data/topics/returns/
+# Generated per-topic study chapters and derived indexes.
+# taxonomy.json is deliberately NOT ignored: it is the pipeline's contract.
+data/topics/chapters/
+data/topics/question_topics.json
+data/topics/topic_index.json
+data/topics/topic_index.slim.json
+# Rendered PDFs (hundreds of MB, rebuildable from the chapters)
+output/
+# Font copies vendored for reportlab
+pipeline/fonts/
