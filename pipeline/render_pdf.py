@@ -287,7 +287,7 @@ def chapter_flowables(ch: dict, by_id: dict, expl: dict, st: dict) -> list:
     heading._header = f"{ch['subject']}  >  {ch['section']}  >  {ch['topic']}"
     flow.append(heading)
 
-    meta = (f"Tier {ch['tier']} &nbsp;|&nbsp; ~{ch['highYield']} expected questions "
+    meta = (f"Tier {ch['tier']} &nbsp;|&nbsp; ~{ch['highYield']:.2f} expected questions "
             f"&nbsp;|&nbsp; {ch['pyqCount']} previous-year questions")
     flow.append(Paragraph(meta, st["small"]))
     flow.append(Spacer(1, 4))

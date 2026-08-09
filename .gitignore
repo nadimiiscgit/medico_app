@@ -100,3 +100,7 @@ data/topics/topic_index.slim.json
 output/
 # Font copies vendored for reportlab
 pipeline/fonts/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
