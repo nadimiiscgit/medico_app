@@ -150,6 +150,13 @@ def emit(subject_filter: str | None, tier_filter: str | None) -> None:
 
         chosen = select_pyqs(topic, by_id)
         spec = TIER_SPEC[topic["tier"]]
+        # A topic with more than MAX_PYQ_IN_PROMPT questions ships a selection,
+        # so clusters referring to questions left out would ask the writer to
+        # cite an id it was never given. Trim them to what is actually in the
+        # packet, and report the selected count rather than the topic total.
+        chosen_set = set(chosen)
+        clusters = [[q for q in c if q in chosen_set] for c in topic.get("repeatClusters", [])]
+        clusters = [c for c in clusters if len(c) > 1]
         packet = {
             "topicId": topic["topicId"],
             "topic": topic["topic"],
@@ -159,11 +166,12 @@ def emit(subject_filter: str | None, tier_filter: str | None) -> None:
             "highYield": topic["highYield"],
             "targetWords": spec["words"],
             "chapterKind": spec["label"],
-            "pyqCount": len(topic["questionIds"]),
+            "pyqCount": len(chosen),
+            "topicQuestionCount": len(topic["questionIds"]),
             "trend": topic["trend"],
             "byExamYear": topic["byExamYear"],
             "neighbouringTopics": neighbours.get(topic["topicId"], []),
-            "repeatClusters": topic.get("repeatClusters", []),
+            "repeatClusters": clusters,
             "textbooks": TEXTBOOKS,
             "returnPath": str(
                 (RETURN_DIR / f"{topic['topicId']}.json").relative_to(paths.REPO)

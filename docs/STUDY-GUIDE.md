@@ -149,6 +149,14 @@ Every chapter contains:
 - **Previous-year questions** — every PYQ for that topic, verbatim, with the answer
   marked and the explanation. These are printed from the original data, never rewritten.
 
+### Read once, early — `docs/ANSWER-KEY-CORRECTIONS.md`
+Every place where the study material disagrees with the answer key or explanation
+stored against a previous-year question. The corpus is not authoritative — 41% of its
+explanations are machine-written, and every paper from 2025 on is a memory-based
+recall — so writing these down beats silently resolving them. **Treat them as claims
+to verify against your book, not as corrections to trust.** Learning a wrong key
+confidently is worse than skipping the question.
+
 ### For the last two days — `NEETPG_HIGH_YIELD_ONLY.pdf`
 Every tier-A chapter from every subject, in one file, ranked. This is what you carry
 on 28–29 August. Nothing else.
