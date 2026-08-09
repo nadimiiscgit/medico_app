@@ -371,7 +371,8 @@ def load_chapters(subject: str | None = None) -> list[dict]:
     return out
 
 
-def build_subject_pdf(subject: str, index: dict, by_id: dict, expl: dict) -> Path | None:
+def build_subject_pdf(subject: str, index: dict, by_id: dict,
+                      expl: dict) -> tuple[Path, dict[str, int]] | None:
     chapters = load_chapters(subject)
     if not chapters:
         return None
@@ -408,7 +409,9 @@ def build_subject_pdf(subject: str, index: dict, by_id: dict, expl: dict) -> Pat
         flow += chapter_flowables(ch, by_id, expl, st)
 
     doc.multiBuild(flow, canvasmaker=NumberedCanvas)
-    return out
+    # Page numbers are per-subject-PDF; the calendar always names the subject
+    # alongside, so the reference is unambiguous.
+    return out, doc.chapter_pages
 
 
 def build_index_pdf(index: dict) -> Path:
@@ -467,6 +470,68 @@ def build_index_pdf(index: dict) -> Path:
     return out
 
 
+def build_calendar_pdf(chapter_pages: dict[str, int] | None = None) -> Path | None:
+    """One page per study day, with tick boxes and a page reference per topic."""
+    if not paths.STUDY_CALENDAR.exists():
+        return None
+    with open(paths.STUDY_CALENDAR) as f:
+        cal = json.load(f)
+    chapter_pages = chapter_pages or {}
+
+    st = styles()
+    out = paths.OUTPUT_PDF / "NEETPG_00_CALENDAR.pdf"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    doc = ChapterDoc(str(out), pagesize=A4, title="NEET PG — 19-Day Study Calendar")
+    doc.addPageTemplates([_frame_template("body")])
+
+    hours = cal["dailyMinutes"] / 60
+    flow = _cover("19-Day Study Calendar",
+                  [f"{cal['start']} to {cal['exam']}",
+                   f"{hours:g} hours a day",
+                   "Tier A first, so falling behind costs the least"], st)
+
+    flow.append(Paragraph("How to use this", st["h1"]))
+    flow.append(Paragraph(
+        "Each day mixes three or four subjects rather than blocking one subject per day — "
+        "that matches the real paper and retains better. A fifth of each day is revisiting "
+        "topics from three and nine days earlier; that is not padding, it is what stops you "
+        "forgetting week one by the 30th. If you fall behind, drop tier C and read only the "
+        "Must-know and Asked-again sections of tier B. Never skip tier A.", st["body"]))
+    flow.append(PageBreak())
+
+    for day in cal["days"]:
+        head = (f"Day {day['day']} &nbsp;&mdash;&nbsp; {day['weekday']} {day['date']}"
+                f" &nbsp;&mdash;&nbsp; {day['totalMinutes']} min")
+        para = Paragraph(head, st["h1"])
+        para._header = f"Day {day['day']} — {day['date']}"
+        flow.append(para)
+
+        if day.get("focus"):
+            flow.append(Paragraph(rich(day["focus"]), st["body"]))
+
+        for block in day["blocks"]:
+            flow.append(Paragraph(
+                f"{rich(block['subject'])} &nbsp;<font color='#5a6472'>"
+                f"({block['minutes']} min)</font>", st["h2"]))
+            rows = [["", "Topic", "Section", "Tier", "Min", "Page"]]
+            for t in block["topics"]:
+                page = chapter_pages.get(t["topicId"])
+                rows.append(["☐", t["topic"], t["section"], t["tier"],
+                             str(t["minutes"]), str(page) if page else "—"])
+            flow.append(data_table({"columns": rows[0], "rows": rows[1:]}, st))
+
+        if day["revisit"]:
+            flow.append(Paragraph(
+                f"Revisit &nbsp;<font color='#5a6472'>({day['revisitMinutes']} min)</font>",
+                st["h2"]))
+            names = ", ".join(t["topic"] for t in day["revisit"])
+            flow.append(Paragraph(rich(names), st["small"]))
+        flow.append(PageBreak())
+
+    doc.multiBuild(flow, canvasmaker=NumberedCanvas)
+    return out
+
+
 def build_high_yield_pdf(index: dict, by_id: dict, expl: dict) -> Path | None:
     chapters = [c for c in load_chapters() if c.get("tier") == "A"]
     if not chapters:
@@ -492,6 +557,7 @@ def main() -> None:
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--index", action="store_true")
     ap.add_argument("--high-yield", action="store_true")
+    ap.add_argument("--calendar", action="store_true")
     args = ap.parse_args()
 
     register_fonts()
@@ -508,15 +574,23 @@ def main() -> None:
     targets = ([args.subject] if args.subject
                else sorted(index["subjects"]) if args.all else [])
     for subject in targets:
-        out = build_subject_pdf(subject, index, by_id, expl)
-        print(f"  {subject:26s} -> {out.name if out else 'no chapters yet'}")
+        built = build_subject_pdf(subject, index, by_id, expl)
+        if built:
+            out, subject_pages = built
+            pages.update(subject_pages)
+            print(f"  {subject:26s} -> {out.name} ({len(subject_pages)} chapters)")
+        else:
+            print(f"  {subject:26s} -> no chapters yet")
     if args.index:
         print(f"  master index -> {build_index_pdf(index).name}")
     if args.high_yield:
         out = build_high_yield_pdf(index, by_id, expl)
         print(f"  high yield -> {out.name if out else 'no tier-A chapters yet'}")
-    if pages:
-        print(f"{len(pages)} chapter page references captured")
+    if args.calendar:
+        # Rendered last so every chapter's start page is known.
+        out = build_calendar_pdf(pages)
+        print(f"  calendar -> {out.name if out else 'no calendar built yet'}"
+              f" ({len(pages)} page references)")
 
 
 if __name__ == "__main__":
