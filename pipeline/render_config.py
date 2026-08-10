@@ -46,10 +46,14 @@ DEFAULTS: dict = {
         # scheduled only the ones the calendar budgets time for
         # none      chapters only, no question banks
         "include": "all",
-        # False keeps the questions attemptable and moves answers to the back.
+        # False keeps the questions attemptable and moves the answers out of the
+        # question box — see answerKey.placement for where they land.
         "answersInline": False,
         "answerKey": {
             "include": True,
+            # topic     after each topic's own question bank, numbered from 1
+            # document  one key at the back, numbered continuously
+            "placement": "topic",
             "grid": True,
             "explanations": True,
             "explanationChars": 1600,

@@ -150,11 +150,16 @@ Every chapter contains:
   from the original data, never rewritten.
 
 **Answers are not printed next to the questions.** All four options are shown blank,
-so a question can actually be attempted. Every answer and explanation is collected in
-an **Answer key** at the back of each subject PDF, numbered to match the `Q1.`, `Q2.`
-labels in the chapters — a compact marking grid first, then the full explanations.
-Attempt, then mark, then read. If you want them inline anyway:
-`python3 -m pipeline.render_pdf --all --with-answers`.
+so a question can actually be attempted. Each topic's answers sit in an **Answer key**
+immediately after that topic's questions — a compact marking grid first, then the full
+explanations — numbered `Q1.`, `Q2.` from the start of the topic. Attempt the topic's
+questions, turn the page, mark them, read the explanations while the topic is still
+fresh. If you would rather have them inline, or one key at the very back:
+
+```bash
+python3 -m pipeline.render_pdf --all --with-answers
+python3 -m pipeline.render_pdf --all --set questions.answerKey.placement=document
+```
 
 Some stems refer to a photograph, ECG or micrograph that the source paper lost. Those
 carry an orange **"Image not available"** banner, so a question you cannot answer is

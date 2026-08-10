@@ -18,6 +18,7 @@
     "answersInline": false,
     "answerKey": {
       "include": true,
+      "placement": "topic",
       "grid": true,
       "explanations": true,
       "explanationChars": 1600

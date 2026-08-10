@@ -72,6 +72,7 @@ python3 -m pipeline.render_pdf --write-config    # rewrite the file with every d
 | `questions.include` | `"all"` | `all`, `scheduled` (only what the calendar budgets time for), `none` (chapters only) |
 | `questions.answersInline` | `false` | `true` puts the answer back under each question instead of in the key |
 | `questions.answerKey.include` | `true` | `false` prints no answers at all — a clean mock paper |
+| `questions.answerKey.placement` | `"topic"` | `topic` puts the key right after each topic's own questions, numbered from 1; `document` collects one key at the back, numbered continuously |
 | `questions.answerKey.grid` | `true` | the compact `Q1 A, Q2 C` marking grid |
 | `questions.answerKey.explanations` | `true` | the long explanations after the grid |
 | `questions.answerKey.explanationChars` | `1600` | truncation point for one explanation |
@@ -95,6 +96,9 @@ python3 -m pipeline.render_pdf --all \
 
 # Only the questions the calendar actually schedules
 python3 -m pipeline.render_pdf --all --set questions.include=scheduled
+
+# One answer key at the back of the whole file instead of one per topic
+python3 -m pipeline.render_pdf --all --set questions.answerKey.placement=document
 
 # Bigger type for reading on a phone
 python3 -m pipeline.render_pdf --all --set layout.fontScale=1.2

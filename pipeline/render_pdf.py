@@ -356,19 +356,29 @@ def question_box(rec: dict, expl: str, st: dict,
     return KeepTogether([table, Spacer(1, 5)])
 
 
-def answer_key(entries: list[tuple[int, dict, str]], st: dict) -> list:
-    """Every answer for the document, collected at the back.
+def answer_key(entries: list[tuple[int, dict, str]], st: dict,
+               *, per_topic: bool = False) -> list:
+    """The answers for a block of questions, kept out of the question boxes.
 
-    Keeping answers out of the question boxes is the point: with the correct
-    option marked and the explanation printed underneath, the questions cannot
-    be attempted. Numbers here match the Q numbers in the chapters.
+    That separation is the whole point: with the correct option marked and the
+    explanation printed underneath, a question cannot be attempted. Numbers here
+    match the Q numbers beside the questions.
+
+    `per_topic` places the key immediately after one topic's question bank —
+    close enough to mark while the topic is still fresh — rather than opening a
+    new page for a document-wide key at the back.
     """
     if not entries or not opt("questions.answerKey.include"):
         return []
-    flow = [PageBreak(), Paragraph("Answer key", st["h1"]),
-            Paragraph("Question numbers match the chapters. Attempt the questions "
-                      "first — the explanation is worth far more after you have "
-                      "committed to an answer.", st["body"]), Spacer(1, 6)]
+    head = "h2" if per_topic else "h1"
+    flow: list = [] if per_topic else [PageBreak()]
+    flow.append(Paragraph("Answer key", st[head]))
+    if not per_topic:
+        flow.append(Paragraph(
+            "Question numbers match the chapters. Attempt the questions first — the "
+            "explanation is worth far more after you have committed to an answer.",
+            st["body"]))
+    flow.append(Spacer(1, 6))
 
     # A compact grid first, for fast marking.
     if opt("questions.answerKey.grid"):
@@ -390,7 +400,7 @@ def answer_key(entries: list[tuple[int, dict, str]], st: dict) -> list:
     if not opt("questions.answerKey.explanations"):
         return flow
 
-    flow.append(Paragraph("Explanations", st["h1"]))
+    flow.append(Paragraph("Explanations", st["h2" if per_topic else "h1"]))
     for number, rec, expl in entries:
         dq = rec.get("dataQuality") or {}
         accepted = sorted({rec.get("correctAnswer")} | set(dq.get("acceptableAnswers") or [])
@@ -455,6 +465,13 @@ def data_table(section: dict, st: dict) -> KeepTogether:
 def chapter_flowables(ch: dict, by_id: dict, expl: dict, st: dict,
                       scheduled: set[str] | None = None,
                       collected: list | None = None, reveal: bool = False) -> list:
+    # With the key placed per topic, questions number from 1 within each topic and
+    # the answers follow the topic's own bank. With it at the back, numbering runs
+    # continuously through the document into one key.
+    per_topic = opt("questions.answerKey.placement") == "topic"
+    if per_topic:
+        collected = []
+
     flow: list = []
     heading = Paragraph(rich(ch["topic"]), st["h2"])
     heading._topicId = ch["topicId"]
@@ -535,6 +552,9 @@ def chapter_flowables(ch: dict, by_id: dict, expl: dict, st: dict,
                 flow.append(question_box(rec, text, st, scheduled,
                                          number=number, reveal=reveal))
         flow.append(Spacer(1, 2))
+
+    if per_topic:
+        flow += answer_key(collected, st, per_topic=True)
 
     flow.append(Spacer(1, 9))
     return flow
