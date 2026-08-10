@@ -163,35 +163,77 @@ on 28–29 August. Nothing else.
 
 ---
 
-## 6. The 19-day plan, and what to do when you fall behind
+## 6. The 19-day plan, and what the minutes mean
 
-The calendar is built on four decisions worth understanding, because you will need to
-deviate from it and you should know what you are trading away.
+### The minutes are measured, not guessed
 
-1. **Tier A is scheduled first (days 1–9), tier C last (days 10–15).** This is
-   deliberate insurance: if you lose three days to illness or fatigue, you lose tier C,
-   which is worth the least. **Never "catch up" by skipping forward — the plan is
-   already ordered so that falling behind is the cheapest possible failure.**
+An earlier version of this calendar estimated study time from a topic's high-yield
+score alone — it never looked at how long the chapter was or how many questions it
+carried. Cardiac Arrhythmias came out at 23 minutes for 2,058 words, 6 tables, 17
+must-know lines and 32 MCQs. That was wrong by more than three times, and it made an
+impossible plan look like it fitted.
 
-2. **Three to four subjects every day, not one subject per day.** Blocked study feels
-   more organised and retains worse. The real paper mixes subjects and so does this.
+Every entry is now costed from the material:
 
-3. **Sections stay together.** Related topics land on the same or adjacent days,
-   because learning the whole of a section at once is what makes it stick.
+```
+minutes = words/130 + table_rows x 12s + must_know x 15s + scheduled_questions x 1.5min
+```
 
-4. **A fifth of every day is revisits** — topics from 3 days ago and 9 days ago. This
-   is not optional padding. Reading 550 topics once and never again is how you arrive
-   on the 30th having forgotten the first week.
+So each row shows **Read** and **Solve** separately. Cardiac Arrhythmias is 43 minutes:
+28 reading, 15 solving. If those numbers are wrong for you, they are one command away
+from being right — see §8.
 
-**Days 16–19 introduce no new material.** Day 16–17 sweep every tier-A Must-know list;
-day 18 is a full 200-question timed mock built from NEET PG 2023–2025 and INI CET
-2025–2026; day 19 reviews the mock and the top-100 list.
+### Only some questions are scheduled
 
-**If you are more than two days behind by day 10:** stop reading tier C entirely, and
-read only the *Must know* and *Asked again and again* sections of tier B. Do not skip
-tier A for any reason.
+Solving every one of the 10,963 questions would take 274 hours on its own. The calendar
+budgets **2,036 of them**: every NEET PG and INI CET question from 2019 onward, plus one
+representative per repeat cluster. Those are precisely the questions the ranking says
+predict your paper.
 
----
+The rest stay in the subject PDFs. A question the calendar budgets for is marked
+**★ ON THE PLAN** under its box — everything else is there for extra practice on a topic
+you know is weak, not for the first pass.
+
+### What does not fit, and why that is stated rather than hidden
+
+At 10 h/day the plan schedules about 178 of the 190 available hours, and **roughly 350
+topics do not fit**. The calendar says so explicitly and names them, lowest-yield first.
+
+It is arranged so that what is missing is what the exam asks least:
+
+- **Every tier-A topic is scheduled.** Priority is global, so nothing high-yield is ever
+  dropped in favour of something lower.
+- Tier C is scheduled as its **Must-know list only** — marked *(Must-know only)* in the
+  calendar.
+- What falls off the end is the bottom of tier B and C.
+
+If you want more coverage: `--tier-c skip` drops tier C entirely and frees its time for
+tier B, `--hours 12` buys about 38 more hours, and `--first-pass-days 17` trades two
+revision days for two more study days.
+
+### How to work a day
+
+Each row is one topic with a tick box, a page reference and a time split:
+
+> `☐ Cardiac Arrhythmias & Conduction Disorders | Cardiology | A | 28m | 15m | 10/37 | p41`
+
+1. Open the subject PDF at that page.
+2. Read the chapter — concept sections, then the tables. That is the **Read** minutes.
+3. Do the **★ ON THE PLAN** questions — 10 of the 37 here. That is the **Solve** minutes.
+4. Tick the box.
+
+Four decisions shape the rest, and it is worth knowing what you trade by deviating:
+
+1. **Tier A is scheduled first.** Falling behind therefore costs you the least.
+2. **Three or four subjects a day, not one.** Blocked study feels tidier and retains
+   worse; the real paper mixes subjects too.
+3. **A fifth of each day is revisits** — topics from 3 and 9 days earlier, at a quarter
+   of their original time. Not optional padding: it is what stops week one evaporating.
+4. **Days 16-19 introduce nothing new.** Two Must-know sweeps, a full 200-question timed
+   mock built from NEET PG 2023-2025 and INI CET 2025-2026, then its review.
+
+**If you are more than two days behind by day 10:** stop reading tier C, and for tier B
+read only *Must know* and *Asked again and again*. Never skip tier A.
 
 ## 7. Bringing doubts back
 
@@ -232,9 +274,24 @@ python3 -m pipeline.render_pdf    --all --index --high-yield
 python3 -m pipeline.build_calendar --hours 10         # change your daily budget
 ```
 
-`--hours` is the one you are most likely to want: the calendar assumes 10 study hours
-a day. If that is wrong, rebuild it with a number you will actually hit, and re-render
-the calendar PDF. A plan you follow beats a plan that is optimal.
+The flags you are most likely to want:
+
+```bash
+# your real pace — time yourself on day 1 and put the truth in
+python3 -m pipeline.build_topic_index --wpm 100 --pyq-minutes 2
+python3 -m pipeline.build_calendar --hours 8
+
+# more coverage, less depth
+python3 -m pipeline.build_calendar --tier-c skip --first-pass-days 17
+
+# schedule every question rather than the priority subset
+python3 -m pipeline.build_topic_index --pyq-scope all
+```
+
+Rebuild the calendar PDF afterwards with `python3 -m pipeline.render_pdf --calendar`.
+Both steps are plain Python and take seconds. **A plan you actually follow beats an
+optimal one you abandon on day three** — if 10 hours a day is fiction, put in the real
+number and let the plan tell you honestly what fits.
 
 Every step that writes to the corpus backs it up first (`data/backups/`) and refuses
 to write if it would change any field it did not declare, so re-running is safe.

@@ -28,7 +28,7 @@ import collections
 import json
 from datetime import date, timedelta
 
-from . import paths
+from . import pace, paths
 
 START = date(2026, 8, 11)
 EXAM = date(2026, 8, 30)
@@ -45,7 +45,7 @@ def load_index() -> dict:
         return json.load(f)
 
 
-def subject_queues(index: dict) -> dict[str, list[dict]]:
+def subject_queues(index: dict, tier_c: str = "mustknow") -> dict[str, list[dict]]:
     """Per-subject topic queues, section-contiguous and high-yield first.
 
     Sections are kept together because related material learned in one sitting
@@ -58,11 +58,26 @@ def subject_queues(index: dict) -> dict[str, list[dict]]:
             for t in sec["topics"]:
                 if t["questionCount"] == 0:
                     continue
+                read = t.get("estReadMinutes", t["estMinutes"])
+                solve = t.get("estSolveMinutes", 0)
+                pyqs = t.get("selectedPyqCount", 0)
+                reduced = False
+                if t["tier"] == "C" and tier_c != "full":
+                    if tier_c == "skip":
+                        continue
+                    # Must-know only: a quarter of the reading, no solving. The
+                    # floor is five minutes because a two-minute slot is not a
+                    # study session, it is a line item.
+                    reduced = True
+                    read = max(5, round(read * pace.MUSTKNOW_ONLY_FRACTION))
+                    solve, pyqs = 0, 0
                 items.append({
                     "topicId": t["topicId"], "topic": t["topic"],
                     "section": sec["section"], "subject": subject,
                     "tier": t["tier"], "highYield": t["highYield"],
-                    "minutes": t["estMinutes"], "pyqCount": t["questionCount"],
+                    "minutes": read + solve, "readMinutes": read,
+                    "solveMinutes": solve, "scheduledPyqs": pyqs,
+                    "mustKnowOnly": reduced, "pyqCount": t["questionCount"],
                 })
         items.sort(key=lambda t: ({"A": 0, "B": 1, "C": 2}[t["tier"]],
                                   t["section"], -t["highYield"]))
@@ -71,9 +86,9 @@ def subject_queues(index: dict) -> dict[str, list[dict]]:
     return queues
 
 
-def build(daily_minutes: int) -> dict:
+def build(daily_minutes: int, tier_c: str = "mustknow") -> dict:
     index = load_index()
-    queues = subject_queues(index)
+    queues = subject_queues(index, tier_c)
     remaining = {s: sum(t["minutes"] for t in q) for s, q in queues.items()}
     scheduled: dict[int, list[dict]] = collections.defaultdict(list)
     # Revisit load is decided by what was scheduled 3 and 9 days earlier, so it
@@ -82,80 +97,55 @@ def build(daily_minutes: int) -> dict:
     revisit_owed: dict[int, int] = collections.defaultdict(int)
     revisits: dict[int, list[dict]] = collections.defaultdict(list)
 
+    # Priority is GLOBAL, not per-subject. The earlier version walked each
+    # subject's own queue, so a subject whose turn came late could leave tier-A
+    # topics unscheduled while lower-yield topics from other subjects were
+    # taken — five tier-A topics were being dropped that way. Sorting every
+    # topic together by tier then yield guarantees that whatever does not fit is
+    # genuinely the least valuable material, which is the whole promise of the
+    # plan.
+    pending = sorted(
+        (t for q in queues.values() for t in q),
+        key=lambda t: ({"A": 0, "B": 1, "C": 2}[t["tier"]], -t["highYield"]),
+    )
+
     for day in range(1, FIRST_PASS_DAYS + 1):
         used = 0
         new_budget = max(60, daily_minutes - revisit_owed[day])
+        per_subject: collections.Counter = collections.Counter()
+        subject_cap = max(1, new_budget // SUBJECTS_PER_DAY)
 
-        def take(nxt: dict, subject: str) -> None:
+        def take(topic: dict) -> None:
             nonlocal used
-            queues[subject].pop(0)
-            scheduled[day].append(nxt)
-            used += nxt["minutes"]
-            remaining[subject] -= nxt["minutes"]
-            for offset in REVISIT_OFFSETS:
-                target = day + offset
-                if target <= TOTAL_DAYS:
-                    minutes = max(3, round(nxt["minutes"] * 0.25))
-                    revisits[target].append({**nxt, "minutes": minutes})
-                    revisit_owed[target] += minutes
-
-        # Three passes, the first respecting each tier's window so tier A is
-        # genuinely front-loaded, the later ones relaxing constraints only if
-        # the day is still short — an empty afternoon in week one is a worse
-        # outcome than starting tier B three days early. Three passes, each relaxing one constraint only if the day is still
-        # short. Total first-pass reading is 113 h against 150 h of first-pass
-        # capacity, so the material does fit — leaving a day underfilled just
-        # pushes work into an impossible day 15.
-        for respect_window, cap_per_subject in ((True, True), (False, True), (False, False)):
-            if used >= new_budget * 0.95:
-                break
-            # Subjects with the most work left go first, so heavy subjects are
-            # spread across the fortnight instead of piling up at the end.
-            order = sorted(queues, key=lambda s: -remaining[s])
-            picked_subjects = 0
-            for subject in order:
-                if used >= new_budget or (cap_per_subject and picked_subjects >= SUBJECTS_PER_DAY):
-                    break
-                queue = queues[subject]
-                if not queue:
-                    continue
-                share = max(1, new_budget // SUBJECTS_PER_DAY) if cap_per_subject else new_budget
-                spent = 0
-                took = False
-                while queue:
-                    nxt = queue[0]
-                    if respect_window and day < TIER_WINDOW[nxt["tier"]][0]:
-                        break
-                    # Stop before overshooting rather than after — but never
-                    # leave a day completely empty.
-                    if used + nxt["minutes"] > new_budget and used > 0:
-                        break
-                    if spent + nxt["minutes"] > share and spent > 0:
-                        break
-                    take(nxt, subject)
-                    spent += nxt["minutes"]
-                    took = True
-                if took:
-                    picked_subjects += 1
-
-    # Whatever the per-day caps could not absorb is spread into the days with
-    # the most room left, rather than dumped on the last day — which produced a
-    # 14-hour day 15 while day 11 sat two hours under budget.
-    leftovers = [t for q in queues.values() for t in q]
-    if leftovers:
-        def spare(day: int) -> int:
-            used_new = sum(t["minutes"] for t in scheduled[day])
-            return daily_minutes - used_new - revisit_owed[day]
-
-        for topic in sorted(leftovers, key=lambda t: {"A": 0, "B": 1, "C": 2}[t["tier"]]):
-            day = max(range(1, FIRST_PASS_DAYS + 1), key=spare)
+            pending.remove(topic)
             scheduled[day].append(topic)
+            used += topic["minutes"]
+            per_subject[topic["subject"]] += topic["minutes"]
             for offset in REVISIT_OFFSETS:
                 target = day + offset
                 if target <= TOTAL_DAYS:
                     minutes = max(3, round(topic["minutes"] * 0.25))
                     revisits[target].append({**topic, "minutes": minutes})
                     revisit_owed[target] += minutes
+
+        # First pass keeps the day mixed across subjects; the second fills
+        # whatever is left rather than leaving the afternoon empty.
+        for spread in (True, False):
+            for topic in list(pending):
+                if used >= new_budget:
+                    break
+                if used + topic["minutes"] > new_budget:
+                    continue
+                if spread and per_subject[topic["subject"]] + topic["minutes"] > subject_cap:
+                    continue
+                take(topic)
+
+    # Anything the days could not absorb stays unscheduled and is reported.
+    # The earlier version forced leftovers into whichever day had most room,
+    # which is how a plan that needed 247 hours came out looking like it fitted
+    # into 190. A plan that quietly overfills every day is worse than one that
+    # states what it could not fit.
+    leftovers = pending
 
     days = []
     for day in range(1, TOTAL_DAYS + 1):
@@ -172,6 +162,9 @@ def build(daily_minutes: int) -> dict:
             "weekday": on.strftime("%A"),
             "phase": "first_pass" if day <= FIRST_PASS_DAYS else "revision",
             "newMinutes": sum(t["minutes"] for t in topics),
+            "readMinutes": sum(t.get("readMinutes", t["minutes"]) for t in topics),
+            "solveMinutes": sum(t.get("solveMinutes", 0) for t in topics),
+            "scheduledPyqs": sum(t.get("scheduledPyqs", 0) for t in topics),
             "revisitMinutes": sum(t["minutes"] for t in rev),
             "blocks": [
                 {"subject": subject,
@@ -183,8 +176,13 @@ def build(daily_minutes: int) -> dict:
             "revisit": rev,
         }
         if day > FIRST_PASS_DAYS:
-            entry["focus"] = REVISION_PLAN[day - FIRST_PASS_DAYS - 1]
-        entry["totalMinutes"] = entry["newMinutes"] + entry["revisitMinutes"]
+            n = day - FIRST_PASS_DAYS - 1
+            entry["focus"] = REVISION_PLAN[n]
+            # Budget the revision work too, so a day that is "only revision"
+            # is not reported as idle capacity.
+            entry["focusMinutes"] = REVISION_MINUTES[n]
+        entry["totalMinutes"] = (entry["newMinutes"] + entry["revisitMinutes"]
+                                 + entry.get("focusMinutes", 0))
         days.append(entry)
 
     return {
@@ -193,8 +191,17 @@ def build(daily_minutes: int) -> dict:
         "dailyMinutes": daily_minutes,
         "firstPassDays": FIRST_PASS_DAYS,
         "days": days,
+        "unscheduled": [
+            {"topicId": t["topicId"], "topic": t["topic"], "subject": t["subject"],
+             "tier": t["tier"], "highYield": t["highYield"], "minutes": t["minutes"]}
+            for t in leftovers
+        ],
     }
 
+
+# Minutes for each revision day: two Must-know sweeps, a full timed mock
+# (200 questions at exam pace, 3.5 h) and its review.
+REVISION_MINUTES = [240, 240, 210, 240]
 
 REVISION_PLAN = [
     "Sweep every tier-A chapter's Must-know list. No new topics from here on.",
@@ -208,11 +215,59 @@ REVISION_PLAN = [
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--hours", type=float, default=10.0)
+    ap.add_argument("--first-pass-days", type=int, default=FIRST_PASS_DAYS,
+                    help="days spent on new material before revision begins")
+    ap.add_argument("--tier-c", choices=("full", "mustknow", "skip"),
+                    default="mustknow",
+                    help="how much of the lowest-yield tier to schedule "
+                         "(default: its Must-know list only)")
     args = ap.parse_args()
 
-    calendar = build(int(args.hours * 60))
+    globals()["FIRST_PASS_DAYS"] = max(1, min(TOTAL_DAYS - 2, args.first_pass_days))
+    calendar = build(int(args.hours * 60), args.tier_c)
+    calendar["tierC"] = args.tier_c
     with open(paths.STUDY_CALENDAR, "w") as f:
         json.dump(calendar, f, ensure_ascii=False, indent=1)
+
+    # State the arithmetic before anything else. The previous estimate was 3.7x
+    # too low, which let an impossible plan look like it fitted; if the material
+    # does not fit now, this says so instead of compressing minutes.
+    index = load_index()
+    flat = [t for s in index["subjects"].values()
+            for sec in s["sections"] for t in sec["topics"] if t["questionCount"]]
+    full_load = sum(t["estReadMinutes"] + t["estSolveMinutes"] for t in flat)
+    first_pass = sum(d["newMinutes"] for d in calendar["days"])
+    revisit = sum(d["revisitMinutes"] for d in calendar["days"])
+    focus = sum(d.get("focusMinutes", 0) for d in calendar["days"])
+    capacity = int(args.hours * 60) * TOTAL_DAYS
+    left = calendar["unscheduled"]
+    pace_cfg = index.get("pace", {})
+
+    print(f"pace: {pace_cfg.get('wpm', '?')} wpm, {pace_cfg.get('pyqMinutes', '?')} min/MCQ, "
+          f"question scope '{pace_cfg.get('pyqScope', '?')}', tier C '{args.tier_c}'")
+    print(f"  material, all {len(flat)} topics      {full_load/60:6.1f} h")
+    print(f"  first pass scheduled            {first_pass/60:6.1f} h")
+    print(f"  revisits (25% at +3 and +9 days){revisit/60:6.1f} h")
+    print(f"  revision days 16-19             {focus/60:6.1f} h")
+    print(f"  scheduled total                 {(first_pass+revisit+focus)/60:6.1f} h")
+    print(f"  available                       {capacity/60:6.1f} h "
+          f"({args.hours:g} h/day x {TOTAL_DAYS} days)")
+    if left:
+        by_tier = collections.Counter(t["tier"] for t in left)
+        print(f"\n  DOES NOT FIT: {len(left)} topics left unscheduled "
+              f"({sum(t['minutes'] for t in left)/60:.1f} h), "
+              f"tiers {dict(sorted(by_tier.items()))}")
+        print("  lowest-yield first, so what is missing is what the exam asks least:")
+        for t in left[-6:]:
+            print(f"    {t['highYield']:5.2f} [{t['tier']}] {t['subject'][:16]:16s} {t['topic'][:44]}")
+        print("  to fit more: --tier-c skip, --hours 12, or rebuild the index "
+              "with --pyq-scope none")
+        print(f"  (days 16-19 are revision; raising --first-pass-days trades "
+              f"revision time for coverage)")
+    else:
+        print(f"  slack                           "
+              f"{(capacity-first_pass-revisit-focus)/60:6.1f} h")
+    print()
 
     total_topics = sum(len(b["topics"]) for d in calendar["days"] for b in d["blocks"])
     print(f"{total_topics} topics across {FIRST_PASS_DAYS} first-pass days, "
@@ -229,9 +284,10 @@ def main() -> None:
               + ", ".join(f"day {d['day']} ({d['totalMinutes']}m)" for d in over[:5]))
 
     for d in calendar["days"]:
-        subjects = ", ".join(f"{b['subject']} {b['minutes']}m" for b in d["blocks"][:4])
+        subjects = ", ".join(f"{b['subject']} {b['minutes']}m" for b in d["blocks"][:3])
         print(f"  day {d['day']:2d} {d['date']} {d['phase']:10s} "
-              f"new={d['newMinutes']:4d} rev={d['revisitMinutes']:3d}  {subjects}")
+              f"read={d.get('readMinutes',0):4d} solve={d.get('solveMinutes',0):4d} "
+              f"rev={d['revisitMinutes']:3d}  {subjects}")
 
 
 if __name__ == "__main__":

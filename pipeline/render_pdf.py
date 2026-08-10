@@ -208,7 +208,8 @@ def _frame_template(name: str) -> PageTemplate:
     return PageTemplate(id=name, frames=[frame])
 
 
-def question_box(rec: dict, expl: str, st: dict) -> KeepTogether:
+def question_box(rec: dict, expl: str, st: dict,
+                 scheduled: set[str] | None = None) -> KeepTogether:
     bits = [Paragraph(rich(rec["question"]), st["qstem"])]
 
     # Twelve questions are defective as printed. Say so on the page, so a reader who
@@ -239,6 +240,11 @@ def question_box(rec: dict, expl: str, st: dict) -> KeepTogether:
     badge = f"{rec.get('exam','')} {rec.get('year','')}"
     if rec.get("sourceConfidence") == "memory_based":
         badge += "  (memory-based recall)"
+    # The calendar budgets time for a subset of each topic's questions — the
+    # recent NEET PG and INI CET ones plus one per repeat cluster. Marking them
+    # is what lets you tell "solve this now" from "extra practice".
+    if scheduled is not None and rec["id"] in scheduled:
+        badge += "   \u2605 ON THE PLAN"
     bits.append(Paragraph(badge, st["small"]))
 
     table = Table([[bits]], colWidths=[A4[0] - 36 * mm])
@@ -298,7 +304,8 @@ def data_table(section: dict, st: dict) -> KeepTogether:
     return KeepTogether([table, Spacer(1, 7)])
 
 
-def chapter_flowables(ch: dict, by_id: dict, expl: dict, st: dict) -> list:
+def chapter_flowables(ch: dict, by_id: dict, expl: dict, st: dict,
+                      scheduled: set[str] | None = None) -> list:
     flow: list = []
     heading = Paragraph(rich(ch["topic"]), st["h2"])
     heading._topicId = ch["topicId"]
@@ -360,7 +367,8 @@ def chapter_flowables(ch: dict, by_id: dict, expl: dict, st: dict) -> list:
             for qid in ids:
                 rec = by_id.get(qid)
                 if rec:
-                    flow.append(question_box(rec, expl.get(qid, {}).get("text", ""), st))
+                    flow.append(question_box(rec, expl.get(qid, {}).get("text", ""),
+                                             st, scheduled))
         flow.append(Spacer(1, 2))
 
     flow.append(Spacer(1, 9))
@@ -393,8 +401,8 @@ def load_chapters(subject: str | None = None) -> list[dict]:
     return out
 
 
-def build_subject_pdf(subject: str, index: dict, by_id: dict,
-                      expl: dict) -> tuple[Path, dict[str, int]] | None:
+def build_subject_pdf(subject: str, index: dict, by_id: dict, expl: dict,
+                      scheduled: set[str] | None = None) -> tuple[Path, dict[str, int]] | None:
     chapters = load_chapters(subject)
     if not chapters:
         return None
@@ -428,7 +436,7 @@ def build_subject_pdf(subject: str, index: dict, by_id: dict,
         if ch["section"] != current:
             current = ch["section"]
             flow.append(Paragraph(rich(current), st["h1"]))
-        flow += chapter_flowables(ch, by_id, expl, st)
+        flow += chapter_flowables(ch, by_id, expl, st, scheduled)
 
     doc.multiBuild(flow, canvasmaker=NumberedCanvas)
     # Page numbers are per-subject-PDF; the calendar always names the subject
@@ -525,26 +533,41 @@ def build_calendar_pdf(chapter_pages: dict[str, int] | None = None) -> Path | No
     flow.append(PageBreak())
 
     for day in cal["days"]:
+        parts = [f"{day['totalMinutes']} min"]
+        if day.get("readMinutes") or day.get("solveMinutes"):
+            parts.append(f"{day.get('readMinutes', 0)} read + "
+                         f"{day.get('solveMinutes', 0)} solve"
+                         + (f" + {day['revisitMinutes']} revisit"
+                            if day.get("revisitMinutes") else ""))
         head = (f"Day {day['day']} &nbsp;&mdash;&nbsp; {day['weekday']} {day['date']}"
-                f" &nbsp;&mdash;&nbsp; {day['totalMinutes']} min")
+                f" &nbsp;&mdash;&nbsp; {' &nbsp;|&nbsp; '.join(parts)}")
         para = Paragraph(head, st["h1"])
         para._header = f"Day {day['day']} — {day['date']}"
         flow.append(para)
 
         if day.get("focus"):
-            flow.append(Paragraph(rich(day["focus"]), st["body"]))
+            mins = day.get("focusMinutes")
+            flow.append(Paragraph(
+                rich(day["focus"]) + (f" <font color='#5a6472'>({mins} min)</font>"
+                                      if mins else ""), st["body"]))
 
         for block in day["blocks"]:
             flow.append(Paragraph(
                 f"{rich(block['subject'])} &nbsp;<font color='#5a6472'>"
                 f"({block['minutes']} min)</font>", st["h2"]))
-            rows = [["", "Topic", "Section", "Tier", "Min", "Page"]]
+            rows = [["", "Topic", "Section", "T", "Read", "Solve", "Qs", "Pg"]]
             for t in block["topics"]:
                 page = chapter_pages.get(t["topicId"])
-                rows.append(["☐", t["topic"], t["section"], t["tier"],
-                             str(t["minutes"]), str(page) if page else "—"])
+                solve = t.get("solveMinutes", 0)
+                qs = t.get("scheduledPyqs", 0)
+                label = t["topic"] + (" (Must-know only)" if t.get("mustKnowOnly") else "")
+                rows.append(["☐", label, t["section"], t["tier"],
+                             f"{t.get('readMinutes', t['minutes'])}m",
+                             f"{solve}m" if solve else "-",
+                             f"{qs}/{t.get('pyqCount', 0)}" if qs else "-",
+                             str(page) if page else "—"])
             flow.append(data_table({"columns": rows[0], "rows": rows[1:],
-                                    "widths": [2, 31, 23, 5, 5, 5]}, st))
+                                    "widths": [2, 27, 18, 3, 6, 6, 7, 4]}, st))
 
         if day["revisit"]:
             flow.append(Paragraph(
@@ -558,7 +581,8 @@ def build_calendar_pdf(chapter_pages: dict[str, int] | None = None) -> Path | No
     return out
 
 
-def build_high_yield_pdf(index: dict, by_id: dict, expl: dict) -> Path | None:
+def build_high_yield_pdf(index: dict, by_id: dict, expl: dict,
+                         scheduled: set[str] | None = None) -> Path | None:
     chapters = [c for c in load_chapters() if c.get("tier") == "A"]
     if not chapters:
         return None
@@ -572,7 +596,7 @@ def build_high_yield_pdf(index: dict, by_id: dict, expl: dict) -> Path | None:
                    "The ones to read on 28-29 August"], st)
     flow += _toc(st)
     for ch in chapters:
-        flow += chapter_flowables(ch, by_id, expl, st)
+        flow += chapter_flowables(ch, by_id, expl, st, scheduled)
     doc.multiBuild(flow, canvasmaker=NumberedCanvas)
     return out
 
@@ -596,11 +620,17 @@ def main() -> None:
                                 **{k: rec[k] for k in ("imageUrl", "imageUrls") if k in rec}}
     expl = dataio.load_explanations()
 
+    # Questions the calendar actually budgets time for.
+    scheduled = {qid
+                 for s_ in index["subjects"].values()
+                 for sec in s_["sections"] for t in sec["topics"]
+                 for qid in (t.get("selectedPyqIds") or [])}
+
     pages: dict[str, int] = {}
     targets = ([args.subject] if args.subject
                else sorted(index["subjects"]) if args.all else [])
     for subject in targets:
-        built = build_subject_pdf(subject, index, by_id, expl)
+        built = build_subject_pdf(subject, index, by_id, expl, scheduled)
         if built:
             out, subject_pages = built
             pages.update(subject_pages)
@@ -610,7 +640,7 @@ def main() -> None:
     if args.index:
         print(f"  master index -> {build_index_pdf(index).name}")
     if args.high_yield:
-        out = build_high_yield_pdf(index, by_id, expl)
+        out = build_high_yield_pdf(index, by_id, expl, scheduled)
         print(f"  high yield -> {out.name if out else 'no tier-A chapters yet'}")
     if args.calendar:
         # Rendered last so every chapter's start page is known.

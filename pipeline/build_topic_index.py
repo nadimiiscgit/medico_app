@@ -32,7 +32,7 @@ import json
 import math
 import re
 
-from . import dataio, paths
+from . import dataio, pace, paths
 
 REF_YEAR = 2026
 RECENCY_TAU = 4.0
@@ -137,11 +137,7 @@ def trend(by_paper: dict[tuple[str, int], int]) -> str:
     return "stable"
 
 
-def est_minutes(high_yield: float) -> int:
-    return int(min(40, max(8, round(6 + 16 * high_yield))))
-
-
-def build() -> dict:
+def build(pace_cfg: pace.Pace = pace.DEFAULT, scope: str = "recent") -> dict:
     with open(paths.TAXONOMY) as f:
         tax = json.load(f)
     with open(paths.QUESTION_TOPICS) as f:
@@ -219,8 +215,19 @@ def build() -> dict:
                     "highYield": hy,
                     "tier": tier_of(hy),
                     "trend": trend(counts),
-                    "estMinutes": est_minutes(hy),
                     "repeatClusters": repeat_clusters([by_id[i] for i in ids]),
+                })
+                # Estimated from the chapter's real size and the questions actually
+                # scheduled, not from the yield score — see pipeline/pace.py.
+                est = pace.estimate(topics[-1], subject, by_id,
+                                    pace=pace_cfg, scope=scope)
+                topics[-1].update({
+                    "estMinutes": est["minutes"],
+                    "estReadMinutes": est["readMinutes"],
+                    "estSolveMinutes": est["solveMinutes"],
+                    "selectedPyqCount": len(est["selectedPyqIds"]),
+                    "selectedPyqIds": est["selectedPyqIds"],
+                    "chapterMeasured": est["measured"],
                 })
             sections.append({
                 "section": sec["section"],
@@ -264,14 +271,23 @@ def slim(index: dict) -> dict:
             for t in sec["topics"]:
                 t.pop("questionIds", None)
                 t.pop("repeatClusters", None)
+                t.pop("selectedPyqIds", None)
     return out
 
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.parse_args()
+    pace.add_pace_args(ap)
+    ap.add_argument("--pyq-scope", choices=pace.SCOPES, default="recent",
+                    help="which questions the plan schedules (default: recent)")
+    args = ap.parse_args()
 
-    index = build()
+    index = build(pace.pace_from_args(args), args.pyq_scope)
+    index["pace"] = {
+        "wpm": args.wpm, "pyqMinutes": args.pyq_minutes,
+        "rowSeconds": args.row_seconds, "mkSeconds": args.mk_seconds,
+        "pyqScope": args.pyq_scope,
+    }
     paths.TOPIC_INDEX.parent.mkdir(parents=True, exist_ok=True)
     with open(paths.TOPIC_INDEX, "w") as f:
         json.dump(index, f, ensure_ascii=False, indent=1)
@@ -288,6 +304,18 @@ def main() -> None:
     print(f"topics: {len(flat)}  tiers: A={tiers['A']} B={tiers['B']} C={tiers['C']}")
     print(f"sum of expected questions: {total_hy:.1f} (should be near {PAPER_LENGTH})")
     print(f"repeat clusters found: {clustered}")
+
+    read = sum(t["estReadMinutes"] for t in flat)
+    solve = sum(t["estSolveMinutes"] for t in flat)
+    scheduled = sum(t["selectedPyqCount"] for t in flat)
+    measured = sum(1 for t in flat if t.get("chapterMeasured"))
+    print(f"\nestimated study load at {args.wpm:g} wpm, {args.pyq_minutes:g} min/MCQ:")
+    print(f"  reading {read/60:6.1f} h")
+    print(f"  solving {solve/60:6.1f} h  ({scheduled} of "
+          f"{sum(t['questionCount'] for t in flat)} questions, scope={args.pyq_scope})")
+    print(f"  TOTAL   {(read+solve)/60:6.1f} h")
+    print(f"  ({measured} of {len(flat)} topics estimated from a real chapter, "
+          f"the rest from tier defaults)")
 
     print("\nsubjects by expected questions:")
     for subject, payload in sorted(index["subjects"].items(),
