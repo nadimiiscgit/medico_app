@@ -29,6 +29,10 @@ RETURNS = TOPICS / "returns"
 
 BACKUPS = REPO / "data/backups"
 OUTPUT_PDF = REPO / "output/pdf"
+
+# How the PDFs are laid out. Edited by hand; see pipeline/render_config.py.
+CONFIG = REPO / "config"
+RENDER_CONFIG = CONFIG / "render.json"
 FONTS = Path(__file__).resolve().parent / "fonts"
 
 DOCS = REPO / "docs"
@@ -38,6 +42,7 @@ def ensure_dirs() -> None:
     """Create every pipeline-owned directory. Safe to call repeatedly."""
     for d in (
         PDFS, TOPICS, CHAPTERS, PACKETS, RETURNS, BACKUPS, OUTPUT_PDF, FONTS, DOCS,
+        CONFIG,
         PACKETS / "tag", PACKETS / "chapter",
         RETURNS / "tag", RETURNS / "chapter",
     ):

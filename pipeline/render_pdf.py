@@ -15,10 +15,21 @@ Two details that matter more than they look:
           The chapter stores only question ids, so the stem, options, answer
           and explanation in the PDF are always the verbatim originals.
 
+  Answers.  Not printed beside the question. All four options render blank and
+          every answer and explanation is collected in an answer key at the
+          back, numbered to match. A question with its answer already marked
+          cannot be attempted, which is most of what a PYQ is worth.
+
+Nothing here calls a model: chapters are read from data/topics/chapters and laid
+out, so re-cutting the PDFs is free and repeatable. Every layout decision is a
+setting in config/render.json — see pipeline/render_config.py and
+docs/REGENERATING-PDFS.md.
+
 Usage:
     python3 -m pipeline.render_pdf --subject Pharmacology
-    python3 -m pipeline.render_pdf --all
-    python3 -m pipeline.render_pdf --index --high-yield
+    python3 -m pipeline.render_pdf --all --index --high-yield --calendar
+    python3 -m pipeline.render_pdf --all --set layout.fontScale=1.15
+    python3 -m pipeline.render_pdf --write-config
 """
 from __future__ import annotations
 
@@ -41,13 +52,44 @@ from reportlab.platypus import (BaseDocTemplate, Frame, Image, KeepTogether,
                                 Paragraph, Spacer, Table, TableStyle)
 from reportlab.platypus.tableofcontents import TableOfContents
 
-from . import dataio, paths
+from . import dataio, paths, render_config
 
 BODY = "DejaVu"
 ACCENT = colors.HexColor("#1f4e79")
 MUTED = colors.HexColor("#5a6472")
 RULE = colors.HexColor("#c9d2dd")
 BOXBG = colors.HexColor("#f4f7fa")
+
+# Layout settings for the current run. Every rendering decision reads from here
+# rather than from a literal, so the PDFs can be re-cut from the stored chapters
+# without editing this file. See pipeline/render_config.py.
+CFG: dict = render_config.DEFAULTS
+MARGIN = 18 * mm
+
+
+def opt(dotted: str):
+    node = CFG
+    for part in dotted.split("."):
+        node = node[part]
+    return node
+
+
+def apply_config(cfg: dict) -> None:
+    """Adopt a config for this process. Themes are module globals by design —
+    reportlab styles are built per document and read them at build time."""
+    global CFG, ACCENT, MUTED, RULE, BOXBG, MARGIN
+    CFG = cfg
+    ACCENT = colors.HexColor(cfg["theme"]["accent"])
+    MUTED = colors.HexColor(cfg["theme"]["muted"])
+    RULE = colors.HexColor(cfg["theme"]["rule"])
+    BOXBG = colors.HexColor(cfg["theme"]["boxBackground"])
+    MARGIN = float(cfg["layout"]["marginMm"]) * mm
+
+
+def content_width() -> float:
+    return A4[0] - 2 * MARGIN
+
+
 TIER_COLOUR = {"A": colors.HexColor("#b3261e"),
                "B": colors.HexColor("#7a5200"),
                "C": colors.HexColor("#3c4858")}
@@ -73,6 +115,7 @@ def register_fonts() -> None:
 
 def styles() -> dict:
     base = getSampleStyleSheet()
+    scale = float(opt("layout.fontScale"))
     s = {
         "title": ParagraphStyle("title", parent=base["Title"], fontName=f"{BODY}-Bold",
                                 fontSize=26, leading=31, textColor=ACCENT, spaceAfter=6),
@@ -120,7 +163,37 @@ def styles() -> dict:
                                leading=15, spaceBefore=7, textColor=ACCENT)
     s["toc2"] = ParagraphStyle("toc2", fontName=BODY, fontSize=9.2, leading=13,
                                leftIndent=13)
+    if scale != 1.0:
+        for style in s.values():
+            style.fontSize *= scale
+            style.leading *= scale
+            if getattr(style, "bulletFontSize", None):
+                style.bulletFontSize *= scale
     return s
+
+
+# A stem that refers to something displayed is unanswerable when the image is
+# missing — the recall lost it, or it was never extracted. Flagged rather than
+# removed, because some are still answerable from data given in the stem itself.
+_VISUAL_NOUN = (r"(image|images|figure|photograph|photo|micrograph|diagram|picture|"
+                r"slide|graph|pedigree|tracing|karyotype|specimen)")
+_NEEDS_IMAGE = re.compile("|".join([
+    r"\b(shown|given|seen|depicted|displayed|attached|provided)\s+(below|above|here)\b",
+    rf"\b{_VISUAL_NOUN}\s+(below|above|shown|given|attached|provided|here)\b",
+    rf"\b(this|the following|the given|the above|following)\s+{_VISUAL_NOUN}\b",
+    rf"\b(in|from)\s+the\s+(given|following|above|below)?\s*{_VISUAL_NOUN}\b",
+    r"\barrow[- ]?(marked|head)\b|\bmarked\s+(area|region|structure|part|point)",
+    r"\blabell?ed\s+(structure|part|region|area)\b",
+    r"\bas\s+shown\b",
+    r"\bidentify\s+the\s+\w+\s+shown\b",
+]), re.I)
+
+
+def missing_visual(rec: dict) -> bool:
+    """Does this stem promise a picture it does not have?"""
+    if rec.get("imageUrl") or rec.get("imageUrls"):
+        return False
+    return bool(_NEEDS_IMAGE.search(rec.get("question", "")))
 
 
 _BOLD = re.compile(r"\*\*(.+?)\*\*", re.S)
@@ -152,13 +225,14 @@ class NumberedCanvas(pdfcanvas.Canvas):
             self.__dict__.update(state)
             self.setFont(BODY, 7.6)
             self.setFillColor(MUTED)
-            self.drawRightString(A4[0] - 18 * mm, 11 * mm,
-                                 f"Page {self._pageNumber} of {total}")
+            if opt("layout.pageNumbers"):
+                self.drawRightString(A4[0] - MARGIN, 11 * mm,
+                                     f"Page {self._pageNumber} of {total}")
             header = getattr(self, "_running_header", "")
-            if header and self._pageNumber > 1:
-                self.drawString(18 * mm, A4[1] - 11 * mm, header[:110])
+            if header and self._pageNumber > 1 and opt("layout.runningHeader"):
+                self.drawString(MARGIN, A4[1] - 11 * mm, header[:110])
                 self.setStrokeColor(RULE)
-                self.line(18 * mm, A4[1] - 13 * mm, A4[0] - 18 * mm, A4[1] - 13 * mm)
+                self.line(MARGIN, A4[1] - 13 * mm, A4[0] - MARGIN, A4[1] - 13 * mm)
             super().showPage()
         super().save()
 
@@ -204,13 +278,21 @@ class ChapterDoc(BaseDocTemplate):
 
 
 def _frame_template(name: str) -> PageTemplate:
-    frame = Frame(18 * mm, 16 * mm, A4[0] - 36 * mm, A4[1] - 32 * mm, id="body")
+    frame = Frame(MARGIN, 16 * mm, content_width(), A4[1] - 32 * mm, id="body")
     return PageTemplate(id=name, frames=[frame])
 
 
 def question_box(rec: dict, expl: str, st: dict,
-                 scheduled: set[str] | None = None) -> KeepTogether:
-    bits = [Paragraph(rich(rec["question"]), st["qstem"])]
+                 scheduled: set[str] | None = None,
+                 number: int | None = None, reveal: bool = False) -> KeepTogether:
+    """One question.
+
+    By default the answer is NOT shown: the marked option, the answer line and
+    the explanation all move to the answer key at the back, so the question can
+    actually be attempted. `reveal=True` restores the old inline behaviour.
+    """
+    label = f"<b>Q{number}.</b> " if number else ""
+    bits = [Paragraph(label + rich(rec["question"]), st["qstem"])]
 
     # Twelve questions are defective as printed. Say so on the page, so a reader who
     # picks a genuinely correct option does not conclude they got it wrong.
@@ -219,35 +301,50 @@ def question_box(rec: dict, expl: str, st: dict,
         accept = dq.get("acceptableAnswers") or []
         headline = (f"More than one answer is correct: {', '.join(accept)} all count"
                     if len(accept) > 1 else "This question is flawed as printed")
-        bits.append(Paragraph(f"<b>{rich(headline)}</b><br/>{rich(dq.get('note', ''))}",
-                              st["flaw"]))
+        note = dq.get("note", "") if reveal else ""
+        bits.append(Paragraph(f"<b>{rich(headline)}</b>"
+                              + (f"<br/>{rich(note)}" if note else ""), st["flaw"]))
 
-    for img in _images(rec):
-        bits.append(Spacer(1, 3))
-        bits.append(img)
+    # A stem that refers to a picture it does not have cannot be answered. Say so
+    # rather than letting it look like a question you failed.
+    if opt("questions.flagMissingImages") and missing_visual(rec):
+        bits.append(Paragraph(
+            "<b>Image not available.</b> This stem refers to a picture that is "
+            "missing from the source paper, so it may not be answerable as printed.",
+            st["flaw"]))
+
+    if opt("questions.showImages"):
+        for img in _images(rec):
+            bits.append(Spacer(1, 3))
+            bits.append(img)
 
     accepted = {rec.get("correctAnswer")} | set((dq or {}).get("acceptableAnswers") or [])
     for key in ("A", "B", "C", "D"):
         if key in rec.get("options", {}):
-            mark = "&#9679;" if key in accepted else "&#9675;"
+            mark = ("&#9679;" if key in accepted else "&#9675;") if reveal else "&#9675;"
             bits.append(Paragraph(f"{mark} <b>{key}.</b> {rich(rec['options'][key])}",
                                   st["qopt"]))
-    answer_line = " or ".join(sorted(accepted - {None})) or "?"
-    bits.append(Paragraph(f"Answer: {answer_line}", st["qans"]))
-    if expl:
-        bits.append(Paragraph(rich(expl[:1600]), st["qexpl"]))
 
-    badge = f"{rec.get('exam','')} {rec.get('year','')}"
-    if rec.get("sourceConfidence") == "memory_based":
+    if reveal:
+        answer_line = " or ".join(sorted(accepted - {None})) or "?"
+        bits.append(Paragraph(f"Answer: {answer_line}", st["qans"]))
+        if expl:
+            bits.append(Paragraph(rich(expl[:opt("questions.answerKey.explanationChars")]),
+                                  st["qexpl"]))
+
+    badge = (f"{rec.get('exam','')} {rec.get('year','')}"
+             if opt("questions.showSourceBadge") else "")
+    if badge and rec.get("sourceConfidence") == "memory_based":
         badge += "  (memory-based recall)"
     # The calendar budgets time for a subset of each topic's questions — the
     # recent NEET PG and INI CET ones plus one per repeat cluster. Marking them
     # is what lets you tell "solve this now" from "extra practice".
-    if scheduled is not None and rec["id"] in scheduled:
+    if opt("questions.markScheduled") and scheduled is not None and rec["id"] in scheduled:
         badge += "   \u2605 ON THE PLAN"
-    bits.append(Paragraph(badge, st["small"]))
+    if badge.strip():
+        bits.append(Paragraph(badge, st["small"]))
 
-    table = Table([[bits]], colWidths=[A4[0] - 36 * mm])
+    table = Table([[bits]], colWidths=[content_width()])
     table.setStyle(TableStyle([
         ("BOX", (0, 0), (-1, -1), 0.6, RULE),
         ("BACKGROUND", (0, 0), (-1, -1), BOXBG),
@@ -259,11 +356,62 @@ def question_box(rec: dict, expl: str, st: dict,
     return KeepTogether([table, Spacer(1, 5)])
 
 
+def answer_key(entries: list[tuple[int, dict, str]], st: dict) -> list:
+    """Every answer for the document, collected at the back.
+
+    Keeping answers out of the question boxes is the point: with the correct
+    option marked and the explanation printed underneath, the questions cannot
+    be attempted. Numbers here match the Q numbers in the chapters.
+    """
+    if not entries or not opt("questions.answerKey.include"):
+        return []
+    flow = [PageBreak(), Paragraph("Answer key", st["h1"]),
+            Paragraph("Question numbers match the chapters. Attempt the questions "
+                      "first — the explanation is worth far more after you have "
+                      "committed to an answer.", st["body"]), Spacer(1, 6)]
+
+    # A compact grid first, for fast marking.
+    if opt("questions.answerKey.grid"):
+        rows = [["Q", "Ans", "Q", "Ans", "Q", "Ans", "Q", "Ans"]]
+        line: list[str] = []
+        for number, rec, _ in entries:
+            dq = rec.get("dataQuality") or {}
+            accepted = sorted({rec.get("correctAnswer")}
+                              | set(dq.get("acceptableAnswers") or []) - {None})
+            line += [str(number), "/".join(a for a in accepted if a)]
+            if len(line) == 8:
+                rows.append(line)
+                line = []
+        if line:
+            rows.append(line + [""] * (8 - len(line)))
+        flow.append(data_table({"columns": rows[0], "rows": rows[1:],
+                                "widths": [3, 4] * 4}, st))
+
+    if not opt("questions.answerKey.explanations"):
+        return flow
+
+    flow.append(Paragraph("Explanations", st["h1"]))
+    for number, rec, expl in entries:
+        dq = rec.get("dataQuality") or {}
+        accepted = sorted({rec.get("correctAnswer")} | set(dq.get("acceptableAnswers") or [])
+                          - {None})
+        head = (f"<b>Q{number}.</b> Answer: <b>{' or '.join(a for a in accepted if a)}</b>"
+                f" &mdash; {rich(rec['options'].get(accepted[0], '') if accepted else '')}")
+        flow.append(Paragraph(head, st["body"]))
+        if dq.get("note"):
+            flow.append(Paragraph(rich(dq["note"]), st["flaw"]))
+        if expl:
+            flow.append(Paragraph(
+                rich(expl[:opt("questions.answerKey.explanationChars")]), st["qexpl"]))
+        flow.append(Spacer(1, 5))
+    return flow
+
+
 def _images(rec: dict) -> list[Image]:
     """Embed question images, skipping any that are missing rather than failing."""
     urls = ([rec["imageUrl"]] if rec.get("imageUrl") else []) + list(rec.get("imageUrls") or [])
     out = []
-    max_w = A4[0] - 52 * mm
+    max_w = content_width() - 16 * mm
     for url in urls[:4]:
         path = paths.PUBLIC / url.lstrip("/")
         if not path.exists():
@@ -284,7 +432,7 @@ def data_table(section: dict, st: dict) -> KeepTogether:
     rows = section.get("rows") or []
     head = [Paragraph(rich(c), st["cellhead"]) for c in cols]
     body = [[Paragraph(rich(c), st["cell"]) for c in row] for row in rows]
-    width = A4[0] - 36 * mm
+    width = content_width()
     # Equal columns force long topic names to break mid-word ("Tem poromandibul
     # ar Joint"), so callers can pass relative weights.
     weights = section.get("widths") or [1] * len(cols)
@@ -305,7 +453,8 @@ def data_table(section: dict, st: dict) -> KeepTogether:
 
 
 def chapter_flowables(ch: dict, by_id: dict, expl: dict, st: dict,
-                      scheduled: set[str] | None = None) -> list:
+                      scheduled: set[str] | None = None,
+                      collected: list | None = None, reveal: bool = False) -> list:
     flow: list = []
     heading = Paragraph(rich(ch["topic"]), st["h2"])
     heading._topicId = ch["topicId"]
@@ -316,10 +465,11 @@ def chapter_flowables(ch: dict, by_id: dict, expl: dict, st: dict,
             f"&nbsp;|&nbsp; {ch['pyqCount']} previous-year questions")
     flow.append(Paragraph(meta, st["small"]))
     flow.append(Spacer(1, 4))
-    if ch.get("oneLiner"):
+    want = opt("chapters.include")
+    if ch.get("oneLiner") and want["oneLiner"]:
         flow.append(Paragraph(rich(ch["oneLiner"]), st["body"]))
 
-    if ch.get("mustKnow"):
+    if ch.get("mustKnow") and want["mustKnow"]:
         flow.append(Paragraph("Must know", st["h2"]))
         for item in ch["mustKnow"]:
             flow.append(Paragraph(rich(item), st["bullet"], bulletText="•"))
@@ -327,6 +477,11 @@ def chapter_flowables(ch: dict, by_id: dict, expl: dict, st: dict,
 
     for sec in ch.get("sections", []):
         kind = sec.get("type")
+        if kind == "pyqBank":
+            if opt("questions.include") == "none":
+                continue
+        elif not want.get(kind, True):
+            continue
         if sec.get("heading") and kind != "pyqBank":
             flow.append(Paragraph(rich(sec["heading"]), st["h2"]))
 
@@ -362,13 +517,23 @@ def chapter_flowables(ch: dict, by_id: dict, expl: dict, st: dict,
                 flow.append(Paragraph(line, st["bullet"], bulletText="▸"))
         elif kind == "pyqBank":
             ids = sec.get("questionIds") or []
+            if opt("questions.include") == "scheduled":
+                ids = [q for q in ids if scheduled is not None and q in scheduled]
+                if not ids:
+                    continue
             flow.append(Paragraph(
                 sec.get("heading") or f"Previous-year questions ({len(ids)})", st["h2"]))
             for qid in ids:
                 rec = by_id.get(qid)
-                if rec:
-                    flow.append(question_box(rec, expl.get(qid, {}).get("text", ""),
-                                             st, scheduled))
+                if not rec:
+                    continue
+                text = expl.get(qid, {}).get("text", "")
+                number = None
+                if collected is not None:
+                    number = len(collected) + 1
+                    collected.append((number, rec, text))
+                flow.append(question_box(rec, text, st, scheduled,
+                                         number=number, reveal=reveal))
         flow.append(Spacer(1, 2))
 
     flow.append(Spacer(1, 9))
@@ -376,6 +541,8 @@ def chapter_flowables(ch: dict, by_id: dict, expl: dict, st: dict,
 
 
 def _cover(title: str, lines: list[str], st: dict) -> list:
+    if not opt("layout.coverPage"):
+        return []
     flow = [Spacer(1, 52 * mm), Paragraph(rich(title), st["title"]), Spacer(1, 5)]
     for line in lines:
         flow.append(Paragraph(rich(line), st["subtitle"]))
@@ -384,25 +551,37 @@ def _cover(title: str, lines: list[str], st: dict) -> list:
 
 
 def _toc(st: dict) -> list:
+    if not opt("layout.tableOfContents"):
+        return []
     toc = TableOfContents()
     toc.levelStyles = [st["toc1"], st["toc2"]]
     return [Paragraph("Contents", st["h1"]), toc, PageBreak()]
 
 
 def load_chapters(subject: str | None = None) -> list[dict]:
+    """Every stored chapter for a subject, filtered to the configured tiers.
+
+    This is the whole content store: chapters are written once and read back on
+    every render, so re-cutting the PDFs costs nothing.
+    """
     out = []
     if not paths.CHAPTERS.exists():
         return out
+    tiers = set(opt("chapters.tiers"))
     for path in sorted(paths.CHAPTERS.rglob("*.json")):
         with open(path) as f:
             ch = json.load(f)
-        if subject is None or ch.get("subject") == subject:
-            out.append(ch)
+        if subject is not None and ch.get("subject") != subject:
+            continue
+        if ch.get("tier") not in tiers:
+            continue
+        out.append(ch)
     return out
 
 
 def build_subject_pdf(subject: str, index: dict, by_id: dict, expl: dict,
-                      scheduled: set[str] | None = None) -> tuple[Path, dict[str, int]] | None:
+                      scheduled: set[str] | None = None,
+                      reveal: bool = False) -> tuple[Path, dict[str, int]] | None:
     chapters = load_chapters(subject)
     if not chapters:
         return None
@@ -431,13 +610,16 @@ def build_subject_pdf(subject: str, index: dict, by_id: dict, expl: dict,
     )
     flow += _toc(st)
 
+    collected: list = []
     current = None
     for ch in chapters:
         if ch["section"] != current:
             current = ch["section"]
             flow.append(Paragraph(rich(current), st["h1"]))
-        flow += chapter_flowables(ch, by_id, expl, st, scheduled)
+        flow += chapter_flowables(ch, by_id, expl, st, scheduled,
+                                  collected=collected, reveal=reveal)
 
+    flow += answer_key(collected, st)
     doc.multiBuild(flow, canvasmaker=NumberedCanvas)
     # Page numbers are per-subject-PDF; the calendar always names the subject
     # alongside, so the reference is unambiguous.
@@ -582,7 +764,8 @@ def build_calendar_pdf(chapter_pages: dict[str, int] | None = None) -> Path | No
 
 
 def build_high_yield_pdf(index: dict, by_id: dict, expl: dict,
-                         scheduled: set[str] | None = None) -> Path | None:
+                         scheduled: set[str] | None = None,
+                         reveal: bool = False) -> Path | None:
     chapters = [c for c in load_chapters() if c.get("tier") == "A"]
     if not chapters:
         return None
@@ -595,8 +778,11 @@ def build_high_yield_pdf(index: dict, by_id: dict, expl: dict,
                   [f"{len(chapters)} tier-A topics across every subject",
                    "The ones to read on 28-29 August"], st)
     flow += _toc(st)
+    collected: list = []
     for ch in chapters:
-        flow += chapter_flowables(ch, by_id, expl, st, scheduled)
+        flow += chapter_flowables(ch, by_id, expl, st, scheduled,
+                                  collected=collected, reveal=reveal)
+    flow += answer_key(collected, st)
     doc.multiBuild(flow, canvasmaker=NumberedCanvas)
     return out
 
@@ -608,7 +794,24 @@ def main() -> None:
     ap.add_argument("--index", action="store_true")
     ap.add_argument("--high-yield", action="store_true")
     ap.add_argument("--calendar", action="store_true")
+    ap.add_argument("--with-answers", action="store_true",
+                    help="print answers and explanations inline instead of in "
+                         "an answer key at the back "
+                         "(same as --set questions.answersInline=true)")
+    ap.add_argument("--write-config", action="store_true",
+                    help="write every default setting to config/render.json and exit")
+    render_config.add_args(ap)
     args = ap.parse_args()
+
+    if args.write_config:
+        print(f"wrote {render_config.write_default(args.config)}")
+        return
+
+    cfg = render_config.load(args.config, args.overrides)
+    if args.with_answers:
+        cfg["questions"]["answersInline"] = True
+    apply_config(cfg)
+    reveal = cfg["questions"]["answersInline"]
 
     register_fonts()
     with open(paths.TOPIC_INDEX) as f:
@@ -630,7 +833,8 @@ def main() -> None:
     targets = ([args.subject] if args.subject
                else sorted(index["subjects"]) if args.all else [])
     for subject in targets:
-        built = build_subject_pdf(subject, index, by_id, expl, scheduled)
+        built = build_subject_pdf(subject, index, by_id, expl, scheduled,
+                                  reveal=reveal)
         if built:
             out, subject_pages = built
             pages.update(subject_pages)
@@ -640,7 +844,8 @@ def main() -> None:
     if args.index:
         print(f"  master index -> {build_index_pdf(index).name}")
     if args.high_yield:
-        out = build_high_yield_pdf(index, by_id, expl, scheduled)
+        out = build_high_yield_pdf(index, by_id, expl, scheduled,
+                                   reveal=reveal)
         print(f"  high yield -> {out.name if out else 'no tier-A chapters yet'}")
     if args.calendar:
         # Rendered last so every chapter's start page is known.

@@ -146,8 +146,19 @@ Every chapter contains:
 - **Where students lose marks** — the traps, and any place the source explanation
   disagreed with the correct answer.
 - **Standard textbook reference** — see §1. Not decoration.
-- **Previous-year questions** — every PYQ for that topic, verbatim, with the answer
-  marked and the explanation. These are printed from the original data, never rewritten.
+- **Previous-year questions** — every PYQ for that topic, verbatim. These are printed
+  from the original data, never rewritten.
+
+**Answers are not printed next to the questions.** All four options are shown blank,
+so a question can actually be attempted. Every answer and explanation is collected in
+an **Answer key** at the back of each subject PDF, numbered to match the `Q1.`, `Q2.`
+labels in the chapters — a compact marking grid first, then the full explanations.
+Attempt, then mark, then read. If you want them inline anyway:
+`python3 -m pipeline.render_pdf --all --with-answers`.
+
+Some stems refer to a photograph, ECG or micrograph that the source paper lost. Those
+carry an orange **"Image not available"** banner, so a question you cannot answer is
+visibly the paper's fault rather than yours.
 
 ### Read once, early — `docs/ANSWER-KEY-CORRECTIONS.md`
 Every place where the study material disagrees with the answer key or explanation
@@ -258,7 +269,16 @@ Worth flagging back, in particular:
 
 ## 8. Rebuilding any of this
 
-Everything is regenerable from the corpus. From the repository root:
+**The written chapters are stored, and re-rendering the PDFs is free.** The material
+lives as JSON in `data/topics/chapters/`; `render_pdf.py` is pure reportlab and has
+never called a model. So any change to how the PDFs look or what they include is a
+re-render, not a regeneration — bigger type, answers inline, tier A only, no question
+banks, a blind mock paper. Every one of those is a setting in `config/render.json`.
+
+**See [REGENERATING-PDFS.md](REGENERATING-PDFS.md) for the full list of settings and
+some ready-made recipes.** Ask for changes by name; nothing needs to be rewritten.
+
+Everything else is regenerable from the corpus too. From the repository root:
 
 ```bash
 python3 -m pipeline.taxonomy      --emit | --ingest   # topic taxonomy
@@ -270,8 +290,9 @@ python3 -m pipeline.apply_topics  --commit            # merge topics into the co
 python3 -m pipeline.build_topic_index                 # scoring and ranking
 python3 -m pipeline.chapters      --emit --subject X  # chapter work packets
 python3 -m pipeline.chapters      --ingest            # validate and store chapters
-python3 -m pipeline.render_pdf    --all --index --high-yield
+python3 -m pipeline.render_pdf    --all --index --high-yield --calendar
 python3 -m pipeline.build_calendar --hours 10         # change your daily budget
+python3 -m pipeline.render_pdf    --write-config      # list every layout setting
 ```
 
 The flags you are most likely to want:
