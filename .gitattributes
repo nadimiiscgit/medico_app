@@ -1,0 +1,28 @@
+# Normalise line endings in the repo regardless of contributor OS. Mixed CRLF
+# and LF is a common source of whole-file "conflicts" that are not real.
+* text=auto eol=lf
+
+# The question banks are multi-megabyte JSON written on a single line. Git
+# therefore sees each one as one enormous line: any two branches that touch
+# the same bank conflict over the entire file, and the conflict cannot be
+# resolved by hand. Mark them so git stops emitting megabyte diffs, and so a
+# merge fails loudly instead of producing a half-written file.
+#
+# The fix when one of these conflicts is to regenerate it, not to edit it:
+#   git checkout --theirs <file>   (or --ours) then re-run the generator.
+medico-app/public/questions.json      -diff merge=binary
+medico-app/public/explanations.json   -diff merge=binary
+medico-app/public/practice_*.json     -diff merge=binary
+medico-app/public/practice_id_index.json -diff merge=binary
+data/extracted/*.json                 -diff merge=binary
+
+# Lockfiles are generated. A textual merge of two lockfiles can succeed and
+# still produce an install-breaking tree, so force a conflict and regenerate
+# with `npm install --legacy-peer-deps`.
+medico-app/package-lock.json          -diff merge=binary
+
+# Images are binary; never try to merge or diff them as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
