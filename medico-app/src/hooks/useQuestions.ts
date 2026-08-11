@@ -71,7 +71,7 @@ export async function fetchPyqQuestions(): Promise<Question[]> {
 // ---------------------------------------------------------------------------
 
 /** Convert a subject name to the filename slug (must match split_practice_by_subject.py) */
-function subjectSlug(subject: string): string {
+export function subjectSlug(subject: string): string {
   return subject.replace(/[^A-Za-z0-9]+/g, '_').replace(/^_|_$/, '');
 }
 
@@ -179,7 +179,8 @@ export function useFilteredQuestions(
         const s = filters.search.toLowerCase();
         const inQ = q.question.toLowerCase().includes(s);
         const inOpts = Object.values(q.options).some((o) => o.toLowerCase().includes(s));
-        if (!inQ && !inOpts) return false;
+        const inId = q.id.toLowerCase().includes(s);
+        if (!inQ && !inOpts && !inId) return false;
       }
       return true;
     });

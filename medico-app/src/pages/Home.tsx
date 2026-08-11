@@ -17,6 +17,7 @@ import {
   CheckCircleIcon,
   TargetIcon,
   XCircleIcon,
+  LibraryIcon,
 } from 'lucide-react';
 
 export function Home() {
@@ -57,7 +58,7 @@ export function Home() {
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 text-white">
         <div className="flex items-start justify-between">
           <div>
-            <h1 className="text-2xl font-bold mb-1">NEET PG Question Bank</h1>
+            <h1 className="text-2xl font-bold mb-1">NEET PG Previous Year Questions</h1>
             <p className="text-blue-100 text-sm">
               {questions.length.toLocaleString()} questions · 2012–2024 · Practice smart
             </p>
@@ -73,7 +74,7 @@ export function Home() {
             <div className="text-blue-200 text-xs">Overall accuracy</div>
           </div>
         </div>
-        <div className="mt-4 flex gap-3">
+        <div className="mt-4 flex gap-3 flex-wrap">
           <Link to="/practice">
             <Button className="bg-white text-blue-700 hover:bg-blue-50 font-semibold">
               <ZapIcon className="w-4 h-4" />
@@ -88,6 +89,24 @@ export function Home() {
           </Link>
         </div>
       </div>
+
+      {/* Question Bank — the main entry point to the practice questions */}
+      <Link to="/question-bank" className="block">
+        <Card className="hover:border-blue-400 dark:hover:border-blue-600 transition-colors">
+          <CardContent className="flex items-center gap-3 py-4">
+            <div className="w-10 h-10 flex-shrink-0 bg-blue-100 dark:bg-blue-900/40 rounded-lg flex items-center justify-center">
+              <LibraryIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">Question Bank</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                Browse and drill practice questions by subject
+              </p>
+            </div>
+            <ArrowRightIcon className="w-4 h-4 flex-shrink-0 text-gray-400" />
+          </CardContent>
+        </Card>
+      </Link>
 
       {/* Stats grid */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -234,7 +253,7 @@ export function Home() {
                   </Link>
                 );
               })}
-              <Link to="/browse" className="block text-center text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 pt-1 font-medium">
+              <Link to="/quiz" className="block text-center text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 pt-1 font-medium">
                 View all years →
               </Link>
             </div>

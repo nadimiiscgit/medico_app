@@ -84,6 +84,7 @@ export interface UserProgress {
   bookmarks: string[]; // question IDs
   practiceBookmarkSubjects: Record<string, string>; // questionId → subject, for practice bookmarks only
   incorrectQuestionIds: string[]; // questions last answered incorrectly
+  practiceIncorrectSubjects: Record<string, string>; // questionId → subject, for practice wrong answers only
   srCards: Record<string, SRCard>;  // spaced repetition data keyed by questionId
   dailyGoal: number; // target questions per day
   dailyStats: { date: string; attempted: number }; // resets each day

@@ -80,13 +80,13 @@ export function QuestionCard({
   useEffect(() => {
     if (showExplanation && expText === null && !expLoading) {
       setExpLoading(true);
-      getExplanation(question.id).then((entry) => {
+      getExplanation(question).then((entry) => {
         setExpText(entry?.text ?? '');
         setExpAI(entry?.ai ?? false);
         setExpLoading(false);
       });
     }
-  }, [showExplanation, question.id, expText, expLoading]);
+  }, [showExplanation, question, expText, expLoading]);
   const [noteText, setNoteText] = useState(note);
   const subjectColor = SUBJECT_COLORS[question.subject] ?? 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300';
 

@@ -71,6 +71,7 @@ export function useProgress() {
         bookmarks: p.bookmarks,
         practiceBookmarkSubjects: p.practiceBookmarkSubjects ?? {},
         incorrectQuestionIds: [],
+        practiceIncorrectSubjects: {},
         srCards: p.srCards ?? {},  // preserve SR schedules on reset
         dailyGoal: p.dailyGoal,
         dailyStats: { date: '', attempted: 0 },

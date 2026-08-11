@@ -51,7 +51,7 @@ export function Flashcard() {
   useEffect(() => { setFlashExpText(null); }, [currentIdx]);
   useEffect(() => {
     if (revealed && flashExpText === null && cards[currentIdx]) {
-      getExplanation(cards[currentIdx].id).then((e) => setFlashExpText(e?.text ?? ''));
+      getExplanation(cards[currentIdx]).then((e) => setFlashExpText(e?.text ?? ''));
     }
   }, [revealed, currentIdx, flashExpText, cards]);
 

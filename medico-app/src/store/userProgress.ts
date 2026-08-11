@@ -17,6 +17,7 @@ const DEFAULT_PROGRESS: UserProgress = {
   bookmarks: [],
   practiceBookmarkSubjects: {},
   incorrectQuestionIds: [],
+  practiceIncorrectSubjects: {},
   srCards: {},
   dailyGoal: 20,
   dailyStats: { date: '', attempted: 0 },
@@ -75,6 +76,17 @@ export function recordAnswer(
     incorrectQuestionIds = [...incorrectQuestionIds, questionId];
   }
 
+  // For practice questions, remember the subject so the Quiz page can lazy-load
+  // the right file when re-drilling them (mirrors practiceBookmarkSubjects)
+  const practiceIncorrectSubjects = { ...(progress.practiceIncorrectSubjects ?? {}) };
+  if (source === 'practice') {
+    if (isCorrect) {
+      delete practiceIncorrectSubjects[questionId];
+    } else {
+      practiceIncorrectSubjects[questionId] = subject;
+    }
+  }
+
   // Track daily progress (resets each day)
   const today = new Date().toDateString();
   const prevDaily = progress.dailyStats ?? { date: '', attempted: 0 };
@@ -97,6 +109,7 @@ export function recordAnswer(
       totalStudyTime: progress.totalStudyTime + timeTaken,
       practiceSubjectStats,
       incorrectQuestionIds,
+      practiceIncorrectSubjects,
       dailyStats,
     };
   }
@@ -123,6 +136,7 @@ export function recordAnswer(
     subjectStats,
     yearStats,
     incorrectQuestionIds,
+    practiceIncorrectSubjects,
     dailyStats,
   };
 }
