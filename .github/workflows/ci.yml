@@ -51,13 +51,8 @@ jobs:
         run: .github/scripts/check_hygiene.sh
 
   lint:
-    name: Lint (advisory)
+    name: Lint
     runs-on: ubuntu-latest
-    # main currently has 10 eslint errors. Until those are cleared this job
-    # reports without blocking — making it required today would block every
-    # PR for faults it did not introduce. Flip this to false once `npm run
-    # lint` is clean on main, and add it to the required checks.
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -68,6 +63,9 @@ jobs:
       - name: Install
         working-directory: medico-app
         run: npm ci --legacy-peer-deps
-      - name: Lint
-        working-directory: medico-app
-        run: npm run lint
+      # main carries 10 eslint errors. Blocking on a clean run would fail every
+      # PR for faults it did not introduce; a permanently-red advisory job
+      # would teach everyone to ignore red. This fails only when the count
+      # rises above .github/lint-baseline.txt.
+      - name: No new eslint errors
+        run: .github/scripts/check_lint.sh
