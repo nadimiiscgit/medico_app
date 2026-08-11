@@ -1,0 +1,48 @@
+{
+  "theme": {
+    "accent": "#1f4e79",
+    "muted": "#5a6472",
+    "rule": "#c9d2dd",
+    "boxBackground": "#f4f7fa"
+  },
+  "layout": {
+    "fontScale": 1.0,
+    "marginMm": 18.0,
+    "coverPage": true,
+    "tableOfContents": true,
+    "runningHeader": true,
+    "pageNumbers": true
+  },
+  "questions": {
+    "include": "all",
+    "answersInline": false,
+    "answerKey": {
+      "include": true,
+      "placement": "topic",
+      "grid": true,
+      "explanations": true,
+      "explanationChars": 1600
+    },
+    "flagMissingImages": true,
+    "showImages": true,
+    "markScheduled": true,
+    "showSourceBadge": true
+  },
+  "chapters": {
+    "tiers": [
+      "A",
+      "B",
+      "C"
+    ],
+    "include": {
+      "oneLiner": true,
+      "mustKnow": true,
+      "concept": true,
+      "table": true,
+      "mnemonic": true,
+      "pitfalls": true,
+      "repeats": true,
+      "crossref": true
+    }
+  }
+}

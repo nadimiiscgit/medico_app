@@ -8,6 +8,7 @@ import { Badge } from '../components/ui/Badge';
 import { Progress } from '../components/ui/Progress';
 import { shuffleArray, mdToHtml } from '../lib/utils';
 import type { Question } from '../types';
+import { isAcceptableAnswer } from '../lib/answers';
 import { cn } from '../lib/utils';
 import { isDue, getDueCount, getNewCount } from '../lib/spacedRepetition';
 import {
@@ -399,7 +400,7 @@ export function Flashcard() {
             {/* Options — always visible; highlighted only after reveal */}
             <div className="space-y-2">
               {(['A', 'B', 'C', 'D'] as const).map((key) => {
-                const isCorrect = key === currentCard.correctAnswer;
+                const isCorrect = isAcceptableAnswer(currentCard, key);
                 return (
                   <div
                     key={key}

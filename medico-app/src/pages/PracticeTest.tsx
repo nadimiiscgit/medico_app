@@ -7,6 +7,7 @@ import { Button } from '../components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
 import { Progress } from '../components/ui/Progress';
 import type { Question, OptionKey, TestSession } from '../types';
+import { isAcceptableAnswer } from '../lib/answers';
 import { shuffleArray, formatTime, percentage } from '../lib/utils';
 import { cn } from '../lib/utils';
 import {
@@ -101,7 +102,7 @@ export function PracticeTest() {
     testQuestions.forEach((q) => {
       const sel = selectedOptions[q.id];
       if (sel) {
-        const isCorrect = sel === q.correctAnswer;
+        const isCorrect = isAcceptableAnswer(q, sel);
         recordQuestionAnswer(q.id, q.subject, q.year, isCorrect, 0);
       }
     });
@@ -118,7 +119,7 @@ export function PracticeTest() {
               {
                 questionId: q.id,
                 selectedOption: selectedOptions[q.id] ?? null,
-                isCorrect: selectedOptions[q.id] === q.correctAnswer,
+                isCorrect: isAcceptableAnswer(q, selectedOptions[q.id] ?? null),
                 timeTaken: 0,
                 answeredAt: new Date().toISOString(),
               },
@@ -303,7 +304,7 @@ export function PracticeTest() {
   if (step === 'results') {
     const attempted = Object.values(selectedOptions).filter(Boolean).length;
     const correct = testQuestions.filter(
-      (q) => selectedOptions[q.id] === q.correctAnswer
+      (q) => isAcceptableAnswer(q, selectedOptions[q.id] ?? null)
     ).length;
     const wrong = attempted - correct;
     const unattempted = testQuestions.length - attempted;

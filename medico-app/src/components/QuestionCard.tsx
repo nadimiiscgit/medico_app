@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getExplanation } from '../lib/explanations';
 import type { Question, OptionKey } from '../types';
+import { isAcceptableAnswer, acceptableAnswers, hasMultipleAnswers } from '../lib/answers';
 import { Badge } from './ui/Badge';
 import { Button } from './ui/Button';
 import { cn, mdToHtml } from '../lib/utils';
@@ -96,10 +97,10 @@ export function QuestionCard({
       }
       return 'border-gray-200 dark:border-gray-700 hover:border-blue-300 hover:bg-blue-50 dark:hover:bg-blue-950/30 cursor-pointer';
     }
-    if (key === question.correctAnswer) {
+    if (isAcceptableAnswer(question, key)) {
       return 'border-green-500 bg-green-50 dark:bg-green-950/50 text-green-900 dark:text-green-200';
     }
-    if (selectedOption === key && key !== question.correctAnswer) {
+    if (selectedOption === key && !isAcceptableAnswer(question, key)) {
       return 'border-red-500 bg-red-50 dark:bg-red-950/50 text-red-900 dark:text-red-200';
     }
     return 'border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400';
@@ -107,17 +108,17 @@ export function QuestionCard({
 
   const getOptionIcon = (key: OptionKey) => {
     if (!showAnswer && !isAnswered) return null;
-    if (key === question.correctAnswer) {
+    if (isAcceptableAnswer(question, key)) {
       return <CheckCircleIcon className="w-4 h-4 text-green-600 flex-shrink-0" />;
     }
-    if (selectedOption === key && key !== question.correctAnswer) {
+    if (selectedOption === key && !isAcceptableAnswer(question, key)) {
       return <XCircleIcon className="w-4 h-4 text-red-600 flex-shrink-0" />;
     }
     return null;
   };
 
   const isRevealed = showAnswer || isAnswered;
-  const userGotCorrect = selectedOption === question.correctAnswer;
+  const userGotCorrect = isAcceptableAnswer(question, selectedOption);
 
   return (
     <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden">
@@ -217,9 +218,9 @@ export function QuestionCard({
               <span className={cn(
                 'flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold',
                 selectedOption === key && !isRevealed && 'bg-blue-600 text-white',
-                key === question.correctAnswer && isRevealed && 'bg-green-600 text-white',
-                selectedOption === key && key !== question.correctAnswer && isRevealed && 'bg-red-600 text-white',
-                !((selectedOption === key && !isRevealed) || (key === question.correctAnswer && isRevealed) || (selectedOption === key && key !== question.correctAnswer && isRevealed)) && 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300',
+                isAcceptableAnswer(question, key) && isRevealed && 'bg-green-600 text-white',
+                selectedOption === key && !isAcceptableAnswer(question, key) && isRevealed && 'bg-red-600 text-white',
+                !((selectedOption === key && !isRevealed) || (isAcceptableAnswer(question, key) && isRevealed) || (selectedOption === key && !isAcceptableAnswer(question, key) && isRevealed)) && 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300',
               )}>
                 {key}
               </span>
@@ -241,8 +242,22 @@ export function QuestionCard({
           {userGotCorrect ? (
             <><CheckCircleIcon className="w-4 h-4" /> Correct! Well done.</>
           ) : (
-            <><XCircleIcon className="w-4 h-4" /> Incorrect. The correct answer is <strong>{question.correctAnswer}</strong>.</>
+            <><XCircleIcon className="w-4 h-4" /> Incorrect. The correct answer is{' '}
+              <strong>{acceptableAnswers(question).join(' or ')}</strong>.</>
           )}
+        </div>
+      )}
+
+      {/* This question is defective as printed — say so while it is being answered,
+          rather than letting a student conclude they got a fair question wrong. */}
+      {question.dataQuality && (
+        <div className="mx-5 mb-4 px-4 py-3 rounded-lg border border-amber-300 dark:border-amber-800/70 bg-amber-50 dark:bg-amber-950/40">
+          <p className="text-xs font-semibold uppercase tracking-wide text-amber-800 dark:text-amber-300">
+            {hasMultipleAnswers(question)
+              ? `More than one answer is correct — ${acceptableAnswers(question).join(', ')} all count`
+              : 'This question is flawed as printed'}
+          </p>
+          <p className="mt-1 text-sm text-amber-900 dark:text-amber-200">{question.dataQuality.note}</p>
         </div>
       )}
 
