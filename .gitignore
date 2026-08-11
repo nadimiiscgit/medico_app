@@ -1,3 +1,9 @@
+# macOS / Windows / editor junk. Tracked OS files conflict on every merge.
+.DS_Store
+**/.DS_Store
+Thumbs.db
+desktop.ini
+
 # Logs
 logs
 *.log

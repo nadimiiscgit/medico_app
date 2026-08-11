@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# A new push to the same branch makes the previous run irrelevant.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: medico-app/package-lock.json
+      - name: Install
+        working-directory: medico-app
+        run: npm ci --legacy-peer-deps
+      - name: Typecheck and build
+        working-directory: medico-app
+        run: npm run build
+
+  data:
+    name: Question data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate question banks
+        run: python .github/scripts/check_data.py
+
+  hygiene:
+    name: Repo hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for junk, secrets, and conflict markers
+        run: .github/scripts/check_hygiene.sh
+
+  lint:
+    name: Lint (advisory)
+    runs-on: ubuntu-latest
+    # main currently has 10 eslint errors. Until those are cleared this job
+    # reports without blocking — making it required today would block every
+    # PR for faults it did not introduce. Flip this to false once `npm run
+    # lint` is clean on main, and add it to the required checks.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: medico-app/package-lock.json
+      - name: Install
+        working-directory: medico-app
+        run: npm ci --legacy-peer-deps
+      - name: Lint
+        working-directory: medico-app
+        run: npm run lint
